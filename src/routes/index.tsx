@@ -151,20 +151,29 @@ function Modules() {
   return (
     <section className="py-20 px-6 bg-white text-foreground">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl md:text-5xl font-extrabold">What You'll Master Inside</h2>
-        <p className="mt-4 text-center text-foreground/60 text-lg">Plan Smart. Create Fast. Sell Like a Pro.</p>
-        <div className="mt-14 space-y-5">
-          {modules.map((m) => (
-            <div key={m.n} className="grid md:grid-cols-[120px_1fr] gap-6 items-start rounded-2xl bg-card border p-6 md:p-8 shadow-card hover:-translate-y-0.5 transition-transform">
-              <div className="text-5xl md:text-6xl font-extrabold bg-gradient-cta bg-clip-text text-transparent flex items-center justify-center md:justify-start">
-                {m.n}
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold leading-tight">
+          <span className="text-brand-yellow">What You'll Master Inside</span>{" "}
+          <span className="text-brand-red">This EBook</span>
+        </h2>
+        <p className="mt-4 text-center italic text-foreground/70 text-lg">Plan Smart. Create Fast. Sell Like a Pro.</p>
+        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {modules.map((m) => {
+            const Icon = m.Icon;
+            return (
+              <div
+                key={m.n}
+                className="rounded-2xl bg-card border p-8 text-center shadow-card hover:-translate-y-1 transition-transform"
+              >
+                <div className="mx-auto w-20 h-20 rounded-full bg-brand-purple flex items-center justify-center shadow-glow">
+                  <Icon className="w-10 h-10 text-white" strokeWidth={2.25} />
+                </div>
+                <h3 className="mt-6 text-xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+                  {m.title}
+                </h3>
+                <p className="mt-3 text-foreground/70 leading-relaxed">{m.body}</p>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold">{m.title}</h3>
-                <p className="mt-2 text-foreground/70 leading-relaxed">{m.body}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
