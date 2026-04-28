@@ -156,7 +156,13 @@ function Modules() {
         <div className="mt-14 space-y-5">
           {modules.map((m) => (
             <div key={m.n} className="grid md:grid-cols-[120px_1fr] gap-6 items-start rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8 hover:bg-white/10 transition">
-              <div className="text-5xl md:text-6xl font-extrabold bg-gradient-cta bg-clip-text text-transparent">{m.n}</div>
+              <div className="text-5xl md:text-6xl font-extrabold bg-gradient-cta bg-clip-text text-transparent flex items-center justify-center md:justify-start">
+                {m.n === "01" ? (
+                  <Globe className="w-16 h-16 md:w-20 md:h-20 text-brand-purple" strokeWidth={1.75} />
+                ) : (
+                  m.n
+                )}
+              </div>
               <div>
                 <h3 className="text-2xl font-bold">{m.title}</h3>
                 <p className="mt-2 text-white/70 leading-relaxed">{m.body}</p>
