@@ -157,11 +157,7 @@ function Modules() {
           {modules.map((m) => (
             <div key={m.n} className="grid md:grid-cols-[120px_1fr] gap-6 items-start rounded-2xl bg-card border p-6 md:p-8 shadow-card hover:-translate-y-0.5 transition-transform">
               <div className="text-5xl md:text-6xl font-extrabold bg-gradient-cta bg-clip-text text-transparent flex items-center justify-center md:justify-start">
-                {m.n === "01" ? (
-                  <Globe className="w-16 h-16 md:w-20 md:h-20 text-brand-purple" strokeWidth={1.75} />
-                ) : (
-                  m.n
-                )}
+                {m.n}
               </div>
               <div>
                 <h3 className="text-2xl font-bold">{m.title}</h3>
