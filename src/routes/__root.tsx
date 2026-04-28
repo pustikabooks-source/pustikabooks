@@ -33,10 +33,14 @@ export const Route = createRootRoute({
       { name: "description", content: "Build, market & sell your first eBook even if you've never written before. Step-by-step guidance, no tech skills needed." },
       { name: "author", content: "Pustika" },
       { property: "og:title", content: "Pustika — Start Earning with eBooks in 30 Days" },
-      { property: "og:description", content: "Build, market & sell your first eBook even if you've never written before." },
+      { property: "og:description", content: "Build, market & sell your first eBook even if you've never written before. Step-by-step guidance, no tech skills needed." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Pustika — Start Earning with eBooks in 30 Days" },
+      { name: "twitter:description", content: "Build, market & sell your first eBook even if you've never written before. Step-by-step guidance, no tech skills needed." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/02b3d9ad-8df1-4c26-8873-486bd6d421d5/id-preview-2b7385f7--0d4bb676-e6f1-4cb3-822e-00f8761ea803.lovable.app-1777345891193.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/02b3d9ad-8df1-4c26-8873-486bd6d421d5/id-preview-2b7385f7--0d4bb676-e6f1-4cb3-822e-00f8761ea803.lovable.app-1777345891193.png" },
     ],
     links: [
       {
