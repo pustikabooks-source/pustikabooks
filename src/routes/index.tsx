@@ -199,8 +199,8 @@ function Founder() {
     <section className="py-20 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl grid md:grid-cols-[280px_1fr] gap-10 items-center">
         <div className="flex flex-col items-center text-center">
-          <img src={founder} alt="Gaurav, founder of Pustika" className="w-56 h-56 rounded-full object-cover shadow-card" width={768} height={768} loading="lazy" />
-          <p className="mt-4 text-lg font-bold">Gaurav</p>
+          <img src={founder} alt="Arpan Chaudhary, founder of Pustika" className="w-56 h-56 rounded-full object-cover object-top shadow-card" width={768} height={768} loading="lazy" />
+          <p className="mt-4 text-lg font-bold">Arpan Chaudhary</p>
           <p className="text-sm text-muted-foreground">CEO & Founder, Pustika</p>
         </div>
         <div>
