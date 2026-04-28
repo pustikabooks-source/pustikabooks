@@ -149,13 +149,13 @@ function Features() {
 
 function Modules() {
   return (
-    <section className="py-20 px-6 bg-brand-ink text-white">
+    <section className="py-20 px-6 bg-white text-foreground">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl md:text-5xl font-extrabold">What You'll Master Inside</h2>
-        <p className="mt-4 text-center text-white/70 text-lg">Plan Smart. Create Fast. Sell Like a Pro.</p>
+        <p className="mt-4 text-center text-foreground/60 text-lg">Plan Smart. Create Fast. Sell Like a Pro.</p>
         <div className="mt-14 space-y-5">
           {modules.map((m) => (
-            <div key={m.n} className="grid md:grid-cols-[120px_1fr] gap-6 items-start rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8 hover:bg-white/10 transition">
+            <div key={m.n} className="grid md:grid-cols-[120px_1fr] gap-6 items-start rounded-2xl bg-card border p-6 md:p-8 shadow-card hover:-translate-y-0.5 transition-transform">
               <div className="text-5xl md:text-6xl font-extrabold bg-gradient-cta bg-clip-text text-transparent flex items-center justify-center md:justify-start">
                 {m.n === "01" ? (
                   <Globe className="w-16 h-16 md:w-20 md:h-20 text-brand-purple" strokeWidth={1.75} />
@@ -165,7 +165,7 @@ function Modules() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">{m.title}</h3>
-                <p className="mt-2 text-white/70 leading-relaxed">{m.body}</p>
+                <p className="mt-2 text-foreground/70 leading-relaxed">{m.body}</p>
               </div>
             </div>
           ))}
