@@ -57,7 +57,7 @@ function Logo() {
   return (
     <div className="flex flex-col items-center leading-none">
       <span className="font-display text-3xl md:text-4xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-        Quotopia
+        Pustika
       </span>
       <span className="text-[10px] tracking-[0.4em] text-muted-foreground mt-1">B O O K S</span>
     </div>
