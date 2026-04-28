@@ -192,7 +192,7 @@ function Bonuses() {
 
 function Founder() {
   return (
-    <section className="py-20 px-6 bg-secondary">
+    <section className="py-20 px-6 bg-white border-t">
       <div className="mx-auto max-w-5xl grid md:grid-cols-[320px_1fr] gap-10 items-center">
         <div className="flex flex-col items-center text-center">
           <div className="relative w-64 h-80 rounded-3xl overflow-hidden shadow-card bg-gradient-cta p-1">
@@ -260,7 +260,7 @@ function Pricing() {
 
 function Whatsapp() {
   return (
-    <section className="py-16 px-6 bg-secondary">
+    <section className="py-16 px-6 bg-white border-t">
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-sm uppercase tracking-widest font-bold text-brand-purple">Still Confused?</p>
         <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Let's Talk on WhatsApp</h2>
