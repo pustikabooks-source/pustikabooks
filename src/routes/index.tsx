@@ -279,7 +279,7 @@ function Whatsapp() {
         <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Let's Talk on WhatsApp</h2>
         <p className="mt-4 text-foreground/70">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
         <a href={WHATSAPP} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3.5 font-bold hover:bg-[#1ebe5a] transition">
-          💬 Message Us Now
+          Let's Build My eBook
         </a>
       </div>
     </section>
