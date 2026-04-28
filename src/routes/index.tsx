@@ -302,7 +302,10 @@ function UrgencyCTA() {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="mx-auto max-w-3xl text-center">
-        <a href={CHECKOUT} className="inline-flex items-center justify-center rounded-2xl bg-brand-red px-10 py-5 text-lg font-bold text-white shadow-glow hover:scale-[1.02] transition-transform">
+        <a
+          href={CHECKOUT}
+          className="inline-flex items-center justify-center rounded-2xl bg-white border-4 border-brand-red px-12 py-6 text-2xl md:text-3xl font-extrabold text-brand-red shadow-glow hover:scale-[1.02] transition-transform tracking-tight"
+        >
           Let's Build My eBook
         </a>
         <h2 className="mt-12 text-4xl md:text-5xl font-extrabold leading-tight">
