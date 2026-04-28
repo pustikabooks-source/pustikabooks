@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Globe } from "lucide-react";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import founder from "@/assets/founder.jpg";
 
