@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT = "https://rzp.io/rzp/ebook-mastery";
-const WHATSAPP = "https://wa.me/919975344244";
+const WHATSAPP = "https://wa.me/919662436387";
 
 const features = [
   { icon: "💸", title: "True Passive Income", body: "Create once, sell forever. Your eBooks keep earning while you sleep, travel, or work on your next project." },
