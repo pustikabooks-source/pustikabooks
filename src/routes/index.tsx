@@ -286,6 +286,58 @@ function Whatsapp() {
   );
 }
 
+function UrgencyCTA() {
+  const [time, setTime] = useState({ m: 9, s: 36 });
+  useEffect(() => {
+    const id = setInterval(() => {
+      setTime((t) => {
+        const total = t.m * 60 + t.s - 1;
+        if (total <= 0) return { m: 9, s: 59 };
+        return { m: Math.floor(total / 60), s: total % 60 };
+      });
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+  const pad = (n: number) => n.toString().padStart(2, "0");
+  return (
+    <section className="py-20 px-6 bg-white">
+      <div className="mx-auto max-w-3xl text-center">
+        <a href={CHECKOUT} className="inline-flex items-center justify-center rounded-2xl bg-brand-red px-10 py-5 text-lg font-bold text-white shadow-glow hover:scale-[1.02] transition-transform">
+          Let's Build My eBook
+        </a>
+        <h2 className="mt-12 text-4xl md:text-5xl font-extrabold leading-tight">
+          Ready to Build Your Passive Income?
+        </h2>
+        <p className="mt-5 text-brand-red text-lg md:text-xl font-bold">
+          There's No Perfect Time — Start Today, Start Small, Start Winning.
+        </p>
+        <div className="mt-10 grid grid-cols-2 gap-4 max-w-xl mx-auto">
+          <div className="rounded-2xl bg-brand-red text-white py-8 flex items-baseline justify-center gap-2">
+            <span className="text-6xl md:text-7xl font-extrabold text-brand-yellow leading-none">{pad(time.m)}</span>
+            <span className="text-xl font-semibold">Min</span>
+          </div>
+          <div className="rounded-2xl bg-brand-red text-white py-8 flex items-baseline justify-center gap-2">
+            <span className="text-6xl md:text-7xl font-extrabold text-brand-yellow leading-none">{pad(time.s)}</span>
+            <span className="text-xl font-semibold">Sec</span>
+          </div>
+        </div>
+        <p className="mt-8 text-2xl md:text-3xl font-bold text-foreground/80">
+          Time's Ticking! Grab Your Copy Before the Offer Ends!
+        </p>
+        <p className="mt-12 text-base md:text-lg font-bold tracking-wide uppercase text-orange-500">
+          Still Confused? Let's Talk on WhatsApp!
+        </p>
+        <a href={WHATSAPP} className="mt-6 inline-flex items-center gap-3 rounded-2xl bg-[#25D366] text-white px-10 py-5 text-lg font-bold hover:bg-[#1ebe5a] transition">
+          <span className="text-2xl">📱</span> Message Us Now
+        </a>
+        <p className="mt-8 text-foreground/70 max-w-xl mx-auto">
+          Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function FAQ() {
   return (
     <section className="py-20 px-6">
@@ -347,6 +399,7 @@ function Index() {
       <Founder />
       <Pricing />
       <Whatsapp />
+      <UrgencyCTA />
       <FAQ />
       <FinalCTA />
       <Footer />
