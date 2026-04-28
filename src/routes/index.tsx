@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CHECKOUT = "https://rzp.io/rzp/ebook-mastery";
+const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const WHATSAPP = "https://wa.me/919662436387";
 
 const features = [
