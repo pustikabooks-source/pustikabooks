@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import founder from "@/assets/founder.jpg";
 
