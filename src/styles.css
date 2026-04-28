@@ -91,7 +91,7 @@
   --brand-ink: oklch(0.18 0.02 260);
 
   --gradient-cta: linear-gradient(90deg, var(--brand-purple), var(--brand-pink));
-  --gradient-soft: linear-gradient(135deg, oklch(0.97 0.03 285), oklch(0.97 0.04 0));
+  --gradient-soft: linear-gradient(135deg, oklch(1 0 0), oklch(1 0 0));
   --shadow-card: 0 12px 40px -16px oklch(0.18 0.02 260 / 0.18);
   --shadow-glow: 0 20px 60px -20px oklch(0.55 0.24 285 / 0.45);
   --font-display: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
