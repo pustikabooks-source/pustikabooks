@@ -29,10 +29,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Quotopia — Start Earning with eBooks in 30 Days" },
+      { title: "Pustika — Start Earning with eBooks in 30 Days" },
       { name: "description", content: "Build, market & sell your first eBook even if you've never written before. Step-by-step guidance, no tech skills needed." },
-      { name: "author", content: "Quotopia" },
-      { property: "og:title", content: "Quotopia — Start Earning with eBooks in 30 Days" },
+      { name: "author", content: "Pustika" },
+      { property: "og:title", content: "Pustika — Start Earning with eBooks in 30 Days" },
       { property: "og:description", content: "Build, market & sell your first eBook even if you've never written before." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

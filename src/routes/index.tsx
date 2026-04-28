@@ -199,9 +199,9 @@ function Founder() {
     <section className="py-20 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl grid md:grid-cols-[280px_1fr] gap-10 items-center">
         <div className="flex flex-col items-center text-center">
-          <img src={founder} alt="Gaurav, founder of Quotopia" className="w-56 h-56 rounded-full object-cover shadow-card" width={768} height={768} loading="lazy" />
+          <img src={founder} alt="Gaurav, founder of Pustika" className="w-56 h-56 rounded-full object-cover shadow-card" width={768} height={768} loading="lazy" />
           <p className="mt-4 text-lg font-bold">Gaurav</p>
-          <p className="text-sm text-muted-foreground">CEO & Founder, Quotopia</p>
+          <p className="text-sm text-muted-foreground">CEO & Founder, Pustika</p>
         </div>
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold">Why We Created This eBook</h2>
@@ -209,7 +209,7 @@ function Founder() {
             We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
           </p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-lg">
-            At Quotopia, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
+            At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
           </p>
         </div>
       </div>
@@ -313,7 +313,7 @@ function Footer() {
   return (
     <footer className="py-10 px-6 border-t bg-background">
       <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} Quotopia Books. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
         <p>support@quotopia.in</p>
       </div>
     </footer>
