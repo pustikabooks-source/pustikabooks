@@ -164,8 +164,8 @@ function Modules() {
                 key={m.n}
                 className="rounded-2xl bg-card border p-8 text-center shadow-card hover:-translate-y-1 transition-transform"
               >
-                <div className="mx-auto w-20 h-20 rounded-full bg-brand-purple flex items-center justify-center shadow-glow">
-                  <Icon className="w-10 h-10 text-white" strokeWidth={2.25} />
+                <div className="mx-auto w-20 h-20 rounded-full bg-brand-blue flex items-center justify-center shadow-lg ring-4 ring-brand-blue/15">
+                  <Icon className="w-10 h-10 text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="mt-6 text-xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
                   {m.title}
