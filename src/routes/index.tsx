@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap } from "lucide-react";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import founder from "@/assets/founder.jpg";
 
@@ -19,11 +20,11 @@ const features = [
 ];
 
 const modules = [
-  { n: "01", title: "Unlock What's Already Selling", body: "Spot trending topics that Indians are buying like crazy — right now, no guesswork." },
-  { n: "02", title: "Price to Sell, Not to Sit", body: "Smart pricing for low-ticket and high-ticket products that boosts profits without scaring customers." },
-  { n: "03", title: "Create Your eBook Crazy Fast", body: "Plan, write, and format your eBook fast with smart tools like ChatGPT — even if writing isn't your thing." },
-  { n: "04", title: "Sell Smart. Not Spendy.", body: "Use Reels, Stories, and DMs to drive sales — zero ad spend, zero drama." },
-  { n: "05", title: "Automate the Whole Thing", body: "Set up checkout, delivery and follow-up on autopilot. No coding, no stress." },
+  { n: "01", Icon: CloudUpload, title: "Unlock What's Already Selling", body: "Spot trending topics that Indians are buying like crazy — right now, no guesswork." },
+  { n: "02", Icon: DollarSign, title: "Price to Sell, Not to Sit", body: "Smart pricing for low-ticket and high-ticket products that boosts profits without scaring customers." },
+  { n: "03", Icon: BookOpen, title: "Create Your eBook Crazy Fast", body: "Plan, write, and format your eBook fast with smart tools like ChatGPT — even if writing isn't your thing." },
+  { n: "04", Icon: Megaphone, title: "Sell Smart. Not Spendy.", body: "Use Reels, Stories, and DMs to drive sales — zero ad spend, zero drama." },
+  { n: "05", Icon: Zap, title: "Automate the Whole Thing", body: "Set up checkout, delivery and follow-up on autopilot. No coding, no stress." },
 ];
 
 const bonuses = [
