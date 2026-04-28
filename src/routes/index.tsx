@@ -291,7 +291,7 @@ function FAQ() {
           ))}
         </div>
         <p className="mt-10 text-center text-foreground/70">
-          Still got questions? Drop us a line at <a className="font-bold text-brand-purple" href="mailto:support@quotopia.in">support@quotopia.in</a>
+          Still got questions? Drop us a line at <a className="font-bold text-brand-purple" href="mailto:support@pustikabooks.in">support@pustikabooks.in</a>
         </p>
       </div>
     </section>
@@ -317,7 +317,7 @@ function Footer() {
     <footer className="py-10 px-6 border-t bg-background">
       <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
         <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
-        <p>support@quotopia.in</p>
+        <p>support@pustikabooks.in</p>
       </div>
     </footer>
   );
