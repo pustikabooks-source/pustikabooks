@@ -53,6 +53,25 @@ const faqs = [
   { q: "What makes this different from other eBook courses?", a: "We don't sell fluff. We give you real, step-by-step systems you can actually use — not just random Google tips." },
 ];
 
+const proofRows = [
+  [
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹349" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹547" },
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
+  ],
+  [
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹499" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹349" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+  ],
+];
+
 function Logo() {
   return (
     <div className="flex flex-col items-center leading-none">
@@ -273,6 +292,67 @@ function Pricing() {
   );
 }
 
+function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reverse?: boolean }) {
+  const doubled = [...items, ...items];
+  return (
+    <div className="overflow-hidden">
+      <div
+        className={`flex gap-4 w-max ${reverse ? "animate-marquee-slow" : "animate-marquee"}`}
+        style={reverse ? { animationDirection: "reverse" } : undefined}
+      >
+        {doubled.map((p, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-3 bg-white border rounded-xl shadow-card px-4 py-3 w-[360px] md:w-[480px] shrink-0"
+          >
+            <div className="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center text-white font-bold shrink-0">
+              ✉
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2 text-xs text-foreground/60">
+                <span className="font-bold text-foreground truncate">{p.sender}</span>
+                <span className="px-1.5 py-0.5 bg-secondary rounded text-[10px] font-semibold">Inbox</span>
+              </div>
+              <p className="mt-1 text-sm truncate">
+                <span className="bg-yellow-200 px-1 font-semibold">Payment</span>{" "}
+                <span className="text-foreground/80">{p.subject}</span>
+              </p>
+            </div>
+            <span className="font-extrabold text-brand-red shrink-0">{p.amount}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Proof() {
+  return (
+    <section className="py-20 px-6 bg-white border-t overflow-hidden">
+      <div className="mx-auto max-w-6xl text-center">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-brand-red underline decoration-2 underline-offset-4 leading-tight">
+          These Aren't Just Emails… They're Sales. And They Could Be Yours.
+        </h2>
+      </div>
+      <div className="mt-12 space-y-4">
+        <ProofRow items={proofRows[0]} />
+        <ProofRow items={proofRows[1]} reverse />
+      </div>
+      <div className="mx-auto max-w-3xl text-center mt-14">
+        <h3 className="text-2xl md:text-4xl font-extrabold text-brand-red underline decoration-2 underline-offset-4">
+          We Made It Happen. Now It's Your Turn.
+        </h3>
+        <a
+          href={CHECKOUT}
+          className="mt-8 inline-flex items-center justify-center rounded-xl bg-brand-red px-10 py-5 text-lg md:text-xl font-extrabold text-white shadow-glow hover:scale-[1.02] transition-transform"
+        >
+          Yes, I Want Sales Like This!
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Whatsapp() {
   return (
     <section className="py-16 px-6 bg-white border-t">
@@ -402,6 +482,7 @@ function Index() {
       <Modules />
       <Bonuses />
       <Founder />
+      <Proof />
       <Pricing />
       <Whatsapp />
       <UrgencyCTA />
