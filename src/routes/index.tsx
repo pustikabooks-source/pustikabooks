@@ -448,7 +448,7 @@ function ProofInner() {
         <ProofRow items={proofRows[1]} reverse />
       </div>
       <div className="mx-auto max-w-6xl text-center mt-14">
-        <h3 className="text-2xl md:text-4xl font-extrabold text-brand-red underline decoration-2 underline-offset-4">
+        <h3 className="text-3xl md:text-5xl font-extrabold text-brand-red underline decoration-4 underline-offset-8 leading-tight drop-shadow-sm">
           We Made It Happen. Now It's Your Turn.
         </h3>
         <DashboardMarquee />
