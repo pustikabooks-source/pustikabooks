@@ -72,6 +72,14 @@ const proofRows = [
   ],
 ];
 
+const dashboards = [
+  { amount: "₹59,540.00", count: 150, upi: 97.24, card: 2.76, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "16", failedNote: "payments" },
+  { amount: "₹1,24,870.00", count: 312, upi: 92.50, card: 7.50, refunds: "₹279.00", refundsCount: "1 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "24", failedNote: "payments" },
+  { amount: "₹84,210.00", count: 218, upi: 95.10, card: 4.90, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "11", failedNote: "payments" },
+  { amount: "₹2,18,930.00", count: 547, upi: 89.30, card: 10.70, refunds: "₹558.00", refundsCount: "2 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "38", failedNote: "payments" },
+  { amount: "₹47,820.00", count: 124, upi: 98.40, card: 1.60, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "7", failedNote: "payments" },
+];
+
 function Logo() {
   return (
     <div className="flex flex-col items-center leading-none">
