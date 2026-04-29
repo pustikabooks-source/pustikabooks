@@ -305,8 +305,8 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
             key={i}
             className="flex items-center gap-3 bg-white border rounded-xl shadow-card px-4 py-3 w-[360px] md:w-[480px] shrink-0"
           >
-            <div className="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center text-white font-bold shrink-0">
-              ✉
+            <div className={`w-9 h-9 rounded-full ${p.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
+              {p.initials}
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 text-xs text-foreground/60">
@@ -318,7 +318,10 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
                 <span className="text-foreground/80">{p.subject}</span>
               </p>
             </div>
-            <span className="font-extrabold text-brand-red shrink-0">{p.amount}</span>
+            <div className="flex flex-col items-end shrink-0 gap-1">
+              <span className="font-extrabold text-brand-red">{p.amount}</span>
+              <span className="text-[10px] text-foreground/50 font-medium">{p.time}</span>
+            </div>
           </div>
         ))}
       </div>
