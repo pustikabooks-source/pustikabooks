@@ -55,20 +55,20 @@ const faqs = [
 
 const proofRows = [
   [
-    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹349" },
-    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
-    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹547" },
-    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
-    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
-    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
+    { sender: "Payments", initials: "AS", color: "bg-rose-500",     subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹349", time: "11:42 AM" },
+    { sender: "Team Razorpay", initials: "RK", color: "bg-blue-500", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "10:58 AM" },
+    { sender: "Payments", initials: "PV", color: "bg-emerald-500",  subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹547", time: "10:21 AM" },
+    { sender: "Razorpay Payment", initials: "MK", color: "bg-amber-500", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279", time: "9:47 AM" },
+    { sender: "Team Razorpay", initials: "SD", color: "bg-violet-500",  subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "9:12 AM" },
+    { sender: "Payments", initials: "NJ", color: "bg-cyan-500",     subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279", time: "8:34 AM" },
   ],
   [
-    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
-    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹499" },
-    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
-    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
-    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹349" },
-    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Razorpay Payment", initials: "TG", color: "bg-pink-500",   subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279", time: "Yesterday" },
+    { sender: "Payments", initials: "VR", color: "bg-indigo-500",         subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹499", time: "Yesterday" },
+    { sender: "Team Razorpay", initials: "HK", color: "bg-orange-500",    subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "Yesterday" },
+    { sender: "Payments", initials: "AB", color: "bg-teal-500",           subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279", time: "Apr 27" },
+    { sender: "Razorpay Payment", initials: "DM", color: "bg-fuchsia-500",subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹349", time: "Apr 27" },
+    { sender: "Team Razorpay", initials: "KS", color: "bg-lime-600",      subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "Apr 26" },
   ],
 ];
 
