@@ -40,6 +40,7 @@ const valueRows = [
   ["50+ ChatGPT Writing Prompts (Bonus)", "₹2,000"],
   ["WhatsApp Support Group (Bonus)", "Priceless"],
   ["500 Digital Product Ideas (Bonus)", "₹2,500"],
+  ["Money Hustle Ebook (Bonus)", "₹1,000"],
   ["Lifetime Access", "✅"],
   ["Instant Access", "✅"],
 ];
@@ -256,7 +257,7 @@ function Pricing() {
           </ul>
           <div className="px-6 py-5 bg-secondary flex justify-between items-center">
             <span className="font-bold">Total Value</span>
-            <span className="font-extrabold text-lg line-through opacity-60">₹9,499</span>
+            <span className="font-extrabold text-lg line-through opacity-60">₹10,499</span>
           </div>
           <div className="px-6 py-8 bg-gradient-cta text-white text-center">
             <p className="text-sm uppercase tracking-widest opacity-90">🎉 Your Price Today</p>
