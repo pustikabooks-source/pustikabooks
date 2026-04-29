@@ -455,7 +455,7 @@ function ProofInner() {
 
         <a
           href={CHECKOUT}
-          className="mt-8 inline-flex items-center justify-center rounded-xl bg-brand-red px-10 py-5 text-lg md:text-xl font-extrabold text-white shadow-glow hover:scale-[1.02] transition-transform"
+          className="mt-10 inline-flex items-center justify-center rounded-2xl bg-white border-4 border-brand-red px-12 py-6 text-2xl md:text-3xl font-extrabold text-brand-red shadow-glow hover:scale-[1.02] transition-transform tracking-tight"
         >
           Yes, I Want Sales Like This!
         </a>
