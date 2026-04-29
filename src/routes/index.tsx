@@ -32,6 +32,7 @@ const bonuses = [
   { tag: "BONUS 01", title: "50+ ChatGPT Prompts", body: "Ready-to-use prompts to help you write your entire eBook effortlessly." },
   { tag: "BONUS 02", title: "Private WhatsApp Community", body: "Ask questions, get feedback, and grow with action-takers like you." },
   { tag: "BONUS 03", title: "500 Digital Product Ideas", body: "Instant inspiration with profitable, beginner-friendly product ideas." },
+  { tag: "BONUS 04", title: "Money Hustle Ebook", body: "The easiest passive income methods no one talks about." },
 ];
 
 const valueRows = [
