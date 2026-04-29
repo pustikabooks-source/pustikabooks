@@ -53,6 +53,25 @@ const faqs = [
   { q: "What makes this different from other eBook courses?", a: "We don't sell fluff. We give you real, step-by-step systems you can actually use — not just random Google tips." },
 ];
 
+const proofRows = [
+  [
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹349" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹547" },
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
+  ],
+  [
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹499" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+    { sender: "Payments", subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279" },
+    { sender: "Razorpay Payment", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹349" },
+    { sender: "Team Razorpay", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279" },
+  ],
+];
+
 function Logo() {
   return (
     <div className="flex flex-col items-center leading-none">
