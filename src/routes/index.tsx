@@ -338,6 +338,104 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
 }
 
 function Proof() {
+  return ProofInner();
+}
+
+function DashboardCard({ d }: { d: typeof dashboards[0] }) {
+  return (
+    <div className="rounded-2xl border bg-white shadow-card overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
+      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x">
+        <div className="p-6">
+          <div className="flex items-center gap-1 text-xs font-semibold text-foreground/60">
+            <span>Collected Amount</span>
+            <span className="w-3.5 h-3.5 rounded-full border border-foreground/30 inline-flex items-center justify-center text-[8px]">i</span>
+          </div>
+          <p className="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">{d.amount}</p>
+          <p className="mt-1 text-xs text-foreground/60">from {d.count} captured payments</p>
+          <div className="mt-6 pt-4 border-t">
+            <p className="text-xs text-foreground/70">
+              Net settlement amount will be deposited as per your{" "}
+              <span className="text-blue-600 font-semibold">settlement cycle</span>
+            </p>
+          </div>
+        </div>
+        <div className="p-6">
+          <p className="text-xs font-semibold text-foreground/60">Split by payment method</p>
+          <div className="mt-4 flex items-center gap-6">
+            <div
+              className="w-24 h-24 md:w-28 md:h-28 rounded-full shrink-0"
+              style={{
+                background: `conic-gradient(#8B7CF6 0 ${d.upi}%, #D4A574 ${d.upi}% 100%)`,
+                mask: "radial-gradient(circle, transparent 50%, black 51%)",
+                WebkitMask: "radial-gradient(circle, transparent 50%, black 51%)",
+              }}
+            />
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-[#8B7CF6]" />
+                <span className="font-semibold">UPI</span>
+                <span className="text-foreground/60 ml-2">{d.upi}%</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-[#D4A574]" />
+                <span className="font-semibold">Card</span>
+                <span className="text-foreground/60 ml-2">{d.card}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 border-t divide-x">
+        <div className="p-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1.5 text-xs font-semibold text-teal-700">
+              <span className="w-3.5 h-3.5 rounded-full border border-teal-700 inline-flex items-center justify-center text-[8px]">↺</span>
+              Refunds
+            </div>
+            <span className="text-foreground/40">›</span>
+          </div>
+          <p className="mt-3 text-xl font-extrabold">{d.refunds}</p>
+          <p className="mt-1 text-[11px] text-foreground/60">{d.refundsCount}</p>
+        </div>
+        <div className="p-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-600">
+              <span>⚠</span> Disputes
+            </div>
+            <span className="text-foreground/40">›</span>
+          </div>
+          <p className="mt-3 text-xl font-extrabold">{d.disputes}</p>
+          <p className="mt-1 text-[11px] text-foreground/60">{d.disputesNote}</p>
+        </div>
+        <div className="p-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-600">
+              <span>⊗</span> Failed
+            </div>
+            <span className="text-foreground/40">›</span>
+          </div>
+          <p className="mt-3 text-xl font-extrabold">{d.failed}</p>
+          <p className="mt-1 text-[11px] text-foreground/60">{d.failedNote}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DashboardMarquee() {
+  const doubled = [...dashboards, ...dashboards];
+  return (
+    <div className="mt-10 -mx-6 overflow-hidden">
+      <div className="flex gap-6 w-max animate-marquee-slow px-6">
+        {doubled.map((d, i) => (
+          <DashboardCard key={i} d={d} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProofInner() {
   return (
     <section className="py-20 px-6 bg-white border-t overflow-hidden">
       <div className="mx-auto max-w-6xl text-center">
