@@ -1,12 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import founder from "@/assets/founder.jpg";
-
-export const Route = createFileRoute("/")({
-  component: Index,
-});
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const WHATSAPP = "https://wa.me/919662436387";
@@ -603,3 +598,5 @@ function Index() {
     </div>
   );
 }
+
+export default Index;
