@@ -669,6 +669,7 @@ function Index() {
       <Proof />
       <Pricing />
       <Whatsapp />
+      <NewsletterSection />
       <UrgencyCTA />
       <FAQ />
       <FinalCTA />
