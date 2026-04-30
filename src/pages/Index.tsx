@@ -150,7 +150,7 @@ function NewsletterForm() {
   }
 
   return (
-    <div className="mt-8 max-w-lg">
+    <div className="w-full max-w-lg text-left">
       <div className="rounded-2xl border bg-card/80 backdrop-blur p-5 md:p-6 shadow-card">
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-cta text-white text-lg">✉️</span>
