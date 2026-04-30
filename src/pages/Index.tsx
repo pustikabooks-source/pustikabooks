@@ -114,6 +114,84 @@ function TopBar() {
 
 function Hero() {
   return (
+    <HeroInner />
+  );
+}
+
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus("error");
+      setMessage("Please enter a valid email address.");
+      return;
+    }
+    setStatus("loading");
+    try {
+      const formData = new FormData();
+      formData.append("EMAIL", email);
+      formData.append("email_address_check", "");
+      formData.append("locale", "en");
+      await fetch(
+        "https://e480659a.sibforms.com/serve/MUIFALvRlwbB6jk6onpDlxLTrMuLOGHfL20YVKIXRAeD982QR78x7CPBcMUhe3taH8AoCc2nuTg8fCfa9IQQDBR6sgxkpMTQRLP58zWRry3tSapqOjcP1J1TdXBwhm0cxdCRn1c_eOzy0U3jXgv7plhYiPifMErj3v7tW_gidbPbuYucjS8Cx7moWCig5oO_TsBbIYY5euuyE6_y8w==",
+        { method: "POST", body: formData, mode: "no-cors" }
+      );
+      setStatus("success");
+      setMessage("You're in! Check your inbox to confirm.");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setMessage("Something went wrong. Please try again.");
+    }
+  }
+
+  return (
+    <div className="mt-8 max-w-lg">
+      <div className="rounded-2xl border bg-card/80 backdrop-blur p-5 md:p-6 shadow-card">
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-cta text-white text-lg">✉️</span>
+          <div>
+            <p className="font-bold leading-tight">Get free eBook tips weekly</p>
+            <p className="text-xs text-muted-foreground">Join 10,000+ creators. No spam, unsubscribe anytime.</p>
+          </div>
+        </div>
+        <form onSubmit={onSubmit} className="mt-4 flex flex-col sm:flex-row gap-2">
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            maxLength={255}
+            disabled={status === "loading" || status === "success"}
+            className="flex-1 h-12 rounded-full bg-background border border-input px-5 text-sm outline-none focus:ring-2 focus:ring-primary/40 transition disabled:opacity-60"
+            aria-label="Email address"
+          />
+          <button
+            type="submit"
+            disabled={status === "loading" || status === "success"}
+            className="h-12 inline-flex items-center justify-center rounded-full bg-gradient-cta px-6 text-sm font-bold text-white shadow-glow hover:scale-[1.02] active:scale-100 transition-transform disabled:opacity-70 disabled:hover:scale-100"
+          >
+            {status === "loading" ? "Subscribing…" : status === "success" ? "Subscribed ✓" : "Subscribe"}
+          </button>
+        </form>
+        {status === "success" && (
+          <p className="mt-3 text-sm font-medium text-emerald-600">{message}</p>
+        )}
+        {status === "error" && (
+          <p className="mt-3 text-sm font-medium text-destructive">{message}</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function HeroInner() {
+  return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-soft -z-10" />
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-20 grid md:grid-cols-2 gap-12 items-center">
