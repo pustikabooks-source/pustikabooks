@@ -207,7 +207,6 @@ function HeroInner() {
             <CtaButton>I'm Ready to Start →</CtaButton>
             <CtaButton variant="ghost">Pass. I Hate Money</CtaButton>
           </div>
-          <NewsletterForm />
           <div className="mt-8 flex items-center gap-3 text-sm text-muted-foreground">
             <div className="flex -space-x-2">
               {[0,1,2,3].map(i => (
