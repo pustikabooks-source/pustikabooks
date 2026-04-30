@@ -191,6 +191,29 @@ function NewsletterForm() {
 }
 
 function HeroInner() {
+  return <HeroContent />;
+}
+
+function NewsletterSection() {
+  return (
+    <section className="py-16 px-6 bg-secondary/40">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-sm font-bold tracking-widest text-brand-purple uppercase">Free Newsletter</p>
+        <h2 className="mt-3 text-3xl md:text-5xl font-extrabold leading-tight">
+          Get free eBook tips <span className="text-brand-red">every week</span>
+        </h2>
+        <p className="mt-4 text-foreground/70 text-lg">
+          Real strategies, no fluff. Join 10,000+ creators learning to sell digital products in India.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <NewsletterForm />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeroContent() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-soft -z-10" />
