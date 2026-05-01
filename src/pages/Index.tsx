@@ -227,7 +227,7 @@ function HeroContent() {
             Build, Market & Sell Your First eBook — even if you've never written before. Step-by-step guidance. No tech skills needed. Results in 30 days.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <CtaButton>I'm Ready to Start →</CtaButton>
+            <CtaButton>Get Instant Access for ₹279</CtaButton>
           </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center">
