@@ -31,7 +31,7 @@ const bonuses = [
 ];
 
 const valueRows = [
-  ["eBook Mastery Guide", "₹4,999"],
+  ["eBook Mastery Guide: From Idea to Income", "₹4,999"],
   ["50+ ChatGPT Writing Prompts (Bonus)", "₹2,000"],
   ["WhatsApp Support Group (Bonus)", "Priceless"],
   ["500 Digital Product Ideas (Bonus)", "₹2,500"],
