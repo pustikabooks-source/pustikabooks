@@ -228,15 +228,6 @@ function HeroContent() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <CtaButton>I'm Ready to Start →</CtaButton>
-            <CtaButton variant="ghost">Pass. I Hate Money</CtaButton>
-          </div>
-          <div className="mt-8 flex items-center gap-3 text-sm text-muted-foreground">
-            <div className="flex -space-x-2">
-              {[0,1,2,3].map(i => (
-                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-gradient-cta" />
-              ))}
-            </div>
-            <span><b className="text-foreground">10,000+</b> learners already started</span>
           </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center">
