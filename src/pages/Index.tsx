@@ -226,9 +226,6 @@ function HeroContent() {
           <p className="mt-6 text-lg text-foreground/80 max-w-xl">
             Build, Market & Sell Your First eBook — even if you've never written before. Step-by-step guidance. No tech skills needed. Results in 30 days.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <CtaButton>Get Instant Access for ₹279</CtaButton>
-          </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center">
           <div className="relative">
@@ -255,9 +252,6 @@ function Features() {
               <p className="mt-3 text-foreground/70 leading-relaxed">{f.body}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <CtaButton>Get Instant Access for ₹279</CtaButton>
         </div>
       </div>
     </section>
