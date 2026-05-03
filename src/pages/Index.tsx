@@ -351,39 +351,96 @@ function Founder() {
 
 function Pricing() {
   return (
-    <section className="py-20 px-6">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold">All This for the Price of a Pizza 🍕</h2>
-        <p className="mt-4 text-foreground/70 text-lg">Seriously. Lifetime access, instant delivery.</p>
+    <div className="w-full bg-[#0A001F] text-white py-16 px-4 font-sans">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 tracking-tight">
+          Ready to Turn Your Idea Into Income?
+        </h2>
+        <p className="text-xl text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+          Choose the package that best fits your goals and skip weeks of frustration.
+        </p>
 
-        <div className="mt-10 rounded-3xl bg-card border shadow-glow overflow-hidden text-left">
-          <div className="bg-brand-ink text-white px-6 py-4 flex justify-between text-sm font-semibold tracking-wide">
-            <span>🚀 What You Get</span>
-            <span>💰 Value</span>
-          </div>
-          <ul className="divide-y">
-            {valueRows.map(([item, val]) => (
-              <li key={item} className="flex justify-between items-center px-6 py-4">
-                <span className="text-foreground/80">{item}</span>
-                <span className="font-bold">{val}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="px-6 py-5 bg-secondary flex justify-between items-center">
-            <span className="font-bold">Total Value</span>
-            <span className="font-extrabold text-lg line-through opacity-60">₹10,499</span>
-          </div>
-          <div className="px-6 py-8 bg-gradient-cta text-white text-center">
-            <p className="text-sm uppercase tracking-widest opacity-90">🎉 Your Price Today</p>
-            <p className="mt-2 text-5xl md:text-6xl font-extrabold">₹279</p>
-            <a href={CHECKOUT} className="mt-6 inline-flex items-center justify-center rounded-full bg-white text-foreground px-8 py-4 font-bold hover:bg-white/90 transition">
-              🔥 Yes, I Want Instant Access 🔥
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+          {/* Card 1: Basic Package */}
+          <div className="bg-[#11012B] p-8 rounded-3xl border-2 border-[#1B0345] shadow-xl flex flex-col h-full hover:border-purple-600 transition-colors duration-300">
+            <h3 className="text-3xl font-bold text-white mb-2">Basic Package</h3>
+            <p className="text-gray-400 mb-6 text-lg">The comprehensive roadmap to ebook success.</p>
+
+            <div className="bg-[#050010] p-6 rounded-2xl mb-8 flex justify-between items-center border border-[#1B0345]">
+              <span className="text-sm font-semibold tracking-wide text-gray-400 uppercase">Regular Value: Rs. 10,499</span>
+              <div className="text-right">
+                <span className="text-5xl font-bold text-white">Rs. 279</span>
+                <p className="text-xs text-gray-400">One-time payment</p>
+              </div>
+            </div>
+
+            <ul className="space-y-4 mb-10 flex-grow">
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> eBook Mastery Guide (Full 10-Chapter Guide)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> ChatGPT Prompt Vault for Content Generation</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Mobile Funnel Setup Blueprint</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Meta (FB/IG) Ad Launch Strategy</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> WhatsApp Support Group Access</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Lifetime Updates</li>
+            </ul>
+
+            <a
+              href="https://rzp.io/rzp/deLqOQQa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center bg-white text-purple-900 font-extrabold text-xl py-5 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+            >
+              Get Basic Access Now 🔥
             </a>
-            <p className="mt-4 text-xs opacity-90">✅ Instant Access • 🔒 100% Secure Payment • 📲 WhatsApp Support</p>
+            <p className="text-xs text-center mt-4 text-gray-500">🔒 100% Secure Payment • Instant Delivery</p>
+          </div>
+
+          {/* Card 2: Pro Bundle (The Upsell) */}
+          <div className="bg-[#11012B] p-8 rounded-3xl shadow-2xl flex flex-col h-full border-4 border-purple-500 relative transform md:-translate-y-4">
+            <div className="absolute top-0 right-0 bg-pink-500 text-white font-bold px-5 py-2 rounded-bl-xl rounded-tr-3xl text-sm shadow-md">
+              BEST VALUE - SAVE 50%
+            </div>
+
+            <h3 className="text-3xl font-bold text-white mb-2 pt-3">The PRO Bundle</h3>
+            <p className="text-gray-400 mb-6 text-lg">Includes the Ebook + The Complete Implementation Toolkit.</p>
+
+            <div className="w-full mb-8 rounded-2xl overflow-hidden border-2 border-[#1B0345]">
+              <img
+                src="image_8.png"
+                alt="Pustika Books Pro Vault Implementation Bundle Contents: Checklists, Templates, Prompt Libraries, Niche Guides, Headlines"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="bg-[#050010] p-6 rounded-2xl mb-8 flex justify-between items-center border-2 border-purple-900">
+              <span className="text-sm font-semibold tracking-wide text-purple-300 uppercase">Regular Price: <span className="line-through text-gray-600">Rs. 999</span></span>
+              <div className="text-right">
+                <span className="text-5xl font-bold text-pink-400">Rs. 499</span>
+                <p className="text-xs text-gray-400">One-time upgrade price</p>
+              </div>
+            </div>
+
+            <ul className="space-y-4 mb-10 flex-grow">
+              <li className="flex items-center text-pink-300 font-semibold"><span className="text-pink-400 mr-3 text-xl">✅</span> EVERYTHING in the Basic Package, PLUS:</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 10+ Ebook Design Inspiration Templates (PDF)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Complete AI Prompt Library (Write chapters & ads faster)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 30-Day First Sale Launch Checklist (Day-by-day roadmap)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 100+ High-Converting Headline Formulas for IG/FB</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Curated Indian Niche Research Guide (50+ Trending Niches)</li>
+            </ul>
+
+            <a
+              href="https://rzp.io/rzp/0PZ18Xk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white font-extrabold text-xl py-5 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+            >
+              Get The PRO Bundle Now 🚀
+            </a>
+            <p className="text-xs text-center mt-4 text-gray-500">🔒 100% Secure Payment • Instant Delivery</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
