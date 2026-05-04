@@ -308,7 +308,7 @@ function Bonuses() {
           Grab <span className="text-brand-yellow">₹5,500+</span> in Bonuses
           <br className="hidden md:block" />
           <span className="text-white/90">— absolutely </span>
-          <span className="bg-gradient-cta bg-clip-text text-transparent">FREE</span>
+          <span className="text-brand-yellow drop-shadow-[0_2px_12px_rgba(255,210,80,0.55)]">FREE</span>
         </h2>
         <p className="mt-5 text-center text-white/70 text-lg max-w-2xl mx-auto">
           Every order ships with these handpicked, action-ready bonuses. No upsells. No catch. Just pure value stacked on top of your eBook.
@@ -354,7 +354,7 @@ function Bonuses() {
           <p className="text-sm uppercase tracking-widest text-white/60">Total Bonus Value</p>
           <p className="mt-2 text-4xl md:text-5xl font-extrabold">
             <span className="line-through text-white/40 mr-3">₹5,500</span>
-            <span className="bg-gradient-cta bg-clip-text text-transparent">YOURS FREE TODAY</span>
+            <span className="text-brand-yellow drop-shadow-[0_2px_12px_rgba(255,210,80,0.55)]">YOURS FREE TODAY</span>
           </p>
           <p className="mt-3 text-white/70">Bonuses delivered instantly with your eBook. 🎉</p>
         </div>
