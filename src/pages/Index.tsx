@@ -293,20 +293,70 @@ function Modules() {
 
 function Bonuses() {
   return (
-    <section className="py-20 px-6">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl md:text-5xl font-extrabold">
-          Unlock Exclusive Bonuses — <span className="text-brand-red">100% FREE</span>
+    <section className="relative py-24 px-6 overflow-hidden bg-brand-ink text-white">
+      {/* decorative glow */}
+      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-cta opacity-25 blur-3xl" />
+      <div className="absolute -bottom-32 -right-32 w-[420px] h-[420px] rounded-full bg-gradient-cta opacity-20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl">
+        <div className="flex justify-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/15 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-brand-yellow">
+            🎁 Limited-Time Bonuses
+          </span>
+        </div>
+        <h2 className="mt-5 text-center text-4xl md:text-6xl font-extrabold leading-tight">
+          Grab <span className="text-brand-yellow">₹5,500+</span> in Bonuses
+          <br className="hidden md:block" />
+          <span className="text-white/90">— absolutely </span>
+          <span className="bg-gradient-cta bg-clip-text text-transparent">FREE</span>
         </h2>
-        <p className="mt-4 text-center text-foreground/70">Every order ships with these handpicked bonuses. No upsells. No catch.</p>
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {bonuses.map((b) => (
-            <div key={b.tag} className="relative rounded-2xl bg-card border p-7 shadow-card">
-              <span className="absolute -top-3 left-6 text-xs font-bold tracking-wider px-3 py-1 rounded-full bg-gradient-cta text-white">FREE • {b.tag}</span>
-              <h3 className="mt-4 text-xl font-bold">{b.title}</h3>
-              <p className="mt-3 text-foreground/70 leading-relaxed">{b.body}</p>
+        <p className="mt-5 text-center text-white/70 text-lg max-w-2xl mx-auto">
+          Every order ships with these handpicked, action-ready bonuses. No upsells. No catch. Just pure value stacked on top of your eBook.
+        </p>
+
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          {bonuses.map((b, i) => (
+            <div
+              key={b.tag}
+              className="group relative rounded-2xl p-[1.5px] bg-gradient-to-br from-white/30 via-white/10 to-transparent hover:from-brand-yellow/60 hover:via-brand-red/40 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-full rounded-2xl bg-brand-ink/90 backdrop-blur p-7 md:p-8 overflow-hidden">
+                {/* corner ribbon */}
+                <div className="absolute top-0 right-0 bg-gradient-cta text-white text-[10px] font-extrabold tracking-wider px-3 py-1 rounded-bl-xl shadow-lg">
+                  FREE • {b.tag}
+                </div>
+
+                <div className="flex items-start gap-5">
+                  <div className="shrink-0 w-16 h-16 rounded-2xl bg-gradient-cta flex items-center justify-center text-3xl shadow-glow group-hover:scale-110 transition-transform">
+                    {b.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">{b.title}</h3>
+                    </div>
+                    <p className="mt-2 text-white/70 leading-relaxed">{b.body}</p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <span className="text-xs uppercase tracking-widest text-white/50">Worth</span>
+                      <span className="text-lg font-extrabold text-brand-yellow">{b.value}</span>
+                      <span className="ml-auto inline-flex items-center gap-1 text-xs font-bold text-emerald-400">
+                        ✓ Included
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* value stack banner */}
+        <div className="mt-12 rounded-2xl border border-white/15 bg-gradient-to-r from-white/[0.08] to-white/[0.03] backdrop-blur p-6 md:p-8 text-center">
+          <p className="text-sm uppercase tracking-widest text-white/60">Total Bonus Value</p>
+          <p className="mt-2 text-4xl md:text-5xl font-extrabold">
+            <span className="line-through text-white/40 mr-3">₹5,500</span>
+            <span className="bg-gradient-cta bg-clip-text text-transparent">YOURS FREE TODAY</span>
+          </p>
+          <p className="mt-3 text-white/70">Bonuses delivered instantly with your eBook. 🎉</p>
         </div>
       </div>
     </section>
