@@ -107,7 +107,7 @@ function CtaButton({ href = CHECKOUT, children, variant = "primary" }: { href?: 
 function TopBar() {
   return (
     <div className="bg-brand-ink text-white text-center text-sm py-2.5 px-4 font-medium">
-      No Upsells. No Hidden Offers. No BS.
+      Instant Delivery. Secure Razorpay Checkout. 100% Beginner Friendly.
     </div>
   );
 }
@@ -221,11 +221,23 @@ function HeroContent() {
         <div className="order-2 md:order-1">
           <Logo />
           <h1 className="mt-8 text-4xl md:text-6xl font-extrabold leading-[1.05]">
-            START EARNING WITH <span className="text-brand-red">EBOOKS IN 30 DAYS!</span>
+            You Have Ideas. <span className="text-brand-red">Now Turn Them Into Income in 30 Days.</span>
           </h1>
           <p className="mt-6 text-lg text-foreground/80 max-w-xl">
             Build, Market & Sell Your First eBook — even if you've never written before. Step-by-step guidance. No tech skills needed. Results in 30 days.
           </p>
+          <div className="mt-8">
+            <a
+              href="#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="inline-flex items-center justify-center rounded-full bg-gradient-cta px-10 py-4 text-base md:text-lg font-extrabold text-white shadow-glow hover:scale-[1.03] active:scale-100 transition-transform"
+            >
+              Get Started Now →
+            </a>
+          </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center">
           <div className="relative">
@@ -395,7 +407,7 @@ function Founder() {
 
 function Pricing() {
   return (
-    <div className="w-full bg-[#0A001F] text-white py-16 px-4 font-sans">
+    <div id="pricing" className="w-full bg-[#0A001F] text-white py-16 px-4 font-sans scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 tracking-tight">
           Ready to Turn Your Idea Into Income?
@@ -446,14 +458,6 @@ function Pricing() {
 
             <h3 className="text-3xl font-bold text-white mb-2 pt-3">The PRO Bundle</h3>
             <p className="text-gray-400 mb-6 text-lg">Includes the Ebook + The Complete Implementation Toolkit.</p>
-
-            <div className="w-full mb-8 rounded-2xl overflow-hidden border-2 border-[#1B0345]">
-              <img
-                src="image_8.png"
-                alt="Pustika Books Pro Vault Implementation Bundle Contents: Checklists, Templates, Prompt Libraries, Niche Guides, Headlines"
-                className="w-full h-auto object-cover"
-              />
-            </div>
 
             <div className="bg-[#050010] p-6 rounded-2xl mb-8 flex justify-between items-center border-2 border-purple-900">
               <span className="text-sm font-semibold tracking-wide text-purple-300 uppercase">Regular Price: <span className="line-through text-gray-600">Rs. 999</span></span>
