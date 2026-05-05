@@ -783,7 +783,6 @@ function Index() {
       <Hero />
       <Features />
       <Modules />
-      <Bonuses />
       <Founder />
       <Proof />
       <Pricing />
