@@ -431,11 +431,11 @@ function Pricing() {
             </div>
 
             <ul className="space-y-4 mb-10 flex-grow">
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> eBook Mastery Guide (Full 10-Chapter Guide)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> ChatGPT Prompt Vault for Content Generation</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Mobile Funnel Setup Blueprint</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Meta (FB/IG) Ad Launch Strategy</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> WhatsApp Support Group Access</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> E-book Mastery Guide (Full Step-by-Step Main Guide)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> 50+ ChatGPT eBook Prompts for Content Generation</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> 500+ Digital Product Ideas for Instant Inspiration</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Bonus: Money Hustle E-book (Passive Income Methods)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Private WhatsApp Support Group Access</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Lifetime Updates</li>
             </ul>
 
