@@ -432,9 +432,6 @@ function Pricing() {
 
             <ul className="space-y-4 mb-10 flex-grow">
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> E-book Mastery Guide (Full Step-by-Step Main Guide)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> 50+ ChatGPT eBook Prompts for Content Generation</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> 500+ Digital Product Ideas for Instant Inspiration</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Bonus: Money Hustle E-book (Passive Income Methods)</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Private WhatsApp Support Group Access</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Lifetime Updates</li>
             </ul>
@@ -470,9 +467,11 @@ function Pricing() {
             <ul className="space-y-4 mb-10 flex-grow">
               <li className="flex items-center text-pink-300 font-semibold"><span className="text-pink-400 mr-3 text-xl">✅</span> EVERYTHING in the Basic Package, PLUS:</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 10+ Ebook Design Inspiration Templates (PDF)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Complete AI Prompt Library (Write chapters & ads faster)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Complete AI Prompt Library (50+ ChatGPT eBook Prompts)</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 500+ Digital Product Ideas for Instant Inspiration</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 30-Day First Sale Launch Checklist (Day-by-day roadmap)</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 100+ High-Converting Headline Formulas for IG/FB</li>
+              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Money Hustle E-book (Passive Income Methods)</li>
               <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Curated Indian Niche Research Guide (50+ Trending Niches)</li>
             </ul>
 
