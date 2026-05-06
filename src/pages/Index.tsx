@@ -1,4 +1,4 @@
-import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Users, Star, Check } from "lucide-react";
+import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import ebookMockup from "@/assets/ebook-cover.png";
 
