@@ -226,6 +226,15 @@ function HeroContent() {
           <p className="mt-6 text-lg text-foreground/80 max-w-xl">
             Build, Market & Sell Your First eBook — even if you've never written before. Step-by-step guidance. No tech skills needed. Results in 30 days.
           </p>
+          <div className="mt-8 max-w-xl">
+            <h2 className="text-2xl md:text-3xl font-extrabold">Why We Created This eBook</h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed">
+              At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
+            </p>
+          </div>
           <div className="mt-8">
             <a
               href="#pricing"
@@ -782,7 +791,6 @@ function Index() {
       <Hero />
       <Features />
       <Modules />
-      <Founder />
       <Proof />
       <Pricing />
       <Whatsapp />
