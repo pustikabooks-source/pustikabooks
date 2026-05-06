@@ -1,7 +1,6 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 import ebookMockup from "@/assets/ebook-cover.png";
-import founder from "@/assets/founder.jpg";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const WHATSAPP = "https://wa.me/919662436387";
