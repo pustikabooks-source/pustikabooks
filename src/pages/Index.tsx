@@ -383,36 +383,6 @@ function Bonuses() {
   );
 }
 
-function Founder() {
-  return (
-    <section className="py-20 px-6 bg-white border-t">
-      <div className="mx-auto max-w-5xl grid md:grid-cols-[320px_1fr] gap-10 items-center">
-        <div className="flex flex-col items-center text-center">
-          <div className="relative w-64 h-80 rounded-3xl overflow-hidden shadow-card bg-gradient-cta p-1">
-            <img
-              src={founder}
-              alt="Arpan Chaudhary, founder of Pustika"
-              className="w-full h-full rounded-[1.3rem] object-cover object-center"
-              loading="lazy"
-            />
-          </div>
-          <p className="mt-4 text-lg font-bold">Arpan Chaudhary</p>
-          <p className="text-sm text-muted-foreground">CEO & Founder, Pustika</p>
-        </div>
-        <div>
-          <h2 className="text-3xl md:text-4xl font-extrabold">Why We Created This eBook</h2>
-          <p className="mt-5 text-foreground/80 leading-relaxed text-lg">
-            We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
-          </p>
-          <p className="mt-4 text-foreground/80 leading-relaxed text-lg">
-            At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Pricing() {
   return (
     <div id="pricing" className="w-full bg-[#0A001F] text-white py-16 px-4 font-sans scroll-mt-20">
