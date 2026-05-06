@@ -1,8 +1,9 @@
-import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap } from "lucide-react";
+import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import ebookMockup from "@/assets/ebook-cover.png";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
+const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
 const WHATSAPP = "https://wa.me/919662436387";
 
 const features = [
@@ -20,23 +21,6 @@ const modules = [
   { n: "03", Icon: BookOpen, title: "Create Your eBook Crazy Fast", body: "Plan, write, and format your eBook fast with smart tools like ChatGPT — even if writing isn't your thing." },
   { n: "04", Icon: Megaphone, title: "Sell Smart. Not Spendy.", body: "Use Reels, Stories, and DMs to drive sales — zero ad spend, zero drama." },
   { n: "05", Icon: Zap, title: "Automate the Whole Thing", body: "Set up checkout, delivery and follow-up on autopilot. No coding, no stress." },
-];
-
-const bonuses = [
-  { tag: "BONUS 01", icon: "🤖", title: "50+ ChatGPT Prompts", body: "Ready-to-use prompts to help you write your entire eBook effortlessly.", value: "₹2,000" },
-  { tag: "BONUS 02", icon: "💬", title: "Private WhatsApp Community", body: "Ask questions, get feedback, and grow with action-takers like you.", value: "Priceless" },
-  { tag: "BONUS 03", icon: "💡", title: "500 Digital Product Ideas", body: "Instant inspiration with profitable, beginner-friendly product ideas.", value: "₹2,500" },
-  { tag: "BONUS 04", icon: "💰", title: "Money Hustle Ebook", body: "The easiest passive income methods no one talks about.", value: "₹1,000" },
-];
-
-const valueRows = [
-  ["eBook Mastery Guide: From Idea to Income", "₹4,999"],
-  ["50+ ChatGPT Writing Prompts (Bonus)", "₹2,000"],
-  ["WhatsApp Support Group (Bonus)", "Priceless"],
-  ["500 Digital Product Ideas (Bonus)", "₹2,500"],
-  ["Money Hustle Ebook (Bonus)", "₹1,000"],
-  ["Lifetime Access", "✅"],
-  ["Instant Access", "✅"],
 ];
 
 const faqs = [
@@ -74,30 +58,19 @@ const dashboards = [
   { amount: "₹47,820.00", count: 124, upi: 98.40, card: 1.60, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "7", failedNote: "payments" },
 ];
 
-function Logo() {
-  return (
-    <div className="flex flex-col items-center leading-none">
-      <span className="font-display text-4xl md:text-5xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-        Pustika
-      </span>
-      <span className="text-xs md:text-sm tracking-[0.4em] text-muted-foreground mt-1">B O O K S</span>
-    </div>
-  );
+function scrollToPricing(e: React.MouseEvent) {
+  e.preventDefault();
+  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function CtaButton({ href = CHECKOUT, children, variant = "primary" }: { href?: string; children: React.ReactNode; variant?: "primary" | "ghost" }) {
-  if (variant === "ghost") {
-    return (
-      <a href={href} className="inline-flex items-center justify-center rounded-full bg-secondary px-7 py-3.5 text-sm font-semibold text-foreground/70 hover:bg-secondary/80 transition">
-        {children}
-      </a>
-    );
-  }
+function GlowButton({ href, onClick, children, className = "" }: { href?: string; onClick?: (e: React.MouseEvent) => void; children: React.ReactNode; className?: string }) {
   return (
     <a
       href={href}
-      className="inline-flex items-center justify-center rounded-full bg-gradient-cta px-8 py-3.5 text-sm md:text-base font-bold text-white shadow-glow hover:scale-[1.02] active:scale-100 transition-transform"
+      onClick={onClick}
+      className={`relative inline-flex items-center justify-center rounded-full bg-gradient-cta px-8 py-4 text-base md:text-lg font-bold text-white shadow-glow hover:scale-[1.03] active:scale-100 transition-transform ${className}`}
     >
+      <span className="absolute inset-0 rounded-full bg-gradient-cta blur-xl opacity-60 -z-10" />
       {children}
     </a>
   );
@@ -105,152 +78,89 @@ function CtaButton({ href = CHECKOUT, children, variant = "primary" }: { href?: 
 
 function TopBar() {
   return (
-    <div className="bg-brand-ink text-white text-center text-sm py-2.5 px-4 font-medium">
-      Instant Delivery. Secure Razorpay Checkout. 100% Beginner Friendly.
+    <div className="bg-black text-white/90 text-center text-xs md:text-sm py-2.5 px-4 font-medium tracking-wide border-b border-white/5">
+      ⚡ Instant Delivery · 🔒 Secure Razorpay Checkout · 🚀 100% Beginner Friendly
     </div>
+  );
+}
+
+function Header() {
+  return (
+    <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/60 border-b border-white/5">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 h-16 flex items-center justify-between">
+        <div className="flex items-baseline gap-2">
+          <span className="text-xl md:text-2xl font-extrabold tracking-tight bg-gradient-cta bg-clip-text text-transparent">Pustika</span>
+          <span className="text-[10px] tracking-[0.4em] text-muted-foreground">BOOKS</span>
+        </div>
+        <a
+          href="#pricing"
+          onClick={scrollToPricing}
+          className="hidden sm:inline-flex items-center justify-center rounded-full bg-gradient-cta px-5 py-2 text-sm font-semibold text-white shadow-glow hover:scale-[1.03] transition-transform"
+        >
+          Get Started
+        </a>
+      </div>
+    </header>
   );
 }
 
 function Hero() {
   return (
-    <HeroInner />
-  );
-}
-
-function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [message, setMessage] = useState("");
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setStatus("error");
-      setMessage("Please enter a valid email address.");
-      return;
-    }
-    setStatus("loading");
-    try {
-      const formData = new FormData();
-      formData.append("EMAIL", email);
-      formData.append("email_address_check", "");
-      formData.append("locale", "en");
-      await fetch(
-        "https://e480659a.sibforms.com/serve/MUIFALvRlwbB6jk6onpDlxLTrMuLOGHfL20YVKIXRAeD982QR78x7CPBcMUhe3taH8AoCc2nuTg8fCfa9IQQDBR6sgxkpMTQRLP58zWRry3tSapqOjcP1J1TdXBwhm0cxdCRn1c_eOzy0U3jXgv7plhYiPifMErj3v7tW_gidbPbuYucjS8Cx7moWCig5oO_TsBbIYY5euuyE6_y8w==",
-        { method: "POST", body: formData, mode: "no-cors" }
-      );
-      setStatus("success");
-      setMessage("You're in! Check your inbox to confirm.");
-      setEmail("");
-    } catch {
-      setStatus("error");
-      setMessage("Something went wrong. Please try again.");
-    }
-  }
-
-  return (
-    <div className="w-full max-w-lg text-left">
-      <div className="rounded-2xl border bg-card/80 backdrop-blur p-5 md:p-6 shadow-card">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-cta text-white text-lg">✉️</span>
-          <div>
-            <p className="font-bold leading-tight">Get free eBook tips weekly</p>
-            <p className="text-xs text-muted-foreground">Join 10,000+ creators. No spam, unsubscribe anytime.</p>
-          </div>
-        </div>
-        <form onSubmit={onSubmit} className="mt-4 flex flex-col sm:flex-row gap-2">
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            maxLength={255}
-            disabled={status === "loading" || status === "success"}
-            className="flex-1 h-12 rounded-full bg-background border border-input px-5 text-sm outline-none focus:ring-2 focus:ring-primary/40 transition disabled:opacity-60"
-            aria-label="Email address"
-          />
-          <button
-            type="submit"
-            disabled={status === "loading" || status === "success"}
-            className="h-12 inline-flex items-center justify-center rounded-full bg-gradient-cta px-6 text-sm font-bold text-white shadow-glow hover:scale-[1.02] active:scale-100 transition-transform disabled:opacity-70 disabled:hover:scale-100"
-          >
-            {status === "loading" ? "Subscribing…" : status === "success" ? "Subscribed ✓" : "Subscribe"}
-          </button>
-        </form>
-        {status === "success" && (
-          <p className="mt-3 text-sm font-medium text-emerald-600">{message}</p>
-        )}
-        {status === "error" && (
-          <p className="mt-3 text-sm font-medium text-destructive">{message}</p>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function HeroInner() {
-  return <HeroContent />;
-}
-
-function NewsletterSection() {
-  return (
-    <section className="py-16 px-6 bg-secondary/40">
-      <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm font-bold tracking-widest text-brand-purple uppercase">Free Newsletter</p>
-        <h2 className="mt-3 text-3xl md:text-5xl font-extrabold leading-tight">
-          Get free eBook tips <span className="text-brand-red">every week</span>
-        </h2>
-        <p className="mt-4 text-foreground/70 text-lg">
-          Real strategies, no fluff. Join 10,000+ creators learning to sell digital products in India.
-        </p>
-        <div className="mt-8 flex justify-center">
-          <NewsletterForm />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function HeroContent() {
-  return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-soft -z-10" />
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-20 grid md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1">
-          <Logo />
-          <h1 className="mt-8 text-4xl md:text-6xl font-extrabold leading-[1.05]">
-            You Have Ideas. <span className="text-brand-red">Now Turn Them Into Income in 30 Days.</span>
-          </h1>
-          <p className="mt-6 text-lg text-foreground/80 max-w-xl">
-            Build, Market & Sell Your First eBook — even if you've never written before. Step-by-step guidance. No tech skills needed. Results in 30 days.
-          </p>
-          <div className="mt-8 max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-extrabold">Why We Created This eBook</h2>
-            <p className="mt-4 text-foreground/80 leading-relaxed">
-              We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
-            </p>
-            <p className="mt-3 text-foreground/80 leading-relaxed">
-              At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
-            </p>
-          </div>
-          <div className="mt-8">
-            <a
-              href="#pricing"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
-              className="inline-flex items-center justify-center rounded-full bg-gradient-cta px-10 py-4 text-base md:text-lg font-extrabold text-white shadow-glow hover:scale-[1.03] active:scale-100 transition-transform"
-            >
-              Get Started Now →
-            </a>
+      {/* glow background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-soft" />
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gradient-cta opacity-20 blur-[140px] -z-10" />
+      <div className="absolute inset-0 -z-10 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+
+      <div className="mx-auto max-w-5xl px-6 pt-16 md:pt-24 pb-20 text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md px-4 py-1.5 text-xs font-medium text-white/80">
+          <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
+          New · Updated for 2026
+        </div>
+
+        <h1 className="mt-7 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.02] tracking-[-0.04em]">
+          You Have Ideas.
+          <br />
+          <span className="bg-gradient-to-r from-[oklch(0.75_0.25_295)] via-[oklch(0.75_0.27_340)] to-[oklch(0.80_0.22_30)] bg-clip-text text-transparent">
+            Turn Them Into Income in 30 Days.
+          </span>
+        </h1>
+
+        <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          Build, market & sell your first eBook — even if you've never written before. Step-by-step guidance. No tech skills needed.
+        </p>
+
+        <div className="mt-10 flex flex-col items-center gap-4">
+          <GlowButton href="#pricing" onClick={scrollToPricing} className="px-12 py-5 text-lg md:text-xl">
+            Get Started Now →
+          </GlowButton>
+          <div className="flex items-center gap-3 text-xs md:text-sm text-white/60">
+            <div className="flex -space-x-2">
+              {["bg-gradient-to-br from-purple-400 to-pink-400", "bg-gradient-to-br from-pink-400 to-orange-400", "bg-gradient-to-br from-orange-400 to-yellow-400", "bg-gradient-to-br from-blue-400 to-purple-400"].map((c, i) => (
+                <div key={i} className={`w-7 h-7 rounded-full ring-2 ring-background ${c}`} />
+              ))}
+            </div>
+            <span className="flex items-center gap-1.5">
+              <Star className="w-3.5 h-3.5 fill-brand-yellow text-brand-yellow" />
+              <span className="font-semibold text-white/90">Trusted by 10,000+ Creators</span>
+            </span>
           </div>
         </div>
-        <div className="order-1 md:order-2 flex justify-center">
+
+        <div className="mt-16 max-w-2xl mx-auto text-left rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-7 md:p-9">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Why We Created This eBook</h2>
+          <p className="mt-4 text-white/70 leading-relaxed">
+            We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
+          </p>
+          <p className="mt-3 text-white/70 leading-relaxed">
+            At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
+          </p>
+        </div>
+
+        <div className="mt-12 flex justify-center">
           <div className="relative">
-            <div className="absolute -inset-8 bg-gradient-cta opacity-20 blur-3xl rounded-full" />
-            <img src={ebookMockup} alt="Ebook Mastery cover" className="relative w-[320px] md:w-[440px] animate-float drop-shadow-2xl" width={1024} height={1024} />
+            <div className="absolute -inset-12 bg-gradient-cta opacity-30 blur-3xl rounded-full" />
+            <img src={ebookMockup} alt="Ebook Mastery cover" className="relative w-[260px] md:w-[360px] animate-float drop-shadow-[0_30px_60px_rgba(168,85,247,0.45)]" width={1024} height={1024} />
           </div>
         </div>
       </div>
@@ -259,17 +169,35 @@ function HeroContent() {
 }
 
 function Features() {
+  // Bento layout: vary spans
+  const spans = [
+    "md:col-span-2 md:row-span-1",
+    "md:col-span-1",
+    "md:col-span-1",
+    "md:col-span-1",
+    "md:col-span-1",
+    "md:col-span-2",
+  ];
   return (
-    <section className="py-20 px-6">
-      <div className="mx-auto max-w-7xl">
-        <p className="text-center text-sm font-bold tracking-widest text-brand-purple uppercase">Tested by thousands. Trusted by learners.</p>
-        <h2 className="mt-3 text-center text-3xl md:text-5xl font-extrabold">Now it's your turn.</h2>
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f) => (
-            <div key={f.title} className="rounded-2xl border bg-card p-7 shadow-card hover:-translate-y-1 transition-transform">
-              <div className="text-4xl">{f.icon}</div>
-              <h3 className="mt-4 text-xl font-bold">{f.title}</h3>
-              <p className="mt-3 text-foreground/70 leading-relaxed">{f.body}</p>
+    <section className="py-24 px-6 relative">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[oklch(0.15_0.04_280)/0.5] to-transparent" />
+      <div className="mx-auto max-w-6xl">
+        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Tested by thousands · Trusted by learners</p>
+        <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight">Now it's your turn.</h2>
+        <div className="mt-14 grid md:grid-cols-3 auto-rows-fr gap-5">
+          {features.map((f, i) => (
+            <div
+              key={f.title}
+              className={`group relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-7 md:p-8 overflow-hidden hover:border-white/20 transition-all hover:-translate-y-1 ${spans[i] ?? ""}`}
+            >
+              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-gradient-cta opacity-0 group-hover:opacity-20 blur-3xl transition-opacity" />
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-cta/20 border border-white/10 text-2xl">
+                  {f.icon}
+                </div>
+                <h3 className="mt-5 text-xl md:text-2xl font-bold tracking-tight">{f.title}</h3>
+                <p className="mt-3 text-white/65 leading-relaxed text-[15px]">{f.body}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -280,28 +208,30 @@ function Features() {
 
 function Modules() {
   return (
-    <section className="py-20 px-6 bg-white text-foreground">
+    <section className="py-24 px-6 relative">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold leading-tight">
-          <span className="text-brand-yellow">What You'll Master Inside</span>{" "}
-          <span className="text-brand-red">This EBook</span>
+        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">What You'll Master Inside</p>
+        <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
+          Plan smart. Create fast.
+          <br />
+          <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Sell like a pro.</span>
         </h2>
-        <p className="mt-4 text-center italic text-foreground/70 text-lg">Plan Smart. Create Fast. Sell Like a Pro.</p>
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {modules.map((m) => {
             const Icon = m.Icon;
             return (
               <div
                 key={m.n}
-                className="rounded-2xl bg-card border p-8 text-center shadow-card hover:-translate-y-1 transition-transform"
+                className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-md p-7 hover:border-white/20 transition-all hover:-translate-y-1 overflow-hidden"
               >
-                <div className="mx-auto w-20 h-20 rounded-full bg-brand-blue flex items-center justify-center shadow-lg ring-4 ring-brand-blue/15">
-                  <Icon className="w-10 h-10 text-white" strokeWidth={2.5} />
+                <div className="absolute top-4 right-5 text-5xl font-black text-white/[0.06] tracking-tighter">{m.n}</div>
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-glow">
+                    <Icon className="w-7 h-7 text-white" strokeWidth={2.4} />
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold tracking-tight">{m.title}</h3>
+                  <p className="mt-3 text-white/65 leading-relaxed text-[15px]">{m.body}</p>
                 </div>
-                <h3 className="mt-6 text-xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-                  {m.title}
-                </h3>
-                <p className="mt-3 text-foreground/70 leading-relaxed">{m.body}</p>
               </div>
             );
           })}
@@ -311,161 +241,125 @@ function Modules() {
   );
 }
 
-function Bonuses() {
-  return (
-    <section className="relative py-24 px-6 overflow-hidden bg-brand-ink text-white">
-      {/* decorative glow */}
-      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-cta opacity-25 blur-3xl" />
-      <div className="absolute -bottom-32 -right-32 w-[420px] h-[420px] rounded-full bg-gradient-cta opacity-20 blur-3xl" />
-
-      <div className="relative mx-auto max-w-6xl">
-        <div className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/15 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-brand-yellow">
-            🎁 Limited-Time Bonuses
-          </span>
-        </div>
-        <h2 className="mt-5 text-center text-4xl md:text-6xl font-extrabold leading-tight">
-          Grab <span className="text-brand-yellow">₹5,500+</span> in Bonuses
-          <br className="hidden md:block" />
-          <span className="text-white/90">— absolutely </span>
-          <span className="text-brand-yellow drop-shadow-[0_2px_12px_rgba(255,210,80,0.55)]">FREE</span>
-        </h2>
-        <p className="mt-5 text-center text-white/70 text-lg max-w-2xl mx-auto">
-          Every order ships with these handpicked, action-ready bonuses. No upsells. No catch. Just pure value stacked on top of your eBook.
-        </p>
-
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
-          {bonuses.map((b, i) => (
-            <div
-              key={b.tag}
-              className="group relative rounded-2xl p-[1.5px] bg-gradient-to-br from-white/30 via-white/10 to-transparent hover:from-brand-yellow/60 hover:via-brand-red/40 transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="relative h-full rounded-2xl bg-brand-ink/90 backdrop-blur p-7 md:p-8 overflow-hidden">
-                {/* corner ribbon */}
-                <div className="absolute top-0 right-0 bg-gradient-cta text-white text-[10px] font-extrabold tracking-wider px-3 py-1 rounded-bl-xl shadow-lg">
-                  FREE • {b.tag}
-                </div>
-
-                <div className="flex items-start gap-5">
-                  <div className="shrink-0 w-16 h-16 rounded-2xl bg-gradient-cta flex items-center justify-center text-3xl shadow-glow group-hover:scale-110 transition-transform">
-                    {b.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3 flex-wrap">
-                      <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">{b.title}</h3>
-                    </div>
-                    <p className="mt-2 text-white/70 leading-relaxed">{b.body}</p>
-                    <div className="mt-4 flex items-center gap-3">
-                      <span className="text-xs uppercase tracking-widest text-white/50">Worth</span>
-                      <span className="text-lg font-extrabold text-brand-yellow">{b.value}</span>
-                      <span className="ml-auto inline-flex items-center gap-1 text-xs font-bold text-emerald-400">
-                        ✓ Included
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* value stack banner */}
-        <div className="mt-12 rounded-2xl border border-white/15 bg-gradient-to-r from-white/[0.08] to-white/[0.03] backdrop-blur p-6 md:p-8 text-center">
-          <p className="text-sm uppercase tracking-widest text-white/60">Total Bonus Value</p>
-          <p className="mt-2 text-4xl md:text-5xl font-extrabold">
-            <span className="line-through text-white/40 mr-3">₹5,500</span>
-            <span className="text-brand-yellow drop-shadow-[0_2px_12px_rgba(255,210,80,0.55)]">YOURS FREE TODAY</span>
-          </p>
-          <p className="mt-3 text-white/70">Bonuses delivered instantly with your eBook. 🎉</p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Pricing() {
   return (
-    <div id="pricing" className="w-full bg-[#0A001F] text-white py-16 px-4 font-sans scroll-mt-20">
+    <section id="pricing" className="relative py-24 px-5 md:px-8 scroll-mt-20">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[oklch(0.15_0.06_290)/0.4] to-transparent" />
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 tracking-tight">
-          Ready to Turn Your Idea Into Income?
+        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
+        <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
+          Ready to turn your idea
+          <br />
+          <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">into income?</span>
         </h2>
-        <p className="text-xl text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="mt-5 text-lg text-center text-white/65 max-w-2xl mx-auto">
           Choose the package that best fits your goals and skip weeks of frustration.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Card 1: Basic Package */}
-          <div className="bg-[#11012B] p-8 rounded-3xl border-2 border-[#1B0345] shadow-xl flex flex-col h-full hover:border-purple-600 transition-colors duration-300">
-            <h3 className="text-3xl font-bold text-white mb-2">Basic Package</h3>
-            <p className="text-gray-400 mb-6 text-lg">The comprehensive roadmap to ebook success.</p>
+        <div className="mt-14 grid md:grid-cols-2 gap-6 items-stretch">
+          {/* Basic */}
+          <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 flex flex-col hover:border-white/20 transition-colors">
+            <h3 className="text-2xl font-bold">Basic Package</h3>
+            <p className="text-white/60 mt-1.5">The comprehensive roadmap to ebook success.</p>
 
-            <div className="bg-[#050010] p-6 rounded-2xl mb-8 flex justify-between items-center border border-[#1B0345]">
-              <span className="text-sm font-semibold tracking-wide text-gray-400 uppercase">Regular Value: Rs. 10,499</span>
+            <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5 flex items-end justify-between">
+              <div>
+                <p className="text-[11px] uppercase tracking-widest text-white/50">Regular value</p>
+                <p className="text-sm font-semibold text-white/70 line-through">Rs. 10,499</p>
+              </div>
               <div className="text-right">
-                <span className="text-5xl font-bold text-white">Rs. 279</span>
-                <p className="text-xs text-gray-400">One-time payment</p>
+                <p className="text-5xl font-black tracking-tight">Rs. 279</p>
+                <p className="text-[11px] text-white/50">One-time payment</p>
               </div>
             </div>
 
-            <ul className="space-y-4 mb-10 flex-grow">
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> E-book Mastery Guide (Full Step-by-Step Main Guide)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Private WhatsApp Support Group Access</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✅</span> Lifetime Updates</li>
+            <ul className="mt-7 space-y-3.5 flex-grow">
+              {[
+                "E-book Mastery Guide (Full Step-by-Step Main Guide)",
+                "Private WhatsApp Support Group Access",
+                "Lifetime Updates",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3 text-white/85">
+                  <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center shrink-0">
+                    <Check className="w-3 h-3 text-brand-purple" strokeWidth={3} />
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
             </ul>
 
             <a
-              href="https://rzp.io/rzp/deLqOQQa"
+              href={CHECKOUT}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center bg-white text-purple-900 font-extrabold text-xl py-5 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+              className="mt-8 block w-full text-center rounded-full border border-white/15 bg-white/95 text-[oklch(0.30_0.15_290)] font-bold text-base md:text-lg py-4 hover:bg-white transition"
             >
               Get Basic Access Now 🔥
             </a>
-            <p className="text-xs text-center mt-4 text-gray-500">🔒 100% Secure Payment • Instant Delivery</p>
+            <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
           </div>
 
-          {/* Card 2: Pro Bundle (The Upsell) */}
-          <div className="bg-[#11012B] p-8 rounded-3xl shadow-2xl flex flex-col h-full border-4 border-purple-500 relative transform md:-translate-y-4">
-            <div className="absolute top-0 right-0 bg-pink-500 text-white font-bold px-5 py-2 rounded-bl-xl rounded-tr-3xl text-sm shadow-md">
-              BEST VALUE - SAVE 50%
-            </div>
-
-            <h3 className="text-3xl font-bold text-white mb-2 pt-3">The PRO Bundle</h3>
-            <p className="text-gray-400 mb-6 text-lg">Includes the Ebook + The Complete Implementation Toolkit.</p>
-
-            <div className="bg-[#050010] p-6 rounded-2xl mb-8 flex justify-between items-center border-2 border-purple-900">
-              <span className="text-sm font-semibold tracking-wide text-purple-300 uppercase">Regular Price: <span className="line-through text-gray-600">Rs. 999</span></span>
-              <div className="text-right">
-                <span className="text-5xl font-bold text-pink-400">Rs. 499</span>
-                <p className="text-xs text-gray-400">One-time upgrade price</p>
+          {/* PRO */}
+          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
+            <div className="absolute -inset-6 bg-gradient-cta opacity-25 blur-3xl rounded-3xl -z-10" />
+            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-[oklch(0.13_0.04_280)] p-8 flex flex-col h-full">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1.5 text-[11px] font-bold tracking-wider text-white uppercase shadow-glow">
+                <Sparkles className="w-3 h-3" /> Most Popular · Save 50%
               </div>
+
+              <h3 className="text-2xl font-bold mt-2">The PRO Bundle</h3>
+              <p className="text-white/60 mt-1.5">Includes the eBook + the complete implementation toolkit.</p>
+
+              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5 flex items-end justify-between">
+                <div>
+                  <p className="text-[11px] uppercase tracking-widest text-brand-pink">Regular price</p>
+                  <p className="text-sm font-semibold text-white/50 line-through">Rs. 999</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
+                  <p className="text-[11px] text-white/50">One-time upgrade price</p>
+                </div>
+              </div>
+
+              <ul className="mt-7 space-y-3.5 flex-grow">
+                <li className="flex items-start gap-3 font-semibold text-brand-pink">
+                  <span className="mt-0.5 w-5 h-5 rounded-full bg-gradient-cta flex items-center justify-center shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </span>
+                  <span>EVERYTHING in the Basic Package, PLUS:</span>
+                </li>
+                {[
+                  "10+ Ebook Design Inspiration Templates (PDF)",
+                  "Complete AI Prompt Library (50+ ChatGPT eBook Prompts)",
+                  "500+ Digital Product Ideas for Instant Inspiration",
+                  "30-Day First Sale Launch Checklist (Day-by-day roadmap)",
+                  "100+ High-Converting Headline Formulas for IG/FB",
+                  "Money Hustle E-book (Passive Income Methods)",
+                  "Curated Indian Niche Research Guide (50+ Trending Niches)",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-white/85">
+                    <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
+                      <Sparkles className="w-3 h-3 text-brand-pink" />
+                    </span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={PRO_CHECKOUT}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform"
+              >
+                Get The PRO Bundle Now 🚀
+              </a>
+              <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
-
-            <ul className="space-y-4 mb-10 flex-grow">
-              <li className="flex items-center text-pink-300 font-semibold"><span className="text-pink-400 mr-3 text-xl">✅</span> EVERYTHING in the Basic Package, PLUS:</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 10+ Ebook Design Inspiration Templates (PDF)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Complete AI Prompt Library (50+ ChatGPT eBook Prompts)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 500+ Digital Product Ideas for Instant Inspiration</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 30-Day First Sale Launch Checklist (Day-by-day roadmap)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> 100+ High-Converting Headline Formulas for IG/FB</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Money Hustle E-book (Passive Income Methods)</li>
-              <li className="flex items-center text-gray-300"><span className="text-purple-400 mr-3 text-xl">✨</span> Curated Indian Niche Research Guide (50+ Trending Niches)</li>
-            </ul>
-
-            <a
-              href="https://rzp.io/rzp/0PZ18Xk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 text-white font-extrabold text-xl py-5 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
-            >
-              Get The PRO Bundle Now 🚀
-            </a>
-            <p className="text-xs text-center mt-4 text-gray-500">🔒 100% Secure Payment • Instant Delivery</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -480,24 +374,24 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
         {doubled.map((p, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 bg-white border rounded-xl shadow-card px-4 py-3 w-[360px] md:w-[480px] shrink-0"
+            className="flex items-center gap-3 bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-2xl px-4 py-3 w-[340px] md:w-[460px] shrink-0"
           >
             <div className={`w-9 h-9 rounded-full ${p.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
               {p.initials}
             </div>
             <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2 text-xs text-foreground/60">
-                <span className="font-bold text-foreground truncate">{p.sender}</span>
-                <span className="px-1.5 py-0.5 bg-secondary rounded text-[10px] font-semibold">Inbox</span>
+              <div className="flex items-center gap-2 text-xs text-white/55">
+                <span className="font-bold text-white/90 truncate">{p.sender}</span>
+                <span className="px-1.5 py-0.5 bg-white/10 rounded text-[10px] font-semibold">Inbox</span>
               </div>
-              <p className="mt-1 text-sm truncate">
-                <span className="bg-yellow-200 px-1 font-semibold">Payment</span>{" "}
-                <span className="text-foreground/80">{p.subject}</span>
+              <p className="mt-1 text-sm truncate text-white/75">
+                <span className="bg-brand-yellow/30 text-brand-yellow px-1 font-semibold rounded">Payment</span>{" "}
+                {p.subject}
               </p>
             </div>
             <div className="flex flex-col items-end shrink-0 gap-1">
-              <span className="font-extrabold text-brand-red">{p.amount}</span>
-              <span className="text-[10px] text-foreground/50 font-medium">{p.time}</span>
+              <span className="font-extrabold text-brand-pink">{p.amount}</span>
+              <span className="text-[10px] text-white/45 font-medium">{p.time}</span>
             </div>
           </div>
         ))}
@@ -506,85 +400,39 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
   );
 }
 
-function Proof() {
-  return ProofInner();
-}
-
 function DashboardCard({ d }: { d: typeof dashboards[0] }) {
   return (
-    <div className="rounded-2xl border bg-white shadow-card overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
-      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x">
+    <div className="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
+      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
         <div className="p-6">
-          <div className="flex items-center gap-1 text-xs font-semibold text-foreground/60">
-            <span>Collected Amount</span>
-            <span className="w-3.5 h-3.5 rounded-full border border-foreground/30 inline-flex items-center justify-center text-[8px]">i</span>
-          </div>
-          <p className="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">{d.amount}</p>
-          <p className="mt-1 text-xs text-foreground/60">from {d.count} captured payments</p>
-          <div className="mt-6 pt-4 border-t">
-            <p className="text-xs text-foreground/70">
-              Net settlement amount will be deposited as per your{" "}
-              <span className="text-blue-600 font-semibold">settlement cycle</span>
-            </p>
-          </div>
+          <p className="text-xs font-semibold text-white/55">Collected Amount</p>
+          <p className="mt-3 text-3xl md:text-4xl font-black tracking-tight">{d.amount}</p>
+          <p className="mt-1 text-xs text-white/55">from {d.count} captured payments</p>
         </div>
         <div className="p-6">
-          <p className="text-xs font-semibold text-foreground/60">Split by payment method</p>
+          <p className="text-xs font-semibold text-white/55">Split by payment method</p>
           <div className="mt-4 flex items-center gap-6">
             <div
-              className="w-24 h-24 md:w-28 md:h-28 rounded-full shrink-0"
+              className="w-24 h-24 rounded-full shrink-0"
               style={{
-                background: `conic-gradient(#8B7CF6 0 ${d.upi}%, #D4A574 ${d.upi}% 100%)`,
+                background: `conic-gradient(oklch(0.70_0.27_295) 0 ${d.upi}%, oklch(0.72_0.28_345) ${d.upi}% 100%)`,
                 mask: "radial-gradient(circle, transparent 50%, black 51%)",
                 WebkitMask: "radial-gradient(circle, transparent 50%, black 51%)",
               }}
             />
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#8B7CF6]" />
+                <span className="w-2 h-2 rounded-full bg-brand-purple" />
                 <span className="font-semibold">UPI</span>
-                <span className="text-foreground/60 ml-2">{d.upi}%</span>
+                <span className="text-white/55 ml-2">{d.upi}%</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#D4A574]" />
+                <span className="w-2 h-2 rounded-full bg-brand-pink" />
                 <span className="font-semibold">Card</span>
-                <span className="text-foreground/60 ml-2">{d.card}%</span>
+                <span className="text-white/55 ml-2">{d.card}%</span>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-3 border-t divide-x">
-        <div className="p-5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-teal-700">
-              <span className="w-3.5 h-3.5 rounded-full border border-teal-700 inline-flex items-center justify-center text-[8px]">↺</span>
-              Refunds
-            </div>
-            <span className="text-foreground/40">›</span>
-          </div>
-          <p className="mt-3 text-xl font-extrabold">{d.refunds}</p>
-          <p className="mt-1 text-[11px] text-foreground/60">{d.refundsCount}</p>
-        </div>
-        <div className="p-5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-600">
-              <span>⚠</span> Disputes
-            </div>
-            <span className="text-foreground/40">›</span>
-          </div>
-          <p className="mt-3 text-xl font-extrabold">{d.disputes}</p>
-          <p className="mt-1 text-[11px] text-foreground/60">{d.disputesNote}</p>
-        </div>
-        <div className="p-5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-600">
-              <span>⊗</span> Failed
-            </div>
-            <span className="text-foreground/40">›</span>
-          </div>
-          <p className="mt-3 text-xl font-extrabold">{d.failed}</p>
-          <p className="mt-1 text-[11px] text-foreground/60">{d.failedNote}</p>
         </div>
       </div>
     </div>
@@ -604,30 +452,27 @@ function DashboardMarquee() {
   );
 }
 
-function ProofInner() {
+function Proof() {
   return (
-    <section className="py-20 px-6 bg-white border-t overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden">
       <div className="mx-auto max-w-6xl text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-brand-red underline decoration-2 underline-offset-4 leading-tight">
-          These Aren't Just Emails… They're Sales. And They Could Be Yours.
+        <p className="text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">Real receipts</p>
+        <h2 className="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-[1.1]">
+          These aren't just emails. <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">They're sales.</span>
         </h2>
       </div>
       <div className="mt-12 space-y-4">
         <ProofRow items={proofRows[0]} />
         <ProofRow items={proofRows[1]} reverse />
       </div>
-      <div className="mx-auto max-w-6xl text-center mt-14">
-        <h3 className="text-3xl md:text-5xl font-extrabold text-brand-red underline decoration-4 underline-offset-8 leading-tight drop-shadow-sm">
-          We Made It Happen. Now It's Your Turn.
-        </h3>
+      <div className="mx-auto max-w-6xl text-center mt-16">
+        <h3 className="text-3xl md:text-5xl font-black tracking-tight">We made it happen. Now it's your turn.</h3>
         <DashboardMarquee />
-
-        <a
-          href={CHECKOUT}
-          className="mt-10 inline-flex items-center justify-center rounded-2xl bg-white border-4 border-brand-red px-12 py-6 text-2xl md:text-3xl font-extrabold text-brand-red shadow-glow hover:scale-[1.02] transition-transform tracking-tight"
-        >
-          Yes, I Want Sales Like This!
-        </a>
+        <div className="mt-12 flex justify-center">
+          <GlowButton href="#pricing" onClick={scrollToPricing}>
+            Yes, I Want Sales Like This! →
+          </GlowButton>
+        </div>
       </div>
     </section>
   );
@@ -635,12 +480,12 @@ function ProofInner() {
 
 function Whatsapp() {
   return (
-    <section className="py-16 px-6 bg-white border-t">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm uppercase tracking-widest font-bold text-brand-purple">Still Confused?</p>
-        <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Let's Talk on WhatsApp</h2>
-        <p className="mt-4 text-foreground/70">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
-        <a href={WHATSAPP} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3.5 font-bold hover:bg-[#1ebe5a] transition">
+    <section className="py-20 px-6">
+      <div className="mx-auto max-w-2xl text-center rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-10">
+        <p className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-purple">Still confused?</p>
+        <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">Let's talk on WhatsApp</h2>
+        <p className="mt-4 text-white/65">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
+        <a href={WHATSAPP} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3.5 font-bold hover:bg-[#1ebe5a] transition shadow-lg">
           💬 Message Us Now
         </a>
       </div>
@@ -662,42 +507,25 @@ function UrgencyCTA() {
   }, []);
   const pad = (n: number) => n.toString().padStart(2, "0");
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-24 px-6">
       <div className="mx-auto max-w-3xl text-center">
-        <a
-          href={CHECKOUT}
-          className="inline-flex items-center justify-center rounded-2xl bg-white border-4 border-brand-red px-12 py-6 text-2xl md:text-3xl font-extrabold text-brand-red shadow-glow hover:scale-[1.02] transition-transform tracking-tight"
-        >
-          Let's Build My eBook
-        </a>
-        <h2 className="mt-12 text-4xl md:text-5xl font-extrabold leading-tight">
-          Ready to Build Your Passive Income?
+        <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
+          Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">passive income?</span>
         </h2>
-        <p className="mt-5 text-brand-red text-lg md:text-xl font-bold">
-          There's No Perfect Time — Start Today, Start Small, Start Winning.
-        </p>
-        <div className="mt-10 grid grid-cols-2 gap-4 max-w-xl mx-auto">
-          <div className="rounded-2xl bg-brand-red text-white py-8 flex items-baseline justify-center gap-2">
-            <span className="text-6xl md:text-7xl font-extrabold text-brand-yellow leading-none">{pad(time.m)}</span>
-            <span className="text-xl font-semibold">Min</span>
-          </div>
-          <div className="rounded-2xl bg-brand-red text-white py-8 flex items-baseline justify-center gap-2">
-            <span className="text-6xl md:text-7xl font-extrabold text-brand-yellow leading-none">{pad(time.s)}</span>
-            <span className="text-xl font-semibold">Sec</span>
-          </div>
+        <p className="mt-5 text-lg text-white/65">There's no perfect time — start today, start small, start winning.</p>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 max-w-md mx-auto">
+          {[{ v: pad(time.m), l: "Min" }, { v: pad(time.s), l: "Sec" }].map((c) => (
+            <div key={c.l} className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md py-7 flex items-baseline justify-center gap-2">
+              <span className="text-5xl md:text-6xl font-black text-brand-yellow leading-none tabular-nums">{c.v}</span>
+              <span className="text-base font-semibold text-white/70">{c.l}</span>
+            </div>
+          ))}
         </div>
-        <p className="mt-8 text-2xl md:text-3xl font-bold text-foreground/80">
-          Time's Ticking! Grab Your Copy Before the Offer Ends!
-        </p>
-        <p className="mt-12 text-base md:text-lg font-bold tracking-wide uppercase text-orange-500">
-          Still Confused? Let's Talk on WhatsApp!
-        </p>
-        <a href={WHATSAPP} className="mt-6 inline-flex items-center gap-3 rounded-2xl bg-[#25D366] text-white px-10 py-5 text-lg font-bold hover:bg-[#1ebe5a] transition">
-          <span className="text-2xl">📱</span> Message Us Now
-        </a>
-        <p className="mt-8 text-foreground/70 max-w-xl mx-auto">
-          Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.
-        </p>
+
+        <div className="mt-10 flex justify-center">
+          <GlowButton href={CHECKOUT}>Let's Build My eBook →</GlowButton>
+        </div>
       </div>
     </section>
   );
@@ -705,23 +533,23 @@ function UrgencyCTA() {
 
 function FAQ() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-24 px-6">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center text-3xl md:text-5xl font-extrabold">Frequently Asked Questions</h2>
-        <p className="mt-4 text-center text-foreground/70">Everything you need to know about creating and selling eBooks in India.</p>
-        <div className="mt-12 space-y-4">
+        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">FAQ</p>
+        <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
+        <div className="mt-12 space-y-3">
           {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border bg-card p-6 shadow-card">
-              <summary className="cursor-pointer list-none flex justify-between items-center font-bold text-lg">
+            <details key={f.q} className="group rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-6 hover:border-white/20 transition-colors">
+              <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-base md:text-lg">
                 {f.q}
                 <span className="ml-4 text-2xl text-brand-purple group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p className="mt-3 text-foreground/70 leading-relaxed">{f.a}</p>
+              <p className="mt-3 text-white/65 leading-relaxed">{f.a}</p>
             </details>
           ))}
         </div>
-        <p className="mt-10 text-center text-foreground/70">
-          Still got questions? Drop us a line at <a className="font-bold text-brand-purple" href="mailto:support@pustikabooks.in">support@pustikabooks.in</a>
+        <p className="mt-10 text-center text-white/65">
+          Still got questions? Drop us a line at <a className="font-semibold text-brand-pink" href="mailto:support@pustikabooks.in">support@pustikabooks.in</a>
         </p>
       </div>
     </section>
@@ -730,12 +558,14 @@ function FAQ() {
 
 function FinalCTA() {
   return (
-    <section className="py-20 px-6 bg-brand-ink text-white text-center">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl md:text-5xl font-extrabold">Ready to Build Your Passive Income?</h2>
+    <section className="py-24 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
+      <div className="mx-auto max-w-3xl text-center rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-10 md:p-14">
+        <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
+        <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your passive income?</h2>
         <p className="mt-4 text-white/70 text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
-          <CtaButton>Let's Build My eBook →</CtaButton>
+          <GlowButton href={CHECKOUT}>Let's Build My eBook →</GlowButton>
         </div>
       </div>
     </section>
@@ -744,8 +574,8 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 border-t bg-background">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+    <footer className="py-10 px-6 border-t border-white/10">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/55">
         <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
         <p>support@pustikabooks.in</p>
       </div>
@@ -753,21 +583,36 @@ function Footer() {
   );
 }
 
+function StickyMobileCTA() {
+  return (
+    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-3 backdrop-blur-xl bg-background/80 border-t border-white/10">
+      <a
+        href="#pricing"
+        onClick={scrollToPricing}
+        className="block w-full text-center rounded-full bg-gradient-cta text-white font-bold py-3.5 shadow-glow"
+      >
+        Buy Now · From Rs. 279 →
+      </a>
+    </div>
+  );
+}
+
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
       <TopBar />
+      <Header />
       <Hero />
       <Features />
       <Modules />
       <Proof />
       <Pricing />
       <Whatsapp />
-      <NewsletterSection />
       <UrgencyCTA />
       <FAQ />
       <FinalCTA />
       <Footer />
+      <StickyMobileCTA />
     </div>
   );
 }
