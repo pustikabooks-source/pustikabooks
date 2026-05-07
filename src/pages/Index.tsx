@@ -415,7 +415,7 @@ function DashboardCard({ d }: { d: typeof dashboards[0] }) {
             <div
               className="w-24 h-24 rounded-full shrink-0"
               style={{
-                background: `conic-gradient(oklch(0.70_0.27_295) 0 ${d.upi}%, oklch(0.72_0.28_345) ${d.upi}% 100%)`,
+                background: `conic-gradient(oklch(0.70 0.27 295) 0 ${d.upi}%, oklch(0.72 0.28 345) ${d.upi}% 100%)`,
                 mask: "radial-gradient(circle, transparent 50%, black 51%)",
                 WebkitMask: "radial-gradient(circle, transparent 50%, black 51%)",
               }}
