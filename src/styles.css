@@ -173,8 +173,8 @@
 }
 
 @layer utilities {
-  .bg-gradient-cta { background: var(--gradient-cta); }
-  .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-cta { background-image: var(--gradient-cta); }
+  .bg-gradient-soft { background-image: var(--gradient-soft); }
   .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .text-brand-red { color: var(--brand-red); }
