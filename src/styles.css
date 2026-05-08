@@ -173,6 +173,8 @@
 }
 
 @layer utilities {
+  .bg-gradient-cta { background-image: var(--gradient-cta); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
   .shadow-card { box-shadow: var(--shadow-card); }
   .text-brand-red { color: var(--brand-red); }
   .text-brand-purple { color: var(--brand-purple); }
