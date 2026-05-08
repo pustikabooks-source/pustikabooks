@@ -1,6 +1,6 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
 import { useEffect, useState } from "react";
-import ebookMockup from "@/assets/ebook-cover.png";
+import ebookMockup from "@/assets/ebook-cover.webp";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
@@ -160,7 +160,15 @@ function Hero() {
         <div className="mt-12 flex justify-center">
           <div className="relative">
             <div className="absolute -inset-12 bg-gradient-cta opacity-30 blur-3xl rounded-full" />
-            <img src={ebookMockup} alt="Ebook Mastery cover" className="relative w-[260px] md:w-[360px] animate-float drop-shadow-[0_30px_60px_rgba(168,85,247,0.45)]" width={1024} height={1024} />
+            <img
+              src={ebookMockup}
+              alt="Ebook Mastery cover"
+              width={720}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
+              className="relative w-[260px] md:w-[360px] animate-float drop-shadow-[0_30px_60px_rgba(168,85,247,0.45)]"
+            />
           </div>
         </div>
       </div>
