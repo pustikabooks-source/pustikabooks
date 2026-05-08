@@ -16,7 +16,296 @@
     <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/02b3d9ad-8df1-4c26-8873-486bd6d421d5/id-preview-2b7385f7--0d4bb676-e6f1-4cb3-822e-00f8761ea803.lovable.app-1777345891193.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="preload" as="image" href="/ebook-cover.webp" fetchpriority="high" />
+    <style>
+      :root {
+        --critical-bg: #0e0b1b;
+        --critical-text: #faf7ff;
+        --critical-muted: rgba(250, 247, 255, 0.72);
+        --critical-soft: rgba(250, 247, 255, 0.62);
+        --critical-border: rgba(255, 255, 255, 0.08);
+        --critical-gradient: linear-gradient(90deg, #a855f7, #ec4899);
+        --critical-hero-gradient: linear-gradient(90deg, #d8b4fe, #f9a8d4 58%, #fdba74);
+        --critical-shadow: 0 0 60px -10px rgba(168, 85, 247, 0.55), 0 0 120px -20px rgba(236, 72, 153, 0.35);
+      }
+
+      html {
+        background: var(--critical-bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--critical-bg);
+        color: var(--critical-text);
+        font-family: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      .site-topbar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        background: #000;
+        color: rgba(255, 255, 255, 0.9);
+        padding: 10px 16px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(14, 11, 27, 0.72);
+        backdrop-filter: blur(18px);
+      }
+
+      .site-header__inner {
+        display: flex;
+        height: 64px;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .site-branding {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+      }
+
+      .site-brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1;
+        background-image: var(--critical-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .site-brand__label {
+        color: rgba(221, 214, 254, 0.72);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+      }
+
+      .site-header__cta {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background-image: var(--critical-gradient);
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        box-shadow: var(--critical-shadow);
+      }
+
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-backdrop,
+      .hero-glow,
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .hero-backdrop {
+        background: radial-gradient(ellipse at top, rgba(107, 33, 168, 0.35), transparent 60%), linear-gradient(180deg, #120f24, #0d0918);
+      }
+
+      .hero-glow {
+        inset: -160px auto auto 50%;
+        width: 900px;
+        height: 900px;
+        transform: translateX(-50%);
+        border-radius: 999px;
+        background-image: var(--critical-gradient);
+        opacity: 0.2;
+        filter: blur(140px);
+      }
+
+      .hero-grid {
+        opacity: 0.05;
+        background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+        background-size: 32px 32px;
+      }
+
+      .hero-shell {
+        position: relative;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+        text-align: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        border: 1px solid var(--critical-border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 12px;
+        font-weight: 500;
+        backdrop-filter: blur(12px);
+      }
+
+      .hero-badge__icon,
+      .hero-proof__icon {
+        color: #facc15;
+        fill: currentColor;
+        flex: 0 0 auto;
+      }
+
+      .hero-title {
+        margin: 28px 0 0;
+        font-size: clamp(3rem, 10vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+      }
+
+      .hero-title__gradient {
+        background-image: var(--critical-hero-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        max-width: 42rem;
+        margin: 24px auto 0;
+        color: var(--critical-muted);
+        font-size: 1.125rem;
+        line-height: 1.75;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .hero-primary-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 48px;
+        border-radius: 999px;
+        background-image: var(--critical-gradient);
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.125rem;
+        font-weight: 800;
+        box-shadow: var(--critical-shadow);
+      }
+
+      .hero-proof {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--critical-soft);
+        font-size: 12px;
+      }
+
+      .hero-avatars {
+        display: flex;
+      }
+
+      .hero-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        border: 2px solid var(--critical-bg);
+        margin-left: -8px;
+        background-size: cover;
+      }
+
+      .hero-avatar:first-child {
+        margin-left: 0;
+      }
+
+      .hero-proof__text {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      .hero-cover {
+        position: relative;
+        width: min(260px, 72vw);
+        height: auto;
+        margin-top: 48px;
+        filter: drop-shadow(0 30px 60px rgba(168, 85, 247, 0.45));
+        animation: hero-float 5s ease-in-out infinite;
+      }
+
+      @keyframes hero-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+
+      @media (min-width: 640px) {
+        .site-header__cta {
+          display: inline-flex;
+        }
+
+        .site-brand {
+          font-size: 1.5rem;
+        }
+
+        .hero-proof {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .site-topbar {
+          font-size: 14px;
+        }
+
+        .site-header__inner {
+          padding: 0 32px;
+        }
+
+        .hero-shell {
+          padding-top: 96px;
+        }
+
+        .hero-subtitle {
+          font-size: 1.25rem;
+        }
+
+        .hero-cover {
+          width: 360px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
