@@ -113,7 +113,7 @@ function Hero() {
 
       <div className="hero-shell">
         <div className="hero-badge">
-          <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
+          <Sparkles className="hero-badge__icon" />
           New · Updated for 2026
         </div>
 
@@ -135,12 +135,17 @@ function Hero() {
           </a>
           <div className="hero-proof">
             <div className="hero-avatars">
-              {["bg-gradient-to-br from-purple-400 to-pink-400", "bg-gradient-to-br from-pink-400 to-orange-400", "bg-gradient-to-br from-orange-400 to-yellow-400", "bg-gradient-to-br from-blue-400 to-purple-400"].map((c, i) => (
-                <div key={i} className={`hero-avatar ${c}`} />
+              {[
+                "linear-gradient(135deg, #c084fc, #f472b6)",
+                "linear-gradient(135deg, #f472b6, #fb923c)",
+                "linear-gradient(135deg, #fb923c, #facc15)",
+                "linear-gradient(135deg, #60a5fa, #c084fc)",
+              ].map((backgroundImage, i) => (
+                <div key={i} className="hero-avatar" style={{ backgroundImage }} />
               ))}
             </div>
             <span className="hero-proof__text">
-              <Star className="w-3.5 h-3.5 fill-brand-yellow text-brand-yellow" />
+              <Star className="hero-proof__icon" />
               <span>Trusted by 10,000+ Creators</span>
             </span>
           </div>
