@@ -1,10 +1,10 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
 import { useEffect, useState } from "react";
-import ebookMockup from "@/assets/ebook-cover.webp";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
 const WHATSAPP = "https://wa.me/919662436387";
+const HERO_IMAGE = "/ebook-cover.webp";
 
 const features = [
   { icon: "💸", title: "True Passive Income", body: "Create once, sell forever. Your eBooks keep earning while you sleep, travel, or work on your next project." },
@@ -78,7 +78,7 @@ function GlowButton({ href, onClick, children, className = "" }: { href?: string
 
 function TopBar() {
   return (
-    <div className="bg-black text-white/90 text-center text-xs md:text-sm py-2.5 px-4 font-medium tracking-wide border-b border-white/5">
+    <div className="site-topbar">
       ⚡ Instant Delivery · 🔒 Secure Razorpay Checkout · 🚀 100% Beginner Friendly
     </div>
   );
@@ -86,16 +86,16 @@ function TopBar() {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/60 border-b border-white/5">
-      <div className="mx-auto max-w-7xl px-5 md:px-8 h-16 flex items-center justify-between">
-        <div className="flex items-baseline gap-2">
-          <span className="text-xl md:text-2xl font-extrabold tracking-tight bg-gradient-cta bg-clip-text text-transparent">Pustika</span>
-          <span className="text-[10px] tracking-[0.4em] text-muted-foreground">BOOKS</span>
+    <header className="site-header">
+      <div className="site-header__inner">
+        <div className="site-branding">
+          <span className="site-brand">Pustika</span>
+          <span className="site-brand__label">BOOKS</span>
         </div>
         <a
           href="#pricing"
           onClick={scrollToPricing}
-          className="hidden sm:inline-flex items-center justify-center rounded-full bg-gradient-cta px-5 py-2 text-sm font-semibold text-white shadow-glow hover:scale-[1.03] transition-transform"
+          className="site-header__cta"
         >
           Get Started
         </a>
@@ -106,43 +106,42 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* glow background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-soft" />
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gradient-cta opacity-20 blur-[140px] -z-10" />
-      <div className="absolute inset-0 -z-10 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+    <section className="hero-section">
+      <div className="hero-backdrop" />
+      <div className="hero-glow" />
+      <div className="hero-grid" />
 
-      <div className="mx-auto max-w-5xl px-6 pt-16 md:pt-24 pb-20 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md px-4 py-1.5 text-xs font-medium text-white/80">
+      <div className="hero-shell">
+        <div className="hero-badge">
           <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
           New · Updated for 2026
         </div>
 
-        <h1 className="mt-7 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.02] tracking-[-0.04em]">
+        <h1 className="hero-title">
           You Have Ideas.
           <br />
-          <span className="bg-gradient-to-r from-[oklch(0.75_0.25_295)] via-[oklch(0.75_0.27_340)] to-[oklch(0.80_0.22_30)] bg-clip-text text-transparent">
+          <span className="hero-title__gradient">
             Turn Them Into Income in 30 Days.
           </span>
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+        <p className="hero-subtitle">
           Build, market & sell your first eBook — even if you've never written before. Step-by-step guidance. No tech skills needed.
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4">
-          <GlowButton href="#pricing" onClick={scrollToPricing} className="px-12 py-5 text-lg md:text-xl">
+        <div className="hero-actions">
+          <a href="#pricing" onClick={scrollToPricing} className="hero-primary-cta">
             Get Started Now →
-          </GlowButton>
-          <div className="flex items-center gap-3 text-xs md:text-sm text-white/60">
-            <div className="flex -space-x-2">
+          </a>
+          <div className="hero-proof">
+            <div className="hero-avatars">
               {["bg-gradient-to-br from-purple-400 to-pink-400", "bg-gradient-to-br from-pink-400 to-orange-400", "bg-gradient-to-br from-orange-400 to-yellow-400", "bg-gradient-to-br from-blue-400 to-purple-400"].map((c, i) => (
-                <div key={i} className={`w-7 h-7 rounded-full ring-2 ring-background ${c}`} />
+                <div key={i} className={`hero-avatar ${c}`} />
               ))}
             </div>
-            <span className="flex items-center gap-1.5">
+            <span className="hero-proof__text">
               <Star className="w-3.5 h-3.5 fill-brand-yellow text-brand-yellow" />
-              <span className="font-semibold text-white/90">Trusted by 10,000+ Creators</span>
+              <span>Trusted by 10,000+ Creators</span>
             </span>
           </div>
         </div>
@@ -161,13 +160,14 @@ function Hero() {
           <div className="relative">
             <div className="absolute -inset-12 bg-gradient-cta opacity-30 blur-3xl rounded-full" />
             <img
-              src={ebookMockup}
+              src={HERO_IMAGE}
               alt="Ebook Mastery cover"
               width={720}
               height={1080}
               fetchPriority="high"
               decoding="async"
-              className="relative w-[260px] md:w-[360px] animate-float drop-shadow-[0_30px_60px_rgba(168,85,247,0.45)]"
+              sizes="(max-width: 768px) 260px, 360px"
+              className="hero-cover"
             />
           </div>
         </div>
