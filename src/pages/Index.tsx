@@ -271,7 +271,7 @@ function Pricing() {
 
         <div className="mt-14 grid md:grid-cols-2 gap-6 items-stretch">
           {/* Basic */}
-          <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 flex flex-col hover:border-white/20 transition-colors">
+          <div className="order-2 relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 flex flex-col hover:border-white/20 transition-colors">
             <h3 className="text-2xl font-bold">Basic Package</h3>
             <p className="text-white/60 mt-1.5">The comprehensive roadmap to ebook success.</p>
 
@@ -313,7 +313,7 @@ function Pricing() {
           </div>
 
           {/* PRO */}
-          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
+          <div className="order-1 relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
             <div className="absolute -inset-6 bg-gradient-cta opacity-25 blur-3xl rounded-3xl -z-10" />
             <div className="relative rounded-[calc(1.5rem-1.5px)] bg-[oklch(0.13_0.04_280)] p-8 flex flex-col h-full">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1.5 text-[11px] font-bold tracking-wider text-white uppercase shadow-glow">
