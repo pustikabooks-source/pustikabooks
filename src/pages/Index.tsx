@@ -346,12 +346,6 @@ function Pricing() {
               </div>
 
               <ul className="mt-7 space-y-3.5 flex-grow">
-                <li className="flex items-start gap-3 font-semibold text-brand-pink">
-                  <span className="mt-0.5 w-5 h-5 rounded-full bg-gradient-cta flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </span>
-                  <span>EVERYTHING in the Basic Package, PLUS:</span>
-                </li>
                 {[
                   { text: "10+ Ebook Design Inspiration Templates (PDF)" },
                   { text: "Complete AI Prompt Library (50+ ChatGPT eBook Prompts)", value: "Rs. 999" },
