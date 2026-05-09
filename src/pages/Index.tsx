@@ -323,15 +323,20 @@ function Pricing() {
               <h3 className="text-2xl font-bold mt-2">The PRO Bundle</h3>
               <p className="text-white/60 mt-1.5">Includes the eBook + the complete implementation toolkit.</p>
 
-              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5 flex items-end justify-between">
-                <div>
-                  <p className="text-[11px] uppercase tracking-widest text-brand-pink">Regular price</p>
-                  <p className="text-sm font-semibold text-white/50 line-through">Rs. 999</p>
+              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Total Value</p>
+                    <p className="text-sm font-semibold text-white/50 line-through">Rs. 4,999</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
+                    <p className="text-[11px] text-brand-pink font-semibold">Founder’s Launch Offer — One-Time Payment</p>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
-                  <p className="text-[11px] text-white/50">One-time upgrade price</p>
-                </div>
+                <p className="mt-3 text-xs text-white/75 leading-relaxed border-t border-brand-purple/20 pt-3">
+                  Invest in your future for less than the cost of 2 pizzas. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
+                </p>
               </div>
 
               <ul className="mt-7 space-y-3.5 flex-grow">
@@ -342,19 +347,24 @@ function Pricing() {
                   <span>EVERYTHING in the Basic Package, PLUS:</span>
                 </li>
                 {[
-                  "10+ Ebook Design Inspiration Templates (PDF)",
-                  "Complete AI Prompt Library (50+ ChatGPT eBook Prompts)",
-                  "500+ Digital Product Ideas for Instant Inspiration",
-                  "30-Day First Sale Launch Checklist (Day-by-day roadmap)",
-                  "100+ High-Converting Headline Formulas for IG/FB",
-                  "Money Hustle E-book (Passive Income Methods)",
-                  "Curated Indian Niche Research Guide (50+ Trending Niches)",
-                ].map((t) => (
+                  { text: "10+ Ebook Design Inspiration Templates (PDF)" },
+                  { text: "Complete AI Prompt Library (50+ ChatGPT eBook Prompts)", value: "Rs. 999" },
+                  { text: "500+ Digital Product Ideas for Instant Inspiration" },
+                  { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
+                  { text: "100+ High-Converting Headline Formulas for IG/FB" },
+                  { text: "Money Hustle E-book (Passive Income Methods)" },
+                  { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
+                ].map(({ text: t, value }) => (
                   <li key={t} className="flex items-start gap-3 text-white/85">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
                       <Sparkles className="w-3 h-3 text-brand-pink" />
                     </span>
-                    <span>{t}</span>
+                    <span>
+                      {t}
+                      {value && (
+                        <span className="ml-1.5 text-[11px] font-semibold text-brand-pink/90">(Value: {value})</span>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
