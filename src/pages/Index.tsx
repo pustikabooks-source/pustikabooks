@@ -151,16 +151,6 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 max-w-2xl mx-auto text-left rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-7 md:p-9">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Why We Created This eBook</h2>
-          <p className="mt-4 text-white/70 leading-relaxed">
-            We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
-          </p>
-          <p className="mt-3 text-white/70 leading-relaxed">
-            At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
-          </p>
-        </div>
-
         <div className="mt-12 flex justify-center">
           <div className="relative">
             <div className="absolute -inset-12 bg-gradient-cta opacity-30 blur-3xl rounded-full" />
