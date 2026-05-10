@@ -264,7 +264,7 @@ function Pricing() {
   return (
     <section id="pricing" className="relative py-24 px-5 md:px-8 scroll-mt-20">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[oklch(0.15_0.06_290)/0.4] to-transparent" />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-w-md">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
         <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
           Ready to turn your idea
@@ -275,48 +275,8 @@ function Pricing() {
           Choose the package that best fits your goals and skip weeks of frustration.
         </p>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-6 items-stretch">
-          {/* Basic */}
-          <div className="order-2 relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 flex flex-col hover:border-white/20 transition-colors">
-            <h3 className="text-2xl font-bold">Basic Package</h3>
-            <p className="text-white/60 mt-1.5">The comprehensive roadmap to ebook success.</p>
-
-            <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5 flex items-end justify-between">
-              <div>
-                <p className="text-[11px] uppercase tracking-widest text-white/50">Regular value</p>
-                <p className="text-sm font-semibold text-white/70 line-through">Rs. 10,499</p>
-              </div>
-              <div className="text-right">
-                <p className="text-5xl font-black tracking-tight">Rs. 279</p>
-                <p className="text-[11px] text-white/50">One-time payment</p>
-              </div>
-            </div>
-
-            <ul className="mt-7 space-y-3.5 flex-grow">
-              {[
-                "E-book Mastery Guide (Full Step-by-Step Main Guide)",
-                "Private WhatsApp Support Group Access",
-                "Lifetime Updates",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3 text-white/85">
-                  <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-brand-purple" strokeWidth={3} />
-                  </span>
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href={CHECKOUT}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 block w-full text-center rounded-full border border-white/15 bg-white/95 text-[oklch(0.30_0.15_290)] font-bold text-base md:text-lg py-4 hover:bg-white transition"
-            >
-              Get Basic Access Now 🔥
-            </a>
-            <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
-          </div>
+        <div className="mt-14 flex justify-center items-stretch">
+          
 
           {/* PRO */}
           <div className="order-1 relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
@@ -333,7 +293,7 @@ function Pricing() {
                 <div className="flex items-end justify-between">
                   <div>
                     <p className="text-[11px] uppercase tracking-widest text-brand-pink">Total Value</p>
-                    <p className="text-sm font-semibold text-white/50 line-through">Rs. 4,999</p>
+                    <p className="text-sm font-semibold text-white/50 line-through">Rs. 10,499</p>
                   </div>
                   <div className="text-right">
                     <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
@@ -341,7 +301,7 @@ function Pricing() {
                   </div>
                 </div>
                 <p className="mt-3 text-xs text-white/75 leading-relaxed border-t border-brand-purple/20 pt-3">
-                  Invest in your future for less than the cost of 2 pizzas. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
+                  Invest in your future for less than the cost of 1 pizzas. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
                 </p>
               </div>
 
@@ -375,7 +335,7 @@ function Pricing() {
                 rel="noopener noreferrer"
                 className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform"
               >
-                Get The PRO Bundle Now 🚀
+                Get Instant Access to the PRO Bundle Now 🚀
               </a>
               <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
