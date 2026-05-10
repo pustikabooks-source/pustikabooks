@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
 const WHATSAPP = "https://wa.me/919662436387";
-const HERO_IMAGE = "/ebook-cover.webp";
+
 
 const features = [
   { icon: "💸", title: "True Passive Income", body: "Create once, sell forever. Your eBooks keep earning while you sleep, travel, or work on your next project." },
@@ -149,22 +149,7 @@ function Hero() {
               <span>Trusted by 10,000+ Creators</span>
             </span>
           </div>
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <div className="relative">
-            <div className="absolute -inset-12 bg-gradient-cta opacity-30 blur-3xl rounded-full" />
-            <img
-              src={HERO_IMAGE}
-              alt="Ebook Mastery cover"
-              width={720}
-              height={1080}
-              fetchPriority="high"
-              decoding="async"
-              sizes="(max-width: 768px) 260px, 360px"
-              className="hero-cover"
-            />
-          </div>
+        
         </div>
       </div>
     </section>
