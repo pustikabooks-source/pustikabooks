@@ -117,17 +117,26 @@ function Hero() {
           New · Updated for 2026
         </div>
 
-        <h1 className="hero-title">
-          You Have Ideas.
+                <h1 className="hero-title">
+          Unlock Speed & Profit.
           <br />
-          <span className="hero-title__gradient">
-            Turn Them Into Income in 30 Days.
+          <span className="hero-title_gradient">
+            Launch Your Digital Product in 30 Days.
           </span>
         </h1>
 
         <p className="hero-subtitle">
-          Build, market & sell your first eBook — even if you've never written before. Step-by-step guidance. No tech skills needed.
+          Stop overthinking. Get the exact AI prompts, templates, and frameworks used by top creators to build and sell digital assets—no tech skills needed.
         </p>
+
+        <div className="flex justify-center my-8">
+          <img 
+            src="/pro-vault-hero.webp" 
+            alt="The Pro Vault Implementation Bundle" 
+            className="w-full max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300" 
+          />
+        </div>
+        
 
         <div className="hero-actions">
           <a href="#pricing" onClick={scrollToPricing} className="hero-primary-cta">
