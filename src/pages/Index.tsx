@@ -129,13 +129,14 @@ function Hero() {
           Stop overthinking. Get the exact AI prompts, templates, and frameworks used by top creators to build and sell digital assets—no tech skills needed.
         </p>
 
-        <div className="flex justify-center my-8">
+                <div className="flex justify-center my-8">
           <img 
-            src="/pro-vault-hero.webp" 
+            src="/pro-vault.jpg" 
             alt="The Pro Vault Implementation Bundle" 
             className="w-full max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300" 
           />
         </div>
+        
         
 
         <div className="hero-actions">
