@@ -7,29 +7,32 @@ const WHATSAPP = "https://wa.me/919662436387";
 
 
 const features = [
-  { icon: "💸", title: "True Passive Income", body: "Create once, sell forever. Your eBooks keep earning while you sleep, travel, or work on your next project." },
-  { icon: "🤑", title: "Zero Startup Costs, High Profit Margins", body: "Start with what you already know. No inventory. No shipping. Earn ₹20,000–₹50,000/month from eBooks that cost nothing to duplicate." },
-  { icon: "⚡", title: "Launch in 30 Days or Less", body: "No fluff. No overwhelm. A clear, step-by-step blueprint that gets your first eBook live and earning in 4 weeks — even with a full-time job." },
-  { icon: "📈", title: "600 Million+ Hungry Readers in India", body: "From fitness to finance, love to lifestyle — Indians are craving knowledge. Tap into a booming market of digital readers." },
-  { icon: "🌍", title: "Work from Anywhere", body: "Home, café, Goa shack, or Himalaya homestay — if you've got Wi-Fi, you've got a business." },
-  { icon: "🤝", title: "Real Human Support", body: "Join our WhatsApp community. Real answers from real people, not bots — we stay with you after the sale." },
+  { icon: "✨", title: "AI-Powered Speed", body: "Don't stare at a blank page. Use our Complete AI Prompt Library to generate content, outlines, and copy in minutes." },
+  { icon: "💰", title: "100% Profit Margins", body: "No shipping, no inventory. Digital products mean every rupee you make goes straight into your pocket." },
+  { icon: "🚀", title: "No Tech Skills Needed", body: "You don't need to be a coder or designer. Our premium templates are plug-and-play so you can launch fast." },
+  { icon: "📈", title: "Sell While You Sleep", body: "Set up your automated system once, and let your digital product generate passive income 24/7." },
+  { icon: "🌍", title: "A Global Audience", body: "The digital e-learning market is exploding. Tap into a worldwide audience hungry for templates and tools." },
+  { icon: "📋", title: "Step-by-Step Blueprint", body: "Never feel lost. The 30-Day Launch Checklist tells you exactly what to do every single day to get results." }
 ];
+
 
 const modules = [
-  { n: "01", Icon: CloudUpload, title: "Unlock What's Already Selling", body: "Spot trending topics that Indians are buying like crazy — right now, no guesswork." },
-  { n: "02", Icon: DollarSign, title: "Price to Sell, Not to Sit", body: "Smart pricing for low-ticket and high-ticket products that boosts profits without scaring customers." },
-  { n: "03", Icon: BookOpen, title: "Create Your eBook Crazy Fast", body: "Plan, write, and format your eBook fast with smart tools like ChatGPT — even if writing isn't your thing." },
-  { n: "04", Icon: Megaphone, title: "Sell Smart. Not Spendy.", body: "Use Reels, Stories, and DMs to drive sales — zero ad spend, zero drama." },
-  { n: "05", Icon: Zap, title: "Automate the Whole Thing", body: "Set up checkout, delivery and follow-up on autopilot. No coding, no stress." },
+  { n: "01", Icon: CloudUpload, title: "Find Your Profitable Niche", body: "Use our 50+ Niche Research Guide to spot high-demand, low-competition ideas instantly." },
+  { n: "02", Icon: DollarSign, title: "Create Your Digital Asset Fast", body: "Use our AI Prompts and templates to build your product professionally in hours, not weeks." },
+  { n: "03", Icon: BookOpen, title: "Write High-Converting Copy", body: "Plug your product into our 100+ Headline Formulas to create offers people can't resist." },
+  { n: "04", Icon: Megaphone, title: "Follow the 30-Day Checklist", body: "Launch with confidence using the exact day-by-day blueprint trusted by top creators." },
+  { n: "05", Icon: Zap, title: "Automate & Profit", body: "Set up checkout, delivery, and follow-up on autopilot so you can earn while you sleep." }
 ];
 
+
 const faqs = [
-  { q: "Do I need to be a professional writer to create an eBook?", a: "Not at all. You just need to know something useful. We'll help you package it like a pro — no fancy writing skills needed." },
-  { q: "How will I get my eBook after buying?", a: "Instant delivery straight to your email right after purchase. Quick, simple, no waiting." },
-  { q: "Can I actually make money selling eBooks?", a: "Yes, but it's not magic. If you follow the process and take action, you can definitely build a solid income stream." },
-  { q: "How much time do I need to invest?", a: "You can start with just a few hours a week. It's designed to fit around your busy life — no need to quit your job." },
-  { q: "What makes this different from other eBook courses?", a: "We don't sell fluff. We give you real, step-by-step systems you can actually use — not just random Google tips." },
+  { q: "Do I need any technical skills or experience?", a: "Not at all. The Pro Vault is designed for complete beginners. Our AI prompts and fill-in-the-blank templates do the heavy lifting for you." },
+  { q: "What kind of digital products can I create with this?", a: "You can use these templates and formulas to create short guides, checklists, Notion templates, planners, mini-courses, or workbooks." },
+  { q: "What if I don't even have an idea yet?", a: "That's exactly why we included the 50+ Profitable Niche Research Guide. It helps you find a high-demand idea in minutes." },
+  { q: "How much time do I need to invest?", a: "You can start with just a few hours a week. It's designed to fit around your schedule." },
+  { q: "What makes The Pro Vault different from other courses?", a: "This isn't a boring 10-hour video course full of fluff. It's an Implementation Bundle. You get the exact tools, templates, and checklists to take action today." }
 ];
+
 
 const proofRows = [
   [
