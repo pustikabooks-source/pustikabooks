@@ -507,7 +507,8 @@ function UrgencyCTA() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Let's Build My eBook →</GlowButton>
+          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →
+(</GlowButton>
         </div>
       </div>
     </section>
@@ -548,7 +549,8 @@ function FinalCTA() {
         <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your passive income?</h2>
         <p className="mt-4 text-white/70 text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Let's Build My eBook →</GlowButton>
+          <GlowButton href="#pricing" onClick={scrollToPricing}>Get The Pro Vault →
+          </GlowButton>
         </div>
       </div>
     </section>
