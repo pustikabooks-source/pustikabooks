@@ -265,12 +265,14 @@ function Pricing() {
       <div className="max-w-6xl mx-w-md">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
         <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
-          Ready to turn your idea
+          "Unlock everything you need"
+          
           <br />
           <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">into income?</span>
         </h2>
         <p className="mt-5 text-lg text-center text-white/65 max-w-2xl mx-auto">
-          Choose the package that best fits your goals and skip weeks of frustration.
+          "One simple price for lifetime access to the entire vault. Get started in seconds."
+          
         </p>
 
         <div className="mt-14 flex justify-center items-stretch">
@@ -284,8 +286,8 @@ function Pricing() {
                 <Sparkles className="w-3 h-3" /> Most Popular · Save 50%
               </div>
 
-              <h3 className="text-2xl font-bold mt-2">The PRO Bundle</h3>
-              <p className="text-white/60 mt-1.5">Includes the eBook + the complete implementation toolkit.</p>
+              <h3 className="text-2xl font-bold mt-2">The Pro Vault</h3>
+              <p className="text-white/60 mt-1.5">Your complete all-in-one implementation toolkit.</p>
 
               <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5">
                 <div className="flex items-end justify-between">
@@ -333,7 +335,7 @@ function Pricing() {
                 rel="noopener noreferrer"
                 className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform"
               >
-                Get Instant Access to the PRO Bundle Now 🚀
+                Get Instant Access to the Pro Vault Now 🚀
               </a>
               <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
