@@ -268,7 +268,7 @@ function Pricing() {
           "Unlock everything you need"
           
           <br />
-          <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">into income?</span>
+          
         </h2>
         <p className="mt-5 text-lg text-center text-white/65 max-w-2xl mx-auto">
           "One simple price for lifetime access to the entire vault. Get started in seconds."
