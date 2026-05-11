@@ -335,7 +335,7 @@ function Pricing() {
                 rel="noopener noreferrer"
                 className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform"
               >
-                Get Instant Access to the Pro Vault Now 🚀
+                Get Pro Vault Now 🚀
               </a>
               <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
@@ -507,8 +507,7 @@ function UrgencyCTA() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →
-(</GlowButton>
+          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →</GlowButton>
         </div>
       </div>
     </section>
