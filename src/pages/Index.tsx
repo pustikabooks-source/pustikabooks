@@ -312,7 +312,7 @@ function Pricing() {
                   { text: "500+ Digital Product Ideas for Instant Inspiration" },
                   { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
                   { text: "100+ High-Converting Headline Formulas for IG/FB" },
-                  { text: "Money Hustle E-book (Passive Income Methods)" },
+                  { text: "E-Book Bundles", value:"Rs. 2000" },
                   { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
                 ].map(({ text: t, value }) => (
                   <li key={t} className="flex items-start gap-3 text-white/85">
@@ -545,7 +545,7 @@ function FinalCTA() {
       <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
       <div className="mx-auto max-w-3xl text-center rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-10 md:p-14">
         <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
-        <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your passive income?</h2>
+        <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your digital empire</h2>
         <p className="mt-4 text-white/70 text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
           <GlowButton href="#pricing" onClick={scrollToPricing}>Get The Pro Vault →
