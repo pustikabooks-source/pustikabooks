@@ -483,7 +483,7 @@ function UrgencyCTA() {
     <section className="py-24 px-6">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
-          Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">passive income?</span>
+          Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">digital empire?</span>
         </h2>
         <p className="mt-5 text-lg text-white/65">There's no perfect time — start today, start small, start winning.</p>
 
