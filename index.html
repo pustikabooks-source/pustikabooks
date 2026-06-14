@@ -21,14 +21,14 @@
 
     <style>
       :root {
-        --critical-bg: #0e0b1b;
-        --critical-text: #faf7ff;
-        --critical-muted: rgba(250, 247, 255, 0.72);
-        --critical-soft: rgba(250, 247, 255, 0.62);
-        --critical-border: rgba(255, 255, 255, 0.08);
-        --critical-gradient: linear-gradient(90deg, #a855f7, #ec4899);
-        --critical-hero-gradient: linear-gradient(90deg, #d8b4fe, #f9a8d4 58%, #fdba74);
-        --critical-shadow: 0 0 60px -10px rgba(168, 85, 247, 0.55), 0 0 120px -20px rgba(236, 72, 153, 0.35);
+        --critical-bg: #FAFAF8;
+        --critical-text: #1C1C2E;
+        --critical-muted: #6B7280;
+        --critical-soft: #6B7280;
+        --critical-border: #E5E7EB;
+        --critical-gradient: linear-gradient(90deg, #4F46E5, #6366F1);
+        --critical-hero-gradient: linear-gradient(90deg, #4F46E5, #D946EF);
+        --critical-shadow: 0 12px 32px -10px rgba(79, 70, 229, 0.35);
       }
 
       html {
@@ -50,9 +50,9 @@
       }
 
       .site-topbar {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        background: #000;
-        color: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid #E5E7EB;
+        background: #F4F0E8;
+        color: #1C1C2E;
         padding: 10px 16px;
         text-align: center;
         font-size: 12px;
@@ -64,9 +64,8 @@
         position: sticky;
         top: 0;
         z-index: 40;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        background: rgba(14, 11, 27, 0.72);
-        backdrop-filter: blur(18px);
+        border-bottom: 1px solid #E5E7EB;
+        background: #FFFFFF;
       }
 
       .site-header__inner {
@@ -96,7 +95,7 @@
       }
 
       .site-brand__label {
-        color: rgba(221, 214, 254, 0.72);
+        color: #6B7280;
         font-size: 10px;
         letter-spacing: 0.4em;
       }
@@ -129,7 +128,7 @@
       }
 
       .hero-backdrop {
-        background: radial-gradient(ellipse at top, rgba(107, 33, 168, 0.35), transparent 60%), linear-gradient(180deg, #120f24, #0d0918);
+        background: linear-gradient(180deg, #FAFAF8, #F4F0E8);
       }
 
       .hero-glow {
@@ -139,13 +138,13 @@
         transform: translateX(-50%);
         border-radius: 999px;
         background-image: var(--critical-gradient);
-        opacity: 0.2;
+        opacity: 0.08;
         filter: blur(140px);
       }
 
       .hero-grid {
-        opacity: 0.05;
-        background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+        opacity: 0.06;
+        background-image: radial-gradient(circle at 1px 1px, #1C1C2E 1px, transparent 0);
         background-size: 32px 32px;
       }
 
@@ -164,16 +163,15 @@
         padding: 6px 16px;
         border: 1px solid var(--critical-border);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.04);
-        color: rgba(255, 255, 255, 0.8);
+        background: #FFFFFF;
+        color: #1C1C2E;
         font-size: 12px;
         font-weight: 500;
-        backdrop-filter: blur(12px);
       }
 
       .hero-badge__icon,
       .hero-proof__icon {
-        color: #facc15;
+        color: #D946EF;
         fill: currentColor;
         flex: 0 0 auto;
       }
@@ -253,7 +251,7 @@
         align-items: center;
         gap: 6px;
         font-weight: 600;
-        color: rgba(255, 255, 255, 0.92);
+        color: #1C1C2E;
       }
 
       .hero-cover {
