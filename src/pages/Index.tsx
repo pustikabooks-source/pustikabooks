@@ -100,7 +100,7 @@ function Header() {
           onClick={scrollToPricing}
           className="site-header__cta"
         >
-          Get Started
+          Get Pro Vault — ₹499
         </a>
       </div>
     </header>
@@ -132,10 +132,10 @@ function Hero() {
           Stop overthinking. Get the exact AI prompts, templates, and frameworks used by top creators to build and sell digital assets—no tech skills needed.
         </p>
           <div className="flex justify-center my-8">
-            <img 
+            <img
               src="/pro-vault.jpg"
               alt="The Pro Vault Implementation Bundle"
-              className="w-full max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="w-full max-w-[540px] md:max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -156,7 +156,7 @@ function Hero() {
             </div>
             <span className="hero-proof__text">
               <Star className="hero-proof__icon" />
-              <span>Trusted by 10,000+ Creators</span>
+              <span>₹84,210+ earned by our community</span>
             </span>
           </div>
         
