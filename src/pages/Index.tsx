@@ -1,5 +1,4 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
