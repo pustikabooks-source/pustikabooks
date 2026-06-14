@@ -278,7 +278,99 @@ function Pricing() {
           "One simple price for lifetime access to the entire vault. Get started in seconds."
           
         </p>
+{/* EBOOK BUNDLE SECTION */}
+<div className="mt-12 mb-16 flex flex-col items-center">
+  <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mb-2">
+    EBOOK COLLECTION
+  </p>
+  <h2 className="text-3xl font-black text-center text-foreground mb-2">
+    One Bundle. Four Books. Zero Excuses.
+  </h2>
+  <p className="text-muted-foreground text-center max-w-md mb-8">
+    Everything you need to earn money, build a business, and master 
+    your finances — all in one place for less than the price of a meal.
+  </p>
 
+  <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple w-full max-w-sm">
+    <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col shadow-card">
+      
+      {/* Badge */}
+      <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
+        <span className="text-white text-xs font-semibold">
+          🔥 LIMITED OFFER — 68% OFF
+        </span>
+      </div>
+
+      <h3 className="text-2xl font-bold mt-2">
+        Pustika Ebook Mastery Bundle
+      </h3>
+      <p className="text-muted-foreground mt-1 text-sm">
+        4 Bestselling Ebooks · Instant PDF Delivery
+      </p>
+
+      {/* Price */}
+      <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="text-[11px] uppercase tracking-widest text-brand-pink">
+              Bundle Price
+            </p>
+            <p className="text-sm font-semibold text-muted-foreground line-through">
+              Rs. 795
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+              ₹249
+            </p>
+            <p className="text-[11px] text-green-600 font-semibold">
+              You save ₹546 today
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Ebooks List */}
+      <ul className="mt-7 space-y-3 flex-grow">
+        {[
+          { emoji: "📘", title: "Paisa Samjho, Zindagi Badlo", desc: "Master money & invest smarter" },
+          { emoji: "💻", title: "Digital Products Guide", desc: "Create & sell digital products online" },
+          { emoji: "🚀", title: "Startup from Zero", desc: "Launch your first Indian business" },
+          { emoji: "💰", title: "Money Hustle", desc: "Side income strategies for Indians" },
+        ].map(({ emoji, title, desc }) => (
+          <li key={title} className="flex items-start gap-3">
+            <span className="text-xl">{emoji}</span>
+            <span>
+              <p className="text-sm font-semibold text-foreground">{title}</p>
+              <p className="text-[11px] text-muted-foreground">{desc}</p>
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Tagline */}
+      <p className="mt-6 text-center text-sm italic text-muted-foreground">
+        "Read once. Apply forever. Start earning sooner."
+      </p>
+
+      {/* CTA Button */}
+      <a
+        href=https://rzp.io/rzp/GxsFnRl
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4"
+      >
+        Get All 4 Ebooks — ₹249 →
+      </a>
+
+      <p className="text-[11px] text-center mt-3 text-muted-foreground">
+        🔒 Instant PDF Delivery · Secure Razorpay · One-time payment
+      </p>
+
+    </div>
+  </div>
+</div>
+{/* END EBOOK BUNDLE SECTION */}
         <div className="mt-14 flex justify-center items-stretch">
           
 
@@ -316,7 +408,7 @@ function Pricing() {
                   { text: "500+ Digital Product Ideas for Instant Inspiration" },
                   { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
                   { text: "100+ High-Converting Headline Formulas for IG/FB" },
-                  { text: "E-Book Bundles", value:"Rs. 2000" },
+                  { text: "E-Book Mastery Guide", value:"Rs. 2000" },
                   { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
                 ].map(({ text: t, value }) => (
                   <li key={t} className="flex items-start gap-3 text-foreground">
