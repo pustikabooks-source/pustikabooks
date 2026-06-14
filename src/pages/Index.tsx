@@ -169,12 +169,12 @@ function Hero() {
 // function WhyCreated() {
 //   return (
 //     <section className="py-16 px-5 md:px-8">
-//       <div className="max-w-2xl mx-auto text-left rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-7 md:p-9">
+//       <div className="max-w-2xl mx-auto text-left rounded-3xl border border-border bg-card shadow-card p-7 md:p-9">
 //         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Why We Created This eBook</h2>
-//         <p className="mt-4 text-white/70 leading-relaxed">
+//         <p className="mt-4 text-muted-foreground leading-relaxed">
 //           We know how confusing it feels when you're starting out — too much advice, not enough real help. That's exactly why we created this book. Not to "sell information," but to share what actually works in simple, clear steps.
 //         </p>
-//         <p className="mt-3 text-white/70 leading-relaxed">
+//         <p className="mt-3 text-muted-foreground leading-relaxed">
 //           At Pustika, we don't disappear after the sale. We stay connected. You get access to our WhatsApp group where we personally reply, solve doubts, and support you like a friend would.
 //         </p>
 //       </div>
@@ -202,15 +202,15 @@ function Features() {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`group relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-7 md:p-8 overflow-hidden hover:border-white/20 transition-all hover:-translate-y-1 ${spans[i] ?? ""}`}
+              className={`group relative rounded-3xl border border-border bg-card shadow-card p-7 md:p-8 overflow-hidden hover:border-border transition-all hover:-translate-y-1 ${spans[i] ?? ""}`}
             >
               <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-gradient-cta opacity-0 group-hover:opacity-20 blur-3xl transition-opacity" />
               <div className="relative">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-cta/20 border border-white/10 text-2xl">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-cta/20 border border-border text-2xl">
                   {f.icon}
                 </div>
                 <h3 className="mt-5 text-xl md:text-2xl font-bold tracking-tight">{f.title}</h3>
-                <p className="mt-3 text-white/65 leading-relaxed text-[15px]">{f.body}</p>
+                <p className="mt-3 text-muted-foreground leading-relaxed text-[15px]">{f.body}</p>
               </div>
             </div>
           ))}
@@ -236,15 +236,15 @@ function Modules() {
             return (
               <div
                 key={m.n}
-                className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-md p-7 hover:border-white/20 transition-all hover:-translate-y-1 overflow-hidden"
+                className="group relative rounded-3xl border border-border bg-gradient-to-br from-card to-card shadow-card p-7 hover:border-border transition-all hover:-translate-y-1 overflow-hidden"
               >
-                <div className="absolute top-4 right-5 text-5xl font-black text-white/[0.06] tracking-tighter">{m.n}</div>
+                <div className="absolute top-4 right-5 text-5xl font-black text-muted-foreground/20 tracking-tighter">{m.n}</div>
                 <div className="relative">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-glow">
                     <Icon className="w-7 h-7 text-white" strokeWidth={2.4} />
                   </div>
                   <h3 className="mt-5 text-xl font-bold tracking-tight">{m.title}</h3>
-                  <p className="mt-3 text-white/65 leading-relaxed text-[15px]">{m.body}</p>
+                  <p className="mt-3 text-muted-foreground leading-relaxed text-[15px]">{m.body}</p>
                 </div>
               </div>
             );
@@ -267,7 +267,7 @@ function Pricing() {
           <br />
           
         </h2>
-        <p className="mt-5 text-lg text-center text-white/65 max-w-2xl mx-auto">
+        <p className="mt-5 text-lg text-center text-muted-foreground max-w-2xl mx-auto">
           "One simple price for lifetime access to the entire vault. Get started in seconds."
           
         </p>
@@ -284,20 +284,20 @@ function Pricing() {
               </div>
 
               <h3 className="text-2xl font-bold mt-2">The Pro Vault</h3>
-              <p className="text-white/60 mt-1.5">Your complete all-in-one implementation toolkit.</p>
+              <p className="text-muted-foreground mt-1.5">Your complete all-in-one implementation toolkit.</p>
 
               <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5">
                 <div className="flex items-end justify-between">
                   <div>
                     <p className="text-[11px] uppercase tracking-widest text-brand-pink">Total Value</p>
-                    <p className="text-sm font-semibold text-white/50 line-through">Rs. 10,499</p>
+                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 10,499</p>
                   </div>
                   <div className="text-right">
                     <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
                     <p className="text-[11px] text-brand-pink font-semibold">Founder’s Launch Offer — One-Time Payment</p>
                   </div>
                 </div>
-                <p className="mt-3 text-xs text-white/75 leading-relaxed border-t border-brand-purple/20 pt-3">
+                <p className="mt-3 text-xs text-muted-foreground leading-relaxed border-t border-brand-purple/20 pt-3">
                   Invest in your future for less than the cost of 1 pizzas. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
                 </p>
               </div>
@@ -312,7 +312,7 @@ function Pricing() {
                   { text: "E-Book Bundles", value:"Rs. 2000" },
                   { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
                 ].map(({ text: t, value }) => (
-                  <li key={t} className="flex items-start gap-3 text-white/85">
+                  <li key={t} className="flex items-start gap-3 text-foreground">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
                       <Sparkles className="w-3 h-3 text-brand-pink" />
                     </span>
@@ -334,7 +334,7 @@ function Pricing() {
               >
                 Get Pro Vault Now 🚀
               </a>
-              <p className="text-[11px] text-center mt-3 text-white/50">🔒 100% Secure Payment · Instant Delivery</p>
+              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
           </div>
         </div>
@@ -354,24 +354,24 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
         {doubled.map((p, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-2xl px-4 py-3 w-[340px] md:w-[460px] shrink-0"
+            className="flex items-center gap-3 bg-card border border-border shadow-card rounded-2xl px-4 py-3 w-[340px] md:w-[460px] shrink-0"
           >
             <div className={`w-9 h-9 rounded-full ${p.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
               {p.initials}
             </div>
             <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2 text-xs text-white/55">
-                <span className="font-bold text-white/90 truncate">{p.sender}</span>
-                <span className="px-1.5 py-0.5 bg-white/10 rounded text-[10px] font-semibold">Inbox</span>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="font-bold text-foreground truncate">{p.sender}</span>
+                <span className="px-1.5 py-0.5 bg-muted rounded text-[10px] font-semibold">Inbox</span>
               </div>
-              <p className="mt-1 text-sm truncate text-white/75">
+              <p className="mt-1 text-sm truncate text-muted-foreground">
                 <span className="bg-brand-yellow/30 text-brand-yellow px-1 font-semibold rounded">Payment</span>{" "}
                 {p.subject}
               </p>
             </div>
             <div className="flex flex-col items-end shrink-0 gap-1">
               <span className="font-extrabold text-brand-pink">{p.amount}</span>
-              <span className="text-[10px] text-white/45 font-medium">{p.time}</span>
+              <span className="text-[10px] text-muted-foreground font-medium">{p.time}</span>
             </div>
           </div>
         ))}
@@ -382,15 +382,15 @@ function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reve
 
 function DashboardCard({ d }: { d: typeof dashboards[0] }) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
-      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
+    <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
+      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
         <div className="p-6">
-          <p className="text-xs font-semibold text-white/55">Collected Amount</p>
+          <p className="text-xs font-semibold text-muted-foreground">Collected Amount</p>
           <p className="mt-3 text-3xl md:text-4xl font-black tracking-tight">{d.amount}</p>
-          <p className="mt-1 text-xs text-white/55">from {d.count} captured payments</p>
+          <p className="mt-1 text-xs text-muted-foreground">from {d.count} captured payments</p>
         </div>
         <div className="p-6">
-          <p className="text-xs font-semibold text-white/55">Split by payment method</p>
+          <p className="text-xs font-semibold text-muted-foreground">Split by payment method</p>
           <div className="mt-4 flex items-center gap-6">
             <div
               className="w-24 h-24 rounded-full shrink-0"
@@ -404,12 +404,12 @@ function DashboardCard({ d }: { d: typeof dashboards[0] }) {
               <div className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-brand-purple" />
                 <span className="font-semibold">UPI</span>
-                <span className="text-white/55 ml-2">{d.upi}%</span>
+                <span className="text-muted-foreground ml-2">{d.upi}%</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-brand-pink" />
                 <span className="font-semibold">Card</span>
-                <span className="text-white/55 ml-2">{d.card}%</span>
+                <span className="text-muted-foreground ml-2">{d.card}%</span>
               </div>
             </div>
           </div>
@@ -461,10 +461,10 @@ function Proof() {
 function Whatsapp() {
   return (
     <section className="py-20 px-6">
-      <div className="mx-auto max-w-2xl text-center rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-10">
+      <div className="mx-auto max-w-2xl text-center rounded-3xl border border-border bg-card shadow-card p-10">
         <p className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-purple">Still confused?</p>
         <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">Let's talk on WhatsApp</h2>
-        <p className="mt-4 text-white/65">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
+        <p className="mt-4 text-muted-foreground">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
         <a href={WHATSAPP} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3.5 font-bold hover:bg-[#1ebe5a] transition shadow-lg">
           💬 Message Us Now
         </a>
@@ -492,13 +492,13 @@ function UrgencyCTA() {
         <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
           Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">digital empire?</span>
         </h2>
-        <p className="mt-5 text-lg text-white/65">There's no perfect time — start today, start small, start winning.</p>
+        <p className="mt-5 text-lg text-muted-foreground">There's no perfect time — start today, start small, start winning.</p>
 
         <div className="mt-10 grid grid-cols-2 gap-4 max-w-md mx-auto">
           {[{ v: pad(time.m), l: "Min" }, { v: pad(time.s), l: "Sec" }].map((c) => (
-            <div key={c.l} className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md py-7 flex items-baseline justify-center gap-2">
+            <div key={c.l} className="rounded-2xl border border-border bg-card shadow-card py-7 flex items-baseline justify-center gap-2">
               <span className="text-5xl md:text-6xl font-black text-brand-yellow leading-none tabular-nums">{c.v}</span>
-              <span className="text-base font-semibold text-white/70">{c.l}</span>
+              <span className="text-base font-semibold text-muted-foreground">{c.l}</span>
             </div>
           ))}
         </div>
@@ -519,16 +519,16 @@ function FAQ() {
         <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
         <div className="mt-12 space-y-3">
           {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-6 hover:border-white/20 transition-colors">
+            <details key={f.q} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
               <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-base md:text-lg">
                 {f.q}
                 <span className="ml-4 text-2xl text-brand-purple group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p className="mt-3 text-white/65 leading-relaxed">{f.a}</p>
+              <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
             </details>
           ))}
         </div>
-        <p className="mt-10 text-center text-white/65">
+        <p className="mt-10 text-center text-muted-foreground">
           Still got questions? Drop us a line at <a className="font-semibold text-brand-pink" href="mailto:support@pustikabooks.in">support@pustikabooks.in</a>
         </p>
       </div>
@@ -540,10 +540,10 @@ function FinalCTA() {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
-      <div className="mx-auto max-w-3xl text-center rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-10 md:p-14">
+      <div className="mx-auto max-w-3xl text-center rounded-3xl border border-border bg-card shadow-card p-10 md:p-14">
         <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
         <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your digital empire</h2>
-        <p className="mt-4 text-white/70 text-lg">There's no perfect time — start today, start small, start winning.</p>
+        <p className="mt-4 text-muted-foreground text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
           <GlowButton href="#pricing" onClick={scrollToPricing}>Get The Pro Vault →
           </GlowButton>
@@ -555,8 +555,8 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 border-t border-white/10">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/55">
+    <footer className="py-10 px-6 border-t border-border">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
         <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
         <p>support@pustikabooks.in</p>
       </div>
@@ -566,7 +566,7 @@ function Footer() {
 
 function StickyMobileCTA() {
   return (
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-3 backdrop-blur-xl bg-background/80 border-t border-white/10">
+    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-3 backdrop-blur-xl bg-background/80 border-t border-border">
       <a
         href="#pricing"
         onClick={scrollToPricing}
