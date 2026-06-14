@@ -194,7 +194,7 @@ function Features() {
   ];
   return (
     <section className="py-24 px-6 relative">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[oklch(0.15_0.04_280)/0.5] to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Tested by thousands · Trusted by learners</p>
         <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight">Now it's your turn.</h2>
