@@ -6,6 +6,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ThankYouBasic from "./pages/ThankYouBasic";
 import ThankYouPro from "./pages/ThankYouPro";
+import Privacy from "./pages/Privacy";
+import Refund from "./pages/Refund";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -14,6 +16,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<Index />} />
         <Route path="/thank-you-basic" element={<ThankYouBasic />} />
         <Route path="/thank-you-pro" element={<ThankYouPro />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/refund" element={<Refund />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
