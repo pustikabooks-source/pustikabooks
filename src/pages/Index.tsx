@@ -501,8 +501,8 @@ function FAQ() {
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">FAQ</p>
         <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
         <div className="mt-12 space-y-3">
-          {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
+          {faqs.map((f, i) => (
+            <details key={f.q} open={i === 0} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
               <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-base md:text-lg">
                 {f.q}
                 <span className="ml-4 text-2xl text-brand-purple group-open:rotate-45 transition-transform">+</span>
