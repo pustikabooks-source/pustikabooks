@@ -302,7 +302,7 @@ function Pricing() {
       </div>
 
       <h3 className="text-2xl font-bold mt-2">
-        Pustika Ebook Mastery Bundle
+        Pustika Ebook Bundle
       </h3>
       <p className="text-muted-foreground mt-1 text-sm">
         4 Bestselling Ebooks · Instant PDF Delivery
