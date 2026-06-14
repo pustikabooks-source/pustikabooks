@@ -79,6 +79,14 @@ function GlowButton({ href, onClick, children, className = "" }: { href?: string
   );
 }
 
+function AnnouncementBar() {
+  return (
+    <div className="w-full bg-[#4F46E5] text-white text-center text-xs md:text-sm font-semibold py-2.5 px-4">
+      ⚡ Limited Time: Get The Pro Vault for just ₹499 — Instant Digital Delivery
+    </div>
+  );
+}
+
 function TopBar() {
   return (
     <div className="site-topbar">
@@ -537,12 +545,45 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 bg-[#1C1C2E] text-white">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
-        <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
-        <p>support@pustikabooks.in</p>
+    <footer className="py-12 px-6 bg-[#1C1C2E] text-white">
+      <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-3 text-sm">
+        <div>
+          <p className="text-lg font-bold text-white">Pustika <span className="text-white/60 text-xs tracking-[0.3em]">BOOKS</span></p>
+          <p className="mt-3 text-white/70">© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
+        </div>
+        <div>
+          <p className="font-semibold text-white mb-3">Contact</p>
+          <p className="text-white/70">
+            <a href="mailto:support@pustikabooks.in" className="hover:text-white transition">support@pustikabooks.in</a>
+          </p>
+          <p className="mt-2 text-white/70">
+            <a href="https://instagram.com/pustikabooks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram @pustikabooks</a>
+          </p>
+        </div>
+        <div>
+          <p className="font-semibold text-white mb-3">Legal</p>
+          <ul className="space-y-2 text-white/70">
+            <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="/refund" className="hover:text-white transition">Refund Policy</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+  );
+}
+
+function FloatingWhatsApp() {
+  return (
+    <a
+      href={WHATSAPP}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-bold px-4 py-3 shadow-lg transition"
+    >
+      <span aria-hidden>💬</span>
+      <span className="hidden sm:inline">Chat with us</span>
+    </a>
   );
 }
 
@@ -563,6 +604,7 @@ function StickyMobileCTA() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
+      <AnnouncementBar />
       <TopBar />
       <Header />
       <Hero />
@@ -577,6 +619,7 @@ function Index() {
       <FinalCTA />
       <Footer />
       <StickyMobileCTA />
+      <FloatingWhatsApp />
     </div>
   );
 }
