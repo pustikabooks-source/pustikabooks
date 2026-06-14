@@ -355,7 +355,7 @@ function Pricing() {
 
       {/* CTA Button */}
       <a
-  href="https://rzp.io/rzp/GxsFnRl"
+  href="https://rzp.io/rzp/Ih78kMZ"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4"
