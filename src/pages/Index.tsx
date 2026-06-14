@@ -258,7 +258,7 @@ function Modules() {
 function Pricing() {
   return (
     <section id="pricing" className="relative py-24 px-5 md:px-8 scroll-mt-20">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[oklch(0.15_0.06_290)/0.4] to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="max-w-6xl mx-w-md">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
         <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
@@ -278,7 +278,7 @@ function Pricing() {
           {/* PRO */}
           <div className="order-1 relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
             <div className="absolute -inset-6 bg-gradient-cta opacity-25 blur-3xl rounded-3xl -z-10" />
-            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-[oklch(0.13_0.04_280)] p-8 flex flex-col h-full">
+            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1.5 text-[11px] font-bold tracking-wider text-white uppercase shadow-glow">
                 <Sparkles className="w-3 h-3" /> Most Popular · Save 50%
               </div>
@@ -286,7 +286,7 @@ function Pricing() {
               <h3 className="text-2xl font-bold mt-2">The Pro Vault</h3>
               <p className="text-muted-foreground mt-1.5">Your complete all-in-one implementation toolkit.</p>
 
-              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-black/40 p-5">
+              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
                 <div className="flex items-end justify-between">
                   <div>
                     <p className="text-[11px] uppercase tracking-widest text-brand-pink">Total Value</p>
