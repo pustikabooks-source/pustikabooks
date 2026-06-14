@@ -1,5 +1,4 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
@@ -79,6 +78,14 @@ function GlowButton({ href, onClick, children, className = "" }: { href?: string
   );
 }
 
+function AnnouncementBar() {
+  return (
+    <div className="w-full bg-[#4F46E5] text-white text-center text-xs md:text-sm font-semibold py-2.5 px-4">
+      ⚡ Limited Time: Get The Pro Vault for just ₹499 — Instant Digital Delivery
+    </div>
+  );
+}
+
 function TopBar() {
   return (
     <div className="site-topbar">
@@ -100,7 +107,7 @@ function Header() {
           onClick={scrollToPricing}
           className="site-header__cta"
         >
-          Get Started
+          Get Pro Vault — ₹499
         </a>
       </div>
     </header>
@@ -132,10 +139,10 @@ function Hero() {
           Stop overthinking. Get the exact AI prompts, templates, and frameworks used by top creators to build and sell digital assets—no tech skills needed.
         </p>
           <div className="flex justify-center my-8">
-            <img 
+            <img
               src="/pro-vault.jpg"
               alt="The Pro Vault Implementation Bundle"
-              className="w-full max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="w-full max-w-[540px] md:max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -156,7 +163,7 @@ function Hero() {
             </div>
             <span className="hero-proof__text">
               <Star className="hero-proof__icon" />
-              <span>Trusted by 10,000+ Creators</span>
+              <span>₹84,210+ earned by our community</span>
             </span>
           </div>
         
@@ -193,7 +200,7 @@ function Features() {
     "md:col-span-2",
   ];
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-20 px-6 relative">
       <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Tested by thousands · Trusted by learners</p>
@@ -222,7 +229,7 @@ function Features() {
 
 function Modules() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-20 px-6 relative">
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">What You'll Master Inside</p>
         <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
@@ -257,7 +264,7 @@ function Modules() {
 
 function Pricing() {
   return (
-    <section id="pricing" className="relative py-24 px-5 md:px-8 scroll-mt-20">
+    <section id="pricing" className="relative py-20 px-5 md:px-8 scroll-mt-20">
       <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="max-w-6xl mx-w-md">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
@@ -434,7 +441,7 @@ function DashboardMarquee() {
 
 function Proof() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden">
       <div className="mx-auto max-w-6xl text-center">
         <p className="text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">Real receipts</p>
         <h2 className="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-[1.1]">
@@ -474,34 +481,17 @@ function Whatsapp() {
 }
 
 function UrgencyCTA() {
-  const [time, setTime] = useState({ m: 9, s: 36 });
-  useEffect(() => {
-    const id = setInterval(() => {
-      setTime((t) => {
-        const total = t.m * 60 + t.s - 1;
-        if (total <= 0) return { m: 9, s: 59 };
-        return { m: Math.floor(total / 60), s: total % 60 };
-      });
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
-  const pad = (n: number) => n.toString().padStart(2, "0");
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
           Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">digital empire?</span>
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">There's no perfect time — start today, start small, start winning.</p>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 max-w-md mx-auto">
-          {[{ v: pad(time.m), l: "Min" }, { v: pad(time.s), l: "Sec" }].map((c) => (
-            <div key={c.l} className="rounded-2xl border border-border bg-card shadow-card py-7 flex items-baseline justify-center gap-2">
-              <span className="text-5xl md:text-6xl font-black text-brand-yellow leading-none tabular-nums">{c.v}</span>
-              <span className="text-base font-semibold text-muted-foreground">{c.l}</span>
-            </div>
-          ))}
-        </div>
+        <p className="mt-10 text-lg md:text-2xl font-bold text-brand-pink">
+          ⚡ Founder's Price Ending Soon — Only ₹499 (Regular ₹999)
+        </p>
 
         <div className="mt-10 flex justify-center">
           <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →</GlowButton>
@@ -513,13 +503,13 @@ function UrgencyCTA() {
 
 function FAQ() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="mx-auto max-w-3xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">FAQ</p>
         <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
         <div className="mt-12 space-y-3">
-          {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
+          {faqs.map((f, i) => (
+            <details key={f.q} open={i === 0} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
               <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-base md:text-lg">
                 {f.q}
                 <span className="ml-4 text-2xl text-brand-purple group-open:rotate-45 transition-transform">+</span>
@@ -538,15 +528,14 @@ function FAQ() {
 
 function FinalCTA() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
       <div className="mx-auto max-w-3xl text-center rounded-3xl border border-border bg-card shadow-card p-10 md:p-14">
         <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
         <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your digital empire</h2>
         <p className="mt-4 text-muted-foreground text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Get The Pro Vault →
-          </GlowButton>
+          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault — ₹499 →</GlowButton>
         </div>
       </div>
     </section>
@@ -555,12 +544,45 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 bg-[#1C1C2E] text-white">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
-        <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
-        <p>support@pustikabooks.in</p>
+    <footer className="py-12 px-6 bg-[#1C1C2E] text-white">
+      <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-3 text-sm">
+        <div>
+          <p className="text-lg font-bold text-white">Pustika <span className="text-white/60 text-xs tracking-[0.3em]">BOOKS</span></p>
+          <p className="mt-3 text-white/70">© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
+        </div>
+        <div>
+          <p className="font-semibold text-white mb-3">Contact</p>
+          <p className="text-white/70">
+            <a href="mailto:support@pustikabooks.in" className="hover:text-white transition">support@pustikabooks.in</a>
+          </p>
+          <p className="mt-2 text-white/70">
+            <a href="https://instagram.com/pustikabooks" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram @pustikabooks</a>
+          </p>
+        </div>
+        <div>
+          <p className="font-semibold text-white mb-3">Legal</p>
+          <ul className="space-y-2 text-white/70">
+            <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="/refund" className="hover:text-white transition">Refund Policy</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+  );
+}
+
+function FloatingWhatsApp() {
+  return (
+    <a
+      href={WHATSAPP}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-bold px-4 py-3 shadow-lg transition"
+    >
+      <span aria-hidden>💬</span>
+      <span className="hidden sm:inline">Chat with us</span>
+    </a>
   );
 }
 
@@ -581,6 +603,7 @@ function StickyMobileCTA() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
+      <AnnouncementBar />
       <TopBar />
       <Header />
       <Hero />
@@ -595,6 +618,7 @@ function Index() {
       <FinalCTA />
       <Footer />
       <StickyMobileCTA />
+      <FloatingWhatsApp />
     </div>
   );
 }
