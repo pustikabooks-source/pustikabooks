@@ -555,8 +555,8 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 border-t border-border">
-      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+    <footer className="py-10 px-6 bg-[#1C1C2E] text-white">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
         <p>© {new Date().getFullYear()} Pustika Books. All rights reserved.</p>
         <p>support@pustikabooks.in</p>
       </div>
