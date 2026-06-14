@@ -193,7 +193,7 @@ function Features() {
     "md:col-span-2",
   ];
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-20 px-6 relative">
       <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Tested by thousands · Trusted by learners</p>
@@ -222,7 +222,7 @@ function Features() {
 
 function Modules() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-20 px-6 relative">
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">What You'll Master Inside</p>
         <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
@@ -257,7 +257,7 @@ function Modules() {
 
 function Pricing() {
   return (
-    <section id="pricing" className="relative py-24 px-5 md:px-8 scroll-mt-20">
+    <section id="pricing" className="relative py-20 px-5 md:px-8 scroll-mt-20">
       <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
       <div className="max-w-6xl mx-w-md">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
@@ -434,7 +434,7 @@ function DashboardMarquee() {
 
 function Proof() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden">
       <div className="mx-auto max-w-6xl text-center">
         <p className="text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">Real receipts</p>
         <h2 className="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-[1.1]">
@@ -487,7 +487,7 @@ function UrgencyCTA() {
   }, []);
   const pad = (n: number) => n.toString().padStart(2, "0");
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
           Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">digital empire?</span>
@@ -513,7 +513,7 @@ function UrgencyCTA() {
 
 function FAQ() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="mx-auto max-w-3xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">FAQ</p>
         <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
@@ -538,7 +538,7 @@ function FAQ() {
 
 function FinalCTA() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
       <div className="mx-auto max-w-3xl text-center rounded-3xl border border-border bg-card shadow-card p-10 md:p-14">
         <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
