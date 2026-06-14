@@ -474,18 +474,6 @@ function Whatsapp() {
 }
 
 function UrgencyCTA() {
-  const [time, setTime] = useState({ m: 9, s: 36 });
-  useEffect(() => {
-    const id = setInterval(() => {
-      setTime((t) => {
-        const total = t.m * 60 + t.s - 1;
-        if (total <= 0) return { m: 9, s: 59 };
-        return { m: Math.floor(total / 60), s: total % 60 };
-      });
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
-  const pad = (n: number) => n.toString().padStart(2, "0");
   return (
     <section className="py-20 px-6">
       <div className="mx-auto max-w-3xl text-center">
@@ -494,14 +482,9 @@ function UrgencyCTA() {
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">There's no perfect time — start today, start small, start winning.</p>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 max-w-md mx-auto">
-          {[{ v: pad(time.m), l: "Min" }, { v: pad(time.s), l: "Sec" }].map((c) => (
-            <div key={c.l} className="rounded-2xl border border-border bg-card shadow-card py-7 flex items-baseline justify-center gap-2">
-              <span className="text-5xl md:text-6xl font-black text-brand-yellow leading-none tabular-nums">{c.v}</span>
-              <span className="text-base font-semibold text-muted-foreground">{c.l}</span>
-            </div>
-          ))}
-        </div>
+        <p className="mt-10 text-lg md:text-2xl font-bold text-brand-pink">
+          ⚡ Founder's Price Ending Soon — Only ₹499 (Regular ₹999)
+        </p>
 
         <div className="mt-10 flex justify-center">
           <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →</GlowButton>
@@ -545,8 +528,7 @@ function FinalCTA() {
         <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your digital empire</h2>
         <p className="mt-4 text-muted-foreground text-lg">There's no perfect time — start today, start small, start winning.</p>
         <div className="mt-8 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Get The Pro Vault →
-          </GlowButton>
+          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault — ₹499 →</GlowButton>
         </div>
       </div>
     </section>
