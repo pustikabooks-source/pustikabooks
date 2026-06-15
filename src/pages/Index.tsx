@@ -698,21 +698,51 @@ function StickyMobileCTA() {
 }
 
 function Index() {
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "The Pro Vault",
+    description: "Implementation bundle of AI prompts, templates, and a 30-day checklist to launch a digital product.",
+    image: "https://pustikabooks.lovable.app/pro-vault.jpg",
+    brand: { "@type": "Brand", name: "Pustika Books" },
+    offers: {
+      "@type": "Offer",
+      price: "499",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      url: "https://pustikabooks.lovable.app/",
+    },
+  };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Helmet>
       <AnnouncementBar />
       <TopBar />
       <Header />
-      <Hero />
-      <Pricing />
-      {/* <WhyCreated /> */}
-      <Features />
-      <Modules />
-      <Proof />
-      <Whatsapp />
-      <UrgencyCTA />
-      <FAQ />
-      <FinalCTA />
+      <main>
+        <Hero />
+        <Pricing />
+        {/* <WhyCreated /> */}
+        <Features />
+        <Modules />
+        <Proof />
+        <Whatsapp />
+        <UrgencyCTA />
+        <FAQ />
+        <FinalCTA />
+      </main>
       <Footer />
       <StickyMobileCTA />
       <FloatingWhatsApp />
