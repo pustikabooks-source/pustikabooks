@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./styles.css";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -11,6 +12,7 @@ import Refund from "./pages/Refund";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <HelmetProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
@@ -21,5 +23,6 @@ createRoot(document.getElementById("root")!).render(
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );

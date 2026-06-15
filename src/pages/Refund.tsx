@@ -1,6 +1,16 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Refund() {
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-16">
+      <Helmet>
+        <title>Refund Policy — Pustika Books</title>
+        <meta name="description" content="Refund terms for The Pro Vault digital download from Pustika Books, plus how to contact support if something goes wrong." />
+        <link rel="canonical" href="https://pustikabooks.lovable.app/refund" />
+        <meta property="og:title" content="Refund Policy — Pustika Books" />
+        <meta property="og:description" content="Refund terms for The Pro Vault digital download from Pustika Books, plus how to contact support if something goes wrong." />
+        <meta property="og:url" content="https://pustikabooks.lovable.app/refund" />
+      </Helmet>
       <article className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-black tracking-tight">Refund Policy</h1>
         <p className="mt-4 text-muted-foreground">Last updated: {new Date().toLocaleDateString()}</p>

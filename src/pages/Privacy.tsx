@@ -1,6 +1,16 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Privacy() {
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-16">
+      <Helmet>
+        <title>Privacy Policy — Pustika Books</title>
+        <meta name="description" content="How Pustika Books collects, uses, and protects your information when you purchase The Pro Vault." />
+        <link rel="canonical" href="https://pustikabooks.lovable.app/privacy" />
+        <meta property="og:title" content="Privacy Policy — Pustika Books" />
+        <meta property="og:description" content="How Pustika Books collects, uses, and protects your information when you purchase The Pro Vault." />
+        <meta property="og:url" content="https://pustikabooks.lovable.app/privacy" />
+      </Helmet>
       <article className="mx-auto max-w-3xl prose prose-neutral">
         <h1 className="text-4xl font-black tracking-tight">Privacy Policy</h1>
         <p className="mt-4 text-muted-foreground">Last updated: {new Date().toLocaleDateString()}</p>

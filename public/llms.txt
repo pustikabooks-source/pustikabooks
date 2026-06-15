@@ -1,0 +1,9 @@
+# Pustika Books
+
+> The Pro Vault — an implementation bundle of AI prompts, templates, and checklists to help beginners build and sell their first digital product in 30 days.
+
+## Pages
+
+- [Home](/): The Pro Vault overview, pricing (₹499), features, FAQ, and instant-access checkout.
+- [Privacy Policy](/privacy): How Pustika Books collects and uses customer data.
+- [Refund Policy](/refund): Refund terms for digital downloads.
