@@ -1,4 +1,5 @@
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
@@ -142,6 +143,10 @@ function Hero() {
             <img
               src="/pro-vault.jpg"
               alt="The Pro Vault Implementation Bundle"
+              width={540}
+              height={540}
+              fetchPriority="high"
+              decoding="async"
               className="w-full max-w-[540px] md:max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>
