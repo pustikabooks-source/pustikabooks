@@ -11,6 +11,7 @@ import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import AboutUs from "./pages/AboutUs";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/refund" element={<Refund />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
