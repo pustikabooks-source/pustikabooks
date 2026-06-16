@@ -103,13 +103,21 @@ function Header() {
           <span className="site-brand">Pustika</span>
           <span className="site-brand__label">BOOKS</span>
         </div>
-        <a
-          href="#pricing"
-          onClick={scrollToPricing}
-          className="site-header__cta"
-        >
-          Get Pro Vault — ₹499
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="/blog"
+            className="hidden sm:inline text-sm font-semibold text-muted-foreground hover:text-foreground"
+          >
+            Blog
+          </a>
+          <a
+            href="#pricing"
+            onClick={scrollToPricing}
+            className="site-header__cta"
+          >
+            Get Pro Vault — ₹499
+          </a>
+        </div>
       </div>
     </header>
   );
