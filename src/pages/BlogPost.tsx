@@ -122,6 +122,38 @@ export default function BlogPost() {
                 </blockquote>
               );
             }
+            if (block.type === "stat") {
+              return (
+                <div key={i} className="my-8 rounded-2xl bg-gradient-to-br from-brand-purple/10 to-secondary border border-brand-purple/20 px-8 py-6 text-center">
+                  <p className="text-4xl md:text-5xl font-black text-brand-purple">{block.value}</p>
+                  <p className="mt-2 text-sm font-semibold text-muted-foreground uppercase tracking-widest">{block.label}</p>
+                </div>
+              );
+            }
+            if (block.type === "table") {
+              return (
+                <div key={i} className="my-8 overflow-x-auto rounded-2xl border border-border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-secondary">
+                      <tr>
+                        {block.headers.map((h: string, j: number) => (
+                          <th key={j} className="px-4 py-3 text-left font-bold text-foreground">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row: string[], j: number) => (
+                        <tr key={j} className={j % 2 === 0 ? "bg-card" : "bg-secondary/40"}>
+                          {row.map((cell: string, k: number) => (
+                            <td key={k} className="px-4 py-3 text-foreground/80">{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            }
             return null;
           })}
         </div>
