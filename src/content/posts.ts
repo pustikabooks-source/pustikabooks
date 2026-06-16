@@ -28,6 +28,12 @@ export const posts: BlogPost[] = [
     tags: ["earn with ebooks", "beginners", "india"],
     body: [
       {
+  type: "image",
+  url: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop",
+  alt: "Person working on laptop earning money online India",
+  caption: "Thousands of Indian creators are building income with digital products"
+},
+      {
         type: "p",
         text: "In 2022, Priya Sharma was a 24-year-old teacher in Pune earning ₹18,000 a month. By 2024, she was making ₹60,000 a month — from a single 40-page PDF she wrote in two weekends. No startup funding. No Instagram fame. Just one eBook about teaching English to rural students, sold quietly through WhatsApp and a simple landing page.",
       },
