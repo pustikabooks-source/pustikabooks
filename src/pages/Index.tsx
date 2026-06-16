@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -96,30 +97,66 @@ function TopBar() {
 }
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="site-header">
-      <div className="site-header__inner">
-        <div className="site-branding">
-          <span className="site-brand">Pustika</span>
-          <span className="site-brand__label">BOOKS</span>
+    <>
+      <header className="site-header">
+        <div className="site-header__inner">
+          <div className="site-branding">
+            <span className="site-brand">Pustika</span>
+            <span className="site-brand__label">BOOKS</span>
+          </div>
+          <div className="flex items-center gap-4">
+            
+              href="#pricing"
+              className="site-header__cta"
+            >
+              Get Pro Vault — ₹499
+            </a>
+            <button
+              onClick={() => setMenuOpen(true)}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
+              aria-label="Open menu"
+            >
+              <div style={{ width: "22px", height: "2px", background: "#191919", marginBottom: "5px", borderRadius: "2px" }} />
+              <div style={{ width: "22px", height: "2px", background: "#191919", marginBottom: "5px", borderRadius: "2px" }} />
+              <div style={{ width: "22px", height: "2px", background: "#191919", borderRadius: "2px" }} />
+            </button>
+          </div>
         </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="/blog"
-            className="hidden sm:inline text-sm font-semibold text-muted-foreground hover:text-foreground"
-          >
-            Blog
-          </a>
-          <a
-            href="#pricing"
-            onClick={scrollToPricing}
-            className="site-header__cta"
-          >
-            Get Pro Vault — ₹499
-          </a>
+      </header>
+
+      {menuOpen && (
+        <div style={{ position: "fixed", inset: 0, zIndex: 9999, display: "flex" }}>
+          <div
+            style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.4)" }}
+            onClick={() => setMenuOpen(false)}
+          />
+          <div style={{
+            position: "relative", width: "280px", height: "100%",
+            background: "white", padding: "32px 24px",
+            display: "flex", flexDirection: "column", zIndex: 10
+          }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
+              <span style={{ fontSize: "18px", fontWeight: 800, color: "#191919" }}>Pustika<span style={{ color: "#7C3AED" }}> Books</span></span>
+              <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>×</button>
+            </div>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+              <a href="/blog" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</a>
+              <a href="/about" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</a>
+              <a href="#pricing" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</a>
+            </nav>
+            <div style={{ marginTop: "auto" }}>
+              <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>
+              <div style={{ display: "flex", gap: "16px" }}>
+                <a href="https://instagram.com/thepustika" target="_blank" rel="noopener noreferrer" style={{ color: "#7C3AED", fontWeight: 700, textDecoration: "none", fontSize: "14px" }}>Instagram</a>
+                <a href="mailto:pustikabooks@gmail.com" style={{ color: "#7C3AED", fontWeight: 700, textDecoration: "none", fontSize: "14px" }}>Email</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
+      )}
+    </>
   );
 }
 
