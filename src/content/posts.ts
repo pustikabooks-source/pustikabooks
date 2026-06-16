@@ -11,6 +11,8 @@ export interface BlogPost {
     | { type: "h2"; text: string }
     | { type: "ul"; items: string[] }
     | { type: "quote"; text: string }
+    | { type: "stat"; value: string; label: string }
+    | { type: "table"; headers: string[]; rows: string[][] }
   >;
 }
 
