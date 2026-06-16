@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pustikabooks.lovable.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pustikabooks.lovable.app/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pustikabooks.lovable.app/blog/how-to-earn-money-selling-ebooks-in-india</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pustikabooks.lovable.app/blog/best-ebook-niches-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pustikabooks.lovable.app/blog/how-to-price-your-ebook</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pustikabooks.lovable.app/blog/promote-your-ebook-without-an-audience</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pustikabooks.lovable.app/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://pustikabooks.lovable.app/refund</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
