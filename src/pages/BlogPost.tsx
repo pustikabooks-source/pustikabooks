@@ -59,9 +59,10 @@ export default function BlogPost() {
 
       <header className="border-b border-border bg-card">
         <div className="mx-auto max-w-3xl px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="font-black text-xl tracking-tight">
-            Pustika<span className="text-brand-purple">.</span>
-          </Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
+  <span style={{ fontSize: "20px", fontWeight: 800, color: "#191919", letterSpacing: "-0.5px" }}>Pustika</span>
+  <span style={{ fontSize: "20px", fontWeight: 700, color: "#7C3AED", letterSpacing: "-0.5px" }}> Books</span>
+</Link>
           <Link to="/blog" className="text-sm font-semibold text-muted-foreground hover:text-foreground">
             ← All articles
           </Link>
