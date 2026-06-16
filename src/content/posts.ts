@@ -11,7 +11,9 @@ export interface BlogPost {
     | { type: "ul"; items: string[] }
     | { type: "quote"; text: string }
     | { type: "stat"; value: string; label: string }
-    | { type: "table"; headers: string[]; rows: string[][] }
+  | { type: "table"; headers: string[]; rows: string[][] }
+| { type: "image"; url: string; alt: string; caption?: string }
+| { type: "youtube"; videoId: string; title: string }
   >;
 }
 
