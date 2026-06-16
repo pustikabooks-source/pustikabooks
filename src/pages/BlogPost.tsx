@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getPost, getSortedPosts } from "@/content/posts";
+import founderImg from "@/assets/founder.jpg";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -132,7 +133,7 @@ export default function BlogPost() {
           <div className="flex items-center gap-4">
             {/* Author avatar */}
             <img
-              src="/founder.jpg"
+              src={founderImg}
               alt="Pustika Books"
               style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }}
             />
