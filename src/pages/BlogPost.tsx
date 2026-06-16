@@ -9,6 +9,7 @@ export default function BlogPost() {
   const post = slug ? getPost(slug) : undefined;
   const [progress, setProgress] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +78,36 @@ export default function BlogPost() {
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
-
+{menuOpen && (
+        <div style={{ position: "fixed", inset: 0, zIndex: 9999, display: "flex" }}>
+          <div
+            style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.4)" }}
+            onClick={() => setMenuOpen(false)}
+          />
+          <div style={{
+            position: "relative", width: "280px", height: "100%",
+            background: "white", padding: "32px 24px",
+            display: "flex", flexDirection: "column", zIndex: 10
+          }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
+              <span style={{ fontSize: "18px", fontWeight: 800, color: "#191919" }}>Pustika<span style={{ color: "#7C3AED" }}> Books</span></span>
+              <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>×</button>
+            </div>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+              <Link to="/blog" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</Link>
+              <Link to="/#pricing" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</Link>
+            </nav>
+            <div style={{ marginTop: "auto" }}>
+              <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>
+              <div style={{ display: "flex", gap: "16px" }}>
+                <a href="https://instagram.com/thepustika" target="_blank" rel="noopener noreferrer" style={{ color: "#7C3AED", fontWeight: 700, textDecoration: "none", fontSize: "14px" }}>Instagram</a>
+                <a href="mailto:pustikabooks@gmail.com" style={{ color: "#7C3AED", fontWeight: 700, textDecoration: "none", fontSize: "14px" }}>Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Reading Progress Bar */}
       <div
         style={{
@@ -99,9 +129,15 @@ export default function BlogPost() {
             <span style={{ fontSize: "20px", fontWeight: 800, color: "#191919", letterSpacing: "-0.5px" }}>Pustika</span>
             <span style={{ fontSize: "20px", fontWeight: 700, color: "#7C3AED", letterSpacing: "-0.5px" }}> Books</span>
           </Link>
-          <Link to="/blog" className="text-sm font-semibold text-muted-foreground hover:text-foreground">
-            ← All articles
-          </Link>
+          <button
+            onClick={() => setMenuOpen(true)}
+            style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
+            aria-label="Open menu"
+          >
+            <div style={{ width: "22px", height: "2px", background: "#191919", marginBottom: "5px", borderRadius: "2px" }} />
+            <div style={{ width: "22px", height: "2px", background: "#191919", marginBottom: "5px", borderRadius: "2px" }} />
+            <div style={{ width: "22px", height: "2px", background: "#191919", borderRadius: "2px" }} />
+          </button>
         </div>
       </header>
 
