@@ -13,7 +13,7 @@ type DbRow = {
   published: boolean;
 };
 
-function toPost(row: DbRow): BlogPost & { id: string; published: boolean } {
+function toPost(row: any): BlogPost & { id: string; published: boolean } {
   return {
     id: row.id,
     slug: row.slug,
@@ -34,7 +34,7 @@ export async function fetchPublishedPosts() {
     .eq("published", true)
     .order("date", { ascending: false });
   if (error) throw error;
-  return (data as DbRow[]).map(toPost);
+  return (data as any[]).map(toPost);
 }
 
 export async function fetchPostBySlug(slug: string) {
@@ -45,7 +45,7 @@ export async function fetchPostBySlug(slug: string) {
     .eq("published", true)
     .maybeSingle();
   if (error) throw error;
-  return data ? toPost(data as DbRow) : null;
+  return data ? toPost(data) : null;
 }
 
 const ADMIN_KEY = "pustika_admin_pw";
@@ -90,7 +90,7 @@ export async function adminVerify(pw: string): Promise<boolean> {
 
 export async function adminListPosts() {
   const { posts } = await adminCall("list");
-  return (posts as DbRow[]).map(toPost);
+  return (posts as any[]).map(toPost);
 }
 export async function adminCreatePost(p: Partial<DbRow> & { title: string }) {
   return (await adminCall("create", p)).post as DbRow;
