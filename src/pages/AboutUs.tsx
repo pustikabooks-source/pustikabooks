@@ -137,7 +137,7 @@ export default function AboutUs() {
           <p style={{ fontSize: "16px", color: "#aaa", lineHeight: 1.7, marginBottom: "32px" }}>
             Have a question about our products? Need support with your purchase? Or just want to say hello? Drop us an email and we'll get back to you within 24 hours.
           </p>
-          
+          <a
             href="mailto:pustikabooks@gmail.com"
             style={{
               display: "inline-flex", alignItems: "center", gap: "8px",
