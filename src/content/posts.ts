@@ -301,7 +301,7 @@ export const posts: BlogPost[] = [
     ],
   },
   {
-    slug: "best-digital-products-to-sell-in-india-2026",
+    slug: "digital-products-india-2026",
     title: "7 Best Digital Products to Sell in India in 2026 (And How to Start This Week)",
     description: "The most profitable digital products Indian creators are selling in 2026 — with real income numbers, zero inventory, and a clear starting point for each.",
     date: "2026-06-17",
