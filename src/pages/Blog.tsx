@@ -1,9 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { getSortedPosts } from "@/content/posts";
+import { useEffect, useState } from "react";
+import type { BlogPost } from "@/content/posts";
+import { fetchPublishedPosts } from "@/lib/blog";
 
 export default function Blog() {
-  const posts = getSortedPosts();
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchPublishedPosts()
+      .then((p) => setPosts(p))
+      .catch(() => setPosts([]))
+      .finally(() => setLoading(false));
+  }, []);
+
   const url = "https://pustikabooks.lovable.app/blog";
 
   const itemListJsonLd = {

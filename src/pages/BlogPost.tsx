@@ -1,15 +1,36 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getPost, getSortedPosts } from "@/content/posts";
+import type { BlogPost as BlogPostType } from "@/content/posts";
+import { fetchPostBySlug, fetchPublishedPosts } from "@/lib/blog";
 import founderImg from "@/assets/founder.jpg";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getPost(slug) : undefined;
+  const [post, setPost] = useState<BlogPostType | null | undefined>(undefined);
+  const [related, setRelated] = useState<BlogPostType[]>([]);
   const [progress, setProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!slug) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const [p, all] = await Promise.all([
+          fetchPostBySlug(slug),
+          fetchPublishedPosts(),
+        ]);
+        if (cancelled) return;
+        setPost(p);
+        setRelated(all.filter((x) => x.slug !== slug).slice(0, 3));
+      } catch {
+        if (!cancelled) setPost(null);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [slug]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +49,16 @@ export default function BlogPost() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (post === undefined) {
+    return (
+      <main className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground">Loading…</p>
+      </main>
+    );
+  }
+  if (post === null) return <Navigate to="/blog" replace />;
 
   const url = `https://pustikabooks.in/blog/${post.slug}`;
-  const related = getSortedPosts()
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 3);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
