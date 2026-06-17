@@ -300,6 +300,98 @@ export const posts: BlogPost[] = [
       { type: "quote", text: "Consistency for 30 days beats viral moments every time. Show up every day for one month and your results will surprise you." },
     ],
   },
+  {
+    slug: "best-digital-products-to-sell-in-india-2026",
+    title: "7 Best Digital Products to Sell in India in 2026 (And How to Start This Week)",
+    description: "The most profitable digital products Indian creators are selling in 2026 — with real income numbers, zero inventory, and a clear starting point for each.",
+    date: "2026-06-17",
+    readingMinutes: 11,
+    tags: ["digital products", "passive income", "india", "beginners"],
+    body: [
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&auto=format&fit=crop",
+        alt: "Indian creator selling digital products online from laptop",
+        caption: "In 2026, the best businesses have no warehouse, no shipping, and no staff"
+      },
+      { type: "p", text: "Arjun was a 27-year-old graphic designer from Ahmedabad earning ₹22,000 a month doing client work. He was talented, hardworking, and completely exhausted. Every rupee he earned required him to show up, deliver, and repeat. Then in October 2024, he packaged his Canva template designs into a ₹399 digital product. In three months, he made ₹71,000 from that one product — without a single client call. Same skill. Different model." },
+      { type: "p", text: "Digital products are the most powerful income model available to Indian creators today. No inventory. No shipping. No middlemen taking 35% cuts. You create once, and the product sells while you sleep, study, travel, or work your day job. This guide covers the 7 best digital products to sell in India in 2026 — with real numbers, real niches, and a clear starting point for each." },
+      { type: "stat", value: "$135B+", label: "Global digital products market size in 2025 — India is the fastest growing slice" },
+      { type: "h2", text: "What makes digital products perfect for Indian creators" },
+      { type: "p", text: "Before we dive into the list, understand why this model works so well in India specifically. UPI has made impulse buying frictionless — someone sees your product at 11pm, pays ₹299 in 10 seconds, and gets instant delivery. No card details, no waiting, no friction. This buying behaviour is unique to India and it massively favours digital product sellers." },
+      {
+        type: "table",
+        headers: ["Model", "Startup Cost", "Profit Margin", "Scales Without You?"],
+        rows: [
+          ["Physical products", "₹50,000+", "20–40%", "Hard"],
+          ["Freelancing", "₹0", "100%", "No"],
+          ["Dropshipping", "₹10,000+", "15–25%", "Somewhat"],
+          ["Digital products", "₹0", "100%", "Yes — infinitely"]
+        ]
+      },
+      { type: "h2", text: "Watch: How to earn in lakhs selling digital products in India" },
+      { type: "youtube", videoId: "ecoIjzZRJbY", title: "How to Earn in Lakhs by Selling Digital Products — Step by Step Guide in Hindi" },
+      { type: "h2", text: "1. eBooks — the fastest product to launch" },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&auto=format&fit=crop",
+        alt: "eBooks digital publishing India",
+        caption: "An eBook takes one weekend to create and can sell for years"
+      },
+      { type: "p", text: "eBooks remain the single easiest digital product to create and sell in India. You need no design skills, no recording equipment, and no technical knowledge. A 30–50 page PDF written in Google Docs, designed in Canva, and sold through Razorpay is a complete, profitable business. The Indian market has strong demand for eBooks on personal finance, career growth, AI productivity, fitness, and relationships." },
+      { type: "ul", items: ["Time to create: 1–2 weekends", "Ideal price point: ₹199–₹499", "Best platforms: Your own website, Razorpay payment links, Instagram DMs", "Top niches: Personal finance, career switching, AI prompts, fitness, parenting"] },
+      { type: "quote", text: "The best eBook is not the most comprehensive one. It's the one that solves one specific, painful problem for one specific person — in the clearest possible way." },
+      { type: "h2", text: "2. Canva Templates — sell your design skills forever" },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&auto=format&fit=crop",
+        alt: "Canva templates digital products India creator",
+        caption: "One template pack can sell hundreds of times with zero extra effort"
+      },
+      { type: "p", text: "Every small business owner, coach, and content creator in India needs professional-looking social media posts, pitch decks, and resumes — but most can't afford a designer and can't design themselves. Canva templates solve this perfectly. You design once in Canva, share a template link, and charge ₹199–₹999 per pack. Instagram post templates, YouTube thumbnail packs, and business proposal templates are selling extremely well in 2026." },
+      { type: "stat", value: "190M+", label: "Canva users worldwide — millions actively buying templates" },
+      { type: "h2", text: "3. AI Prompt Packs — the hottest new category in India" },
+      { type: "p", text: "This is the most underserved niche in India right now. Every student, professional, and business owner wants to use ChatGPT and Gemini effectively — but they don't know how to write good prompts. A well-curated pack of 50–100 prompts for a specific use case can be created in a day and sold for ₹149–₹499. Competition is almost zero among serious Indian creators." },
+      { type: "ul", items: ["50 ChatGPT prompts for MBA students — ₹199", "100 Instagram caption prompts for Indian businesses — ₹249", "AI prompts for teachers and educators — ₹299", "ChatGPT prompts for job seekers and resume writing — ₹199"] },
+      { type: "h2", text: "4. Online Courses — highest revenue per sale" },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop",
+        alt: "Online course creator India laptop recording",
+        caption: "Online courses command 5–10x the price of eBooks on the same topic"
+      },
+      { type: "p", text: "Online courses take more effort to create but command dramatically higher prices. A course that teaches the same content as a ₹299 eBook can sell for ₹2,999–₹9,999. Indian creators are building profitable courses on everything from stock market investing to spoken English to freelancing on Fiverr. You don't need Udemy — a simple video series delivered via Google Drive works perfectly for the Indian market." },
+      { type: "stat", value: "₹9,000 Cr+", label: "India's online learning market in 2025" },
+      { type: "h2", text: "5. Digital Planners and Notion Templates" },
+      { type: "p", text: "Notion has exploded in India among students, founders, and productivity-obsessed professionals. A well-designed Notion template for project management, content planning, or personal finance tracking can sell for ₹199–₹799. PDF planners — daily planners, habit trackers, business plan templates — also sell consistently well on Instagram and through direct DMs." },
+      { type: "h2", text: "6. Stock Photos and Digital Art" },
+      { type: "p", text: "If you have a decent smartphone camera, you're sitting on a product. Indian stock photos — real streets, real people, real food, real festivals — are massively underrepresented on global stock sites. Indian businesses, bloggers, and marketers are desperately searching for authentic Indian visual content. Upload to Shutterstock, Adobe Stock, or sell directly through your own site." },
+      { type: "h2", text: "7. Printables and Worksheets" },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&auto=format&fit=crop",
+        alt: "Digital printables worksheets India",
+        caption: "Printables are the most passive of all digital products — design once, sell forever"
+      },
+      { type: "p", text: "Printables are PDF files people download and print at home — meal planners, budgeting sheets, study timetables, wedding checklists, kids activity sheets. They sell for ₹49–₹299 and require almost zero effort to create. Bundling 5–10 related printables into a pack at ₹499 creates strong value perception and higher average order value." },
+      { type: "h2", text: "Which digital product should YOU start with?" },
+      {
+        type: "table",
+        headers: ["Your Background", "Best First Product", "Expected First Month"],
+        rows: [
+          ["Writer / Teacher / Expert", "eBook", "₹5,000–₹25,000"],
+          ["Designer / Creative", "Canva Templates", "₹8,000–₹30,000"],
+          ["Tech / AI enthusiast", "AI Prompt Pack", "₹3,000–₹15,000"],
+          ["Coach / Trainer", "Online Course", "₹15,000–₹75,000"],
+          ["Photographer", "Stock Photos", "₹2,000–₹10,000"]
+        ]
+      },
+      { type: "h2", text: "Watch: 15 digital products to sell for passive income" },
+      { type: "youtube", videoId: "zy5tOkKAPbM", title: "15 Best Digital Products to Sell Online — Passive Income Ideas" },
+      { type: "quote", text: "Your knowledge is worth more than you think. Someone out there is struggling with exactly what you've already figured out. Package that solution. Price it fairly. Put it in front of them. That's the entire business." },
+      { type: "p", text: "The Pustika Pro Vault gives you the exact templates, AI prompts, niche research, and 30-day launch checklist to go from idea to first sale — without months of guesswork. Everything you need is already inside." }
+    ]
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
