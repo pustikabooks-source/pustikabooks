@@ -107,7 +107,7 @@ function Header() {
             <span className="site-brand__label">BOOKS</span>
           </div>
           <div className="flex items-center gap-4">
-            
+            <a
               href="#pricing"
               className="site-header__cta"
             >
