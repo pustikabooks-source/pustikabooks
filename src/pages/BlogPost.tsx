@@ -24,7 +24,7 @@ export default function BlogPost() {
         ]);
         if (cancelled) return;
         setPost(p);
-        setRelated(all.filter((x) => x.slug !== slug).slice(0, 3));
+        setRelated(all.filter((x: BlogPostType) => x.slug !== slug).slice(0, 3));
       } catch {
         if (!cancelled) setPost(null);
       }
