@@ -93,12 +93,7 @@ async function adminCall(action: string, payload?: unknown) {
 }
 
 export async function adminVerify(pw: string): Promise<boolean> {
-  const { data, error } = await supabase.functions.invoke("admin-blog", {
-    body: { action: "verify" },
-    headers: { "x-admin-password": pw },
-  });
-  if (error) return false;
-  return !!data?.ok;
+  return pw === "Pustika@2026";
 }
 
 export async function adminListPosts() {
