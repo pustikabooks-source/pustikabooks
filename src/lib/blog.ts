@@ -37,7 +37,7 @@ export async function fetchPublishedPosts() {
       .order("date", { ascending: false });
     if (error) throw error;
     const fromDb = (data as any[] | null)?.map(toPost) ?? [];
-    if (fromDb.length > 0) return fromDb;
+    if (fromDb.length > 0) return [...staticPosts as any, ...fromDb];
     return staticPosts as any;
   } catch {
     return staticPosts as any;
