@@ -15,7 +15,7 @@ export default function Blog() {
       .finally(() => setLoading(false));
   }, []);
 
-  const url = "https://pustikabooks.lovable.app/blog";
+  const url = "https://pustikabooks.in/blog";
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -27,7 +27,7 @@ export default function Blog() {
       headline: p.title,
       description: p.description,
       datePublished: p.date,
-      url: `https://pustikabooks.lovable.app/blog/${p.slug}`,
+      url: `https://pustikabooks.in/blog/${p.slug}`,
     })),
   };
 

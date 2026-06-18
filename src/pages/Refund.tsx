@@ -6,10 +6,10 @@ export default function Refund() {
       <Helmet>
         <title>Refund Policy — Pustika Books</title>
         <meta name="description" content="Refund terms for The Pro Vault digital download from Pustika Books, plus how to contact support if something goes wrong." />
-        <link rel="canonical" href="https://pustikabooks.lovable.app/refund" />
+        <link rel="canonical" href="https://pustikabooks.in/refund" />
         <meta property="og:title" content="Refund Policy — Pustika Books" />
         <meta property="og:description" content="Refund terms for The Pro Vault digital download from Pustika Books, plus how to contact support if something goes wrong." />
-        <meta property="og:url" content="https://pustikabooks.lovable.app/refund" />
+        <meta property="og:url" content="https://pustikabooks.in/refund" />
       </Helmet>
       <article className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-black tracking-tight">Refund Policy</h1>
