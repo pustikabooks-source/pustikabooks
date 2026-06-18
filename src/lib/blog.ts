@@ -37,7 +37,11 @@ export async function fetchPublishedPosts() {
       .order("date", { ascending: false });
     if (error) throw error;
     const fromDb = (data as any[] | null)?.map(toPost) ?? [];
-    if (fromDb.length > 0) return [...staticPosts as any, ...fromDb];
+    if (fromDb.length > 0) {
+  const dbSlugs = new Set(fromDb.map((p: any) => p.slug));
+  const staticOnly = (staticPosts as any[]).filter((p: any) => !dbSlugs.has(p.slug));
+  return [...staticOnly, ...fromDb];
+    }
     return staticPosts as any;
   } catch {
     return staticPosts as any;
