@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { BlogPost } from "@/content/posts";
+import { posts as staticPosts } from "@/content/posts";
 
 type DbRow = {
   id: string;
@@ -28,24 +29,36 @@ function toPost(row: any): BlogPost & { id: string; published: boolean } {
 }
 
 export async function fetchPublishedPosts() {
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select("*")
-    .eq("published", true)
-    .order("date", { ascending: false });
-  if (error) throw error;
-  return (data as any[]).map(toPost);
+  try {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select("*")
+      .eq("published", true)
+      .order("date", { ascending: false });
+    if (error) throw error;
+    const fromDb = (data as any[] | null)?.map(toPost) ?? [];
+    if (fromDb.length > 0) return fromDb;
+    return staticPosts as any;
+  } catch {
+    return staticPosts as any;
+  }
 }
 
 export async function fetchPostBySlug(slug: string) {
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select("*")
-    .eq("slug", slug)
-    .eq("published", true)
-    .maybeSingle();
-  if (error) throw error;
-  return data ? toPost(data) : null;
+  try {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select("*")
+      .eq("slug", slug)
+      .eq("published", true)
+      .maybeSingle();
+    if (error) throw error;
+    if (data) return toPost(data);
+  } catch {
+    /* fall through to static */
+  }
+  const fallback = staticPosts.find((p) => p.slug === slug);
+  return fallback ? (fallback as any) : null;
 }
 
 const ADMIN_KEY = "pustika_admin_pw";
