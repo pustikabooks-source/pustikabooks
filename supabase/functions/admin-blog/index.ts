@@ -1,7 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
-const ADMIN_PASSWORD = Deno.env.get("ADMIN_PASSWORD") ?? "";
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
@@ -31,6 +30,7 @@ Deno.serve(async (req) => {
 
   try {
     const password = req.headers.get("x-admin-password") ?? "";
+    const ADMIN_PASSWORD = Deno.env.get("ADMIN_PASSWORD") ?? "";
     if (!ADMIN_PASSWORD || password !== ADMIN_PASSWORD) {
       return json({ error: "Unauthorized" }, 401);
     }
