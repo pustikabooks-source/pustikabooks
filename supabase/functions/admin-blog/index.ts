@@ -31,7 +31,6 @@ Deno.serve(async (req) => {
   try {
     const password = req.headers.get("x-admin-password") ?? "";
     const ADMIN_PASSWORD = Deno.env.get("ADMIN_PASSWORD") ?? "";
-    console.log("auth check: envLen=", ADMIN_PASSWORD.length, "inLen=", password.length, "match=", password === ADMIN_PASSWORD);
     if (!ADMIN_PASSWORD || password !== ADMIN_PASSWORD) {
       return json({ error: "Unauthorized" }, 401);
     }
