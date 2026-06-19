@@ -122,7 +122,7 @@ function Topics() {
           Everything we publish answers one question:
         </h2>
         <p className="mt-8 text-2xl md:text-4xl italic text-brand-purple text-center font-bold leading-snug max-w-3xl mx-auto">
-          “How can an everyday Indian earn more from what they already know?”
+        "How can anyone turn what they already know into a sustainable income?"
         </p>
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {cards.map((c) => (
@@ -235,8 +235,7 @@ function Newsletter() {
           Get one practical tip every week.
         </h2>
         <p className="mt-5 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed">
-          No fluff. No spam. Just real strategies for earning online in India —
-          delivered to your inbox every Wednesday.
+          No fluff. No spam. Just real strategies for earning online — delivered to your inbox every Wednesday.
         </p>
         <form
           onSubmit={onSubmit}
