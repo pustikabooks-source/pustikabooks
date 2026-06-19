@@ -142,9 +142,10 @@ function Header() {
               <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>×</button>
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+              <a href="/" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🏠 Home</a>
               <a href="/blog" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</a>
+              <a href="/products" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</a>
               <a href="/about" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</a>
-              <a href="#pricing" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</a>
             </nav>
             <div style={{ marginTop: "auto" }}>
               <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>
@@ -742,7 +743,7 @@ function StickyMobileCTA() {
   );
 }
 
-function Index() {
+function Products() {
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -770,6 +771,9 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
       <Helmet>
+        <title>Products — The Pro Vault | Pustika Books</title>
+        <meta name="description" content="The Pro Vault: AI prompts, templates and a 30-day checklist to launch your digital product in India." />
+        <link rel="canonical" href="https://pustikabooks.in/products" />
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
       </Helmet>
@@ -777,7 +781,6 @@ function Index() {
       <TopBar />
       <Header />
       <main>
-        <Hero />
         <Pricing />
         {/* <WhyCreated /> */}
         <Features />
@@ -795,4 +798,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Products;
