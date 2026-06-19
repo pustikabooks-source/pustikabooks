@@ -9,7 +9,7 @@ export default function AboutUs() {
     <main className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>About Us | Pustika Books</title>
-        <meta name="description" content="Learn about Pustika Books — helping everyday Indians turn their knowledge into income, one eBook at a time." />
+        <meta name="description" content="Learn about Pustika Books — helping everyday creators to turn their knowledge into income, one eBook at a time." />
         <link rel="canonical" href="https://pustikabooks.in/about" />
       </Helmet>
 
@@ -82,10 +82,10 @@ export default function AboutUs() {
         <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "4px", color: "#7C3AED", textTransform: "uppercase", marginBottom: "16px" }}>Our Mission</p>
           <h1 style={{ fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, color: "#191919", letterSpacing: "-1.5px", lineHeight: 1.1, marginBottom: "24px" }}>
-            We help everyday Indians turn their knowledge into income.
+            We help everyday people turn their knowledge into income.
           </h1>
           <p style={{ fontSize: "18px", color: "#555", lineHeight: 1.7, maxWidth: "560px", margin: "0 auto" }}>
-            Pustika Books creates practical digital products and guides that make earning from your knowledge simple, affordable, and accessible — no tech skills needed.
+            Pustika Books creates practical digital products and guides that make earning from your knowledge simple, affordable, and accessible — for creators anywhere in the world.
           </p>
         </div>
       </section>
@@ -93,14 +93,14 @@ export default function AboutUs() {
       {/* What We Do */}
       <section style={{ padding: "80px 24px", maxWidth: "800px", margin: "0 auto" }}>
         <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "4px", color: "#7C3AED", textTransform: "uppercase", marginBottom: "12px" }}>What We Do</p>
-        <h2 style={{ fontSize: "36px", fontWeight: 900, color: "#191919", letterSpacing: "-1px", marginBottom: "48px" }}>Built for Indian creators.</h2>
+        <h2 style={{ fontSize: "36px", fontWeight: 900, color: "#191919", letterSpacing: "-1px", marginBottom: "48px" }}> Built for creators worldwide.</h2>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
           {[
             {
               icon: "📚",
               title: "Digital Products",
-              desc: "We create eBooks, templates, and resource bundles that give Indian creators an unfair advantage — priced for the Indian market."
+              desc: "We create eBooks, templates, and resource bundles that give creators worldwide an unfair advantage — priced fairly for everyone."
             },
             {
               icon: "🧠",
