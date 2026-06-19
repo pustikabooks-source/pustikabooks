@@ -1,6 +1,6 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./styles.css";
 import Index from "./pages/Index";
@@ -14,12 +14,23 @@ import BlogPost from "./pages/BlogPost";
 import AboutUs from "./pages/AboutUs";
 import Admin from "./pages/Admin";
 import Products from "./pages/Products";
-
+function Analytics() {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("config", "G-67HQPXJ3QB", {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+  return null;
+}
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
     <BrowserRouter>
-      <Routes>
+      <Analytics />
+          <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/thank-you-basic" element={<ThankYouBasic />} />
         <Route path="/thank-you-pro" element={<ThankYouPro />} />
