@@ -1,10 +1,4 @@
-import { useState } from "react";
-import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
-const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
-const WHATSAPP = "https://wa.me/919662436387";
+// This file was fully replaced — see git history for the previous monolithic homepage.
 
 
 const features = [
