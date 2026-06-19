@@ -413,7 +413,18 @@ function Pricing() {
       >
         Get All 4 Ebooks — ₹249 →
       </a>
-
+<a
+  href="https://www.paypal.com/ncp/payment/JF7TS5GTBNAYJ"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
+  style={{ background: "#0070BA" }}
+>
+  Buy with PayPal — $4.99 →
+</a>
+<p className="text-[11px] text-center mt-2 text-muted-foreground">
+  🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
+</p>
       <p className="text-[11px] text-center mt-3 text-muted-foreground">
         🔒 Instant PDF Delivery · Secure Razorpay · One-time payment
       </p>
@@ -484,6 +495,18 @@ function Pricing() {
               >
                 Get Pro Vault Now 🚀
               </a>
+              <a
+  href="https://www.paypal.com/ncp/payment/V6FXA4TBLT39J"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
+  style={{ background: "#0070BA" }}
+>
+  Buy with PayPal — $8.99 →
+</a>
+<p className="text-[11px] text-center mt-2 text-muted-foreground">
+  🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
+</p>
               <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 100% Secure Payment · Instant Delivery</p>
             </div>
           </div>
