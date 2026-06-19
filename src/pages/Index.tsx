@@ -82,12 +82,10 @@ function Hero() {
     <section className="bg-white">
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-32 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground">
-          Learn how to earn online —<br />
-          <span className="text-brand-purple">the Indian way.</span>
+          Turn what you know into income. —<br />
         </h1>
         <p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Practical guides, honest advice, and real strategies for Indian creators
-          who want to turn their knowledge into income.
+          Practical guides and digital products for creators worldwide who want to earn from their knowledge — on their own terms.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Link
@@ -110,10 +108,10 @@ function Hero() {
 
 function Topics() {
   const cards = [
-    { emoji: "📚", title: "Selling eBooks", body: "How to write, price and sell digital books in India." },
+    { emoji: "📚", title: "Selling Digital Products", body: "How to create, price and sell ebooks, templates and courses online." },
     { emoji: "🤖", title: "AI for Creators", body: "Using ChatGPT and AI tools to build and earn faster." },
-    { emoji: "💰", title: "Digital Income", body: "Templates, courses, prompts and passive income strategies." },
-  ];
+    { emoji: "💰", title: "Digital Income", body: "Proven strategies for building passive income through digital products worldwide." },
+  
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
