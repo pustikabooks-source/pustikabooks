@@ -1,30 +1,10 @@
 import { useState } from "react";
-import { CloudUpload, DollarSign, BookOpen, Megaphone, Zap, Sparkles, ShieldCheck, Star, Check } from "lucide-react";
+import { Sparkles, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const CHECKOUT = "https://rzp.io/rzp/deLqOQQa";
 const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
 const WHATSAPP = "https://wa.me/919662436387";
-
-
-const features = [
-  { icon: "✨", title: "AI-Powered Speed", body: "Don't stare at a blank page. Use our Complete AI Prompt Library to generate content, outlines, and copy in minutes." },
-  { icon: "💰", title: "100% Profit Margins", body: "No shipping, no inventory. Digital products mean every rupee you make goes straight into your pocket." },
-  { icon: "🚀", title: "No Tech Skills Needed", body: "You don't need to be a coder or designer. Our premium templates are plug-and-play so you can launch fast." },
-  { icon: "📈", title: "Sell While You Sleep", body: "Set up your automated system once, and let your digital product generate passive income 24/7." },
-  { icon: "🌍", title: "A Global Audience", body: "The digital e-learning market is exploding. Tap into a worldwide audience hungry for templates and tools." },
-  { icon: "📋", title: "Step-by-Step Blueprint", body: "Never feel lost. The 30-Day Launch Checklist tells you exactly what to do every single day to get results." }
-];
-
-
-const modules = [
-  { n: "01", Icon: CloudUpload, title: "Find Your Profitable Niche", body: "Use our 50+ Niche Research Guide to spot high-demand, low-competition ideas instantly." },
-  { n: "02", Icon: DollarSign, title: "Create Your Digital Asset Fast", body: "Use our AI Prompts and templates to build your product professionally in hours, not weeks." },
-  { n: "03", Icon: BookOpen, title: "Write High-Converting Copy", body: "Plug your product into our 100+ Headline Formulas to create offers people can't resist." },
-  { n: "04", Icon: Megaphone, title: "Follow the 30-Day Checklist", body: "Launch with confidence using the exact day-by-day blueprint trusted by top creators." },
-  { n: "05", Icon: Zap, title: "Automate & Profit", body: "Set up checkout, delivery, and follow-up on autopilot so you can earn while you sleep." }
-];
-
 
 const faqs = [
   { q: "Do I need any technical skills or experience?", a: "Not at all. The Pro Vault is designed for complete beginners. Our AI prompts and fill-in-the-blank templates do the heavy lifting for you." },
@@ -33,68 +13,6 @@ const faqs = [
   { q: "How much time do I need to invest?", a: "You can start with just a few hours a week. It's designed to fit around your schedule." },
   { q: "What makes The Pro Vault different from other courses?", a: "This isn't a boring 10-hour video course full of fluff. It's an Implementation Bundle. You get the exact tools, templates, and checklists to take action today." }
 ];
-
-
-const proofRows = [
-  [
-    { sender: "Payments", initials: "AS", color: "bg-rose-500",     subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹349", time: "11:42 AM" },
-    { sender: "Team Razorpay", initials: "RK", color: "bg-blue-500", subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "10:58 AM" },
-    { sender: "Payments", initials: "PV", color: "bg-emerald-500",  subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹547", time: "10:21 AM" },
-    { sender: "Razorpay Payment", initials: "MK", color: "bg-amber-500", subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279", time: "9:47 AM" },
-    { sender: "Team Razorpay", initials: "SD", color: "bg-violet-500",  subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "9:12 AM" },
-    { sender: "Payments", initials: "NJ", color: "bg-cyan-500",     subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279", time: "8:34 AM" },
-  ],
-  [
-    { sender: "Razorpay Payment", initials: "TG", color: "bg-pink-500",   subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹279", time: "Yesterday" },
-    { sender: "Payments", initials: "VR", color: "bg-indigo-500",         subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹499", time: "Yesterday" },
-    { sender: "Team Razorpay", initials: "HK", color: "bg-orange-500",    subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "Yesterday" },
-    { sender: "Payments", initials: "AB", color: "bg-teal-500",           subject: "Razorpay | Payment successful for QUOTOPIA SOLUTONS PVT LTD", amount: "₹279", time: "Apr 27" },
-    { sender: "Razorpay Payment", initials: "DM", color: "bg-fuchsia-500",subject: "Successful payment on Payment Page - Get Instant Access to Your eBook!", amount: "₹349", time: "Apr 27" },
-    { sender: "Team Razorpay", initials: "KS", color: "bg-lime-600",      subject: "Ka-Ching! Payment Received from RAZORPAY SOFTWARE PRIVATE LIMITED", amount: "₹279", time: "Apr 26" },
-  ],
-];
-
-const dashboards = [
-  { amount: "₹59,540.00", count: 150, upi: 97.24, card: 2.76, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "16", failedNote: "payments" },
-  { amount: "₹1,24,870.00", count: 312, upi: 92.50, card: 7.50, refunds: "₹279.00", refundsCount: "1 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "24", failedNote: "payments" },
-  { amount: "₹84,210.00", count: 218, upi: 95.10, card: 4.90, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "11", failedNote: "payments" },
-  { amount: "₹2,18,930.00", count: 547, upi: 89.30, card: 10.70, refunds: "₹558.00", refundsCount: "2 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "38", failedNote: "payments" },
-  { amount: "₹47,820.00", count: 124, upi: 98.40, card: 1.60, refunds: "₹0.00", refundsCount: "0 processed", disputes: "₹0.00", disputesNote: "0 open • 0 under-review", failed: "7", failedNote: "payments" },
-];
-
-function scrollToPricing(e: React.MouseEvent) {
-  e.preventDefault();
-  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-function GlowButton({ href, onClick, children, className = "" }: { href?: string; onClick?: (e: React.MouseEvent) => void; children: React.ReactNode; className?: string }) {
-  return (
-    <a
-      href={href}
-      onClick={onClick}
-      className={`relative inline-flex items-center justify-center rounded-full bg-gradient-cta px-8 py-4 text-base md:text-lg font-bold text-white shadow-glow hover:scale-[1.03] active:scale-100 transition-transform ${className}`}
-    >
-      <span className="absolute inset-0 rounded-full bg-gradient-cta blur-xl opacity-60 -z-10" />
-      {children}
-    </a>
-  );
-}
-
-function AnnouncementBar() {
-  return (
-    <div className="w-full bg-[#4F46E5] text-white text-center text-xs md:text-sm font-semibold py-2.5 px-4">
-      ⚡ Limited Time: Get The Pro Vault for just ₹499 — Instant Digital Delivery
-    </div>
-  );
-}
-
-function TopBar() {
-  return (
-    <div className="site-topbar">
-      ⚡ Instant Delivery · 🔒 Secure Razorpay Checkout · 🚀 100% Beginner Friendly
-    </div>
-  );
-}
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -161,68 +79,6 @@ function Header() {
   );
 }
 
-function Hero() {
-  return (
-    <section className="hero-section">
-      <div className="hero-backdrop" />
-      <div className="hero-glow" />
-      <div className="hero-grid" />
-
-      <div className="hero-shell">
-        <div className="hero-badge">
-          <Sparkles className="hero-badge__icon" />
-          New · Updated for 2026
-        </div>
-
-                <h1 className="hero-title">
-          Unlock Speed & Profit.
-          <br />
-          <span className="hero-title_gradient">
-            Launch Your Digital Product in 30 Days.
-          </span>
-        </h1>
-
-        <p className="hero-subtitle">
-          Stop overthinking. Get the exact AI prompts, templates, and frameworks used by top creators to build and sell digital assets—no tech skills needed.
-        </p>
-          <div className="flex justify-center my-8">
-            <img
-              src="/pro-vault.jpg"
-              alt="The Pro Vault Implementation Bundle"
-              width={540}
-              height={540}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full max-w-[540px] md:max-w-sm drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-                  <div className="hero-actions">
-          <a href="#pricing" onClick={scrollToPricing} className="hero-primary-cta">
-            Get Started Now →
-          </a>
-          <div className="hero-proof">
-            <div className="hero-avatars">
-              {[
-                "linear-gradient(135deg, #c084fc, #f472b6)",
-                "linear-gradient(135deg, #f472b6, #fb923c)",
-                "linear-gradient(135deg, #fb923c, #facc15)",
-                "linear-gradient(135deg, #60a5fa, #c084fc)",
-              ].map((backgroundImage, i) => (
-                <div key={i} className="hero-avatar" style={{ backgroundImage }} />
-              ))}
-            </div>
-            <span className="hero-proof__text">
-              <Star className="hero-proof__icon" />
-              <span>₹84,210+ earned by our community</span>
-            </span>
-          </div>
-        
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // function WhyCreated() {
 //   return (
@@ -240,78 +96,6 @@ function Hero() {
 //   );
 // }
 
-function Features() {
-  // Bento layout: vary spans
-  const spans = [
-    "md:col-span-2 md:row-span-1",
-    "md:col-span-1",
-    "md:col-span-1",
-    "md:col-span-1",
-    "md:col-span-1",
-    "md:col-span-2",
-  ];
-  return (
-    <section className="py-20 px-6 relative">
-      <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
-      <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Tested by thousands · Trusted by learners</p>
-        <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight">Now it's your turn.</h2>
-        <div className="mt-14 grid md:grid-cols-3 auto-rows-fr gap-5">
-          {features.map((f, i) => (
-            <div
-              key={f.title}
-              className={`group relative rounded-3xl border border-border bg-card shadow-card p-7 md:p-8 overflow-hidden hover:border-border transition-all hover:-translate-y-1 ${spans[i] ?? ""}`}
-            >
-              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-gradient-cta opacity-0 group-hover:opacity-20 blur-3xl transition-opacity" />
-              <div className="relative">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-cta/20 border border-border text-2xl">
-                  {f.icon}
-                </div>
-                <h3 className="mt-5 text-xl md:text-2xl font-bold tracking-tight">{f.title}</h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed text-[15px]">{f.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Modules() {
-  return (
-    <section className="py-20 px-6 relative">
-      <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">What You'll Master Inside</p>
-        <h2 className="mt-3 text-center text-4xl md:text-6xl font-black tracking-tight leading-[1.05]">
-          Plan smart. Create fast.
-          <br />
-          <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Sell like a pro.</span>
-        </h2>
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {modules.map((m) => {
-            const Icon = m.Icon;
-            return (
-              <div
-                key={m.n}
-                className="group relative rounded-3xl border border-border bg-gradient-to-br from-card to-card shadow-card p-7 hover:border-border transition-all hover:-translate-y-1 overflow-hidden"
-              >
-                <div className="absolute top-4 right-5 text-5xl font-black text-muted-foreground/20 tracking-tighter">{m.n}</div>
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-glow">
-                    <Icon className="w-7 h-7 text-white" strokeWidth={2.4} />
-                  </div>
-                  <h3 className="mt-5 text-xl font-bold tracking-tight">{m.title}</h3>
-                  <p className="mt-3 text-muted-foreground leading-relaxed text-[15px]">{m.body}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Pricing() {
   return (
@@ -516,120 +300,7 @@ function Pricing() {
   );
 }
 
-function ProofRow({ items, reverse = false }: { items: typeof proofRows[0]; reverse?: boolean }) {
-  const doubled = [...items, ...items];
-  return (
-    <div className="overflow-hidden">
-      <div
-        className={`flex gap-4 w-max ${reverse ? "animate-marquee-slow" : "animate-marquee"}`}
-        style={reverse ? { animationDirection: "reverse" } : undefined}
-      >
-        {doubled.map((p, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-3 bg-card border border-border shadow-card rounded-2xl px-4 py-3 w-[340px] md:w-[460px] shrink-0"
-          >
-            <div className={`w-9 h-9 rounded-full ${p.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
-              {p.initials}
-            </div>
-            <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="font-bold text-foreground truncate">{p.sender}</span>
-                <span className="px-1.5 py-0.5 bg-muted rounded text-[10px] font-semibold">Inbox</span>
-              </div>
-              <p className="mt-1 text-sm truncate text-muted-foreground">
-                <span className="bg-brand-yellow/30 text-brand-yellow px-1 font-semibold rounded">Payment</span>{" "}
-                {p.subject}
-              </p>
-            </div>
-            <div className="flex flex-col items-end shrink-0 gap-1">
-              <span className="font-extrabold text-brand-pink">{p.amount}</span>
-              <span className="text-[10px] text-muted-foreground font-medium">{p.time}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
-function DashboardCard({ d }: { d: typeof dashboards[0] }) {
-  return (
-    <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden text-left w-[340px] md:w-[680px] shrink-0">
-      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
-        <div className="p-6">
-          <p className="text-xs font-semibold text-muted-foreground">Collected Amount</p>
-          <p className="mt-3 text-3xl md:text-4xl font-black tracking-tight">{d.amount}</p>
-          <p className="mt-1 text-xs text-muted-foreground">from {d.count} captured payments</p>
-        </div>
-        <div className="p-6">
-          <p className="text-xs font-semibold text-muted-foreground">Split by payment method</p>
-          <div className="mt-4 flex items-center gap-6">
-            <div
-              className="w-24 h-24 rounded-full shrink-0"
-              style={{
-                background: `conic-gradient(oklch(0.70 0.27 295) 0 ${d.upi}%, oklch(0.72 0.28 345) ${d.upi}% 100%)`,
-                mask: "radial-gradient(circle, transparent 50%, black 51%)",
-                WebkitMask: "radial-gradient(circle, transparent 50%, black 51%)",
-              }}
-            />
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-brand-purple" />
-                <span className="font-semibold">UPI</span>
-                <span className="text-muted-foreground ml-2">{d.upi}%</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-brand-pink" />
-                <span className="font-semibold">Card</span>
-                <span className="text-muted-foreground ml-2">{d.card}%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function DashboardMarquee() {
-  const doubled = [...dashboards, ...dashboards];
-  return (
-    <div className="mt-10 -mx-6 overflow-hidden">
-      <div className="flex gap-6 w-max animate-marquee-slow px-6">
-        {doubled.map((d, i) => (
-          <DashboardCard key={i} d={d} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function Proof() {
-  return (
-    <section className="py-20 px-6 relative overflow-hidden">
-      <div className="mx-auto max-w-6xl text-center">
-        <p className="text-xs font-semibold tracking-[0.2em] text-brand-pink uppercase">Real receipts</p>
-        <h2 className="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-[1.1]">
-          These aren't just emails. <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">They're sales.</span>
-        </h2>
-      </div>
-      <div className="mt-12 space-y-4">
-        <ProofRow items={proofRows[0]} />
-        <ProofRow items={proofRows[1]} reverse />
-      </div>
-      <div className="mx-auto max-w-6xl text-center mt-16">
-        <h3 className="text-3xl md:text-5xl font-black tracking-tight">We made it happen. Now it's your turn.</h3>
-        <DashboardMarquee />
-        <div className="mt-12 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>
-            Yes, I Want Sales Like This! →
-          </GlowButton>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Whatsapp() {
   return (
@@ -646,26 +317,7 @@ function Whatsapp() {
   );
 }
 
-function UrgencyCTA() {
-  return (
-    <section className="py-20 px-6">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-4xl md:text-6xl font-black leading-[1.05] tracking-tight">
-          Ready to build your <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">digital empire?</span>
-        </h2>
-        <p className="mt-5 text-lg text-muted-foreground">There's no perfect time — start today, start small, start winning.</p>
 
-        <p className="mt-10 text-lg md:text-2xl font-bold text-brand-pink">
-          ⚡ Founder's Price Ending Soon — Only ₹499 (Regular ₹999)
-        </p>
-
-        <div className="mt-10 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault →</GlowButton>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FAQ() {
   return (
@@ -692,21 +344,6 @@ function FAQ() {
   );
 }
 
-function FinalCTA() {
-  return (
-    <section className="py-20 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-cta opacity-15 blur-3xl" />
-      <div className="mx-auto max-w-3xl text-center rounded-3xl border border-border bg-card shadow-card p-10 md:p-14">
-        <ShieldCheck className="mx-auto w-10 h-10 text-brand-pink" />
-        <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Ready to build your digital empire</h2>
-        <p className="mt-4 text-muted-foreground text-lg">There's no perfect time — start today, start small, start winning.</p>
-        <div className="mt-8 flex justify-center">
-          <GlowButton href="#pricing" onClick={scrollToPricing}>Access The Pro Vault — ₹499 →</GlowButton>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Footer() {
   return (
@@ -752,19 +389,7 @@ function FloatingWhatsApp() {
   );
 }
 
-function StickyMobileCTA() {
-  return (
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-50 p-3 backdrop-blur-xl bg-background/80 border-t border-border">
-      <a
-        href="#pricing"
-        onClick={scrollToPricing}
-        className="block w-full text-center rounded-full bg-gradient-cta text-white font-bold py-3.5 shadow-glow"
-      >
-        Get Instant Access →
-      </a>
-    </div>
-  );
-}
+
 
 function Products() {
   const productLd = {
@@ -800,22 +425,14 @@ function Products() {
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
       </Helmet>
-      <AnnouncementBar />
-      <TopBar />
+      
       <Header />
       <main>
         <Pricing />
-        {/* <WhyCreated /> */}
-        <Features />
-        <Modules />
-        <Proof />
         <Whatsapp />
-        <UrgencyCTA />
         <FAQ />
-        <FinalCTA />
       </main>
       <Footer />
-      <StickyMobileCTA />
       <FloatingWhatsApp />
     </div>
   );
