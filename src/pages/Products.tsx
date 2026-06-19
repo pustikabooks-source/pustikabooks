@@ -142,9 +142,10 @@ function Header() {
               <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>×</button>
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+              <a href="/" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🏠 Home</a>
               <a href="/blog" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</a>
+              <a href="/products" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</a>
               <a href="/about" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</a>
-              <a href="#pricing" style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</a>
             </nav>
             <div style={{ marginTop: "auto" }}>
               <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>
