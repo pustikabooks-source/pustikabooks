@@ -742,7 +742,7 @@ function StickyMobileCTA() {
   );
 }
 
-function Index() {
+function Products() {
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -770,6 +770,9 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
       <Helmet>
+        <title>Products — The Pro Vault | Pustika Books</title>
+        <meta name="description" content="The Pro Vault: AI prompts, templates and a 30-day checklist to launch your digital product in India." />
+        <link rel="canonical" href="https://pustikabooks.in/products" />
         <script type="application/ld+json">{JSON.stringify(productLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
       </Helmet>
@@ -777,7 +780,6 @@ function Index() {
       <TopBar />
       <Header />
       <main>
-        <Hero />
         <Pricing />
         {/* <WhyCreated /> */}
         <Features />
@@ -795,4 +797,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Products;
