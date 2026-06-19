@@ -190,3 +190,8 @@
   .animate-marquee { animation: marquee 30s linear infinite; }
   .animate-marquee-slow { animation: marquee 50s linear infinite; }
 }
+/* Force the navigation header to stay on top of ad overlays */
+header, nav, .navbar {
+  position: relative !important;
+  z-index: 999999 !important;
+}
