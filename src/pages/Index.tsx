@@ -111,7 +111,7 @@ function Topics() {
     { emoji: "📚", title: "Selling Digital Products", body: "How to create, price and sell ebooks, templates and courses online." },
     { emoji: "🤖", title: "AI for Creators", body: "Using ChatGPT and AI tools to build and earn faster." },
     { emoji: "💰", title: "Digital Income", body: "Proven strategies for building passive income through digital products worldwide." },
-  
+  ];
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
