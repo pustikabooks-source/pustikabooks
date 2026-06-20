@@ -209,25 +209,37 @@ function Newsletter() {
   const [message, setMessage] = useState("");
 
   async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email) return;
-    setStatus("loading");
-    setMessage("");
-    try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      const { data, error } = await supabase.functions.invoke("newsletter-subscribe", {
-        body: { email },
-      });
-      if (error || data?.error) throw new Error(data?.error || error?.message || "Failed");
-      setStatus("success");
-      setMessage("You're subscribed. See you Wednesday.");
-      setEmail("");
-    } catch (err) {
-      setStatus("error");
-      setMessage((err as Error).message || "Something went wrong.");
-    }
+      e.preventDefault();
+      if (!email) return;
+      setStatus("loading");
+      setMessage("");
+      try {
+        const response = await fetch("https://api.brevo.com/v3/contacts", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "api-key": "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"
+          },
+          body: JSON.stringify({
+            email: email,
+            listIds: [2],
+            updateEnabled: true
+          })
+        });
+        if (response.status === 201 || response.status === 204) {
+          setStatus("success");
+          setMessage("You're subscribed! See you every Wednesday. 🎉");
+          setEmail("");
+        } else {
+          const data = await response.json();
+          throw new Error(data?.message || "Failed to subscribe");
+        }
+      } catch (err) {
+        setStatus("error");
+        setMessage("Something went wrong. Please try again.");
+      }
   }
-
   return (
     <section style={{ background: "#0F0A1E" }}>
       <div className="mx-auto max-w-3xl px-6 py-20 md:py-28 text-center">
