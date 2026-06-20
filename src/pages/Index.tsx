@@ -204,42 +204,7 @@ function LatestArticles() {
 }
 
 function Newsletter() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [message, setMessage] = useState("");
-
-  async function onSubmit(e: React.FormEvent) {
-      e.preventDefault();
-      if (!email) return;
-      setStatus("loading");
-      setMessage("");
-      try {
-        const response = await fetch("https://api.brevo.com/v3/contacts", {
-          method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "api-key": "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"
-          },
-          body: JSON.stringify({
-            email: email,
-            listIds: [2],
-            updateEnabled: true
-          })
-        });
-        if (response.status === 201 || response.status === 204) {
-          setStatus("success");
-          setMessage("You're subscribed! See you every Wednesday. 🎉");
-          setEmail("");
-        } else {
-          const data = await response.json();
-          throw new Error(data?.message || "Failed to subscribe");
-        }
-      } catch (err) {
-        setStatus("error");
-        setMessage("Something went wrong. Please try again.");
-      }
-  }
+  
   return (
     <section style={{ background: "#0F0A1E" }}>
       <div className="mx-auto max-w-3xl px-6 py-20 md:py-28 text-center">
@@ -249,29 +214,21 @@ function Newsletter() {
         <p className="mt-5 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed">
           No fluff. No spam. Just real strategies for earning online — delivered to your inbox every Wednesday.
         </p>
-        <form
-          onSubmit={onSubmit}
-          className="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-        >
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            className="flex-1 rounded-full px-5 py-3.5 text-sm bg-white/10 text-white placeholder:text-white/40 border border-white/15 focus:outline-none focus:ring-2 focus:ring-brand-purple"
-          />
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="rounded-full bg-brand-purple px-6 py-3.5 text-sm font-bold text-white hover:opacity-90 transition disabled:opacity-60"
-          >
-            {status === "loading" ? "Subscribing…" : "Subscribe"}
-          </button>
-        </form>
-        {message && (
-          <p className={`mt-4 text-sm ${status === "success" ? "text-emerald-400" : "text-red-400"}`}>
-            {message}
+      <div className="mt-10 flex justify-center">
+  <iframe
+    src="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpEcMKWtZRBjKXmK-h5_gQZMwsV17Qia-hCgyfE5YiMtO8gNiB1bGMElegEL5rZx7SKZw8zYblZT3aHi5xHkSUi2PpPa053glMzTZWqPhauWZBFzKX0TlWID9M8s67TEO1jPnvRxvLZyUDO1Hy8ENxM-S2-qAIIiocMWakfD16eY9Jn_6Ys2PqBBoOk7Ni_08-03g=="
+    style={{
+      width: "100%",
+      maxWidth: "500px",
+      border: "none",
+      minHeight: "180px",
+      display: "block"
+    }}
+    scrolling="no"
+    frameBorder="0"
+    allowFullScreen
+  />
+</div>
           </p>
         )}
       </div>
