@@ -215,25 +215,23 @@ function Newsletter() {
           No fluff. No spam. Just real strategies for earning online — delivered to your inbox every Wednesday.
         </p>
       <div className="mt-10 flex justify-center">
-  <iframe
-    src="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpEcMKWtZRBjKXmK-h5_gQZMwsV17Qia-hCgyfE5YiMtO8gNiB1bGMElegEL5rZx7SKZw8zYblZT3aHi5xHkSUi2PpPa053glMzTZWqPhauWZBFzKX0TlWID9M8s67TEO1jPnvRxvLZyUDO1Hy8ENxM-S2-qAIIiocMWakfD16eY9Jn_6Ys2PqBBoOk7Ni_08-03g=="
-    style={{
-      width: "100%",
-      maxWidth: "500px",
-      border: "none",
-      minHeight: "180px",
-      display: "block"
-    }}
-    scrolling="no"
-    frameBorder="0"
-    allowFullScreen
-  />
-</div>
-          </p>
-        )}
+          <iframe
+          src="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpeCWtMWtzRBjkXnK-h5_gZMWsVTQia-hCgyfE5YiVtO8gNiB1bGMElegEL5..."
+          style={{
+            width: "100%",
+            maxWidth: "500px",
+            border: "none",
+            minHeight: "180px",
+            display: "block"
+          }}
+          scrolling="no"
+          frameBorder="0"
+          allowFullScreen
+        />
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }
 
 function SiteFooter() {
