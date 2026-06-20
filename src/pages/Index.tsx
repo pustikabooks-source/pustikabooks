@@ -214,21 +214,21 @@ function Newsletter() {
         <p className="mt-5 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed">
           No fluff. No spam. Just real strategies for earning online — delivered to your inbox every Wednesday.
         </p>
-      <div className="mt-10 flex justify-center">
-          <iframe
-          src="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpeCWtMWtzRBjkXnK-h5_gZMWsVTQia-hCgyfE5YiVtO8gNiB1bGMElegEL5..."
-          style={{
-            width: "100%",
-            maxWidth: "500px",
-            border: "none",
-            minHeight: "180px",
-            display: "block"
-          }}
-          scrolling="no"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </div>
+      <div
+  className="mt-8 w-full max-w-md mx-auto"
+  dangerouslySetInnerHTML={{
+    __html: `
+      <form id="sib-form" method="POST" action="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpEcMKWtZRBjKXmK-h5_gQZMwsV17Qia-hCgyfE5YiMtO8gNiB1bGMElegEL5rZx7SKZw8zYblZT3aHi5xHkSUi2PpPa053glMzTZWqPhauWZBFzKX0TlWID9M8s67TEO1jPnvRxvLZyUDO1Hy8ENxM-S2-qAIIiocMWakfD16eY9Jn_6Ys2PqBBoOk7Ni_08-03g==" data-type="subscription">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+          <input type="text" id="EMAIL" name="EMAIL" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:12px 20px;border-radius:999px;border:none;font-size:14px;color:#333;outline:none;" />
+          <button type="submit" style="padding:12px 28px;border-radius:999px;border:none;background:#7C3AED;color:white;font-size:14px;font-weight:700;cursor:pointer;">Subscribe →</button>
+        </div>
+        <input type="text" name="email_address_check" value="" style="display:none;" />
+        <input type="hidden" name="locale" value="en" />
+      </form>
+    `
+  }}
+/>
     </div>
   </section>
 );
