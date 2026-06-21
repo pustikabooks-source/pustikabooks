@@ -1,3 +1,4 @@
+import { useAuth } from "@/hooks/useAuth";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -5,6 +6,7 @@ import type { BlogPost } from "@/content/posts";
 import { fetchPublishedPosts } from "@/lib/blog";
 
 export default function Blog() {
+  const { user, logout } = useAuth();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,6 +35,15 @@ export default function Blog() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      {user && (
+  <div style={{ background: "#0F0A1E", padding: "10px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 100 }}>
+    <span style={{ color: "#A78BFA", fontSize: "13px", fontWeight: 600 }}>✏️ Admin Mode</span>
+    <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+      <Link to="/blog/new" style={{ color: "white", fontSize: "13px", fontWeight: 700, textDecoration: "none", background: "#7C3AED", padding: "6px 16px", borderRadius: "999px" }}>+ New Post</Link>
+      <button onClick={logout} style={{ color: "#A78BFA", fontSize: "13px", fontWeight: 600, background: "none", border: "none", cursor: "pointer" }}>Logout</button>
+    </div>
+  </div>
+)}
       <Helmet>
         <title>Blog — How to Earn With eBooks | Pustika Books</title>
         <meta
@@ -55,12 +66,17 @@ export default function Blog() {
           <Link to="/" className="font-black text-xl tracking-tight">
             Pustika<span className="text-brand-purple">.</span>
           </Link>
-          <Link
-            to="/"
-            className="text-sm font-semibold text-muted-foreground hover:text-foreground"
-          >
-            ← Back to site
-          </Link>
+          <div className="flex items-center gap-4">
+  <Link
+    to="/"
+    className="text-sm font-semibold text-muted-foreground hover:text-foreground"
+  >
+    ← Back to site
+  </Link>
+  {!user && (
+    <Link to="/login" style={{ fontSize: "13px", color: "#7C3AED", fontWeight: 600, textDecoration: "none" }}>Login</Link>
+  )}
+</div>
         </div>
       </header>
 
