@@ -12,7 +12,8 @@ import Refund from "./pages/Refund";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import AboutUs from "./pages/AboutUs";
-import Admin from "./pages/Admin";
+import Login from "./pages/Login";
+import BlogEditor from "./pages/BlogEditor";
 import Products from "./pages/Products";
 function Analytics() {
   const location = useLocation();
@@ -40,7 +41,9 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<Login />} />
+<Route path="/blog/new" element={<BlogEditor />} />
+<Route path="/blog/edit/:slug" element={<BlogEditor />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
