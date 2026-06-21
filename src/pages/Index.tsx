@@ -82,11 +82,13 @@ function Hero() {
     <section className="bg-white">
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-32 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground">
-          Turn what you know into income. —<br />
-        </h1>
-        <p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Practical guides and digital products for creators worldwide who want to earn from their knowledge — on their own terms.
-        </p>
+  Turn Your Knowledge Into
+  <span className="text-brand-purple"> Digital Income</span>
+</h1>
+
+<p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+  Learn how to create, publish and sell eBooks, digital products and AI-powered businesses—even if you're starting from zero.
+</p>
         <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Link
             to="/blog"
@@ -260,10 +262,10 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Pustika Books — Practical guides for Indian creators</title>
+        <title>Sell eBooks & Digital Products | Pustika Books</title>
         <meta
           name="description"
-          content="Learn how to earn online the Indian way. Practical guides on selling eBooks, AI tools, and digital income for Indian creators."
+          content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses. Practical guides for creators and entrepreneurs."
         />
         <link rel="canonical" href="https://pustikabooks.in/" />
         <meta property="og:title" content="Pustika Books — Practical guides for Indian creators" />
