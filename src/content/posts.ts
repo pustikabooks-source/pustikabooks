@@ -392,6 +392,202 @@ export const posts: BlogPost[] = [
       { type: "p", text: "The Pustika Pro Vault gives you the exact templates, AI prompts, niche research, and 30-day launch checklist to go from idea to first sale — without months of guesswork. Everything you need is already inside." }
     ]
   },
+  {
+    slug: "how-to-validate-a-digital-product-idea",
+    title: "How to Validate a Digital Product Idea Before You Create It",
+    description: "Most creators waste weeks building products nobody wants. Here's the exact validation framework to test demand before you write a single word.",
+    date: "2026-06-21",
+    readingMinutes: 10,
+    tags: ["digital products", "validation", "make money online"],
+    body: [
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop",
+        alt: "Person researching and validating a business idea on laptop",
+        caption: "Validation is the single most important step most creators skip"
+      },
+      {
+        type: "p",
+        text: "Marcus spent three months building a course on freelance writing. He recorded 40 videos, designed a landing page, and launched to his email list of 200 people. He made two sales. The course was good. The content was genuinely useful. But nobody had asked for it — and he had never checked if they would buy it before spending 300 hours creating it."
+      },
+      {
+        type: "p",
+        text: "This story repeats itself thousands of times every week. Creators build first and validate never. The result is wasted months, crushed confidence, and the wrong conclusion — that digital products don't work. They do work. The problem is building before validating."
+      },
+      {
+        type: "h2",
+        text: "Why validation matters more than the product itself"
+      },
+      {
+        type: "p",
+        text: "Most failed digital products don't fail because they were bad. They fail because nobody wanted them badly enough to pay for them. Validation answers one question before you invest your time: will people actually hand over money for this? Not 'do they think it's a good idea' — that's easy to say yes to. But 'will they pay for it right now?' That's the real test."
+      },
+      {
+        type: "p",
+        text: "The good news: validation takes days, not months. And it costs nothing except a few hours of honest research. Here's the exact framework that works in 2026."
+      },
+      {
+        type: "h2",
+        text: "Step 1 — The 5-minute demand test"
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+        alt: "Google search keyword research on laptop screen",
+        caption: "Google tells you exactly what people are searching for — and how many"
+      },
+      {
+        type: "p",
+        text: "Before anything else, open Google and type your product idea as a question. If you're thinking of creating an eBook on budgeting for freelancers, search 'how to budget as a freelancer' and 'budgeting tips for freelancers.' Look at two things: how many results exist (demand signal) and what those results look like (competition quality)."
+      },
+      {
+        type: "p",
+        text: "Then go to Google Trends and type your topic. If the search trend is flat or declining over 5 years — be careful. If it's growing or spiking — you have timing on your side. This entire process takes 5 minutes and tells you more than most people learn in a week of 'research.'"
+      },
+      {
+        type: "ul",
+        items: [
+          "Go to trends.google.com → type your topic → check 5-year trend",
+          "Growing trend = people are increasingly interested",
+          "Declining trend = market is shrinking, pick a different angle",
+          "Flat but high = stable demand, safe but competitive",
+          "Sudden spike = act fast, these windows close"
+        ]
+      },
+      {
+        type: "h2",
+        text: "Step 2 — Use Reddit and online communities to find real pain"
+      },
+      {
+        type: "p",
+        text: "Reddit is the most honest market research tool in existence. People on Reddit don't soften their feedback. They say exactly what they're struggling with, what solutions they've tried, and what's missing. Go to the subreddit for your niche and search for pain words: 'frustrated,' 'struggling,' 'can't find,' 'does anyone know,' 'help with.'"
+      },
+      {
+        type: "p",
+        text: "If you're creating a product for freelancers, go to r/freelance and search 'pricing.' You'll find hundreds of posts from people who are genuinely confused about how to price their services — and who would pay for a clear, practical guide that solves that specific confusion. That's your product brief, written by your future customers."
+      },
+      {
+        type: "ul",
+        items: [
+          "Find the 2-3 subreddits where your target buyer hangs out",
+          "Search pain words: 'struggling,' 'frustrated,' 'can't figure out'",
+          "Read the top comments — they tell you exactly what solution people want",
+          "Look for questions that get 50+ upvotes — high upvotes = widespread problem",
+          "Do the same on Facebook Groups, Quora, and Twitter/X"
+        ]
+      },
+      {
+        type: "h2",
+        text: "Watch: How to validate a digital product idea fast"
+      },
+      {
+        type: "youtube",
+        videoId: "gP9CdoPc5PI",
+        title: "5 Steps to Validate Your Product Idea FAST — Before You Create Anything"
+      },
+      {
+        type: "h2",
+        text: "Step 3 — Competitor research (this is actually good news)"
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+        alt: "Competitor research and market analysis on computer",
+        caption: "Competitors prove the market exists — they are not a reason to stop"
+      },
+      {
+        type: "p",
+        text: "Most new creators see competitors and think 'the market is too crowded.' This is exactly backwards. Competitors are proof the market exists and that people are already spending money in this space. No competitors means no market — that should scare you far more than competition."
+      },
+      {
+        type: "p",
+        text: "Go to Gumroad, Etsy, Amazon KDP, and Udemy and search your topic. Look at the top selling products. Read their reviews carefully — especially the negative ones. The negative reviews are a goldmap of exactly what buyers wanted but didn't get. That gap is your product."
+      },
+      {
+        type: "ul",
+        items: [
+          "Search your topic on Gumroad — are people selling similar products?",
+          "Check Etsy for templates and printables in your niche",
+          "Search Amazon KDP for eBooks on your topic",
+          "Read negative reviews — they tell you what's missing",
+          "If top sellers have 50+ sales, the market is proven"
+        ]
+      },
+      {
+        type: "h2",
+        text: "Step 4 — The keyword demand check"
+      },
+      {
+        type: "p",
+        text: "Go to Google and type your product title idea with 'buy' or 'best' in front of it. 'Best budgeting template for freelancers.' 'Buy freelancer pricing guide.' If Google autocompletes your search — that's a strong signal people are already searching for this. If multiple paid ads appear at the top — that means businesses are spending money to reach these searchers. Where businesses spend money on ads, buyers exist."
+      },
+      {
+        type: "p",
+        text: "You can also use free tools like Ubersuggest or Google Keyword Planner to check monthly search volume. A topic with 1,000+ monthly searches globally is worth pursuing. A topic with fewer than 100 searches needs either a wider angle or a different topic entirely."
+      },
+      {
+        type: "h2",
+        text: "Step 5 — Pre-sell before you create"
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+        alt: "Pre-selling digital product online payment",
+        caption: "Money in your account before you create a single page — that's real validation"
+      },
+      {
+        type: "p",
+        text: "This is the most powerful validation method and almost nobody uses it. Write a description of your product — what it covers, what problem it solves, what the buyer will be able to do after using it. Set a price. Create a payment link. Then tell 20-30 people in your network or online communities about it."
+      },
+      {
+        type: "p",
+        text: "Don't say 'I'm thinking about creating this — would you be interested?' That question is worthless. Say 'I've created this product — here's the link.' The willingness to actually pay is the only real signal. If 2-3 people buy before you've created a single page, you have confirmation the idea is worth building. If nobody buys, you've saved yourself weeks of wasted work."
+      },
+      {
+        type: "quote",
+        text: "Money is the only thing that can validate a product. Surveys tell you what people think they want. Pre-sales tell you what they'll actually pay for. Those are very different answers."
+      },
+      {
+        type: "h2",
+        text: "The validation checklist — before you create anything"
+      },
+      {
+        type: "ul",
+        items: [
+          "✅ Google Trends shows stable or growing interest in my topic",
+          "✅ Reddit and online communities show real, repeated complaints about this problem",
+          "✅ At least 3 competitors exist and are actively selling similar products",
+          "✅ Negative reviews of competitor products reveal a clear gap I can fill",
+          "✅ My topic has 1,000+ monthly searches globally",
+          "✅ At least 2 people have pre-paid before I started creating"
+        ]
+      },
+      {
+        type: "h2",
+        text: "What to do when your idea fails validation"
+      },
+      {
+        type: "p",
+        text: "A failed validation is not a failed idea — it's a failed angle. If nobody is searching for 'budgeting for freelancers' but thousands search 'how to price freelance services,' that's your pivot. The core knowledge you want to share is the same. The angle, the title, and the specific promise change to match what the market is already looking for."
+      },
+      {
+        type: "p",
+        text: "Most successful digital products are not original ideas — they're better executed versions of things that already sell. Your job is not to invent a new category. Your job is to find a proven category and serve it better, more specifically, or for a more underserved audience."
+      },
+      {
+        type: "h2",
+        text: "How long should validation take?"
+      },
+      {
+        type: "p",
+        text: "Two to three days maximum. Day one: Google Trends, Reddit research, competitor analysis. Day two: write your product description, create a payment link, share it with your network. Day three: evaluate responses and make the go or no-go decision. Anyone telling you validation takes weeks is either overthinking it or selling you a course about validation."
+      },
+      {
+        type: "p",
+        text: "At Pustika Books, our Pro Vault includes a 50+ niche research guide that does much of this validation work for you — identifying proven niches with real buyer demand so you skip straight to creating and selling."
+      }
+    ]
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
