@@ -45,16 +45,16 @@ export default function Blog() {
   </div>
 )}
       <Helmet>
-        <title>Blog — How to Earn With eBooks | Pustika Books</title>
+        <title>Blog — How to Earn With eBooks and Digital Products| Pustika Books</title>
         <meta
-          name="description"
-          content="Practical guides on writing, pricing, and selling eBooks in India. Learn how to earn passive income with digital products — from beginners to pros."
-        />
+  name="description"
+  content="Practical guides on creating, marketing, and selling eBooks and digital products worldwide. Learn how to build an online income."
+/>
         <link rel="canonical" href={url} />
-        <meta property="og:title" content="Pustika Books Blog — How to Earn With eBooks" />
+        <meta property="og:title" content="Pustika Books Blog — How to Earn With eBooks and Digital Products" />
         <meta
           property="og:description"
-          content="Practical guides on writing, pricing, and selling eBooks in India."
+          content="Practical guides on creating, marketing, and selling eBooks and digital products worldwide."
         />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
@@ -92,13 +92,15 @@ export default function Blog() {
             </span>
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            Honest, step-by-step guides on writing, pricing, and selling digital books in India.
-            No fluff, no theory — just what's working in 2026.
-          </p>
+  Honest, step-by-step guides on writing, pricing, marketing, and selling digital products worldwide.
+  No fluff, no theory — just what's working in 2026.
+</p>
         </div>
 
         <div className="mx-auto mt-14 max-w-5xl grid md:grid-cols-2 gap-6">
-          {posts.map((p) => (
+          {posts
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .map((p) => (
             <Link
               key={p.slug}
               to={`/blog/${p.slug}`}
