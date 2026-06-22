@@ -588,6 +588,202 @@ export const posts: BlogPost[] = [
       }
     ]
   },
+  {
+    slug: "25-chatgpt-prompts-every-creator-should-save",
+    title: "25 ChatGPT Prompts Every Creator Should Save (Copy-Paste Ready)",
+    description: "Stop staring at blank screens. These 25 battle-tested ChatGPT prompts cover content ideas, captions, emails, blog posts, and sales copy — ready to use right now.",
+    date: "2026-06-22",
+    readingMinutes: 8,
+    tags: ["chatgpt", "ai for creators", "digital products", "productivity"],
+    body: [
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop",
+        alt: "ChatGPT AI interface on laptop screen creator workflow",
+        caption: "The right prompt is the difference between 2 hours of writing and 10 minutes"
+      },
+      {
+        type: "p",
+        text: "Most people use ChatGPT wrong. They type vague instructions, get generic output, and conclude that AI is overhyped. The problem is never the tool — it's the prompt. A weak prompt gives you content that sounds like it was written for no one. A strong prompt gives you a first draft that sounds like you, structured around your audience's exact problem."
+      },
+      {
+        type: "p",
+        text: "These 25 prompts are not theoretical. They are copy-paste ready, tested across content types, and designed for one thing: saving you hours every single week. Bookmark this page. You'll come back to it."
+      },
+      {
+        type: "h2",
+        text: "How to use these prompts"
+      },
+      {
+        type: "p",
+        text: "Every prompt uses [brackets] for the parts you replace with your own details. The more specific you are inside those brackets, the better the output. 'Write a caption for [my digital product about budgeting for freelancers targeting 25-35 year olds who are just starting out]' will outperform 'write a caption for [my product]' every single time."
+      },
+      {
+        type: "h2",
+        text: "Content Ideas — Never Run Out Again"
+      },
+      {
+        type: "quote",
+        text: "Prompt 1 — The Idea Machine: 'Give me 20 content ideas for [your niche] that would perform well on [platform]. Each idea should target a specific pain point, start with a curiosity hook, and be completable in under 5 minutes of reading or watching. Format as a numbered list with the pain point in brackets after each idea.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 2 — The Trending Angle: 'I create content about [topic]. Give me 10 angles on this topic I probably haven't covered yet — angles that are counterintuitive, contrarian, or that challenge common advice in the space. Be specific and bold.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 3 — The Content Calendar: 'Create a 30-day content calendar for [your niche] with one post per day. Each day should include: platform, content format, hook, and core message. Vary between educational, personal story, promotional, and engagement formats.'"
+      },
+      {
+        type: "h2",
+        text: "Blog Posts — First Drafts in Minutes"
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop",
+        alt: "Writing blog post on laptop with coffee",
+        caption: "A strong prompt gives you a structured first draft — you just add your voice"
+      },
+      {
+        type: "quote",
+        text: "Prompt 4 — The SEO Blog Outline: 'Create a detailed blog post outline for the keyword \"[your keyword].\" Include: an attention-grabbing title, meta description under 160 characters, 6-8 H2 headings with 2-3 bullet points each, and a CTA at the end. Target audience: [describe your reader].'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 5 — The Hook Generator: 'Write 10 different opening paragraphs for a blog post about [topic]. Each hook should use a different technique: shocking statistic, controversial statement, personal story, common misconception, surprising question, specific scenario, bold promise, historical reference, pop culture comparison, and direct challenge to the reader.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 6 — The Rewriter: 'Rewrite this section of my blog post to be more conversational, specific, and engaging. Remove any generic phrases. Add a concrete example or data point. Keep it under [word count]. Here is the text: [paste your text]'"
+      },
+      {
+        type: "h2",
+        text: "Social Media — Captions That Actually Work"
+      },
+      {
+        type: "quote",
+        text: "Prompt 7 — The Instagram Caption: 'Write 5 Instagram captions for a post about [topic]. Each caption should: start with a one-line hook that stops the scroll, use short punchy sentences, include a specific insight or tip, and end with a question that invites comments. Keep each under 150 words. Tone: [conversational/professional/bold].'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 8 — The LinkedIn Post: 'Write a LinkedIn post about [your experience or insight]. Format: start with a surprising first line, use short one-sentence paragraphs, tell a specific story with a clear before and after, end with one practical takeaway and a question. No corporate language. Sound like a real person.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 9 — The Twitter Thread: 'Turn this idea into a 10-tweet thread: [your idea]. Tweet 1 should be the hook that makes people want to read all 10. Each tweet should be a standalone insight. Tweet 10 should summarize and include a CTA. Keep each tweet under 250 characters.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 10 — The Reel Script: 'Write a 30-second Reel script about [topic]. Format: Hook (0-3 seconds) — one bold statement that stops scrolling. Problem (3-10 seconds) — the pain point. Solution (10-25 seconds) — three quick tips. CTA (25-30 seconds) — one clear action. Keep it punchy. No filler words.'"
+      },
+      {
+        type: "h2",
+        text: "Email — From Subscribers to Buyers"
+      },
+      {
+        type: "quote",
+        text: "Prompt 11 — The Welcome Email: 'Write a welcome email for new subscribers to [your newsletter/list]. Include: a warm opening that confirms what they signed up for, one specific valuable tip they can use today, a brief personal story about why you started this, and what to expect from future emails. Tone: friendly, like emailing a smart friend. Under 300 words.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 12 — The Sales Email: 'Write a sales email for [your product]. Structure: subject line (curiosity-driven, under 8 words), opening with a relatable problem, middle with 3 specific benefits (not features), social proof in one sentence, and a clear CTA button text. No hype. No excessive exclamation marks. Sound confident not desperate.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 13 — The Subject Line Generator: 'Give me 20 email subject lines for an email about [topic]. Include a mix of: curiosity gaps, numbered lists, personal questions, bold statements, and FOMO-based lines. Mark your top 3 picks and explain why they would perform best.'"
+      },
+      {
+        type: "h2",
+        text: "Digital Products — Create and Sell Faster"
+      },
+      {
+        type: "image",
+        url: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&auto=format&fit=crop",
+        alt: "Digital product creation planning notes laptop",
+        caption: "ChatGPT can outline your entire product in minutes — you just fill in the expertise"
+      },
+      {
+        type: "quote",
+        text: "Prompt 14 — The Product Outline: 'Create a detailed outline for a [type: eBook/course/template pack] about [topic] for [target audience]. Include: a compelling title, subtitle, table of contents with 8-10 chapters, 3-5 bullet points per chapter showing what the reader will learn, and a closing chapter with next steps. Make it feel like a complete transformation.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 15 — The Sales Page: 'Write a sales page for [product name] priced at [price]. Include: headline, subheadline, who this is for (3 bullet points), what's inside (5 bullet points), 3 objections and responses, FAQ section with 4 questions, and a CTA. Tone: confident, clear, no hype. Focus on transformation not features.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 16 — The Product Title Generator: 'Give me 15 title options for a [type] about [topic] targeting [audience]. Each title should be specific, outcome-focused, and create curiosity. Include the format: \"How to [outcome] Without [common objection]\" for 5 of them.'"
+      },
+      {
+        type: "h2",
+        text: "Research and Strategy — Think Smarter"
+      },
+      {
+        type: "quote",
+        text: "Prompt 17 — The Competitor Analysis: 'I sell [product/service] in the [niche] space. My main competitors are [names]. Analyze what they likely do well and where they probably fall short based on common patterns in this industry. Then suggest 5 specific ways I could differentiate my offer to win customers they are not serving well.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 18 — The Audience Research: 'I create content and products for [audience description]. List the top 10 fears, frustrations, desires, and aspirations this audience likely has. Then suggest 5 content topics and 3 product ideas that directly address the most painful items on each list.'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 19 — The Niche Validator: 'I want to create a digital product in the [niche] space targeting [specific audience]. Help me validate this idea by: identifying 3 signs the market is active and paying, 3 potential red flags, the top 3 competitors I should research, and the single most important question I need to answer before creating this product.'"
+      },
+      {
+        type: "h2",
+        text: "Personal Brand — Sound Like You"
+      },
+      {
+        type: "quote",
+        text: "Prompt 20 — The Bio Generator: 'Write 5 versions of a professional bio for [your name], who [what you do] for [who you help] so they can [outcome]. Versions: 1 sentence, 3 sentences, Twitter bio (under 160 chars), LinkedIn summary opener, and a spoken introduction for podcasts. Tone: [confident/warm/bold].'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 21 — The Brand Voice Guide: 'Based on this sample of my writing: [paste 3-5 paragraphs you have written], describe my brand voice in detail. Include: 5 adjectives that describe my tone, phrases I use frequently, what I should and should not sound like, and 3 example sentences in my voice on the topic of [topic].'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 22 — The Story Finder: 'I want to share personal stories in my content to build connection with my audience. Based on the topic of [topic], suggest 10 types of personal experiences that would resonate — including struggles, turning points, mistakes, and wins. I will tell you which ones apply and you help me shape them into content.'"
+      },
+      {
+        type: "h2",
+        text: "Repurposing — One Piece of Content, Ten Places"
+      },
+      {
+        type: "quote",
+        text: "Prompt 23 — The Repurposing Machine: 'Take this blog post and repurpose it into: 3 tweet threads, 5 Instagram captions, 1 LinkedIn article opener, 1 email newsletter section, and 3 short video script hooks. Here is the post: [paste your content]'"
+      },
+      {
+        type: "quote",
+        text: "Prompt 24 — The Video to Text: 'I recorded a video/podcast about [topic]. Based on this transcript, write: a blog post with proper headings, a summary email under 200 words, 5 pull quotes for social media, and 3 short clip titles. Transcript: [paste transcript]'"
+      },
+      {
+        type: "h2",
+        text: "The Most Powerful Prompt of All"
+      },
+      {
+        type: "quote",
+        text: "Prompt 25 — The Feedback Loop: 'Read what I just wrote and tell me: what is the single weakest sentence, what is missing that my reader is probably wondering, where does the logic jump without explanation, and what one specific change would make this 30% more compelling. Be direct. Do not soften the feedback. Here is the text: [paste your writing]'"
+      },
+      {
+        type: "p",
+        text: "That last one is the prompt most creators are too afraid to use. Direct feedback from an AI that has no ego and no agenda is one of the most underrated tools available to writers in 2026. Use it on every piece of content before you publish."
+      },
+      {
+        type: "h2",
+        text: "One rule before you close this tab"
+      },
+      {
+        type: "p",
+        text: "ChatGPT is a thinking partner, not a ghostwriter. The creators who build real audiences in 2026 are the ones who use AI to structure and accelerate their thinking — then add their own voice, stories, and opinions on top. Raw AI output is a first draft. Your perspective is the finished product. Never skip that step."
+      },
+      {
+        type: "p",
+        text: "Save this page. Come back when you are staring at a blank screen. And if you want 50 more prompts specifically for digital product creators — along with templates, checklists, and a 30-day launch plan — the Pustika Pro Vault has everything in one place."
+      }
+    ]
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
