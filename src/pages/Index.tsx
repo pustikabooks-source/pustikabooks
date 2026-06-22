@@ -1,4 +1,3 @@
-import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -207,69 +206,24 @@ function LatestArticles() {
 }
 
 function FreeGuide() {
-  const [email, setEmail] = useState("");
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-uid", "9463c73c8f");
+    script.src = "https://pustika-books.kit.com/9463c73c8f/index.js";
 
-  async function handleDownload() {
-  if (!email) {
-    alert("Please enter your email");
-    return;
-  }
-
-  const { error } = await supabase
-    .from("subscribers")
-    .insert([{ email }]);
-
-  if (error) {
-    console.error(error);
-    alert("Something went wrong");
-    return;
-  }
-
-  window.open("/50-digital-product-ideas.pdf", "_blank");
-  }
+    document.getElementById("kit-form")?.appendChild(script);
+  }, []);
 
   return (
     <section style={{ background: "#0F0A1E" }}>
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
-
-        <span className="inline-block px-4 py-2 rounded-full bg-brand-purple text-white text-sm font-bold">
-          FREE DOWNLOAD
-        </span>
-
-        <h2 className="mt-6 text-3xl md:text-5xl font-black text-white leading-tight">
-          50 Digital Product Ideas
-          <br />
-          You Can Launch This Weekend
-        </h2>
-
-        <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-          Discover 50 proven digital product ideas creators are using to build
-          online income.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
-
-          <input
-            type="email"
-            placeholder="Enter your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="px-5 py-4 rounded-full w-full max-w-sm text-black"
-          />
-
-          <button
-            onClick={handleDownload}
-            className="inline-flex items-center justify-center rounded-full bg-brand-purple px-8 py-4 text-base font-bold text-white"
-          >
-            Download Free PDF →
-          </button>
-
-        </div>
-
+        <div id="kit-form"></div>
       </div>
     </section>
   );
 }
+  
 function SiteFooter() {
   return (
     <footer className="bg-white border-t border-border">
