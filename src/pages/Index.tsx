@@ -1,3 +1,4 @@
+import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -209,12 +210,22 @@ function FreeGuide() {
   const [email, setEmail] = useState("");
 
   async function handleDownload() {
-    if (!email) {
-      alert("Please enter your email");
-      return;
-    }
+  if (!email) {
+    alert("Please enter your email");
+    return;
+  }
 
-    window.open("/50-digital-product-ideas.pdf", "_blank");
+  const { error } = await supabase
+    .from("subscribers")
+    .insert([{ email }]);
+
+  if (error) {
+    console.error(error);
+    alert("Something went wrong");
+    return;
+  }
+
+  window.open("/50-digital-product-ideas.pdf", "_blank");
   }
 
   return (
