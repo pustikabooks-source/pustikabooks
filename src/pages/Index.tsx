@@ -212,13 +212,23 @@ function FreeGuide() {
     script.setAttribute("data-uid", "9463c73c8f");
     script.src = "https://pustika-books.kit.com/9463c73c8f/index.js";
 
-    document.getElementById("kit-form")?.appendChild(script);
+    const container = document.getElementById("kit-form");
+
+    if (container && !container.hasChildNodes()) {
+      container.appendChild(script);
+    }
   }, []);
 
   return (
     <section style={{ background: "#0F0A1E" }}>
-      <div className="mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
-        <div id="kit-form"></div>
+      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
+        <div
+          id="kit-form"
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}
+        />
       </div>
     </section>
   );
