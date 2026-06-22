@@ -144,7 +144,7 @@ function LatestArticles() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
     fetchPublishedPosts()
-      .then((p: BlogPost[]) => setPosts(p.slice(0, 3)))
+      .then((data: BlogPost[]) => setPosts(data.slice(0, 3)))
       .catch(() => setPosts([]));
   }, []);
 
