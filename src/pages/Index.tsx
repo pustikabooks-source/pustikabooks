@@ -206,6 +206,17 @@ function LatestArticles() {
 }
 
 function FreeGuide() {
+  const [email, setEmail] = useState("");
+
+  async function handleDownload() {
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    window.open("/50-digital-product-ideas.pdf", "_blank");
+  }
+
   return (
     <section style={{ background: "#0F0A1E" }}>
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
@@ -225,22 +236,29 @@ function FreeGuide() {
           online income.
         </p>
 
-        <div className="mt-10">
-          <a
-            href="/50-digital-product-ideas.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-brand-purple px-8 py-4 text-base font-bold text-white hover:opacity-90 transition"
+        <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
+
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="px-5 py-4 rounded-full w-full max-w-sm text-black"
+          />
+
+          <button
+            onClick={handleDownload}
+            className="inline-flex items-center justify-center rounded-full bg-brand-purple px-8 py-4 text-base font-bold text-white"
           >
             Download Free PDF →
-          </a>
+          </button>
+
         </div>
 
       </div>
     </section>
   );
 }
-
 function SiteFooter() {
   return (
     <footer className="bg-white border-t border-border">
