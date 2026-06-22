@@ -205,35 +205,40 @@ function LatestArticles() {
   );
 }
 
-function Newsletter() {
-  
+function FreeGuide() {
   return (
     <section style={{ background: "#0F0A1E" }}>
-      <div className="mx-auto max-w-3xl px-6 py-20 md:py-28 text-center">
-        <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
-          Get one practical tip every week.
+      <div className="mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
+
+        <span className="inline-block px-4 py-2 rounded-full bg-brand-purple text-white text-sm font-bold">
+          FREE DOWNLOAD
+        </span>
+
+        <h2 className="mt-6 text-3xl md:text-5xl font-black text-white leading-tight">
+          50 Digital Product Ideas
+          <br />
+          You Can Launch This Weekend
         </h2>
-        <p className="mt-5 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed">
-          No fluff. No spam. Just real strategies for earning online — delivered to your inbox every Wednesday.
+
+        <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
+          Discover 50 proven digital product ideas creators are using to build
+          online income.
         </p>
-      <div
-  className="mt-8 w-full max-w-md mx-auto"
-  dangerouslySetInnerHTML={{
-    __html: `
-      <form id="sib-form" method="POST" action="https://e480659a.sibforms.com/serve/MUIFAGQT5Dwz4IpEcMKWtZRBjKXmK-h5_gQZMwsV17Qia-hCgyfE5YiMtO8gNiB1bGMElegEL5rZx7SKZw8zYblZT3aHi5xHkSUi2PpPa053glMzTZWqPhauWZBFzKX0TlWID9M8s67TEO1jPnvRxvLZyUDO1Hy8ENxM-S2-qAIIiocMWakfD16eY9Jn_6Ys2PqBBoOk7Ni_08-03g==" data-type="subscription">
-        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
-          <input type="text" id="EMAIL" name="EMAIL" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:12px 20px;border-radius:999px;border:none;font-size:14px;color:#333;outline:none;" />
-          <button type="submit" style="padding:12px 28px;border-radius:999px;border:none;background:#7C3AED;color:white;font-size:14px;font-weight:700;cursor:pointer;">Subscribe →</button>
+
+        <div className="mt-10">
+          <a
+            href="/50-digital-product-ideas.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-brand-purple px-8 py-4 text-base font-bold text-white hover:opacity-90 transition"
+          >
+            Download Free PDF →
+          </a>
         </div>
-        <input type="text" name="email_address_check" value="" style="display:none;" />
-        <input type="hidden" name="locale" value="en" />
-      </form>
-    `
-  }}
-/>
-    </div>
-  </section>
-);
+
+      </div>
+    </section>
+  );
 }
 
 function SiteFooter() {
@@ -276,7 +281,7 @@ export default function Index() {
         <Hero />
         <Topics />
         <LatestArticles />
-        <Newsletter />
+        <FreeGuide />
       </main>
       <SiteFooter />
     </div>
