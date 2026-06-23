@@ -400,7 +400,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "how-to-validate-a-digital-product-idea",
-    category; "digital-products",
+    category: "digital-products",
     title: "How to Validate a Digital Product Idea Before You Create It",
     description: "Most creators waste weeks building products nobody wants. Here's the exact validation framework to test demand before you write a single word.",
     date: "2026-06-21",
