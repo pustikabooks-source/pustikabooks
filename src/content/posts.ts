@@ -1,5 +1,6 @@
 export interface BlogPost {
   slug: string;
+  category?: "ebook" | "digital-products" | "ai-for-creators";
   title: string;
   description: string;
   date: string;
@@ -20,6 +21,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "how-to-earn-money-selling-ebooks-in-india",
+    category: "ebook",
     title: "How to Earn Money Selling eBooks in India (2026 Beginner's Guide)",
     description: "A practical, step-by-step guide to writing, pricing, and selling your first eBook in India — even if you're starting from zero followers.",
     date: "2026-06-01",
@@ -103,6 +105,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "best-ebook-niches-2026",
+    category: "ebook",
     title: "10 Best eBook Niches to Sell in India in 2026 (With Real Demand Data)",
     description: "The most profitable eBook niches for Indian creators in 2026 — what's selling, what's saturated, and how to pick a category that pays for years.",
     date: "2026-05-20",
@@ -170,6 +173,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "how-to-price-your-ebook",
+    category: "ebook",
     title: "How to Price Your eBook in India (The Psychology Behind ₹199, ₹499 and ₹999)",
     description: "A no-fluff pricing framework for digital eBooks in India — anchor prices, bundle tiers, and the psychology that makes buyers click without hesitation.",
     date: "2026-05-05",
@@ -228,6 +232,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "promote-your-ebook-without-an-audience",
+    category: "ebook",
     title: "How to Promote Your eBook Without an Audience (5 Free Channels That Actually Work)",
     description: "You don't need followers to sell eBooks. Five free, repeatable promotion channels that work for first-time creators in India.",
     date: "2026-04-18",
@@ -302,6 +307,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "digital-products-india-2026",
+    category; "digital-products",
     title: "7 Best Digital Products to Sell in India in 2026 (And How to Start This Week)",
     description: "The most profitable digital products Indian creators are selling in 2026 — with real income numbers, zero inventory, and a clear starting point for each.",
     date: "2026-06-17",
@@ -394,6 +400,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "how-to-validate-a-digital-product-idea",
+    category; "digital-products",
     title: "How to Validate a Digital Product Idea Before You Create It",
     description: "Most creators waste weeks building products nobody wants. Here's the exact validation framework to test demand before you write a single word.",
     date: "2026-06-21",
@@ -590,6 +597,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "25-chatgpt-prompts-every-creator-should-save",
+    category; "ai-for-creators",
     title: "25 ChatGPT Prompts Every Creator Should Save (Copy-Paste Ready)",
     description: "Stop staring at blank screens. These 25 battle-tested ChatGPT prompts cover content ideas, captions, emails, blog posts, and sales copy — ready to use right now.",
     date: "2026-06-22",
