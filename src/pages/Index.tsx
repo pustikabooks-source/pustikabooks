@@ -11,13 +11,11 @@ function SiteHeader() {
       <header className="site-header">
         <div className="site-header__inner">
           <Link to="/" className="site-branding" style={{ textDecoration: "none" }}>
-            <span className="site-brand">Pustika</span>
-            <span className="site-brand__label">BOOKS</span>
+            <span style={{ fontSize: 20, fontWeight: 900, color: "#191919", letterSpacing: "-0.5px" }}>
+              Pustika<span style={{ color: "#7C3AED" }}> Books</span>
+            </span>
           </Link>
           <div className="flex items-center gap-4">
-            <Link to="/products" className="site-header__cta">
-              Get Pro Vault — ₹499
-            </Link>
             <button
               onClick={() => setMenuOpen(true)}
               style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
@@ -82,13 +80,12 @@ function Hero() {
     <section className="bg-white">
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-32 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground">
-  Turn Your Knowledge Into
-  <span className="text-brand-purple"> Digital Income</span>
-</h1>
-
-<p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-  Learn how to create, publish and sell eBooks, digital products and AI-powered businesses—even if you're starting from zero.
-</p>
+          Turn Your Knowledge Into
+          <span className="text-brand-purple"> Digital Income</span>
+        </h1>
+        <p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Learn how to create, publish and sell eBooks, digital products and AI-powered businesses—even if you're starting from zero.
+        </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Link
             to="/blog"
@@ -124,7 +121,7 @@ function Topics() {
           Everything we publish answers one question:
         </h2>
         <p className="mt-8 text-2xl md:text-4xl italic text-brand-purple text-center font-bold leading-snug max-w-3xl mx-auto">
-        "How can anyone turn what they already know into a sustainable income?"
+          "How can anyone turn what they already know into a sustainable income?"
         </p>
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {cards.map((c) => (
@@ -144,7 +141,12 @@ function LatestArticles() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
     fetchPublishedPosts()
-      .then((data: BlogPost[]) => setPosts(data.slice(0, 3)))
+      .then((data: any[]) => {
+        const sorted = data.sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+        setPosts(sorted.slice(0, 3));
+      })
       .catch(() => setPosts([]));
   }, []);
 
@@ -207,33 +209,38 @@ function LatestArticles() {
 
 function FreeGuide() {
   useEffect(() => {
+    const existing = document.getElementById("kit-script");
+    if (existing) return;
     const script = document.createElement("script");
+    script.id = "kit-script";
     script.async = true;
     script.setAttribute("data-uid", "9463c73c8f");
     script.src = "https://pustika-books.kit.com/9463c73c8f/index.js";
-
-    const container = document.getElementById("kit-form");
-
-    if (container && !container.hasChildNodes()) {
-      container.appendChild(script);
-    }
+    document.getElementById("kit-form")?.appendChild(script);
   }, []);
 
   return (
     <section style={{ background: "#0F0A1E" }}>
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 text-center">
+      <div
+        style={{
+          maxWidth: 600,
+          margin: "0 auto",
+          padding: "64px 24px",
+        }}
+      >
         <div
           id="kit-form"
           style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
+            background: "white",
+            borderRadius: 20,
+            overflow: "hidden",
           }}
         />
       </div>
     </section>
   );
 }
-  
+
 function SiteFooter() {
   return (
     <footer className="bg-white border-t border-border">
