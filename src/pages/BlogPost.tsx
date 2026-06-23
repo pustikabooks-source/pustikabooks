@@ -58,10 +58,10 @@ export default function BlogPost() {
   }
   if (post === null) return <Navigate to="/blog" replace />;
 
-  const url = `https://pustikabooks.in/blog/${post.slug}`;
+  const url = `https://www.pustikabooks.in/blog/${post.slug}`;
   const coverImage =
   post.body.find((b: any) => b.type === "image")?.url ||
-  "https://pustikabooks.in/images/blog-default.jpg";
+  "https://www.pustikabooks.in/images/blog-default.jpg";
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -74,7 +74,7 @@ export default function BlogPost() {
     publisher: {
       "@type": "Organization",
       name: "Pustika Books",
-      url: "https://pustikabooks.in",
+      url: "https://www.pustikabooks.in",
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
   };
