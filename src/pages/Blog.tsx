@@ -82,14 +82,6 @@ export default function Blog() {
           <Link to="/" className="font-black text-xl tracking-tight">
             Pustika<span className="text-brand-purple">.</span>
           </Link>
-          <div className="flex items-center gap-4">
-            <Link to="/" className="text-sm font-semibold text-muted-foreground hover:text-foreground">
-              ← Back to site
-            </Link>
-            {!user && (
-              <Link to="/login" style={{ fontSize: "13px", color: "#7C3AED", fontWeight: 600, textDecoration: "none" }}>Login</Link>
-            )}
-          </div>
         </div>
       </header>
 
