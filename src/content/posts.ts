@@ -890,10 +890,10 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "The ceiling for a solo physical product seller is real and painful. Most solo operators hit a wall at 50–100 orders a month — beyond that, the business runs you rather than the other way around. Digital product sellers routinely run 500–1,000 sales a month completely alone, with automated delivery, automated receipts, and automated follow-up emails."
     },
-    {
+  {
   type: "youtube",
-  videoId: "dqBDh_3Zdss",
-  title: "Digital Products vs Physical Products: Which Makes More Money in 2026?"
+  videoId: "3H3yZsMf59Y",
+  title: "Digital Products VS Physical Products — Which Should You Sell?"
 },
     {
       type: "h2",
