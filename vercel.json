@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/blog/:slug",
-      "destination": "/api/og"
+  "source": "/blog/:slug",
+  "destination": "/api/og?slug=:slug"
     },
     {
       "source": "/((?!assets/).*)",
