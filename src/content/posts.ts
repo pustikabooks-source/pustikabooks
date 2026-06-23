@@ -307,7 +307,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "digital-products-india-2026",
-    category; "digital-products",
+    category: "digital-products",
     title: "7 Best Digital Products to Sell in India in 2026 (And How to Start This Week)",
     description: "The most profitable digital products Indian creators are selling in 2026 — with real income numbers, zero inventory, and a clear starting point for each.",
     date: "2026-06-17",
@@ -597,7 +597,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "25-chatgpt-prompts-every-creator-should-save",
-    category; "ai-for-creators",
+    category: "ai-for-creators",
     title: "25 ChatGPT Prompts Every Creator Should Save (Copy-Paste Ready)",
     description: "Stop staring at blank screens. These 25 battle-tested ChatGPT prompts cover content ideas, captions, emails, blog posts, and sales copy — ready to use right now.",
     date: "2026-06-22",
