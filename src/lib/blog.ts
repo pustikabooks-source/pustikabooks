@@ -18,6 +18,7 @@ function toPost(row: any): BlogPost & { id: string; published: boolean } {
   return {
     id: row.id,
     slug: row.slug,
+    category: row.category ?? "ebook",   // ← ADD THIS LINE
     title: row.title,
     description: row.description,
     date: row.date,
