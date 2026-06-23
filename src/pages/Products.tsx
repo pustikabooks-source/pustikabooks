@@ -20,17 +20,13 @@ function Header() {
     <>
       <header className="site-header">
         <div className="site-header__inner">
-          <div className="site-branding">
-            <span className="site-brand">Pustika</span>
-            <span className="site-brand__label">BOOKS</span>
-          </div>
+          <a href="/" style={{ textDecoration: "none" }}>
+  <span style={{ fontSize: "20px", fontWeight: 900, color: "#191919", letterSpacing: "-0.5px" }}>
+    Pustika<span style={{ color: "#7C3AED" }}> Books</span>
+  </span>
+</a>
           <div className="flex items-center gap-4">
-            <a
-              href="#pricing"
-              className="site-header__cta"
-            >
-              Get Pro Vault — ₹499
-            </a>
+            
             <button
               onClick={() => setMenuOpen(true)}
               style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
