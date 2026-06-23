@@ -59,6 +59,9 @@ export default function BlogPost() {
   if (post === null) return <Navigate to="/blog" replace />;
 
   const url = `https://pustikabooks.in/blog/${post.slug}`;
+  const coverImage =
+  post.body.find((b: any) => b.type === "image")?.url ||
+  "https://pustikabooks.in/images/blog-default.jpg";
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -93,10 +96,17 @@ export default function BlogPost() {
         <meta name="description" content={post.description} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={post.date} />
+<meta property="og:description" content={post.description} />
+<meta property="og:url" content={url} />
+<meta property="og:type" content="article" />
+<meta property="og:image" content={coverImage} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={post.title} />
+<meta name="twitter:description" content={post.description} />
+<meta name="twitter:image" content={coverImage} />
+
+<meta property="article:published_time" content={post.date} />
         {post.tags.map((t) => (
           <meta key={t} property="article:tag" content={t} />
         ))}
