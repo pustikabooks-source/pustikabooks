@@ -20,6 +20,237 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+  slug: "how-to-create-ebook-with-chatgpt",
+  category: "ai-for-creators",
+  title: "How to Create an eBook Using ChatGPT, Gemini, or Claude (Step-by-Step Guide for 2026)",
+  description: "A complete step-by-step guide to planning, writing, editing, and publishing a professional eBook using AI tools like ChatGPT, Gemini, and Claude — in a single weekend.",
+  date: "2026-06-24",
+  readingMinutes: 12,
+  tags: ["chatgpt", "ai for creators", "ebook creation", "digital products"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop",
+      alt: "Creating an eBook with AI tools like ChatGPT and Gemini",
+      caption: "AI has made eBook creation 10x faster — here's exactly how to use it"
+    },
+    {
+      type: "p",
+      text: "In 2024, Vikram was a software engineer in Hyderabad with zero writing experience. He used ChatGPT to write a 45-page eBook on 'How to Switch Careers into Tech' in one weekend. Within 30 days he had made ₹42,000 in sales. He didn't write a single sentence from scratch — he used AI to plan, research, write, and edit the entire book. This guide shows you exactly how to do the same thing."
+    },
+    {
+      type: "stat",
+      value: "10x",
+      label: "faster eBook creation with AI compared to writing manually"
+    },
+    {
+      type: "p",
+      text: "AI tools like ChatGPT, Gemini, Groq, and Claude are not just chatbots. They are writing partners that can help you turn your knowledge into a polished, professional eBook in days instead of months. The key is knowing how to prompt them correctly — and that's exactly what this guide teaches you."
+    },
+    {
+      type: "h2",
+      text: "Which AI tool should you use?"
+    },
+    {
+      type: "table",
+      headers: ["AI Tool", "Best For", "Free Tier", "Speed"],
+      rows: [
+        ["ChatGPT (GPT-4o)", "Structured writing, outlines", "Yes (limited)", "Fast"],
+        ["Gemini 1.5 Pro", "Research, long-form content", "Yes (generous)", "Very Fast"],
+        ["Claude (Sonnet)", "Natural tone, editing, flow", "Yes (limited)", "Fast"],
+        ["Groq (Llama 3)", "Ultra-fast drafting", "Yes (very generous)", "Fastest"],
+      ]
+    },
+    {
+      type: "p",
+      text: "The honest answer — use all of them for different tasks. Use Gemini for research, ChatGPT or Claude for writing and structuring, and Groq for rapid first drafts. They're all free to start and switching between them costs nothing."
+    },
+    {
+      type: "h2",
+      text: "Step 1 — Planning your eBook"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop",
+      alt: "Planning an eBook outline with AI",
+      caption: "A strong plan is 50% of your eBook's success"
+    },
+    {
+      type: "p",
+      text: "Before you open any AI tool, you need to answer three questions: Who is this eBook for? What specific problem does it solve? What will the reader be able to do after reading it? These answers become the foundation of every prompt you write."
+    },
+    {
+      type: "quote",
+      text: "The best eBook is not the most comprehensive one. It's the most specific one. 'How to get your first freelance client in 30 days' will outsell 'The complete guide to freelancing' every single time."
+    },
+    {
+      type: "p",
+      text: "Once you have your topic, use this exact prompt in ChatGPT or Claude to generate your outline:"
+    },
+    {
+      type: "ul",
+      items: [
+        "Prompt: 'I am writing a 40-page eBook titled [YOUR TITLE] for [YOUR AUDIENCE]. Create a detailed chapter-by-chapter outline with 6-8 chapters. Each chapter should have 3-4 subheadings and a clear learning outcome. Make it practical and actionable, not theoretical.'",
+        "Review the outline and remove anything that feels off-topic or too advanced",
+        "Add any personal stories or examples you want to include in specific chapters",
+        "Lock the outline before writing — do not change it mid-way or you'll lose momentum",
+      ]
+    },
+    {
+      type: "stat",
+      value: "15 min",
+      label: "average time to generate a full eBook outline using ChatGPT with the right prompt"
+    },
+    {
+      type: "h2",
+      text: "Step 2 — Research"
+    },
+    {
+      type: "p",
+      text: "This is where Gemini shines. Its massive context window and real-time search access make it the best AI for gathering accurate, current information. Use Gemini to research statistics, case studies, and real examples for each chapter before you start writing."
+    },
+    {
+      type: "ul",
+      items: [
+        "Prompt for Gemini: 'Find me 5 recent statistics about [YOUR TOPIC] from 2024-2026 with sources. Also give me 3 real-world examples of people who have succeeded in this area.'",
+        "Save all research in a Google Doc before writing — don't research and write at the same time",
+        "Fact-check any statistic that seems surprising — AI can hallucinate numbers",
+        "Use Claude to summarise long research into bullet points you can reference while writing",
+      ]
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop",
+      alt: "AI research for eBook content",
+      caption: "Gemini's real-time search makes it the best AI for research tasks"
+    },
+    {
+      type: "h2",
+      text: "Step 3 — Writing"
+    },
+    {
+      type: "p",
+      text: "This is where most people make the biggest mistake — they ask AI to 'write my eBook' and get generic, robotic content that sounds like it was written by a machine. The secret is to write chapter by chapter, inject your own voice, and use AI as a drafting partner rather than a ghostwriter."
+    },
+    {
+      type: "quote",
+      text: "Don't ask AI to write your eBook. Ask it to draft a chapter, then rewrite every paragraph in your own voice. The result sounds human because it is — AI gives you the structure, you give it the soul."
+    },
+    {
+      type: "ul",
+      items: [
+        "Use this prompt for each chapter: 'Write chapter [NUMBER] of my eBook: [CHAPTER TITLE]. The audience is [AUDIENCE]. Tone should be conversational, practical, and direct — not academic. Include: an opening story or hook, 3-4 main points with examples, and a chapter summary. Length: 600-800 words.'",
+        "After each chapter is drafted, read it aloud and rewrite anything that doesn't sound like you",
+        "Add your personal stories, local examples, and Indian context manually — AI won't know these",
+        "Use Groq for speed when you need to draft multiple chapters quickly — it's the fastest model available",
+      ]
+    },
+    {
+      type: "table",
+      headers: ["Chapter Task", "Best AI", "Prompt Type"],
+      rows: [
+        ["Opening hook / story", "Claude", "Creative writing prompt"],
+        ["Main content / steps", "ChatGPT", "Structured outline prompt"],
+        ["Examples and case studies", "Gemini", "Research prompt"],
+        ["Quick first drafts", "Groq", "Speed drafting prompt"],
+        ["Transitions between sections", "Claude", "Flow and tone prompt"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Step 4 — Editing"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop",
+      alt: "Editing an eBook with AI assistance",
+      caption: "Claude is the best AI for editing — it understands tone and flow better than any other model"
+    },
+    {
+      type: "p",
+      text: "Claude is the best AI editor available right now. Its understanding of tone, flow, and natural language makes it exceptional at catching robotic-sounding sentences and suggesting more human alternatives. Use it as your final pass before formatting."
+    },
+    {
+      type: "ul",
+      items: [
+        "Paste each chapter into Claude with this prompt: 'Edit this chapter for clarity, flow, and natural tone. Remove any sentences that sound robotic or generic. Make it sound like a knowledgeable friend explaining this topic, not a textbook. Flag any factual claims that seem uncertain.'",
+        "Check for consistency — make sure your tone is the same across all chapters",
+        "Remove all fluff — if a sentence doesn't add value, delete it",
+        "Read the full eBook start to finish one final time before formatting",
+      ]
+    },
+    {
+      type: "stat",
+      value: "40%",
+      label: "of AI-generated content needs rewriting to sound natural — always edit before publishing"
+    },
+    {
+      type: "h2",
+      text: "Step 5 — Publishing"
+    },
+    {
+      type: "p",
+      text: "Once your content is ready, you need to format it into a professional PDF and set up a way to sell it. This is simpler than most people think — you don't need a designer or a developer."
+    },
+    {
+      type: "ul",
+      items: [
+        "Format with Canva — use a free eBook template, paste your content, and export as PDF in under an hour",
+        "Cover design — use Canva's AI image generator or pick a professional template. Your cover is the most important visual in your entire product.",
+        "File size — keep your PDF under 10MB for fast delivery. Compress images if needed.",
+        "Delivery — use Razorpay for Indian buyers and PayPal for international. Set up Make.com to automatically email the PDF after payment.",
+        "Landing page — you can sell directly from a WhatsApp link or a simple page on your website. You don't need a complex funnel to make your first 10 sales.",
+      ]
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&auto=format&fit=crop",
+      alt: "Publishing and selling an eBook online",
+      caption: "Canva + Razorpay + Make.com is all you need to publish and sell your first eBook"
+    },
+    {
+      type: "table",
+      headers: ["Task", "Tool", "Cost"],
+      rows: [
+        ["Write & edit content", "ChatGPT / Claude / Gemini / Groq", "Free"],
+        ["Format & design", "Canva", "Free"],
+        ["Indian payments", "Razorpay", "2% per transaction"],
+        ["International payments", "PayPal", "3-4% per transaction"],
+        ["Automated delivery", "Make.com", "Free tier available"],
+        ["Landing page", "Your existing website", "Free"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "The full weekend timeline"
+    },
+    {
+      type: "ul",
+      items: [
+        "Saturday morning (2 hrs) — Topic validation, outline generation, research with Gemini",
+        "Saturday afternoon (3 hrs) — Write chapters 1-4 using ChatGPT and Groq",
+        "Saturday evening (1 hr) — Write chapters 5-8, chapter summaries",
+        "Sunday morning (2 hrs) — Edit everything with Claude, read aloud, fix tone",
+        "Sunday afternoon (2 hrs) — Format in Canva, design cover, export PDF",
+        "Sunday evening (1 hr) — Set up Razorpay link, Make.com automation, launch on WhatsApp",
+      ]
+    },
+    {
+      type: "quote",
+      text: "10 hours. One weekend. One eBook. That's all it takes when you use AI correctly. The question is not whether you have the time. It's whether you'll start this Saturday."
+    },
+    {
+      type: "stat",
+      value: "₹0",
+      label: "cost to create your first eBook using free AI tools and Canva"
+    },
+    {
+      type: "p",
+      text: "The entire stack — ChatGPT free tier, Gemini free tier, Claude free tier, Groq free tier, Canva free tier — costs you nothing. Your first eBook can go from idea to sale with zero investment. The only thing standing between you and your first digital income is this weekend."
+    },
+  ],
+},
+  {
     slug: "how-to-earn-money-selling-ebooks-in-india",
     category: "ebook",
     title: "How to Earn Money Selling eBooks in India (2026 Beginner's Guide)",
