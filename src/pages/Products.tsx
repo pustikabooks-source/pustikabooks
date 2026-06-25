@@ -251,7 +251,7 @@ function Pricing() {
                   { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
                   { text: "100+ High-Converting Headline Formulas for IG/FB" },
                   { text: "E-Book Mastery Guide", value:"Rs. 2000" },
-                  { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
+                  { text: "Curated Niche Research Guide (100+ Trending Niches)" },
                 ].map(({ text: t, value }) => (
                   <li key={t} className="flex items-start gap-3 text-foreground">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
