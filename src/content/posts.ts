@@ -8,6 +8,7 @@ export interface BlogPost {
   tags: string[];
   body: Array<
     | { type: "p"; text: string }
+    | { type: "p-link"; parts: Array<{ text: string; href?: string }> }
     | { type: "h2"; text: string }
     | { type: "ul"; items: string[] }
     | { type: "quote"; text: string }
