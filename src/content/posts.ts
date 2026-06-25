@@ -21,6 +21,454 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+  slug: "online-business-ideas-laptop",
+  category: "digital-products",
+  title: "50 Online Business Ideas You Can Start With Just a Laptop in 2026",
+  description: "50 real, proven online business ideas you can start from anywhere with just a laptop and internet connection — from digital products to freelancing to creator businesses.",
+  date: "2026-06-25",
+  readingMinutes: 14,
+  tags: ["online business ideas", "make money online", "digital products", "side hustle"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop",
+      alt: "50 online business ideas you can start with a laptop",
+      caption: "A laptop and internet connection is all you need to start any of these 50 businesses"
+    },
+    {
+      type: "p",
+      text: "The most powerful business tool ever created costs under ₹30,000. It fits in a backpack. It works from a coffee shop in Mumbai, a co-working space in Nairobi, or a bedroom in Manchester. It is a laptop — and in 2026, it is the only equipment you need to start a business that can generate more income than most traditional careers. This is not an exaggeration. It is the reality of the knowledge economy. Here are 50 real, proven business ideas you can start today — broken into four categories by skill type and income potential."
+    },
+    {
+      type: "stat",
+      value: "400M+",
+      label: "people worldwide now earn income from laptop-based businesses — and the number grows every year"
+    },
+    {
+      type: "youtube",
+      videoId: "u5_hYAiDAJw",
+      title: "Best Online Business Ideas for Beginners in 2024 — Which One Should You Start?"
+    },
+    {
+      type: "h2",
+      text: "Category 1 — Digital Product Businesses (Ideas 1-15)"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop",
+      alt: "Digital product businesses you can start with a laptop",
+      caption: "Digital products — create once, sell forever, keep 90%+ of every sale"
+    },
+    {
+      type: "p",
+      text: "Digital products are the highest-margin laptop businesses available. You create a file once — an eBook, a template, a guide, a course — and sell it an unlimited number of times with zero additional cost per sale. Your margin on every sale after the first is essentially 100%. This is why digital products are the recommended starting point for anyone building a laptop business from scratch."
+    },
+    {
+      type: "ul",
+      items: [
+        "1. eBook author — Write a practical guide on a topic you know well. Sell via your website, Gumroad, or Amazon KDP. Price range: $5-$30 per copy.",
+        "2. Notion template creator — Build productivity, business, or study templates and sell them. One good template can sell thousands of copies.",
+        "3. Canva template designer — Create social media, presentation, or document templates. High demand from small businesses and creators.",
+        "4. Digital planner creator — Build PDF planners for students, professionals, or entrepreneurs. Massive market on Etsy and Gumroad.",
+        "5. Prompt library seller — Curate and sell collections of AI prompts for specific use cases. One of the fastest growing digital product categories.",
+        "6. Stock photo/graphic seller — Create and sell digital graphics, icons, or illustrations on Creative Market or Envato.",
+        "7. Recipe eBook author — Package your cooking knowledge into themed recipe collections. Strong global market.",
+        "8. Worksheet and workbook creator — Build fillable PDFs for coaches, educators, or therapists. High repeat purchase rate.",
+        "9. Resume and CV template seller — Professional templates for job seekers. Evergreen demand globally.",
+        "10. Social media template pack creator — Ready-made Instagram, LinkedIn, or Pinterest templates for brands and creators.",
+        "11. Online course creator — Turn your expertise into a structured video course. Higher price point than eBooks — $50-$500+.",
+        "12. Digital art print seller — Create printable wall art and sell on Etsy or your own store. Zero shipping, instant delivery.",
+        "13. Email newsletter template designer — Create branded email templates for businesses. Strong B2B demand.",
+        "14. Spreadsheet template creator — Build Excel or Google Sheets templates for budgeting, project management, or business tracking.",
+        "15. Language learning guide creator — Create guides for learning specific languages or preparing for language exams."
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "If digital products appeal to you, start with an eBook — it is the fastest path from idea to first sale. Our complete guide on " },
+        { text: "how to create an eBook with ChatGPT in one weekend", href: "/blog/how-to-create-ebook-with-chatgpt" },
+        { text: " shows you exactly how to go from blank page to sellable product using free AI tools." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Category 2 — Creator Businesses (Ideas 16-25)"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop",
+      alt: "Creator businesses for laptop entrepreneurs",
+      caption: "Creator businesses build audiences that become long-term, compounding income streams"
+    },
+    {
+      type: "ul",
+      items: [
+        "16. Newsletter writer — Build a paid newsletter on a specific topic. Substack has paid writers earning $10,000-$100,000+ per month.",
+        "17. YouTube educator — Create educational content on a specific topic. Monetise through ads, sponsorships, and digital products.",
+        "18. Podcast host — Build an audio show around your expertise. Monetise through sponsorships, memberships, and affiliate links.",
+        "19. Blog and affiliate site — Write SEO-optimised content and earn commissions on recommended products. Slow to start, very passive once established.",
+        "20. Instagram educator — Teach a specific skill through carousels, posts, and stories. Monetise through digital products and brand deals.",
+        "21. LinkedIn thought leader — Build authority in your professional niche. Monetise through consulting, speaking, and digital products.",
+        "22. TikTok creator — Short-form educational or entertainment content. Monetise through creator fund, brand deals, and product links.",
+        "23. Pinterest traffic builder — Create pins that drive traffic to your blog or product pages. Highly underrated organic traffic source.",
+        "24. Faceless YouTube channel — Create educational YouTube content without showing your face. Works for tutorials, finance, history, and more.",
+        "25. Community builder — Create and monetise a paid community around a specific topic using Circle, Skool, or Discord."
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Creator businesses and digital products work best together. Read our full breakdown of " },
+        { text: "how the creator economy works and which income streams pay best", href: "/blog/creator-economy-explained" },
+        { text: " to understand how to stack these income streams for maximum leverage." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Category 3 — Freelancing and Services (Ideas 26-40)"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1516321165247-4aa89a48be55?w=800&auto=format&fit=crop",
+      alt: "Freelancing and service businesses for laptop workers",
+      caption: "Freelancing generates immediate income — often within days of starting"
+    },
+    {
+      type: "p",
+      text: "Freelancing is the fastest path to laptop income. Unlike digital products or creator businesses that take weeks or months to generate revenue, freelancing can put money in your account within days. The tradeoff is that it trades time for money — it is not passive. But it is an excellent starting point that funds your passive income investments."
+    },
+    {
+      type: "ul",
+      items: [
+        "26. Freelance copywriter — Write sales pages, emails, and marketing copy for businesses. High demand, high rates ($50-$200+ per hour).",
+        "27. Freelance SEO specialist — Help businesses rank higher on Google. One of the most in-demand digital skills globally.",
+        "28. Social media manager — Manage Instagram, LinkedIn, or Twitter accounts for brands and businesses.",
+        "29. Virtual assistant — Provide administrative, research, or operational support to entrepreneurs and executives remotely.",
+        "30. Freelance graphic designer — Create logos, brand assets, and marketing materials for clients using Canva or Adobe.",
+        "31. Video editor — Edit YouTube videos, Reels, and corporate content. Massive demand as video consumption grows.",
+        "32. Web designer — Build websites for small businesses using WordPress, Webflow, or Framer. No coding required.",
+        "33. Email marketing specialist — Set up and manage email campaigns for e-commerce and digital product businesses.",
+        "34. Paid ads manager — Run Facebook, Google, or Instagram ads for businesses. High-value skill with strong demand.",
+        "35. Content writer — Write blog posts, articles, and website copy for businesses. Entry-level laptop income, scales with specialisation.",
+        "36. Proofreader and editor — Review and edit written content for authors, businesses, and publishers.",
+        "37. Online tutor — Teach academic subjects, languages, or professional skills via Zoom or dedicated platforms.",
+        "38. Career coach — Help job seekers with resumes, interview prep, and career strategy. Strong demand globally.",
+        "39. Bookkeeper — Provide remote bookkeeping services using cloud accounting software. Evergreen B2B demand.",
+        "40. Podcast editor — Edit and produce podcast episodes for creators and businesses. Growing rapidly as podcasting expands."
+      ]
+    },
+    {
+      type: "h2",
+      text: "Category 4 — AI-Powered Businesses (Ideas 41-50)"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop",
+      alt: "AI-powered laptop businesses for 2026",
+      caption: "AI has created entirely new business categories that did not exist 3 years ago"
+    },
+    {
+      type: "p",
+      text: "AI has created an entirely new category of laptop businesses that did not exist three years ago. These businesses use AI tools as the core of their service or product — dramatically reducing the time and cost of delivery while maintaining high quality output."
+    },
+    {
+      type: "ul",
+      items: [
+        "41. AI content agency — Use AI tools to produce blog posts, social media content, and newsletters for businesses at scale.",
+        "42. AI eBook creation service — Help businesses and experts package their knowledge into eBooks using AI tools. Charge ₹5,000-₹25,000 per eBook.",
+        "43. AI prompt engineer — Create and sell custom AI prompt libraries for specific industries or use cases.",
+        "44. AI image generation service — Create custom AI-generated images for brands, books, and marketing campaigns.",
+        "45. Chatbot builder — Build custom AI chatbots for businesses using no-code tools. High B2B demand.",
+        "46. AI-powered resume writing service — Use AI to create professional, ATS-optimised resumes for job seekers.",
+        "47. AI automation consultant — Help small businesses automate repetitive tasks using Make.com, Zapier, and AI tools.",
+        "48. AI-generated children's book author — Create illustrated children's books using AI image tools and self-publish on Amazon KDP.",
+        "49. AI thumbnail and graphic creator — Create YouTube thumbnails and social media graphics for creators using AI design tools.",
+        "50. AI training data creator — Create and sell datasets, prompts, and training examples for AI companies. Emerging and growing rapidly."
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "AI tools have transformed how fast you can build any of these businesses. Read our guide on " },
+        { text: "how to use ChatGPT and Gemini to create your first eBook", href: "/blog/how-to-create-ebook-with-chatgpt" },
+        { text: " to see exactly how AI reduces a two-month project to a single weekend." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "How to choose which business to start"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop",
+      alt: "Choosing the right online business to start",
+      caption: "The right business is at the intersection of what you know, what people pay for, and what you can sustain"
+    },
+    {
+      type: "p",
+      text: "With 50 options in front of you, the hardest part is picking one. Here is a simple three-question framework to narrow it down. What do you already know that others would pay to learn or use? That points to digital products, courses, or consulting. How fast do you need income? Fast means freelancing first. Slow build means digital products and creator businesses. How much time do you have per week? Less than 5 hours means digital products. 10-20 hours opens freelancing and creator paths."
+    },
+    {
+      type: "table",
+      headers: ["Your Situation", "Best Starting Business", "Expected First Revenue"],
+      rows: [
+        ["Need income within 2 weeks", "Freelancing (copywriting, VA, design)", "1-2 weeks"],
+        ["Have knowledge to share", "eBook or digital product", "1-4 weeks"],
+        ["Want long-term passive income", "Blog + affiliate or digital products", "3-6 months"],
+        ["Have AI skills", "AI content agency or prompt library", "1-3 weeks"],
+        ["Want to build an audience", "Newsletter or YouTube + digital products", "3-12 months"],
+      ]
+    },
+    {
+      type: "quote",
+      text: "Do not optimise for the best business. Optimise for the business you will actually start and actually stick with for 6 months. The only wrong choice is the one you never begin."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Whichever business you choose, the foundation is the same — understanding what people pay for and positioning your offer correctly. Read our guide on " },
+        { text: "why most creators never make their first sale", href: "/blog/why-creators-never-make-first-sale" },
+        { text: " before you launch anything — it covers the four mistakes that kill most new online businesses before they get started." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And if passive income is your goal, read our honest breakdown of " },
+        { text: "15 passive income myths that keep people stuck", href: "/blog/passive-income-myths" },
+        { text: " — so you go in with the right expectations and the right strategy from day one." },
+      ],
+    },
+  ],
+},
+  {
+  slug: "passive-income-myths",
+  category: "digital-products",
+  title: "15 Passive Income Myths That Keep People Stuck (And What Actually Works)",
+  description: "Most passive income advice online is either misleading or outright false. Here are 15 myths keeping people broke and stuck — and the honest truth about what actually builds lasting income.",
+  date: "2026-06-25",
+  readingMinutes: 12,
+  tags: ["passive income myths", "make money online", "digital products", "creator economy"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&auto=format&fit=crop",
+      alt: "Passive income myths debunked — what actually works",
+      caption: "Most passive income content online is selling a fantasy. Here is the reality."
+    },
+    {
+      type: "p",
+      text: "Type 'passive income' into any search engine and you will find thousands of videos, posts, and courses promising that you can make money while you sleep with zero effort, zero skills, and zero investment. Most of it is either misleading, oversimplified, or outright false. The result? Millions of people try three things, fail at all three, and conclude that online income is a scam. It is not a scam. But the myths around it are keeping intelligent, capable people completely stuck. This post names all 15 — and gives you the honest truth about what actually works."
+    },
+    {
+      type: "stat",
+      value: "76%",
+      label: "of people who try to build passive income give up within 90 days — almost always because of false expectations"
+    },
+    {
+      type: "youtube",
+      videoId: "auk7-RiVjaE",
+      title: "The Truth About Passive Income — Why It's Not As Easy As You Think"
+    },
+    {
+      type: "h2",
+      text: "The myths — and the reality behind each one"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=800&auto=format&fit=crop",
+      alt: "Myth vs reality of passive income online",
+      caption: "Understanding what passive income actually requires changes everything"
+    },
+    {
+      type: "h2",
+      text: "Myth 1 — Passive income requires no work"
+    },
+    {
+      type: "p",
+      text: "This is the most dangerous myth in the entire space. Every passive income stream requires significant upfront work — writing an eBook, building a course, creating a template, growing an audience, setting up systems. The 'passive' part only comes after that foundation is built. A more accurate term is 'leveraged income' — you work hard once and the results compound over time. Anyone selling you 'zero effort income' is selling you a fantasy."
+    },
+    {
+      type: "h2",
+      text: "Myth 2 — You need a lot of money to start"
+    },
+    {
+      type: "p",
+      text: "The most effective passive income streams for individuals — digital products, eBooks, templates, newsletters, affiliate content — require almost zero upfront investment. An eBook costs nothing to write and nothing to distribute. A Notion template costs nothing to build. The tools to create, sell, and deliver digital products are either free or cost under $20 a month. Capital is not the barrier. Action is."
+    },
+    {
+      type: "h2",
+      text: "Myth 3 — You need a large audience first"
+    },
+    {
+      type: "p",
+      text: "This myth stops more people from starting than any other. The truth is that your first 10 sales will almost certainly come from people who already know you — WhatsApp contacts, Instagram followers, colleagues, family friends. You do not need 10,000 followers to make your first ₹10,000. You need one product, one payment link, and the willingness to tell 50 people about it personally."
+    },
+    {
+      type: "h2",
+      text: "Myth 4 — Passive income works immediately"
+    },
+    {
+      type: "p",
+      text: "Almost no passive income stream generates meaningful revenue in the first 30 days. The typical timeline: 0-30 days is building and launching. 30-90 days is getting first sales and refining. 90-180 days is when compounding starts. 6-12 months is when income becomes genuinely consistent. Anyone who made serious passive income built it over months, not days — they just only talk about the results, not the timeline."
+    },
+    {
+      type: "table",
+      headers: ["Income Stream", "Setup Time", "First Revenue", "Consistent Revenue"],
+      rows: [
+        ["Digital Products (eBooks, templates)", "1-2 weeks", "3-14 days", "2-3 months"],
+        ["Affiliate Marketing", "2-4 weeks", "1-3 months", "6-12 months"],
+        ["YouTube Ad Revenue", "Ongoing content", "6-12 months", "12-24 months"],
+        ["Paid Newsletter", "1 week setup", "1-2 months", "3-6 months"],
+        ["Online Course", "4-8 weeks", "2-4 weeks", "3-6 months"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Myth 5 — Dropshipping is passive income"
+    },
+    {
+      type: "p",
+      text: "Dropshipping requires constant product research, supplier management, customer service, ad management, and return handling. It is an active business that can become semi-passive with systems — but in the early stages it demands more time than most full-time jobs. Calling dropshipping passive income is like calling a restaurant passive income because you hired a chef."
+    },
+    {
+      type: "h2",
+      text: "Myth 6 — YouTube will make you rich quickly"
+    },
+    {
+      type: "p",
+      text: "YouTube ad revenue requires 1,000 subscribers and 4,000 watch hours before you earn a single cent from ads. The average YouTuber with 10,000 subscribers earns $200-$500 per month from ads — not enough to replace a salary. The creators making serious money on YouTube are doing it through digital products, courses, and brand deals — not ad revenue alone. YouTube is a distribution channel, not a passive income source by itself."
+    },
+    {
+      type: "h2",
+      text: "Myth 7 — Once it's set up, you never touch it again"
+    },
+    {
+      type: "p",
+      text: "Every passive income stream requires maintenance. Digital products need occasional updates. Affiliate links need checking. Newsletters need sending. Courses need updating as information changes. The maintenance load is far lower than active work — but zero maintenance is a myth. The realistic expectation is 2-5 hours per week of maintenance per income stream, once it is established."
+    },
+    {
+      type: "h2",
+      text: "Myth 8 — You need technical skills"
+    },
+    {
+      type: "p",
+      text: "In 2026, creating, selling, and delivering a digital product requires no coding, no design degree, and no technical expertise. Canva handles design. ChatGPT helps with writing. Razorpay handles payments. Make.com handles automation. Notion handles templates. The entire stack is point-and-click. If you can use a smartphone, you have all the technical skills you need."
+    },
+    {
+      type: "h2",
+      text: "Myth 9 — Passive income is only for influencers"
+    },
+    {
+      type: "p",
+      text: "The most consistent passive income earners are not influencers with millions of followers — they are specialists with deep knowledge in specific niches who sell to small, highly targeted audiences. A physiotherapist selling a ₹499 posture correction guide to 200 buyers a month earns ₹1,00,000 without a single viral post. Niche expertise beats mass fame every single time in digital products."
+    },
+    {
+      type: "h2",
+      text: "Myth 10 — You need to be an expert"
+    },
+    {
+      type: "p",
+      text: "You do not need to be the world's leading authority on a topic. You need to be 10 steps ahead of your buyer. If you learned something valuable in the last 2 years — a skill, a system, a strategy — and someone else is starting where you were 2 years ago, you have enough to teach them. The best-selling digital products are often written by people who recently solved the exact problem their buyer is struggling with right now."
+    },
+    {
+      type: "h2",
+      text: "Myth 11 — One income stream is enough"
+    },
+    {
+      type: "p",
+      text: "Relying on a single passive income stream is fragile. Algorithms change. Platforms shut down. Trends shift. The creators building lasting income have 3-5 streams that reinforce each other — a blog drives traffic to an eBook, which leads to a course, which promotes a membership. Each stream feeds the others. Starting with one is correct — staying at one forever is a mistake."
+    },
+    {
+      type: "h2",
+      text: "Myth 12 — Passive income replaces active income immediately"
+    },
+    {
+      type: "p",
+      text: "For most people, passive income starts as a supplement — an extra ₹5,000-₹20,000 a month alongside their job or primary business. It rarely replaces a full income in the first year. The smart approach is to build passive income streams while keeping your primary income, then scale until the passive streams exceed your expenses before making any major life changes."
+    },
+    {
+      type: "h2",
+      text: "Myth 13 — You need a website or app"
+    },
+    {
+      type: "p",
+      text: "Thousands of creators earn significant passive income with nothing more than a Razorpay payment link and a WhatsApp number. A website helps — but it is not required to make your first 100 sales. Start with the simplest possible setup: product, payment link, delivery method. Add complexity only after you have proven the product sells."
+    },
+    {
+      type: "h2",
+      text: "Myth 14 — Competition means there is no room for you"
+    },
+    {
+      type: "p",
+      text: "Every profitable niche has competition. Competition is proof of demand. The question is never 'is this market too crowded?' — it is 'can I serve a specific slice of this market better than what currently exists?' A market with 50 eBooks on personal finance has room for the 51st if it is more specific, more actionable, or targeted at a more precise audience. Specificity always wins."
+    },
+    {
+      type: "h2",
+      text: "Myth 15 — If it worked for them, it will work for me in the same way"
+    },
+    {
+      type: "p",
+      text: "Every creator's path is different. Someone who built a $10,000/month business from Instagram Reels in 2022 cannot replicate that exact path in 2026 — the algorithm, the competition, and the audience have all changed. Learn the principles from successful creators, not the exact tactics. The principle of creating valuable knowledge-based products and selling directly to a targeted audience will always work. The specific platform, format, and distribution channel changes constantly."
+    },
+    {
+      type: "h2",
+      text: "What actually works — the honest framework"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&auto=format&fit=crop",
+      alt: "What actually works for building passive income online",
+      caption: "Consistent systems beat one-time tactics every time"
+    },
+    {
+      type: "p",
+      text: "Across all the noise, the creators consistently building real passive income in 2026 share four characteristics. They pick one specific audience with a real, painful problem. They create a product that solves that problem completely and immediately. They price it high enough to signal quality. And they promote it consistently for at least 90 days before evaluating results. That is the entire framework — and it is boring precisely because it works."
+    },
+    {
+      type: "ul",
+      items: [
+        "Pick one specific audience — not 'everyone who wants to make money' but 'freelance graphic designers in their first year'",
+        "Solve one specific problem completely — not a general guide but a precise solution to a precise pain",
+        "Price for value — minimum $5 / ₹199, ideally $15-30 / ₹500-1,000 for a well-positioned product",
+        "Promote consistently for 90 days — WhatsApp, Instagram, Quora, Pinterest, in that order",
+        "Reinvest first revenue into a second product — stack streams, never rely on one"
+      ]
+    },
+    {
+      type: "h2",
+      text: "Long-term thinking — the real secret"
+    },
+    {
+      type: "p",
+      text: "The biggest difference between creators who build lasting passive income and those who give up is time horizon. Most people think in days and weeks. Successful creators think in quarters and years. A digital product that earns ₹3,000 in month one and ₹5,000 in month two and ₹8,000 in month three is on a trajectory that reaches ₹50,000+ per month within a year — but most people quit at month one because ₹3,000 did not feel like success."
+    },
+    {
+      type: "quote",
+      text: "Passive income is not a shortcut. It is a long game that looks like a shortcut once you are on the other side of it. The work you do today creates freedom you feel a year from now. Most people want it backwards."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "The fastest, lowest-risk entry point into real passive income in 2026 is digital products. Read our complete guide on " },
+        { text: "how to earn money selling eBooks and digital products", href: "/blog/how-to-earn-money-selling-ebooks-in-india" },
+        { text: " — and our breakdown of " },
+        { text: "why digital products beat every other business model on margins", href: "/blog/digital-products-vs-physical-products" },
+        { text: " to understand exactly why this is the right starting point." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "If you are ready to start but not sure what to create, our " },
+        { text: "niche research guide", href: "/blog/best-ebook-niches-2026" },
+        { text: " shows you the 10 most profitable digital product niches right now — with demand data, competition levels, and recommended price points for each." },
+      ],
+    },
+  ],
+},
+  {
   slug: "why-creators-never-make-first-sale",
   category: "digital-products",
   title: "Why Most Creators Never Make Their First Sale (And Exactly How to Fix It)",
