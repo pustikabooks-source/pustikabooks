@@ -109,9 +109,8 @@ export const posts: BlogPost[] = [
       ]
     }
   ]
-  }
-  
-  {
+  },
+    {
   slug: "online-business-ideas-laptop",
   category: "digital-products",
   title: "50 Online Business Ideas You Can Start With Just a Laptop in 2026",
