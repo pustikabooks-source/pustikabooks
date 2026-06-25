@@ -160,9 +160,13 @@ export const posts: BlogPost[] = [
       ]
     },
     {
-      type: "p",
-      text: "One powerful pricing trick — create a bundle immediately. Even if you only have one template, offer a 'starter pack' at a slightly higher price that promises future templates. Buyers love bundles and you immediately increase your average order value without creating anything extra right now. This is exactly how Pustika Books structures the Pro Vault — read more about bundling strategy in our guide on <a href='https://pustikabooks.in/blog/how-to-price-your-ebook'>how to price your digital products</a>."
-    },
+  type: "p-link",
+  parts: [
+    { text: "One powerful pricing trick — create a bundle immediately. Even if you only have one template, offer a 'starter pack' at a slightly higher price that promises future templates. Buyers love bundles and you immediately increase your average order value without creating anything extra right now. This is exactly how Pustika Books structures the Pro Vault — read more about bundling strategy in our guide on " },
+    { text: "how to price your digital products", href: "/blog/how-to-price-your-ebook" },
+    { text: "." },
+  ],
+},
     {
       type: "h2",
       text: "Step 4 — Set up delivery"
@@ -220,9 +224,13 @@ export const posts: BlogPost[] = [
       text: "How to scale from one template to a full product line"
     },
     {
-      type: "p",
-      text: "The creators making serious money from Notion templates are not selling one template — they are selling systems. Start with one template, get your first 10 sales, collect testimonials, then build a second template for a slightly different problem in the same niche. Package them together as a bundle at a higher price. This is the same strategy that works for eBooks, Canva templates, and every other digital product — and you can read exactly how this bundling approach works in our post on <a href='https://pustikabooks.in/blog/digital-products-vs-physical-products'>why digital products win on margins</a>."
-    },
+  type: "p-link",
+  parts: [
+    { text: "The creators making serious money from Notion templates are not selling one template — they are selling systems. Start with one template, get your first 10 sales, collect testimonials, then build a second template for a slightly different problem in the same niche. Package them together as a bundle at a higher price. This is the same strategy that works for eBooks, Canva templates, and every other digital product — and you can read exactly how this bundling approach works in our post on " },
+    { text: "why digital products win on margins", href: "/blog/digital-products-vs-physical-products" },
+    { text: "." },
+  ],
+},
     {
       type: "stat",
       value: "3x",
@@ -239,9 +247,13 @@ export const posts: BlogPost[] = [
       ]
     },
     {
-      type: "p",
-      text: "These numbers are not guarantees — they are what consistent creators with focused promotion achieve. The key word is consistent. One post a week about your template, one Quora answer every three days, one bundle upgrade every month. Compounding effort in digital products works exactly like compounding interest — slow at first, then suddenly very fast. If you are just starting your digital products journey, read our complete guide on <a href='https://pustikabooks.in/blog/best-ebook-niches-2026'>how to pick the right niche</a> before building your first template."
-    },
+  type: "p-link",
+  parts: [
+    { text: "These numbers are not guarantees — they are what consistent creators with focused promotion achieve. The key word is consistent. One post a week about your template, one Quora answer every three days, one bundle upgrade every month. Compounding effort in digital products works exactly like compounding interest — slow at first, then suddenly very fast. If you are just starting your digital products journey, read our complete guide on " },
+    { text: "how to pick the right niche", href: "/blog/best-ebook-niches-2026" },
+    { text: " before building your first template." },
+  ],
+},
   ],
 },
   {
