@@ -261,8 +261,32 @@ export default function BlogPost() {
               );
             }
             if (block.type === "p") {
-              return <p key={i}>{block.text}</p>;
-            }
+  return <p key={i}>{block.text}</p>;
+}
+if (block.type === "p-link") {
+  return (
+    <p key={i}>
+      {block.parts.map((part, j) =>
+        part.href ? (
+          <Link
+            key={j}
+            to={part.href}
+            style={{
+              color: "#7C3AED",
+              fontWeight: 700,
+              textDecoration: "underline",
+              textDecorationColor: "rgba(124,58,237,0.3)",
+            }}
+          >
+            {part.text}
+          </Link>
+        ) : (
+          <span key={j}>{part.text}</span>
+        )
+      )}
+    </p>
+  );
+}
             if (block.type === "ul") {
               return (
                 <ul key={i} className="list-disc pl-6 space-y-2 marker:text-brand-purple">
