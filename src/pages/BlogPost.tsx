@@ -380,20 +380,23 @@ if (block.type === "p-link") {
         </div>
 
         {/* CTA Box */}
-        <aside className="mt-16 rounded-3xl border border-border bg-gradient-to-br from-card to-secondary p-7 md:p-9 shadow-card">
-          <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">
-            Ready to launch?
-          </p>
-          <h3 className="mt-2 text-2xl md:text-3xl font-black tracking-tight">
-            Get the Pustika Pro Vault — everything you need to sell your first eBook.
-          </h3>
-          <Link
-            to="/#pricing"
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-gradient-cta px-7 py-3.5 text-base font-bold text-white shadow-glow hover:scale-[1.03] transition-transform"
-          >
-            See the Pro Vault →
-          </Link>
-        </aside>
+        <aside className="mt-16 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-card to-secondary p-7 md:p-9 shadow-card text-center">
+  <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">
+    Ready to start?
+  </p>
+  <h3 className="mt-2 text-2xl md:text-3xl font-black tracking-tight">
+    Turn your knowledge into income — explore our resources.
+  </h3>
+  <p className="mt-3 text-muted-foreground text-[15px]">
+    eBooks, templates, and guides to help you launch your first digital product.
+  </p>
+  <Link
+    to="/products"
+    className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-purple px-7 py-3.5 text-base font-bold text-white hover:opacity-90 transition"
+  >
+    Browse our products →
+  </Link>
+</aside>
 
         {/* Bottom share row */}
         <div className="mt-12 pt-8 border-t border-border flex items-center justify-between flex-wrap gap-4">
