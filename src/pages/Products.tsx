@@ -200,7 +200,7 @@ function Pricing() {
   className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
   style={{ background: "#0070BA" }}
 >
-  Buy with PayPal — $4.99 →
+  Buy with PayPal — $9.99 →
 </a>
 <p className="text-[11px] text-center mt-2 text-muted-foreground">
   🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
@@ -282,7 +282,7 @@ function Pricing() {
   className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
   style={{ background: "#0070BA" }}
 >
-  Buy with PayPal — $8.99 →
+  Buy with PayPal — $19.99 →
 </a>
 <p className="text-[11px] text-center mt-2 text-muted-foreground">
   🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
