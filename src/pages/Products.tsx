@@ -97,136 +97,80 @@ function Pricing() {
   return (
     <section id="pricing" className="relative py-20 px-5 md:px-8 scroll-mt-20">
       <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
-      <div className="max-w-6xl mx-w-md">
+      <div className="max-w-6xl mx-auto">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
         <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
           "Unlock everything you need"
-          
-          <br />
-          
         </h2>
         <p className="mt-5 text-lg text-center text-muted-foreground max-w-2xl mx-auto">
-          "One simple price for lifetime access to the entire vault. Get started in seconds."
-          
+          "One simple price for lifetime access. Get started in seconds."
         </p>
-{/* EBOOK BUNDLE SECTION */}
-<div className="mt-12 mb-16 flex flex-col items-center">
-  <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mb-2">
-    EBOOK COLLECTION
-  </p>
-  <h2 className="text-3xl font-black text-center text-foreground mb-2">
-    One Bundle. Four Books. Zero Excuses.
-  </h2>
-  <p className="text-muted-foreground text-center max-w-md mb-8">
-    Everything you need to earn money, build a business, and master 
-    your finances — all in one place for less than the price of a meal.
-  </p>
 
-  <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple w-full max-w-sm">
-    <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col shadow-card">
-      
-      {/* Badge */}
-      <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
-        <span className="text-white text-xs font-semibold">
-          🔥 LIMITED OFFER — 68% OFF
-        </span>
-      </div>
+        {/* THREE EQUAL CARDS */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6 items-stretch">
 
-      <h3 className="text-2xl font-bold mt-2">
-        Pustika Ebook Bundle
-      </h3>
-      <p className="text-muted-foreground mt-1 text-sm">
-        4 Bestselling Ebooks · Instant PDF Delivery
-      </p>
-
-      {/* Price */}
-      <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
-        <div className="flex items-end justify-between">
-          <div>
-            <p className="text-[11px] uppercase tracking-widest text-brand-pink">
-              Bundle Price
-            </p>
-            <p className="text-sm font-semibold text-muted-foreground line-through">
-              Rs. 795
-            </p>
+          {/* CARD 1 — eBook Bundle */}
+          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple">
+            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
+                <span className="text-white text-xs font-semibold">🔥 LIMITED OFFER — 68% OFF</span>
+              </div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">eBook Collection</p>
+              <h3 className="text-2xl font-bold mt-2">Pustika eBook Bundle</h3>
+              <p className="text-muted-foreground mt-1 text-sm">4 Bestselling Ebooks · Instant PDF Delivery</p>
+              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Bundle Price</p>
+                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 795</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">₹249</p>
+                    <p className="text-[11px] text-green-600 font-semibold">You save ₹546 today</p>
+                  </div>
+                </div>
+              </div>
+              <ul className="mt-7 space-y-3 flex-grow">
+                {[
+                  { emoji: "📘", title: "Paisa Samjho, Zindagi Badlo", desc: "Master money & invest smarter" },
+                  { emoji: "💻", title: "Digital Products Guide", desc: "Create & sell digital products online" },
+                  { emoji: "🚀", title: "Startup from Zero", desc: "Launch your first Indian business" },
+                  { emoji: "💰", title: "Money Hustle", desc: "Side income strategies for Indians" },
+                ].map(({ emoji, title, desc }) => (
+                  <li key={title} className="flex items-start gap-3">
+                    <span className="text-xl">{emoji}</span>
+                    <span>
+                      <p className="text-sm font-semibold text-foreground">{title}</p>
+                      <p className="text-[11px] text-muted-foreground">{desc}</p>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-center text-sm italic text-muted-foreground">"Read once. Apply forever. Start earning sooner."</p>
+              <a href="https://rzp.io/rzp/Ih78kMZ" target="_blank" rel="noopener noreferrer"
+                className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4">
+                Get All 4 Ebooks — ₹249 →
+              </a>
+              <a href="https://www.paypal.com/ncp/payment/JF7TS5GTBNAYJ" target="_blank" rel="noopener noreferrer"
+                className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
+                style={{ background: "#0070BA" }}>
+                Buy with PayPal — $9.99 →
+              </a>
+              <p className="text-[11px] text-center mt-2 text-muted-foreground">🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal</p>
+              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 Instant PDF Delivery · Secure Razorpay · One-time payment</p>
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
-              ₹249
-            </p>
-            <p className="text-[11px] text-green-600 font-semibold">
-              You save ₹546 today
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Ebooks List */}
-      <ul className="mt-7 space-y-3 flex-grow">
-        {[
-          { emoji: "📘", title: "Paisa Samjho, Zindagi Badlo", desc: "Master money & invest smarter" },
-          { emoji: "💻", title: "Digital Products Guide", desc: "Create & sell digital products online" },
-          { emoji: "🚀", title: "Startup from Zero", desc: "Launch your first Indian business" },
-          { emoji: "💰", title: "Money Hustle", desc: "Side income strategies for Indians" },
-        ].map(({ emoji, title, desc }) => (
-          <li key={title} className="flex items-start gap-3">
-            <span className="text-xl">{emoji}</span>
-            <span>
-              <p className="text-sm font-semibold text-foreground">{title}</p>
-              <p className="text-[11px] text-muted-foreground">{desc}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-
-      {/* Tagline */}
-      <p className="mt-6 text-center text-sm italic text-muted-foreground">
-        "Read once. Apply forever. Start earning sooner."
-      </p>
-
-      {/* CTA Button */}
-      <a
-  href="https://rzp.io/rzp/Ih78kMZ"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4"
-      >
-        Get All 4 Ebooks — ₹249 →
-      </a>
-<a
-  href="https://www.paypal.com/ncp/payment/JF7TS5GTBNAYJ"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
-  style={{ background: "#0070BA" }}
->
-  Buy with PayPal — $9.99 →
-</a>
-<p className="text-[11px] text-center mt-2 text-muted-foreground">
-  🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
-</p>
-      <p className="text-[11px] text-center mt-3 text-muted-foreground">
-        🔒 Instant PDF Delivery · Secure Razorpay · One-time payment
-      </p>
-
-    </div>
-  </div>
-</div>
-{/* END EBOOK BUNDLE SECTION */}
-        <div className="mt-14 flex justify-center items-stretch">
-          
-
-          {/* PRO */}
-          <div className="order-1 relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
+          {/* CARD 2 — Pro Vault */}
+          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
             <div className="absolute -inset-6 bg-gradient-cta opacity-25 blur-3xl rounded-3xl -z-10" />
             <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1.5 text-[11px] font-bold tracking-wider text-white uppercase shadow-glow">
                 <Sparkles className="w-3 h-3" /> Most Popular · Save 50%
               </div>
-
+              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">Implementation Toolkit</p>
               <h3 className="text-2xl font-bold mt-2">The Pro Vault</h3>
               <p className="text-muted-foreground mt-1.5">Your complete all-in-one implementation toolkit.</p>
-
               <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
                 <div className="flex items-end justify-between">
                   <div>
@@ -235,14 +179,13 @@ function Pricing() {
                   </div>
                   <div className="text-right">
                     <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
-                    <p className="text-[11px] text-brand-pink font-semibold">Founder’s Launch Offer — One-Time Payment</p>
+                    <p className="text-[11px] text-brand-pink font-semibold">Founder's Launch Offer — One-Time Payment</p>
                   </div>
                 </div>
                 <p className="mt-3 text-xs text-muted-foreground leading-relaxed border-t border-brand-purple/20 pt-3">
-                  Invest in your future for less than the cost of 1 pizzas. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
+                  Invest in your future for less than the cost of 1 pizza. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
                 </p>
               </div>
-
               <ul className="mt-7 space-y-3.5 flex-grow">
                 {[
                   { text: "10+ Ebook Design Inspiration Templates (PDF)" },
@@ -250,51 +193,87 @@ function Pricing() {
                   { text: "500+ Digital Product Ideas for Instant Inspiration" },
                   { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
                   { text: "100+ High-Converting Headline Formulas for IG/FB" },
-                  { text: "E-Book Mastery Guide", value:"Rs. 2000" },
-                  { text: "Curated Niche Research Guide (100+ Trending Niches)" },
+                  { text: "E-Book Mastery Guide", value: "Rs. 2000" },
+                  { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
                 ].map(({ text: t, value }) => (
                   <li key={t} className="flex items-start gap-3 text-foreground">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
                       <Sparkles className="w-3 h-3 text-brand-pink" />
                     </span>
+                    <span>{t}{value && <span className="ml-1.5 text-[11px] font-semibold text-brand-pink/90">(Value: {value})</span>}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="https://rzp.io/rzp/0PZ18Xk" target="_blank" rel="noopener noreferrer"
+                className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform">
+                Get Pro Vault Now 🚀
+              </a>
+              <a href="https://www.paypal.com/ncp/payment/V6FXA4TBLT39J" target="_blank" rel="noopener noreferrer"
+                className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
+                style={{ background: "#0070BA" }}>
+                Buy with PayPal — $19.99 →
+              </a>
+              <p className="text-[11px] text-center mt-2 text-muted-foreground">🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal</p>
+              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 100% Secure Payment · Instant Delivery</p>
+            </div>
+          </div>
+
+          {/* CARD 3 — Notion Template */}
+          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple">
+            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
+                <span className="text-white text-xs font-semibold">🆕 NEW LAUNCH</span>
+              </div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">Notion Template</p>
+              <h3 className="text-2xl font-bold mt-2">Content Creator Dashboard</h3>
+              <p className="text-muted-foreground mt-1 text-sm">6 Databases · Instant Notion Delivery</p>
+              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Launch Price</p>
+                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 599</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">₹299</p>
+                    <p className="text-[11px] text-green-600 font-semibold">You save ₹300 today</p>
+                  </div>
+                </div>
+              </div>
+              <ul className="mt-7 space-y-3 flex-grow">
+                {[
+                  { emoji: "📅", title: "Content Calendar", desc: "Plan every post across all platforms" },
+                  { emoji: "💡", title: "Ideas Bank", desc: "Never lose a content idea again" },
+                  { emoji: "💰", title: "Product Tracker", desc: "Track every product and sale" },
+                  { emoji: "📊", title: "Analytics Log", desc: "Log weekly growth numbers" },
+                  { emoji: "🎯", title: "Monthly Goals", desc: "Set and track monthly targets" },
+                  { emoji: "🎨", title: "Brand Assets", desc: "All your links in one place" },
+                ].map(({ emoji, title, desc }) => (
+                  <li key={title} className="flex items-start gap-3">
+                    <span className="text-xl">{emoji}</span>
                     <span>
-                      {t}
-                      {value && (
-                        <span className="ml-1.5 text-[11px] font-semibold text-brand-pink/90">(Value: {value})</span>
-                      )}
+                      <p className="text-sm font-semibold text-foreground">{title}</p>
+                      <p className="text-[11px] text-muted-foreground">{desc}</p>
                     </span>
                   </li>
                 ))}
               </ul>
-
-              <a
-                href={PRO_CHECKOUT}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform"
-              >
-                Get Pro Vault Now 🚀
+              <p className="mt-6 text-center text-sm italic text-muted-foreground">"Plan, track, and grow — all in one place."</p>
+              <a href="https://rzp.io/rzp/OLr2Io9" target="_blank" rel="noopener noreferrer"
+                className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4">
+                Get Notion Template — ₹299 →
               </a>
-              <a
-  href="https://www.paypal.com/ncp/payment/V6FXA4TBLT39J"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
-  style={{ background: "#0070BA" }}
->
-  Buy with PayPal — $19.99 →
-</a>
-<p className="text-[11px] text-center mt-2 text-muted-foreground">
-  🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal
-</p>
-              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 100% Secure Payment · Instant Delivery</p>
+              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 Instant Notion Delivery · One-time payment · No subscription</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 }
+        
+
+
 
 
 
