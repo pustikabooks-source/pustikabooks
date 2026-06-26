@@ -255,7 +255,7 @@ function Pricing() {
                   className="mt-4 h-14 rounded-full flex items-center justify-center text-white font-black"
                   style={{ background: "#0070BA" }}
                 >
-                  PayPal • $4.99
+                  PayPal • $9.99
                 </a>
 
               </div>
@@ -405,7 +405,7 @@ function Pricing() {
           className="mt-4 flex h-16 items-center justify-center rounded-full text-lg font-black text-white"
           style={{ background: "#0070BA" }}
         >
-          Pay with PayPal • $8.99
+          Pay with PayPal • $19.99
         </a>
 
         <div className="mt-6 border-t pt-5">
