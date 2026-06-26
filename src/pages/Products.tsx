@@ -92,185 +92,518 @@ function Header() {
 //   );
 // }
 
-
 function Pricing() {
   return (
-    <section id="pricing" className="relative py-20 px-5 md:px-8 scroll-mt-20">
-      <div className="absolute inset-0 -z-10 bg-[#F4F0E8]" />
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">Pricing</p>
-        <h2 className="mt-3 text-4xl md:text-6xl font-black text-center tracking-tight leading-[1.05]">
-          "Unlock everything you need"
-        </h2>
-        <p className="mt-5 text-lg text-center text-muted-foreground max-w-2xl mx-auto">
-          "One simple price for lifetime access. Get started in seconds."
+    <section
+      id="pricing"
+      className="relative overflow-hidden py-28 px-6 md:px-10 scroll-mt-24"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 -z-20 bg-[#F7F3EC]" />
+
+      <div className="absolute inset-0 -z-10 opacity-40">
+        <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-brand-purple/10 blur-[120px]" />
+        <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-brand-pink/10 blur-[120px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+
+        <div className="text-center max-w-3xl mx-auto">
+
+          <span className="inline-flex items-center rounded-full border border-brand-purple/20 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.25em] text-brand-purple shadow-sm">
+            Pricing
+          </span>
+
+          <h2 className="mt-7 text-5xl md:text-7xl font-black tracking-tight leading-[1.05]">
+            Everything You Need
+            <br />
+            <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+              To Build & Sell
+            </span>
+          </h2>
+
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-8">
+            No subscriptions.
+            <br />
+            Pay once. Own forever.
+          </p>
+
+        </div>
+
+        {/* Cards */}
+
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+          {/* ===================================================== */}
+          {/* CARD 1 */}
+          {/* ===================================================== */}
+
+          <div className="group relative">
+
+            <div className="absolute inset-0 rounded-[34px] bg-gradient-to-br from-brand-purple via-brand-pink to-brand-purple opacity-30 blur-xl transition duration-500 group-hover:opacity-60" />
+
+            <div className="relative h-full rounded-[34px] border border-brand-purple/15 bg-white p-9 shadow-xl transition duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl flex flex-col">
+
+              <div className="mx-auto mb-7">
+
+                <span className="rounded-full bg-gradient-cta px-5 py-2 text-xs font-bold uppercase tracking-widest text-white shadow-lg">
+                  🔥 Limited Offer
+                </span>
+
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.25em] text-brand-purple font-bold">
+                eBook Bundle
+              </p>
+
+              <h3 className="mt-3 text-3xl font-black">
+                Pustika Bundle
+              </h3>
+
+              <p className="mt-2 text-muted-foreground leading-7">
+                Four practical eBooks that help you build wealth,
+                create digital products and start earning online.
+              </p>
+
+              {/* PRICE */}
+
+              <div className="mt-8 h-44 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
+
+                <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
+                  Bundle Price
+                </p>
+
+                <div className="flex items-end justify-between mt-2">
+
+                  <div>
+
+                    <p className="line-through text-muted-foreground text-lg">
+                      ₹795
+                    </p>
+
+                    <p className="text-sm text-green-600 font-semibold">
+                      Save ₹546
+                    </p>
+
+                  </div>
+
+                  <h2 className="text-6xl font-black bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+                    ₹249
+                  </h2>
+
+                </div>
+
+              </div>
+
+              {/* FEATURES */}
+
+              <div className="mt-10 space-y-5 flex-1">
+
+                {[
+                  "📘 Paisa Samjho, Zindagi Badlo",
+                  "💻 Digital Products Guide",
+                  "🚀 Startup From Zero",
+                  "💰 Money Hustle",
+                ].map((item) => (
+
+                  <div
+                    key={item}
+                    className="flex items-center gap-4"
+                  >
+
+                    <div className="w-10 h-10 rounded-xl bg-brand-purple/10 flex items-center justify-center text-lg">
+                      ✓
+                    </div>
+
+                    <p className="font-semibold">
+                      {item}
+                    </p>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+              {/* Bottom */}
+
+              <div className="mt-auto">
+
+                <div className="mt-8 border-t border-border pt-6">
+
+                  <p className="text-center text-sm italic text-muted-foreground">
+                    Lifetime access • Instant download
+                  </p>
+
+                </div>
+
+                <a
+                  href="https://rzp.io/rzp/Ih78kMZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 h-14 rounded-full bg-gradient-cta flex items-center justify-center text-white font-black text-lg shadow-lg transition hover:scale-[1.02]"
+                >
+                  Get Bundle →
+                </a>
+
+                <a
+                  href="https://www.paypal.com/ncp/payment/JF7TS5GTBNAYJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 h-14 rounded-full flex items-center justify-center text-white font-black"
+                  style={{ background: "#0070BA" }}
+                >
+                  PayPal • $4.99
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* ===================================================== */}
+          {/* PRO VAULT STARTS HERE */}
+          {/* ===================================================== */}
+{/* CARD 2 — PRO VAULT */}
+{/* ===================================================== */}
+
+<div className="group relative scale-[1.03] lg:scale-105 z-10">
+
+  {/* Glow */}
+  <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-brand-purple via-brand-pink to-brand-purple blur-2xl opacity-40 group-hover:opacity-70 transition duration-500" />
+
+  <div className="relative h-full rounded-[36px] bg-gradient-to-br from-brand-purple to-brand-pink p-[2px] shadow-2xl">
+
+    <div className="relative flex h-full flex-col rounded-[34px] bg-white p-10">
+
+      {/* Badge */}
+
+      <div className="absolute left-1/2 -top-5 -translate-x-1/2">
+
+        <div className="rounded-full bg-gradient-cta px-6 py-2 text-sm font-black uppercase tracking-widest text-white shadow-xl">
+
+          ⭐ MOST POPULAR
+
+        </div>
+
+      </div>
+
+      <p className="mt-5 text-xs font-bold uppercase tracking-[0.25em] text-brand-purple">
+        IMPLEMENTATION TOOLKIT
+      </p>
+
+      <h3 className="mt-3 text-4xl font-black">
+        Pro Vault
+      </h3>
+
+      <p className="mt-3 leading-7 text-muted-foreground">
+        Everything you need to create, launch and sell digital products
+        without wasting months figuring it out.
+      </p>
+
+      {/* Price */}
+
+      <div className="mt-8 h-52 rounded-3xl bg-[#FAF7F2] border border-brand-purple/15 px-8 flex flex-col justify-center">
+
+        <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
+          FOUNDER PRICE
         </p>
 
-        {/* THREE EQUAL CARDS */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 items-stretch">
+        <div className="mt-3 flex items-end justify-between">
 
-          {/* CARD 1 — eBook Bundle */}
-          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple">
-            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
-                <span className="text-white text-xs font-semibold">🔥 LIMITED OFFER — 68% OFF</span>
-              </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">eBook Collection</p>
-              <h3 className="text-2xl font-bold mt-2">Pustika eBook Bundle</h3>
-              <p className="text-muted-foreground mt-1 text-sm">4 Bestselling Ebooks · Instant PDF Delivery</p>
-              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Bundle Price</p>
-                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 795</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">₹249</p>
-                    <p className="text-[11px] text-green-600 font-semibold">You save ₹546 today</p>
-                  </div>
-                </div>
-              </div>
-              <ul className="mt-7 space-y-3 flex-grow">
-                {[
-                  { emoji: "📘", title: "Paisa Samjho, Zindagi Badlo", desc: "Master money & invest smarter" },
-                  { emoji: "💻", title: "Digital Products Guide", desc: "Create & sell digital products online" },
-                  { emoji: "🚀", title: "Startup from Zero", desc: "Launch your first Indian business" },
-                  { emoji: "💰", title: "Money Hustle", desc: "Side income strategies for Indians" },
-                ].map(({ emoji, title, desc }) => (
-                  <li key={title} className="flex items-start gap-3">
-                    <span className="text-xl">{emoji}</span>
-                    <span>
-                      <p className="text-sm font-semibold text-foreground">{title}</p>
-                      <p className="text-[11px] text-muted-foreground">{desc}</p>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-center text-sm italic text-muted-foreground">"Read once. Apply forever. Start earning sooner."</p>
-              <a href="https://rzp.io/rzp/Ih78kMZ" target="_blank" rel="noopener noreferrer"
-                className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4">
-                Get All 4 Ebooks — ₹249 →
-              </a>
-              <a href="https://www.paypal.com/ncp/payment/JF7TS5GTBNAYJ" target="_blank" rel="noopener noreferrer"
-                className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
-                style={{ background: "#0070BA" }}>
-                Buy with PayPal — $9.99 →
-              </a>
-              <p className="text-[11px] text-center mt-2 text-muted-foreground">🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal</p>
-              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 Instant PDF Delivery · Secure Razorpay · One-time payment</p>
-            </div>
+          <div>
+
+            <p className="text-xl line-through text-muted-foreground">
+              ₹10,499
+            </p>
+
+            <p className="text-sm font-semibold text-green-600">
+              Save ₹10,000+
+            </p>
+
           </div>
 
-          {/* CARD 2 — Pro Vault */}
-          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple shadow-glow md:-translate-y-3">
-            <div className="absolute -inset-6 bg-gradient-cta opacity-25 blur-3xl rounded-3xl -z-10" />
-            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1.5 text-[11px] font-bold tracking-wider text-white uppercase shadow-glow">
-                <Sparkles className="w-3 h-3" /> Most Popular · Save 50%
-              </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">Implementation Toolkit</p>
-              <h3 className="text-2xl font-bold mt-2">The Pro Vault</h3>
-              <p className="text-muted-foreground mt-1.5">Your complete all-in-one implementation toolkit.</p>
-              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Total Value</p>
-                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 10,499</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Rs. 499</p>
-                    <p className="text-[11px] text-brand-pink font-semibold">Founder's Launch Offer — One-Time Payment</p>
-                  </div>
-                </div>
-                <p className="mt-3 text-xs text-muted-foreground leading-relaxed border-t border-brand-purple/20 pt-3">
-                  Invest in your future for less than the cost of 1 pizza. <span className="text-brand-pink font-semibold">Lifetime access included.</span>
-                </p>
-              </div>
-              <ul className="mt-7 space-y-3.5 flex-grow">
-                {[
-                  { text: "10+ Ebook Design Inspiration Templates (PDF)" },
-                  { text: "Complete AI Prompt Library (50+ ChatGPT eBook Prompts)", value: "Rs. 999" },
-                  { text: "500+ Digital Product Ideas for Instant Inspiration" },
-                  { text: "30-Day First Sale Launch Checklist (Day-by-day roadmap)", value: "Rs. 1,499" },
-                  { text: "100+ High-Converting Headline Formulas for IG/FB" },
-                  { text: "E-Book Mastery Guide", value: "Rs. 2000" },
-                  { text: "Curated Indian Niche Research Guide (50+ Trending Niches)" },
-                ].map(({ text: t, value }) => (
-                  <li key={t} className="flex items-start gap-3 text-foreground">
-                    <span className="mt-0.5 w-5 h-5 rounded-full bg-brand-pink/15 border border-brand-pink/40 flex items-center justify-center shrink-0">
-                      <Sparkles className="w-3 h-3 text-brand-pink" />
-                    </span>
-                    <span>{t}{value && <span className="ml-1.5 text-[11px] font-semibold text-brand-pink/90">(Value: {value})</span>}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="https://rzp.io/rzp/0PZ18Xk" target="_blank" rel="noopener noreferrer"
-                className="mt-8 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base md:text-lg py-4 shadow-glow hover:scale-[1.02] transition-transform">
-                Get Pro Vault Now 🚀
-              </a>
-              <a href="https://www.paypal.com/ncp/payment/V6FXA4TBLT39J" target="_blank" rel="noopener noreferrer"
-                className="mt-3 block w-full text-center rounded-full py-4 text-base font-extrabold text-white"
-                style={{ background: "#0070BA" }}>
-                Buy with PayPal — $19.99 →
-              </a>
-              <p className="text-[11px] text-center mt-2 text-muted-foreground">🇮🇳 Indian buyers pay in ₹ via Razorpay · 🌍 International buyers pay in $ via PayPal</p>
-              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 100% Secure Payment · Instant Delivery</p>
-            </div>
-          </div>
+          <div className="text-right">
 
-          {/* CARD 3 — Notion Template */}
-          <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-b from-brand-purple via-brand-pink to-brand-purple">
-            <div className="relative rounded-[calc(1.5rem-1.5px)] bg-card p-8 flex flex-col h-full shadow-card">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-cta px-4 py-1">
-                <span className="text-white text-xs font-semibold">🆕 NEW LAUNCH</span>
-              </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase mt-2">Notion Template</p>
-              <h3 className="text-2xl font-bold mt-2">Content Creator Dashboard</h3>
-              <p className="text-muted-foreground mt-1 text-sm">6 Databases · Instant Notion Delivery</p>
-              <div className="mt-6 rounded-2xl border border-brand-purple/30 bg-[#F4F0E8] p-5">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-[11px] uppercase tracking-widest text-brand-pink">Launch Price</p>
-                    <p className="text-sm font-semibold text-muted-foreground line-through">Rs. 599</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-5xl font-black tracking-tight bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">₹299</p>
-                    <p className="text-[11px] text-green-600 font-semibold">You save ₹300 today</p>
-                  </div>
-                </div>
-              </div>
-              <ul className="mt-7 space-y-3 flex-grow">
-                {[
-                  { emoji: "📅", title: "Content Calendar", desc: "Plan every post across all platforms" },
-                  { emoji: "💡", title: "Ideas Bank", desc: "Never lose a content idea again" },
-                  { emoji: "💰", title: "Product Tracker", desc: "Track every product and sale" },
-                  { emoji: "📊", title: "Analytics Log", desc: "Log weekly growth numbers" },
-                  { emoji: "🎯", title: "Monthly Goals", desc: "Set and track monthly targets" },
-                  { emoji: "🎨", title: "Brand Assets", desc: "All your links in one place" },
-                ].map(({ emoji, title, desc }) => (
-                  <li key={title} className="flex items-start gap-3">
-                    <span className="text-xl">{emoji}</span>
-                    <span>
-                      <p className="text-sm font-semibold text-foreground">{title}</p>
-                      <p className="text-[11px] text-muted-foreground">{desc}</p>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-center text-sm italic text-muted-foreground">"Plan, track, and grow — all in one place."</p>
-              <a href="https://rzp.io/rzp/OLr2Io9" target="_blank" rel="noopener noreferrer"
-                className="mt-4 block w-full text-center rounded-full bg-gradient-cta text-white font-extrabold text-base py-4">
-                Get Notion Template — ₹299 →
-              </a>
-              <p className="text-[11px] text-center mt-3 text-muted-foreground">🔒 Instant Notion Delivery · One-time payment · No subscription</p>
-            </div>
+            <h2 className="text-7xl font-black bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+              ₹499
+            </h2>
+
           </div>
 
         </div>
+
       </div>
-    </section>
+
+      {/* Features */}
+
+      <div className="mt-10 space-y-5 flex-1">
+
+        {[
+          "50+ ChatGPT Prompts",
+          "500+ Digital Product Ideas",
+          "30-Day Launch Roadmap",
+          "100+ High-Converting Headlines",
+          "Ebook Mastery Guide",
+          "50+ Profitable Niches",
+          "Bonus Templates & Resources",
+        ].map((item) => (
+
+          <div
+            key={item}
+            className="flex items-center gap-4"
+          >
+
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-purple text-white font-black">
+
+              ✓
+
+            </div>
+
+            <p className="font-semibold">
+              {item}
+            </p>
+
+          </div>
+
+        ))}
+
+      </div>
+
+      {/* Bonus */}
+
+      <div className="mt-8 rounded-2xl border border-brand-purple/20 bg-brand-purple/5 p-5">
+
+        <p className="text-center text-sm font-semibold">
+
+          🎁 Plus lifetime updates included at no extra cost.
+
+        </p>
+
+      </div>
+
+      {/* Buttons */}
+
+      <div className="mt-auto">
+
+        <a
+          href="https://rzp.io/rzp/0PZ18Xk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-7 flex h-16 items-center justify-center rounded-full bg-gradient-cta text-lg font-black text-white shadow-xl transition hover:scale-[1.02]"
+        >
+          Get Pro Vault →
+        </a>
+
+        <a
+          href="https://www.paypal.com/ncp/payment/V6FXA4TBLT39J"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex h-16 items-center justify-center rounded-full text-lg font-black text-white"
+          style={{ background: "#0070BA" }}
+        >
+          Pay with PayPal • $8.99
+        </a>
+
+        <div className="mt-6 border-t pt-5">
+
+          <p className="text-center text-sm text-muted-foreground">
+
+            🔒 Lifetime Access • Instant Delivery • One-Time Payment
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{/* ===================================================== */}
+{/* NOTION TEMPLATE STARTS HERE */}
+{/* ===================================================== */}
+{/* CARD 3 — NOTION TEMPLATE */}
+{/* ===================================================== */}
+
+<div className="group relative">
+
+  <div className="absolute inset-0 rounded-[34px] bg-gradient-to-br from-brand-purple via-brand-pink to-brand-purple opacity-25 blur-xl transition duration-500 group-hover:opacity-60" />
+
+  <div className="relative h-full rounded-[34px] border border-brand-purple/15 bg-white p-9 shadow-xl transition duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl flex flex-col">
+
+    <div className="mx-auto mb-7">
+
+      <span className="rounded-full bg-gradient-cta px-5 py-2 text-xs font-bold uppercase tracking-widest text-white shadow-lg">
+        ✨ NEW
+      </span>
+
+    </div>
+
+    <p className="text-xs uppercase tracking-[0.25em] text-brand-purple font-bold">
+      NOTION TEMPLATE
+    </p>
+
+    <h3 className="mt-3 text-3xl font-black">
+      Creator Dashboard
+    </h3>
+
+    <p className="mt-2 text-muted-foreground leading-7">
+      Organize your content, products, ideas and business inside one beautiful
+      Notion workspace.
+    </p>
+
+    {/* PRICE */}
+
+    <div className="mt-8 h-44 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
+
+      <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
+        Launch Price
+      </p>
+
+      <div className="flex items-end justify-between mt-2">
+
+        <div>
+
+          <p className="line-through text-muted-foreground text-lg">
+            ₹599
+          </p>
+
+          <p className="text-sm text-green-600 font-semibold">
+            Save ₹300
+          </p>
+
+        </div>
+
+        <h2 className="text-6xl font-black bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+          ₹299
+        </h2>
+
+      </div>
+
+    </div>
+
+    {/* FEATURES */}
+
+    <div className="mt-10 space-y-5 flex-1">
+
+      {[
+        "📅 Content Calendar",
+        "💡 Idea Database",
+        "📦 Product Tracker",
+        "📈 Analytics Dashboard",
+        "🎯 Monthly Goals",
+        "🎨 Brand Assets",
+      ].map((item) => (
+
+        <div
+          key={item}
+          className="flex items-center gap-4"
+        >
+
+          <div className="w-10 h-10 rounded-xl bg-brand-purple/10 flex items-center justify-center text-lg">
+            ✓
+          </div>
+
+          <p className="font-semibold">
+            {item}
+          </p>
+
+        </div>
+
+      ))}
+
+    </div>
+
+    <div className="mt-auto">
+
+      <div className="mt-8 border-t border-border pt-6">
+
+        <p className="text-center text-sm italic text-muted-foreground">
+          Instant duplicate • Lifetime access
+        </p>
+
+      </div>
+
+      <a
+        href="https://rzp.io/rzp/BGZW52V"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 h-14 rounded-full bg-gradient-cta flex items-center justify-center text-white font-black text-lg shadow-lg transition hover:scale-[1.02]"
+      >
+        Get Dashboard →
+      </a>
+
+      <p className="mt-4 text-center text-xs text-muted-foreground">
+        🔒 One-time payment • No subscription
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+{/* Bottom Trust Section */}
+
+<div className="mt-20 rounded-[34px] border border-brand-purple/10 bg-white p-10 shadow-lg">
+
+  <div className="grid md:grid-cols-4 gap-8 text-center">
+
+    <div>
+      <h4 className="text-3xl font-black text-brand-purple">
+        100%
+      </h4>
+      <p className="mt-2 text-muted-foreground">
+        Secure Payments
+      </p>
+    </div>
+
+    <div>
+      <h4 className="text-3xl font-black text-brand-purple">
+        Instant
+      </h4>
+      <p className="mt-2 text-muted-foreground">
+        Digital Delivery
+      </p>
+    </div>
+
+    <div>
+      <h4 className="text-3xl font-black text-brand-purple">
+        Lifetime
+      </h4>
+      <p className="mt-2 text-muted-foreground">
+        Access Included
+      </p>
+    </div>
+
+    <div>
+      <h4 className="text-3xl font-black text-brand-purple">
+        24/7
+      </h4>
+      <p className="mt-2 text-muted-foreground">
+        Email Support
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
   );
 }
+          
         
 
 
