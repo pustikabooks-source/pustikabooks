@@ -20,203 +20,409 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-    {
-    "slug": "best-platforms-to-sell-ebooks-2026",
-    "category": "ebooks",
-    "title": "Best Platforms to Sell eBooks in 2026: A Complete Guide for Authors",
-    "description": "Discover the best platforms to sell eBooks online in 2026. Compare fees, features, and audiences for Amazon KDP, Payhip, and top Gumroad alternatives to maximize your author revenue.",
-    "date": "2026-06-26",
-    "readingMinutes": 16,
-    "tags": ["sell ebooks", "Gumroad alternatives", "Payhip", "self-publishing", "author tools"],
-    "body": [
-      {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop",
-        "alt": "Person reading an ebook on a tablet with coffee",
-        "caption": "Choosing the right platform to sell ebooks can make a massive difference in your take-home profit margins."
-      },
-      {
-        "type": "p",
-        "text": "For authors and digital creators in 2026, the digital publishing landscape has evolved dramatically. The core operational question is no longer whether your content is valuable enough to print, but where your digital storefront should live to minimize friction and maximize direct margins. Relying blindly on a single marketplace exposes your independent publishing business to sudden algorithm shifts, unexpected platform fee hikes, and policy updates that can sever your connection with your readers overnight. To build a resilient online business, you must strategically select infrastructure that balances customer ownership with smooth checkout experiences."
-      },
-      {
-        "type": "p",
-        "text": "When learning how to sell ebooks effectively, creators generally face two distinct structural paths: global multi-vendor marketplaces or independent direct-to-consumer commerce platforms. Marketplaces provide ready-made internal search engines and high baseline user trust, but they hold your customer data hostage. Direct platforms require you to drive your own distribution channels but grant full autonomy over pricing structures, subscriber lists, and backend automation pipelines. This exhaustive guide breaks down the absolute best software solutions in 2026 so you can make an informed, data-driven operational choice."
-      },
-      {
-        "type": "stat",
-        "value": "$20B+",
-        "label": "The projected global revenue for the digital publishing and ebook market in 2026."
-      },
-      {
-        "type": "h2",
-        "text": "1. Amazon KDP: The Built-In Traffic Monolith"
-      },
-      {
-        "type": "p",
-        "text": "Amazon Kindle Direct Publishing (KDP) remains the heavy hitter in the self-publishing space due to sheer volume. Millions of readers visit Amazon daily with their payment details stored, specifically looking for their next read. For independent fiction writers or authors entering highly searched non-fiction categories, the organic discoverability powered by the Amazon recommendation engine can be game-changing. If your metadata, review generation systems, and category tags are properly aligned, Amazon can drive thousands of automated sales without requiring external marketing spend."
-      },
-      {
-        "type": "p",
-        "text": "However, processing your business through a massive marketplace comes with high transactional tolls. Amazon’s primary royalty tier takes a 30% cut on books priced strictly between $2.99 and $9.99. If your product is priced outside this bracket, their cut surges to a massive 65%. More importantly, Amazon enforces strict customer isolation. You never receive the email addresses of the people purchasing your books. Without direct customer communication, you cannot launch future backend offers or build a predictable, repeating reader base."
-      },
-      {
-        "type": "p-link",
-        "parts": [
-          { "text": "Before rushing to upload your manuscript to Amazon, it is critical to confirm there is verified search demand for your concept. Read our comprehensive analysis on selecting a profitable topic in our guide to the " },
-          { "text": "10 Best eBook Niches to Sell in India in 2026 (With Real Demand Data)", "href": "/blog/best-ebook-niches-sell-india" },
-          { "text": " to ensure you are writing for an active, buying market." }
-        ]
-      },
-      {
-        "type": "h2",
-        "text": "2. Payhip: The Ultimate Direct-to-Consumer Frontend"
-      },
-      {
-        "type": "p",
-        "text": "For authors who want absolute control over their audience, margins, and presentation, Payhip stands out as a premier modern solution. Unlike old-school e-commerce software, Payhip is designed from the ground up for digital assets. The platform provides clean checkout pages, instant delivery mechanisms, and handles complex digital tax calculations—such as EU/UK VAT collection and reporting—completely on your behalf. This tax feature saves independent creators from incredibly complex compliance burdens."
-      },
-      {
-        "type": "p",
-        "text": "Payhip’s pricing model is built to scale with your business phase. Their free tier charges a flat 5% transaction fee alongside standard processing rates, which is ideal when you are validating your initial offer. As your monthly sales volume expands, you can switch seamlessly to a flat monthly subscription plan that completely removes transaction fees down to 0%. This ensures your successful scaling efforts directly reward your bottom line instead of rewarding the platform."
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Instant Stripe/PayPal Payouts: Funds clear directly to your merchant accounts immediately upon purchase, bypassing marketplace 60-day holding cycles.",
-          "Automated PDF Stamping: Dynamically encrypts the buyer's name and transactional email address across the header or footer of your ebook pages to mitigate unauthorized link sharing.",
-          "Built-in Affiliate Architecture: Allows you to easily recruit partners, reviewers, and fellow creators to promote your digital store in exchange for a custom percentage commission tracked automatically."
-        ]
-      },
-      {
-        "type": "h2",
-        "text": "3. Analyzing Modern Gumroad Alternatives"
-      },
-      {
-        "type": "p",
-        "text": "Gumroad was historically the go-to recommendation for launching a digital products business quickly. However, their structural transition to a flat 10% network fee (excluding credit card processing charges) has forced high-volume creators to systematically look for alternative web infrastructure. When your volume reaches thousands of dollars a month, a 10% platform tax becomes a massive operational drain on a lean internet business."
-      },
-      {
-        "type": "p",
-        "text": "When reviewing modern Gumroad alternatives, tools like Lemon Squeezy and Stan Store offer strong competition. Lemon Squeezy acts as a comprehensive Merchant of Record, meaning they legalistically handle global financial compliance, refund requests, and localized payment routing pipelines for a standard transaction cut. Meanwhile, Stan Store dominates mobile-first social spaces, offering a simple landing page design that integrates smoothly into a creator's social bio. This setup makes it easy to capture quick conversions from platforms like Instagram, TikTok, or YouTube Shorts."
-      },
-      {
-        "type": "table",
-        "headers": ["Infrastructure Platform", "Optimal Use Case Focus", "Base Transaction Cost Structure"],
-        "rows": [
-          ["Amazon KDP", "Marketplace distribution & organic discoverability", "30% to 65% depending on asset price point"],
-          ["Payhip", "Direct audience monetization & total list ownership", "5% on Free Plan, scaling down to 0% on flat monthly tier"],
-          ["Lemon Squeezy", "Global tax compliance outsourcing", "5% + 50¢ per successful customer checkout"],
-          ["Stan Store", "High-volume mobile social media traffic", "Flat monthly subscription fee with zero transaction cuts"]
-        ]
-      },
-      {
-        "type": "quote",
-        "text": "Building a stable online business requires relying on diversified infrastructure. Leverage high-traffic marketplaces to capture cold discovery, but host your core digital storefront on direct platforms where you own the consumer relationship and data pipeline."
-      },
-      {
-        "type": "p-link",
-        "parts": [
-          { "text": "If you don't have an established email list or social media following to feed your direct store, your immediate focus must shift to organic distribution strategies. Review our detailed guide on " },
-          { "text": "How to Promote Your eBook Without an Audience (5 Free Channels That Actually Work)", "href": "/blog/promote-ebook-without-audience" },
-          { "text": " to learn how to generate consistent traffic without spending capital on paid advertisements." }
-        ]
-      }
-    ]
-  },
-
   {
-    "slug": "how-to-price-ebook-maximum-profit",
-    "category": "ebooks",
-    "title": "How to Price Your eBook for Maximum Profit: A 2026 Strategy Guide",
-    "description": "Struggling with ebook pricing? Learn the most effective pricing strategy for authors to maximize sales, increase perceived value, and boost your digital product profits.",
-    "date": "2026-06-26",
-    "readingMinutes": 15,
-    "tags": ["ebook pricing", "pricing strategy", "self-publishing", "author advice"],
-    "body": [
-      {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1580519542036-ed47f3e42f9b?w=800&auto=format&fit=crop",
-        "alt": "Calculator and coins on a desk near a laptop",
-        "caption": "Ebook pricing is a balance of psychology, perceived value, and platform royalties."
-      },
-      {
-        "type": "p",
-        "text": "Choosing the right ebook pricing strategy is often the final hurdle before an independent author launches their product. Set the price point too high, and casual browsers leave without buying. Price the product too low, and you run into a subtle psychological trap: consumers assume cheap products contain low-value information, and your profit margins dry up. Finding the sweet spot requires aligning your pricing with consumer psychology, market expectations, and clear business goals."
-      },
-      {
-        "type": "p",
-        "text": "In 2026, pricing your digital products shouldn't involve arbitrary guesswork. Instead, it should be treated as an ongoing strategic lever. Your pricing affects how your work is perceived in the market, your budget for running customer acquisition campaigns, and how much profit you ultimately make. To optimize your revenue, you need to deeply understand the relationship between cost, perceived utility, and conversion psychology."
-      },
-      {
-        "type": "h2",
-        "text": "The Core Law of Perceived Value vs. Page Count"
-      },
-      {
-        "type": "p",
-        "text": "A common mistake beginners make is tying their pricing strategy directly to the physical length of their ebook. On the internet, readers don't buy content volume; they buy solutions, transformation, and efficiency. If a comprehensive 400-page historical overview serves as an entertaining read, it might trade at standard marketplace rates. However, a highly specific 40-page guide that solves an active business problem or teaches an advanced technical skill can easily command a premium price because it offers immediate, practical utility to the buyer."
-      },
-      {
-        "type": "p-link",
-        "parts": [
-          { "text": "If you are targeting specific regional markets, you need to understand how local currency expectations shape consumer behavior. Check out our real-world pricing breakdown in " },
-          { "text": "How to Price Your eBook in India (The Psychology Behind ₹199, ₹449 and ₹999)", "href": "/blog/price-ebook-india-psychology" },
-          { "text": " to see how adjusting your price to local purchase patterns can significantly lift your conversion rates." }
-        ]
-      },
-      {
-        "type": "h2",
-        "text": "Structural Pricing Frameworks Explained"
-      },
-      {
-        "type": "h3",
-        "text": "The Frictionless Volume Engine ($0.99 - $2.99)"
-      },
-      {
-        "type": "p",
-        "text": "This lower price tier is designed to remove financial friction entirely, turning the purchase into a quick impulse buy. It is highly effective for fiction series starters, introductory guides, or quick educational assets. The main goal here isn't large profit margins on the first sale, but rapid customer acquisition. By bringing readers in at a lower cost, you can build trust and upsell them on higher-priced books or digital products down the line."
-      },
-      {
-        "type": "h3",
-        "text": "The Premium Authority Position ($9.99 - $19.99)"
-      },
-      {
-        "type": "p",
-        "text": "This price range serves as the gold standard for comprehensive non-fiction assets, professional reference materials, and premium deep-dives. Pricing your ebook here signals to the market that your content is thoroughly researched, high-quality, and written by an authority. It filters out casual freebie-seekers while remaining accessible to serious readers. If you distribute directly through platforms like Payhip, this tier keeps your profit margins healthy enough to reinvest back into growing your platform."
-      },
-      {
-        "type": "h3",
-        "text": "The Specialized Value Bundle ($27.00 - $97.00+)"
-      },
-      {
-        "type": "p",
-        "text": "To confidently charge premium prices, your asset needs to be framed as an active, step-by-step solution system rather than a casual book. Authors who command these rates often bundle their core ebook with valuable extras, such as interactive resource checklists, downloadable spreadsheet tools, or editable templates. This changes the product from a passive read into an actionable toolkit that saves the customer time or helps them make money."
-      },
-      {
-        "type": "table",
-        "headers": ["Pricing Strategy Tier", "Target Digital Asset Structure", "Primary Business Optimization Goal"],
-        "rows": [
-          ["Low-Friction Volume", "Novellas, introductory guides, lead generation assets", "Maximize download volume and build email lists quickly"],
-          ["Premium Authority", "Comprehensive guides, deep-dives, non-fiction guides", "Generate healthy margins while maintaining accessibility"],
-          ["Value Bundle", "Specialized toolkits, templates, system blueprints", "Maximize revenue per user by delivering an all-in-one solution"]
-        ]
-      },
-      {
-        "type": "quote",
-        "text": "Price is an interactive marketing message. Your chosen price point communicates quality, target audience, and the level of transformation your product provides long before a customer opens the first page."
-      },
-      {
-        "type": "p-link",
-        "parts": [
-          { "text": "Before finalizing your price point, you must make sure your target audience actually wants your offer. Review our step-by-step validation methods in " },
-          { "text": "How to Validate a Digital Product Idea Before You Create It", "href": "/blog/validate-digital-product-idea" },
-          { "text": " to verify consumer demand before spending weeks writing and packaging a product." }
-        ]
-      }
-    ]
-  },
-
-   {
+  slug: "best-platforms-to-sell-ebooks-2026",
+  category: "ebook",
+  title: "Best Platforms to Sell eBooks in 2026 (Compared for Every Type of Creator)",
+  description: "A no-fluff comparison of every major platform to sell eBooks in 2026 — fees, audiences, control, and which one is right for your specific situation.",
+  date: "2026-06-26",
+  readingMinutes: 12,
+  tags: ["earn with ebooks", "ebook business", "digital products", "make money online"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&auto=format&fit=crop",
+      alt: "Best platforms to sell eBooks online in 2026",
+      caption: "The platform you choose determines your margin, your audience, and your freedom"
+    },
+    {
+      type: "p",
+      text: "One of the most common questions new eBook creators ask is: where should I sell my eBook? The answer depends entirely on three things — how much control you want over pricing, how much of each sale you want to keep, and whether you want to build your own audience or borrow someone else's. This guide compares every major platform honestly, with no affiliate bias, so you can make the right decision for your specific situation."
+    },
+    {
+      type: "stat",
+      value: "97%",
+      label: "of your revenue you keep when selling directly — vs as low as 30% on some platforms"
+    },
+    {
+      type: "h2",
+      text: "The two types of platforms — and why it matters"
+    },
+    {
+      type: "p",
+      text: "Every eBook selling platform falls into one of two categories. Marketplace platforms like Amazon KDP and Scribd have built-in audiences — millions of buyers already searching for books. The tradeoff is lower margins, less pricing control, and no access to buyer data. Direct selling platforms like Gumroad, Payhip, and your own website give you full control, higher margins, and direct access to your buyers. The tradeoff is that you need to bring your own traffic. Understanding this distinction is the foundation of every platform decision you will ever make."
+    },
+    {
+      type: "table",
+      headers: ["Platform Type", "Audience", "Your Margin", "Buyer Data", "Pricing Control"],
+      rows: [
+        ["Marketplace (Amazon, Scribd)", "Built-in millions", "30-70%", "None", "Limited"],
+        ["Direct (Gumroad, Payhip)", "You bring traffic", "85-97%", "Full access", "Complete"],
+        ["Hybrid (your website + Razorpay)", "You bring traffic", "97-100%", "Full access", "Complete"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Platform 1 — Amazon KDP"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&auto=format&fit=crop",
+      alt: "Amazon KDP platform for selling eBooks",
+      caption: "Amazon KDP gives you access to millions of readers — but takes a significant cut"
+    },
+    {
+      type: "p",
+      text: "Amazon Kindle Direct Publishing is the world's largest eBook marketplace with over 300 million active customers. Publishing is free and Amazon handles all payment processing and delivery. The royalty structure gives you 70% on books priced between $2.99 and $9.99, and only 35% on books priced outside that range. The biggest limitation is exclusivity — if you enrol in KDP Select (required for Kindle Unlimited), you cannot sell your eBook anywhere else."
+    },
+    {
+      type: "table",
+      headers: ["Factor", "Details"],
+      rows: [
+        ["Cost to publish", "Free"],
+        ["Royalty rate", "35% or 70% depending on price"],
+        ["Price range for 70%", "$2.99 — $9.99 only"],
+        ["Audience", "300M+ Amazon customers"],
+        ["Buyer data", "None — Amazon owns the customer"],
+        ["Best for", "Fiction, how-to books, global English audience"],
+        ["Worst for", "High-priced knowledge products, Indian market"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Platform 2 — Gumroad"
+    },
+    {
+      type: "p",
+      text: "Gumroad is the most popular direct selling platform for digital creators worldwide. It has a built-in discovery feature where buyers can find your products without you promoting them, but most of your sales will come from your own audience. Gumroad charges a flat 10% fee on every sale with no monthly subscription. It handles payments, delivery, and basic analytics. The platform is particularly strong for creators who want to start selling immediately with minimal setup — you can have a product live in under 30 minutes."
+    },
+    {
+      type: "table",
+      headers: ["Factor", "Details"],
+      rows: [
+        ["Cost", "Free to start — 10% fee per sale"],
+        ["Your margin", "90% of every sale"],
+        ["Payment methods", "Credit card, PayPal"],
+        ["Indian payments", "Limited — international focus"],
+        ["Audience", "Small built-in discovery + your own"],
+        ["Best for", "Global creators, first-time sellers"],
+        ["Worst for", "Indian buyers who prefer UPI"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Platform 3 — Payhip"
+    },
+    {
+      type: "p",
+      text: "Payhip is an underrated platform that offers more features than Gumroad at a lower fee. The free plan charges 5% per sale — half of Gumroad. The Plus plan at $29/month drops the fee to 2%, and the Pro plan at $99/month charges zero fees. Payhip also includes built-in affiliate management, coupon codes, and EU VAT handling — features that Gumroad charges extra for. For creators building a serious digital product business, Payhip's fee structure becomes significantly more attractive at scale."
+    },
+    {
+      type: "table",
+      headers: ["Plan", "Monthly Cost", "Fee Per Sale", "Best At"],
+      rows: [
+        ["Free", "$0", "5%", "Starting out"],
+        ["Plus", "$29", "2%", "Growing creators"],
+        ["Pro", "$99", "0%", "Established sellers"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Platform 4 — Your own website + Razorpay (best for India)"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop",
+      alt: "Selling eBooks directly via your own website and Razorpay in India",
+      caption: "Selling directly via your website keeps 97%+ of every sale and gives you full buyer data"
+    },
+    {
+      type: "p",
+      text: "For Indian creators targeting Indian buyers, selling directly through your own website with Razorpay as the payment gateway is the highest-margin option available. Razorpay charges 2% per transaction with no monthly fees. Combined with Make.com for automated delivery, you keep 97-98% of every sale, collect buyer email addresses, and have complete control over pricing, discounts, and upsells. This is exactly how Pustika Books sells — and it is the model we recommend for any serious Indian creator."
+    },
+    {
+      type: "table",
+      headers: ["Factor", "Details"],
+      rows: [
+        ["Setup cost", "₹0 — Razorpay is free to start"],
+        ["Fee per sale", "2% (Razorpay)"],
+        ["Your margin", "97-98% of every sale"],
+        ["Indian payments", "UPI, cards, net banking, EMI"],
+        ["Buyer data", "Full — name, email, phone"],
+        ["Automation", "Make.com (free tier) for delivery"],
+        ["Best for", "Indian creators, UPI buyers, serious sellers"],
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "This is the exact setup we use at Pustika Books. Read our complete guide on " },
+        { text: "how to earn money selling eBooks in India", href: "/blog/how-to-earn-money-selling-ebooks-in-india" },
+        { text: " to see the full stack — from product creation to automated delivery." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Platform 5 — Etsy"
+    },
+    {
+      type: "p",
+      text: "Etsy is primarily known for handmade physical products but has a substantial and growing digital products section. Digital planners, workbooks, templates, and eBooks sell well on Etsy because buyers are already in a purchasing mindset and the platform has strong SEO visibility. Etsy charges a $0.20 listing fee per item, 6.5% transaction fee, and 3% + $0.25 payment processing fee — totalling roughly 10% per sale. The advantage is Etsy's built-in audience of over 90 million buyers who actively search for digital products."
+    },
+    {
+      type: "h2",
+      text: "Platform 6 — Instamojo (India-specific)"
+    },
+    {
+      type: "p",
+      text: "Instamojo is India's most popular platform specifically designed for digital product creators. It supports UPI, cards, and net banking, has a built-in marketplace of Indian buyers, and charges 5% + ₹3 per transaction. It is particularly strong for creators who want a marketplace presence without building their own website. The limitation is that the platform's design and features are more basic compared to Gumroad or Payhip, and the built-in audience is smaller."
+    },
+    {
+      type: "youtube",
+      videoId: "j4w_Yo1lb5M",
+      title: "The BEST Platform To Sell Digital Products For Beginners in 2026"
+    },
+    {
+      type: "h2",
+      text: "The verdict — which platform should you use?"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1665686306574-1ace09918530?w=800&auto=format&fit=crop",
+      alt: "Choosing the best platform to sell eBooks",
+      caption: "The right platform depends on your audience, margin goals, and how much control you want"
+    },
+    {
+      type: "table",
+      headers: ["Your Situation", "Best Platform"],
+      rows: [
+        ["Indian creator, Indian buyers", "Own website + Razorpay"],
+        ["Want built-in global audience", "Amazon KDP + Gumroad"],
+        ["First eBook, zero setup time", "Gumroad"],
+        ["Serious about scaling", "Own website + Razorpay + Payhip"],
+        ["Targeting US/UK buyers", "Amazon KDP + Gumroad"],
+        ["Digital planners and templates", "Etsy + Gumroad"],
+        ["Indian market, no website", "Instamojo or Razorpay link"],
+      ]
+    },
+    {
+      type: "quote",
+      text: "The best platform is not the one with the biggest audience. It is the one where you keep the most money and own the most data. Start with direct selling. Add marketplace platforms only after your product is proven."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Once you know where to sell, the next most important decision is how to price. Read our complete guide on " },
+        { text: "how to price your eBook for maximum profit", href: "/blog/how-to-price-ebook-maximum-profit" },
+        { text: " — the pricing framework that Indian and global creators use to maximise revenue on every sale." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And if you haven't created your eBook yet, our guide on " },
+        { text: "how to create an eBook with ChatGPT in one weekend", href: "/blog/how-to-create-ebook-with-chatgpt" },
+        { text: " shows you how to go from zero to a finished, sellable product using free AI tools." },
+      ],
+    },
+  ],
+},
+  {
+  slug: "how-to-price-ebook-maximum-profit",
+  category: "ebook",
+  title: "How to Price Your eBook for Maximum Profit in 2026 (The Complete Framework)",
+  description: "The complete eBook pricing framework for 2026 — psychological pricing, tiered strategies, global vs Indian pricing, when to raise prices, and the exact numbers that convert best.",
+  date: "2026-06-26",
+  readingMinutes: 11,
+  tags: ["pricing", "earn with ebooks", "ebook business", "digital products"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&auto=format&fit=crop",
+      alt: "How to price your eBook for maximum profit in 2026",
+      caption: "Pricing is not math — it is psychology. And getting it right changes everything."
+    },
+    {
+      type: "p",
+      text: "Two eBook creators launch on the same day with products of equal quality. Creator A prices at $2.99. Creator B prices at $19. After 90 days, Creator A has made $450. Creator B has made $2,800. Same effort. Same marketing. Same number of buyers. The only difference was the price. This is not a hypothetical. It is what happens consistently when creators understand pricing psychology — and what happens to those who don't."
+    },
+    {
+      type: "stat",
+      value: "6x",
+      label: "more revenue Creator B made with the same number of buyers — purely from pricing correctly"
+    },
+    {
+      type: "h2",
+      text: "Why most creators underprice — and what it costs them"
+    },
+    {
+      type: "p",
+      text: "The most common pricing mistake in digital products is not greed — it is fear. Creators underprice because they are afraid of rejection. They think a lower price means more buyers. This is not how buyer psychology works. A low price does not reduce rejection — it signals low quality before a single word is read. In every split test across digital products, higher prices consistently outperform lower ones in total revenue — and often in conversion rate too."
+    },
+    {
+      type: "quote",
+      text: "Your price is not just a number. It is your first signal of quality. A ₹49 eBook says 'I am not sure this is worth much.' A ₹499 eBook says 'This is worth your time and money.' The content inside could be identical. The buyer's perception is completely different."
+    },
+    {
+      type: "h2",
+      text: "The global pricing framework for eBooks in 2026"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&auto=format&fit=crop",
+      alt: "Global eBook pricing framework 2026",
+      caption: "Different markets have different price sensitivities — but the psychology is universal"
+    },
+    {
+      type: "table",
+      headers: ["Price Tier", "USD", "INR", "Best For", "Conversion"],
+      rows: [
+        ["Entry", "$5-$9", "₹199-₹499", "First eBook, impulse buy", "Highest volume"],
+        ["Mid", "$15-$29", "₹799-₹1,499", "eBook + templates bundle", "Best revenue"],
+        ["Premium", "$37-$97", "₹2,000-₹5,000", "Full course or vault", "Lower volume, highest value"],
+        ["Ultra premium", "$97-$297", "₹5,000-₹15,000", "Coaching + content", "Low volume, maximum value"],
+      ]
+    },
+    {
+      type: "p",
+      text: "The sweet spot for most first-time eBook creators is the entry tier — $7-$9 globally and ₹299-₹499 for Indian buyers. This is the impulse-buy zone where the buyer does not need to think carefully before purchasing. Once you have testimonials and a proven product, moving to the mid tier ($15-$29) dramatically increases revenue per sale without significantly reducing conversions."
+    },
+    {
+      type: "h2",
+      text: "The psychology of specific price points"
+    },
+    {
+      type: "p",
+      text: "Pricing research consistently shows that specific numbers outperform round numbers. $17 converts better than $15. $27 converts better than $25. $97 converts better than $100. This is called charm pricing — the brain processes $17 as significantly less than $20, even though the difference is only $3. In Indian markets, ₹297 consistently outperforms ₹300, and ₹499 outperforms ₹500. The psychological impact of staying below a round number threshold is real and measurable."
+    },
+    {
+      type: "table",
+      headers: ["Avoid", "Use Instead", "Why"],
+      rows: [
+        ["$5", "$7", "Too low signals no value"],
+        ["$10", "$9 or $12", "Round number feels arbitrary"],
+        ["$20", "$17 or $19", "Charm pricing works"],
+        ["$25", "$27", "Slightly above feels more premium"],
+        ["$50", "$47 or $49", "Below threshold is stronger"],
+        ["₹100", "₹99 or ₹149", "Round numbers feel lazy"],
+        ["₹500", "₹497 or ₹499", "Charm pricing in INR too"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "The anchor pricing strategy that doubles conversions"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?w=800&auto=format&fit=crop",
+      alt: "Anchor pricing strategy for eBooks and digital products",
+      caption: "Anchoring — showing a higher original price — is the single most effective pricing tactic in digital products"
+    },
+    {
+      type: "p",
+      text: "Anchoring is the practice of showing a higher original price alongside your actual selling price. The brain does not evaluate price in isolation — it evaluates price relative to a reference point. 'Originally $47 — today $17' makes $17 feel like an extraordinary deal. Without the anchor, $17 feels like an unknown quantity. The anchor price does not need to be a price you ever actually charged — it can be the value of what is included."
+    },
+    {
+      type: "ul",
+      items: [
+        "Show original value: 'Value: $197 — your price today: $27'",
+        "Show time-limited discount: 'Launch price $17 — regular price $37 after July 1'",
+        "Show comparison: 'A 1-hour coaching session costs $200. This eBook gives you the same framework for $17.'",
+        "Show component value: 'eBook ($27 value) + templates ($19 value) + checklist ($9 value) — all for $27'"
+      ]
+    },
+    {
+      type: "h2",
+      text: "The bundle pricing strategy for maximum revenue per buyer"
+    },
+    {
+      type: "p",
+      text: "Bundles consistently generate 2-3x more revenue per buyer than single products. The key is to make the bundle feel like an obvious deal — not a random collection. Bundle items that naturally go together and serve the same goal. An eBook on freelancing + a client proposal template + a pricing calculator spreadsheet is a natural bundle. An eBook on freelancing + a recipe eBook is not."
+    },
+    {
+      type: "table",
+      headers: ["Bundle Tier", "What to Include", "Price", "Value Shown"],
+      rows: [
+        ["Starter", "eBook only", "$7-$17", "$29 value"],
+        ["Essential", "eBook + templates + checklist", "$27-$37", "$97 value"],
+        ["Complete", "eBook + templates + video walkthrough + community", "$47-$97", "$197 value"],
+        ["VIP", "Everything + 1 coaching call", "$197-$497", "$500+ value"],
+      ]
+    },
+    {
+      type: "youtube",
+      videoId: "8TMUKIRoOVI",
+      title: "How to Price Your eBook for Maximum Earnings — Complete Guide"
+    },
+    {
+      type: "h2",
+      text: "Indian market pricing — specific guidance"
+    },
+    {
+      type: "p",
+      text: "Indian buyers have different price sensitivity than Western markets — but not in the way most creators assume. The common mistake is pricing too low because 'Indians won't pay high prices.' This is false. Indian buyers are value-conscious, not cheap. They will pay ₹999 for something that clearly solves a painful problem. They will not pay ₹99 for something that looks low-effort. The key in India is not low price — it is clear, specific, credible value."
+    },
+    {
+      type: "table",
+      headers: ["Product", "Too Low", "Sweet Spot", "Premium"],
+      rows: [
+        ["Single eBook (30-50 pages)", "Below ₹99", "₹199-₹399", "₹499-₹799"],
+        ["eBook + templates bundle", "Below ₹299", "₹499-₹799", "₹999-₹1,499"],
+        ["Full digital vault", "Below ₹499", "₹799-₹1,499", "₹1,999-₹4,999"],
+        ["Course (video + content)", "Below ₹999", "₹1,999-₹4,999", "₹9,999+"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "When to raise your price — the exact triggers"
+    },
+    {
+      type: "ul",
+      items: [
+        "After 10 sales — you now have proof the product sells. Raise by 20-30% immediately.",
+        "After 3 genuine testimonials — social proof justifies a higher price. Update your sales page first.",
+        "After adding bonus material — each addition is a price increase opportunity. New template = new price.",
+        "After 90 days at current price — if still selling, test a 25% increase. Conversions rarely drop significantly.",
+        "Never lower your price as a first response to slow sales — fix the headline, the description, or the promotion first.",
+        "If buyers consistently say 'this is so cheap for what it is' — raise your price immediately. You are leaving money on the table."
+      ]
+    },
+    {
+      type: "stat",
+      value: "2.4x",
+      label: "average revenue increase when creators raise prices after first 10 sales — conversions rarely drop"
+    },
+    {
+      type: "h2",
+      text: "Testing your price — the right way"
+    },
+    {
+      type: "p",
+      text: "The only way to know your optimal price is to test. But testing does not mean randomly changing prices and watching what happens. It means structured comparison. Run your eBook at price A for 30 days, then price B for 30 days, with identical promotion. Compare total revenue — not just number of sales. A price that gets half the sales but at 3x the price generates 50% more revenue. Most creators optimise for sales volume when they should optimise for total revenue."
+    },
+    {
+      type: "quote",
+      text: "Stop counting sales. Start counting revenue. Ten sales at $27 is $270. Three sales at $97 is $291. Which would you rather have? Fewer buyers, more money — or more buyers, less money?"
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Now that you know how to price, make sure you are selling on the right platform. Read our guide on " },
+        { text: "the best platforms to sell eBooks in 2026", href: "/blog/best-platforms-to-sell-ebooks-2026" },
+        { text: " to see which platform keeps the most money in your pocket per sale." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And if you haven't launched yet, read our guide on " },
+        { text: "why most creators never make their first sale", href: "/blog/why-creators-never-make-first-sale" },
+        { text: " — so you avoid the four silent mistakes that kill most eBook launches before they get started." },
+      ],
+    },
+  ],
+},
+  {
   "slug": "start-digital-products-business-from-scratch",
   "category": "digital-products",
   "title": "How to Start a Digital Products Business From Scratch in 2026",
