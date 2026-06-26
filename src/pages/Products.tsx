@@ -532,7 +532,7 @@ function Pricing() {
       </div>
 
       <a
-        href="https://rzp.io/rzp/BGZW52V"
+        href="https://rzp.io/rzp/OLr2Io9"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 h-14 rounded-full bg-gradient-cta flex items-center justify-center text-white font-black text-lg shadow-lg transition hover:scale-[1.02]"
