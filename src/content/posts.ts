@@ -16,6 +16,8 @@ export interface BlogPost {
     | { type: "table"; headers: string[]; rows: string[][] }
     | { type: "image"; url: string; alt: string; caption?: string }
     | { type: "youtube"; videoId: string; title: string }
+    | { type: "tip"; text: string }
+    | { type: "warning"; text: string }
   >;
 }
 
