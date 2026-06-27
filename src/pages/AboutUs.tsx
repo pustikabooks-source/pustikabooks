@@ -75,20 +75,153 @@ export default function AboutUs() {
       )}
 
       {/* Hero */}
-      <section style={{
-        background: "linear-gradient(135deg, #f5f3ff 0%, #fdf4ff 100%)",
-        padding: "80px 24px"
-      }}>
-        <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "4px", color: "#7C3AED", textTransform: "uppercase", marginBottom: "16px" }}>Our Mission</p>
-          <h1 style={{ fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, color: "#191919", letterSpacing: "-1.5px", lineHeight: 1.1, marginBottom: "24px" }}>
-            We help everyday people turn their knowledge into income.
-          </h1>
-          <p style={{ fontSize: "18px", color: "#555", lineHeight: 1.7, maxWidth: "560px", margin: "0 auto" }}>
-            Pustika Books creates practical digital products and guides that make earning from your knowledge simple, affordable, and accessible — for creators anywhere in the world.
-          </p>
-        </div>
-      </section>
+<section
+  style={{
+    background: "linear-gradient(135deg,#f5f3ff 0%,#fdf4ff 100%)",
+    padding: "90px 24px",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      width: "500px",
+      height: "500px",
+      background: "#7C3AED",
+      opacity: 0.08,
+      borderRadius: "50%",
+      filter: "blur(120px)",
+      top: "-180px",
+      left: "50%",
+      transform: "translateX(-50%)",
+    }}
+  />
+
+  <div
+    style={{
+      maxWidth: "760px",
+      margin: "0 auto",
+      textAlign: "center",
+      position: "relative",
+      zIndex: 2,
+    }}
+  >
+    <p
+      style={{
+        fontSize: "12px",
+        fontWeight: 700,
+        letterSpacing: "4px",
+        color: "#7C3AED",
+        textTransform: "uppercase",
+        marginBottom: "18px",
+      }}
+    >
+      ABOUT PUSTIKA BOOKS
+    </p>
+
+    <h1
+      style={{
+        fontSize: "clamp(36px,7vw,60px)",
+        lineHeight: 1.05,
+        fontWeight: 900,
+        letterSpacing: "-2px",
+        color: "#191919",
+        marginBottom: "24px",
+      }}
+    >
+      Helping Creators Turn
+      <br />
+      Knowledge Into
+      <span style={{ color: "#7C3AED" }}> Digital Income</span>
+    </h1>
+
+    <p
+      style={{
+        maxWidth: "620px",
+        margin: "0 auto",
+        fontSize: "19px",
+        lineHeight: 1.8,
+        color: "#666",
+      }}
+    >
+      Pustika Books creates practical guides, ebooks, digital
+      products and educational resources that help creators
+      build online income through knowledge, AI and modern
+      digital businesses.
+    </p>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "16px",
+        flexWrap: "wrap",
+        marginTop: "42px",
+      }}
+    >
+      <Link
+        to="/products"
+        style={{
+          background: "#7C3AED",
+          color: "white",
+          padding: "15px 34px",
+          borderRadius: "999px",
+          textDecoration: "none",
+          fontWeight: 700,
+        }}
+      >
+        Explore Products →
+      </Link>
+
+      <Link
+        to="/blog"
+        style={{
+          border: "2px solid #7C3AED",
+          color: "#7C3AED",
+          padding: "15px 34px",
+          borderRadius: "999px",
+          textDecoration: "none",
+          fontWeight: 700,
+        }}
+      >
+        Read Our Blog →
+      </Link>
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        gap: "12px",
+        marginTop: "40px",
+      }}
+    >
+      {[
+        "📚 Practical Guides",
+        "🌍 Global Audience",
+        "🤖 AI Learning",
+        "🚀 Beginner Friendly",
+      ].map((item) => (
+        <span
+          key={item}
+          style={{
+            background: "white",
+            border: "1px solid #ececec",
+            borderRadius: "999px",
+            padding: "10px 18px",
+            fontSize: "14px",
+            fontWeight: 600,
+            boxShadow: "0 4px 12px rgba(0,0,0,.05)",
+          }}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* What We Do */}
       <section style={{ padding: "80px 24px", maxWidth: "800px", margin: "0 auto" }}>
