@@ -7,11 +7,38 @@ const PRO_CHECKOUT = "https://rzp.io/rzp/0PZ18Xk";
 const WHATSAPP = "https://wa.me/919662436387";
 
 const faqs = [
-  { q: "Do I need any technical skills or experience?", a: "Not at all. The Pro Vault is designed for complete beginners. Our AI prompts and fill-in-the-blank templates do the heavy lifting for you." },
-  { q: "What kind of digital products can I create with this?", a: "You can use these templates and formulas to create short guides, checklists, Notion templates, planners, mini-courses, or workbooks." },
-  { q: "What if I don't even have an idea yet?", a: "That's exactly why we included the 50+ Profitable Niche Research Guide. It helps you find a high-demand idea in minutes." },
-  { q: "How much time do I need to invest?", a: "You can start with just a few hours a week. It's designed to fit around your schedule." },
-  { q: "What makes The Pro Vault different from other courses?", a: "This isn't a boring 10-hour video course full of fluff. It's an Implementation Bundle. You get the exact tools, templates, and checklists to take action today." }
+  {
+    q: "Which product is best for beginners?",
+    a: "If you're starting from scratch, we recommend Pro Vault. It includes the Ebook Mastery Guide, AI prompts, digital product ideas, templates, and a complete launch roadmap."
+  },
+  {
+    q: "Will I get instant access after purchasing?",
+    a: "Yes. As soon as your payment is confirmed, you'll receive instant access to your digital purchase."
+  },
+  {
+    q: "Are these products only for creators in India?",
+    a: "No. Our guides and strategies are designed for creators worldwide. The principles can be applied regardless of your country."
+  },
+  {
+    q: "Do I need any prior experience?",
+    a: "No. Every product is written with beginners in mind and provides step-by-step guidance."
+  },
+  {
+    q: "Will I receive future updates?",
+    a: "Yes. Eligible products, including Pro Vault, include lifetime updates whenever we release new resources or improvements."
+  },
+  {
+    q: "Can I use AI tools like ChatGPT with these products?",
+    a: "Absolutely. Pro Vault includes AI-powered workflows, prompts, and practical resources to help you create digital products faster."
+  },
+  {
+    q: "Do you offer refunds?",
+    a: "Please review our Refund Policy before purchasing. Because these are digital products, refunds are handled according to that policy."
+  },
+  {
+    q: "How can I contact support?",
+    a: "If you have any questions before or after purchasing, you can contact us by email or through WhatsApp, and we'll be happy to help."
+  }
 ];
 
 function Header() {
@@ -209,7 +236,7 @@ function Pricing() {
 
               {/* PRICE */}
 
-              <div className="mt-8 h-44 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
+              <div className="mt-8 h-36 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
 
                 <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
                   Bundle Price
@@ -239,13 +266,13 @@ function Pricing() {
 
               {/* FEATURES */}
 
-              <div className="mt-10 space-y-5 flex-1">
+              <div className="mt-10 space-y-5 min-h-[260px]">
 
                 {[
-                  "📘 Paisa Samjho, Zindagi Badlo",
-                  "💻 Digital Products Guide",
-                  "🚀 Startup From Zero",
-                  "💰 Money Hustle",
+                "📚 4 Premium eBooks",
+                "💰 Personal Finance Guide",
+                "💻 Digital Products Guide",
+                "♾️ Lifetime Access",
                 ].map((item) => (
 
                   <div
@@ -346,7 +373,7 @@ function Pricing() {
 
       {/* Price */}
 
-      <div className="mt-8 h-52 rounded-3xl bg-[#FAF7F2] border border-brand-purple/15 px-8 flex flex-col justify-center">
+      <div className="mt-8 h-36 rounded-3xl bg-[#FAF7F2] border border-brand-purple/15 px-8 flex flex-col justify-center">
 
         <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
           FOUNDER PRICE
@@ -380,16 +407,14 @@ function Pricing() {
 
       {/* Features */}
 
-      <div className="mt-10 space-y-5 flex-1">
+      <div className="mt-10 space-y-5 min-h-[260px]">
 
         {[
-          "50+ ChatGPT Prompts",
-          "500+ Digital Product Ideas",
-          "30-Day Launch Roadmap",
-          "100+ High-Converting Headlines",
-          "Ebook Mastery Guide",
-          "50+ Profitable Niches",
-          "Bonus Templates & Resources",
+          "📘 Ebook Mastery Guide",
+          "🤖 50+ ChatGPT Prompts",
+          "💡 500+ Digital Product Ideas",
+          "🚀 30-Day Launch Roadmap",
+          "🎁 Bonus Templates & Resources",
         ].map((item) => (
 
           <div
@@ -501,7 +526,7 @@ function Pricing() {
 
     {/* PRICE */}
 
-    <div className="mt-8 h-44 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
+    <div className="mt-8 h-36 rounded-3xl border border-brand-purple/15 bg-[#FAF7F2] flex flex-col justify-center px-7">
 
       <p className="text-xs uppercase tracking-[0.25em] text-brand-pink font-bold">
         Launch Price
@@ -531,15 +556,13 @@ function Pricing() {
 
     {/* FEATURES */}
 
-    <div className="mt-10 space-y-5 flex-1">
+    <div className="mt-10 space-y-5 min-h-[260px]">
 
       {[
         "📅 Content Calendar",
-        "💡 Idea Database",
         "📦 Product Tracker",
         "📈 Analytics Dashboard",
-        "🎯 Monthly Goals",
-        "🎨 Brand Assets",
+        "🎯 Goal Planner",
       ].map((item) => (
 
         <div
@@ -592,45 +615,58 @@ function Pricing() {
 
 </div>
 
-{/* Bottom Trust Section */}
+{/* WHY BUY FROM US */}
 
-<div className="mt-20 rounded-[34px] border border-brand-purple/10 bg-white p-10 shadow-lg">
+<div className="mt-24">
 
-  <div className="grid md:grid-cols-4 gap-8 text-center">
+  <div className="text-center max-w-2xl mx-auto">
 
-    <div>
-      <h4 className="text-3xl font-black text-brand-purple">
-        100%
-      </h4>
-      <p className="mt-2 text-muted-foreground">
-        Secure Payments
+    <span className="text-sm font-bold uppercase tracking-[0.3em] text-brand-purple">
+      WHY CHOOSE PUSTIKA BOOKS
+    </span>
+
+    <h2 className="mt-4 text-4xl md:text-5xl font-black">
+      Built For Modern Digital Creators
+    </h2>
+
+    <p className="mt-5 text-lg text-muted-foreground">
+      Everything is designed to help you learn faster,
+      launch quicker and start earning online with confidence.
+    </p>
+
+  </div>
+
+  <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div className="rounded-3xl bg-white border border-border p-8 text-center shadow-sm">
+      <div className="text-5xl">⚡</div>
+      <h3 className="mt-5 text-xl font-bold">Instant Access</h3>
+      <p className="mt-3 text-muted-foreground">
+        Download your products immediately after purchase.
       </p>
     </div>
 
-    <div>
-      <h4 className="text-3xl font-black text-brand-purple">
-        Instant
-      </h4>
-      <p className="mt-2 text-muted-foreground">
-        Digital Delivery
+    <div className="rounded-3xl bg-white border border-border p-8 text-center shadow-sm">
+      <div className="text-5xl">♾️</div>
+      <h3 className="mt-5 text-xl font-bold">Lifetime Updates</h3>
+      <p className="mt-3 text-muted-foreground">
+        Get future improvements without paying again.
       </p>
     </div>
 
-    <div>
-      <h4 className="text-3xl font-black text-brand-purple">
-        Lifetime
-      </h4>
-      <p className="mt-2 text-muted-foreground">
-        Access Included
+    <div className="rounded-3xl bg-white border border-border p-8 text-center shadow-sm">
+      <div className="text-5xl">🌍</div>
+      <h3 className="mt-5 text-xl font-bold">Global Focus</h3>
+      <p className="mt-3 text-muted-foreground">
+        Practical strategies that work for creators worldwide.
       </p>
     </div>
 
-    <div>
-      <h4 className="text-3xl font-black text-brand-purple">
-        24/7
-      </h4>
-      <p className="mt-2 text-muted-foreground">
-        Email Support
+    <div className="rounded-3xl bg-white border border-border p-8 text-center shadow-sm">
+      <div className="text-5xl">🤝</div>
+      <h3 className="mt-5 text-xl font-bold">Beginner Friendly</h3>
+      <p className="mt-3 text-muted-foreground">
+        No technical skills or previous experience required.
       </p>
     </div>
 
@@ -638,34 +674,10 @@ function Pricing() {
 
 </div>
 
-</div>
-
 </section>
   );
 }
-          
         
-
-
-
-
-
-function Whatsapp() {
-  return (
-    <section className="py-20 px-6">
-      <div className="mx-auto max-w-2xl text-center rounded-3xl border border-border bg-card shadow-card p-10">
-        <p className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-purple">Still confused?</p>
-        <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight">Let's talk on WhatsApp</h2>
-        <p className="mt-4 text-muted-foreground">Got a question before you buy? Our team is here to help — no pressure, no bots, just real answers.</p>
-        <a href={WHATSAPP} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3.5 font-bold hover:bg-[#1ebe5a] transition shadow-lg">
-          💬 Message Us Now
-        </a>
-      </div>
-    </section>
-  );
-}
-
-
 
 function FAQ() {
   return (
@@ -673,7 +685,7 @@ function FAQ() {
       <div className="mx-auto max-w-3xl">
         <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">FAQ</p>
         <h2 className="mt-3 text-center text-4xl md:text-5xl font-black tracking-tight">Frequently asked questions</h2>
-        <div className="mt-12 space-y-3">
+        <div className="mt-12 space-y-5">
           {faqs.map((f, i) => (
             <details key={f.q} open={i === 0} className="group rounded-2xl border border-border bg-card shadow-card p-6 hover:border-border transition-colors">
               <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-base md:text-lg">
@@ -777,7 +789,6 @@ function Products() {
       <Header />
       <main>
         <Pricing />
-        <Whatsapp />
         <FAQ />
       </main>
       <Footer />
