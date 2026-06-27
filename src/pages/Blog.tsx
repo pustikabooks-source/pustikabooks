@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import type { BlogPost } from "@/content/posts";
 import { fetchPublishedPosts } from "@/lib/blog";
 
-type Category = "all" | "ebook" | "digital-products" | "ai-for-creators";
+type Category = "all" | "ebook" | "digital-products" | "ai-for-creators" | "marketing" ;
 
 const CATEGORIES = [
   { id: "all" as Category, label: "All Posts", emoji: "📚", description: "" },
   { id: "ebook" as Category, label: "eBook Business", emoji: "📖", description: "Write, price, and sell eBooks" },
   { id: "digital-products" as Category, label: "Digital Products", emoji: "💡", description: "Templates, Notion, Canva & more" },
   { id: "ai-for-creators" as Category, label: "AI for Creators", emoji: "🤖", description: "Use AI to build & sell faster" },
+  { id: "marketing" as Category, label: "Marketing", emoji: "📣", description: "Pinterest, SEO, email, Instagram and more" },
 ];
 
 function getCategory(post: any): Category {
