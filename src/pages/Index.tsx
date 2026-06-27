@@ -136,6 +136,220 @@ function Topics() {
     </section>
   );
 }
+function FeaturedArticles() {
+  const featured = [
+    {
+      title: "How to Earn Money Selling eBooks",
+      desc: "Learn how beginners can create and sell profitable ebooks from scratch.",
+      link: "/blog/how-to-earn-money-selling-ebooks-in-india",
+      emoji: "📘",
+    },
+    {
+      title: "Best eBook Niches in 2026",
+      desc: "Discover profitable ebook niches with high demand and low competition.",
+      link: "/blog/best-ebook-niches-2026",
+      emoji: "🔥",
+    },
+    {
+      title: "Digital Products That Sell",
+      desc: "The best digital products you can build once and sell again and again.",
+      link: "/blog/digital-products-india-2026",
+      emoji: "🚀",
+    },
+  ];
+
+  return (
+    <section className="bg-[#FAFAF8]">
+      <div className="max-w-6xl mx-auto px-6 py-20">
+
+        <p className="text-center text-xs font-bold tracking-[0.25em] uppercase text-brand-purple">
+          Start Here
+        </p>
+
+        <h2 className="mt-3 text-center text-4xl md:text-5xl font-black">
+          Read These First
+        </h2>
+
+        <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
+          New to digital products? These guides will help you build your first
+          income online.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6 mt-14">
+          {featured.map((post) => (
+            <Link
+              key={post.title}
+              to={post.link}
+              className="rounded-3xl bg-white border border-border p-8 shadow-card hover:-translate-y-1 transition-all"
+            >
+              <div className="text-5xl">{post.emoji}</div>
+
+              <h3 className="mt-6 text-xl font-bold">
+                {post.title}
+              </h3>
+
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                {post.desc}
+              </p>
+
+              <div className="mt-6 font-bold text-brand-purple">
+                Read Guide →
+              </div>
+            </Link>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+function WhyPustika() {
+  const features = [
+    {
+      icon: "📚",
+      title: "Practical Guides",
+      text: "Every article focuses on real-world implementation instead of theory.",
+    },
+    {
+      icon: "🚀",
+      title: "Beginner Friendly",
+      text: "No experience required. Start building digital income from scratch.",
+    },
+    {
+      icon: "🤖",
+      title: "AI Powered",
+      text: "Learn how to use ChatGPT and AI tools to work faster and smarter.",
+    },
+    {
+      icon: "🌍",
+      title: "Global Audience",
+      text: "Create products that can be sold to customers worldwide.",
+    },
+    {
+      icon: "⚡",
+      title: "Actionable",
+      text: "Every guide includes practical steps you can implement immediately.",
+    },
+    {
+      icon: "💰",
+      title: "Built for Income",
+      text: "Everything we teach is designed to help creators earn online.",
+    },
+  ];
+
+  return (
+    <section className="bg-white">
+      <div className="max-w-6xl mx-auto px-6 py-24">
+
+        <p className="text-center text-xs font-bold uppercase tracking-[0.25em] text-brand-purple">
+          WHY CHOOSE US
+        </p>
+
+        <h2 className="mt-3 text-center text-4xl md:text-5xl font-black">
+          Everything You Need To Build
+          <br />
+          Your Digital Business
+        </h2>
+
+        <p className="mt-5 text-center text-muted-foreground max-w-2xl mx-auto">
+          Learn faster with practical guides, AI workflows, and proven digital
+          product strategies designed for creators.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-7 mt-16">
+
+          {features.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-border bg-[#FAFAF8] p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="text-5xl">
+                {item.icon}
+              </div>
+
+              <h3 className="mt-5 text-xl font-bold">
+                {item.title}
+              </h3>
+
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
+function StartJourney() {
+  const steps = [
+    {
+      number: "01",
+      title: "Read Free Guides",
+      text: "Explore our in-depth blog posts and learn how digital products work.",
+    },
+    {
+      number: "02",
+      title: "Download Resources",
+      text: "Get templates, prompts, and practical tools to speed up your progress.",
+    },
+    {
+      number: "03",
+      title: "Launch Your First Product",
+      text: "Create your first eBook or digital product and start selling online.",
+    },
+    {
+      number: "04",
+      title: "Build Passive Income",
+      text: "Grow your digital business with AI, automation, and smart marketing.",
+    },
+  ];
+
+  return (
+    <section className="bg-[#F8F5FF]">
+      <div className="max-w-6xl mx-auto px-6 py-24">
+
+        <p className="text-center text-xs font-bold uppercase tracking-[0.25em] text-brand-purple">
+          START HERE
+        </p>
+
+        <h2 className="mt-3 text-center text-4xl md:text-5xl font-black">
+          Your Journey Starts Here
+        </h2>
+
+        <p className="mt-5 text-center text-muted-foreground max-w-2xl mx-auto">
+          Follow this simple roadmap to go from learning to earning.
+        </p>
+
+        <div className="grid md:grid-cols-4 gap-6 mt-16">
+
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="rounded-3xl bg-white p-8 shadow-card border border-border text-center hover:-translate-y-1 transition"
+            >
+              <div className="text-5xl font-black text-brand-purple">
+                {step.number}
+              </div>
+
+              <h3 className="mt-5 text-xl font-bold">
+                {step.title}
+              </h3>
+
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                {step.text}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
 
 function LatestArticles() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -171,7 +385,7 @@ function LatestArticles() {
               <Link
                 key={p.slug}
                 to={`/blog/${p.slug}`}
-                className="group rounded-3xl overflow-hidden border border-border bg-white shadow-card hover:-translate-y-1 transition-all flex flex-col"
+                className="group rounded-3xl overflow-hidden border border-border bg-white shadow-card hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
               >
                 {cover && (
                   <div className="aspect-[16/10] overflow-hidden bg-secondary">
@@ -184,6 +398,9 @@ function LatestArticles() {
                   </div>
                 )}
                 <div className="p-6 flex-1 flex flex-col">
+                  <span className="inline-flex items-center rounded-full bg-brand-purple/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
+  Latest Article
+</span>
                   <h3 className="text-lg font-bold tracking-tight group-hover:text-brand-purple transition-colors">
                     {p.title}
                   </h3>
@@ -191,8 +408,10 @@ function LatestArticles() {
                     {p.description}
                   </p>
                   <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-                    <span>{p.readingMinutes} min read</span>
-                    <span className="font-bold text-brand-purple">Read article →</span>
+                    <span>⏱ {p.readingMinutes} min read</span>
+                    <span className="font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
+  Read article →
+</span>
                   </div>
                 </div>
               </Link>
@@ -240,24 +459,189 @@ function FreeGuide() {
     </section>
   );
 }
+function FAQ() {
+  const faqs = [
+    {
+      q: "What is Pustika Books?",
+      a: "Pustika Books is a platform that helps creators learn how to create, publish and sell ebooks, digital products and AI-powered businesses.",
+    },
+    {
+      q: "Can beginners create and sell ebooks?",
+      a: "Yes. Our guides are designed for complete beginners and explain everything step by step.",
+    },
+    {
+      q: "Do I need coding skills?",
+      a: "No. Most digital products can be created using tools like ChatGPT, Canva, Google Docs and Notion.",
+    },
+    {
+      q: "Will I get instant access after purchase?",
+      a: "Yes. All digital products are delivered immediately after successful payment.",
+    },
+    {
+      q: "Can I sell my products worldwide?",
+      a: "Absolutely. Digital products can be sold globally using payment platforms like Razorpay and PayPal.",
+    },
+    {
+      q: "What topics does Pustika Books cover?",
+      a: "We cover ebooks, digital products, AI tools, online business, passive income and creator growth.",
+    },
+  ];
+
+  return (
+    <section className="bg-white">
+      <div className="max-w-5xl mx-auto px-6 py-24">
+
+        <p className="text-center text-xs font-bold tracking-[0.25em] uppercase text-brand-purple">
+          FAQ
+        </p>
+
+        <h2 className="mt-3 text-center text-4xl md:text-5xl font-black">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="mt-14 space-y-5">
+
+          {faqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="rounded-2xl border border-border bg-[#FAFAF8] p-6"
+            >
+              <summary className="cursor-pointer text-lg font-bold">
+                {faq.q}
+              </summary>
+
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                {faq.a}
+              </p>
+
+            </details>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
 
 function SiteFooter() {
   return (
-    <footer className="bg-white border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-5">
-        <div className="text-center md:text-left">
-          <div className="font-black text-lg tracking-tight">
-            Pustika<span className="text-brand-purple"> Books</span>
+    <footer className="bg-[#0F172A] text-white">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+
+        <div className="grid md:grid-cols-4 gap-10">
+
+          {/* Brand */}
+          <div>
+            <h3 className="text-2xl font-black">
+              Pustika <span className="text-brand-purple">Books</span>
+            </h3>
+
+            <p className="mt-4 text-sm text-slate-300 leading-7">
+              Helping creators build digital income through ebooks,
+              AI and digital products.
+            </p>
           </div>
-          <p className="mt-1 text-xs text-muted-foreground">© 2026 Pustika Books</p>
+
+          {/* Explore */}
+          <div>
+            <h4 className="font-bold mb-5">Explore</h4>
+
+            <div className="space-y-3 text-sm">
+
+              <Link to="/blog" className="block hover:text-brand-purple">
+                Blog
+              </Link>
+
+              <Link to="/products" className="block hover:text-brand-purple">
+                Products
+              </Link>
+
+              <Link to="/about" className="block hover:text-brand-purple">
+                About
+              </Link>
+
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-bold mb-5">Legal</h4>
+
+            <div className="space-y-3 text-sm">
+
+              <Link to="/privacy" className="block hover:text-brand-purple">
+                Privacy Policy
+              </Link>
+
+              <Link to="/refund" className="block hover:text-brand-purple">
+                Refund Policy
+              </Link>
+
+            </div>
+          </div>
+
+          {/* Connect */}
+          <div>
+
+            <h4 className="font-bold mb-5">
+              Connect
+            </h4>
+
+            <div className="space-y-3 text-sm">
+
+              <a
+                href="https://instagram.com/thepustika"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-brand-purple"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://x.com/thepustika"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-brand-purple"
+              >
+                X (Twitter)
+              </a>
+
+              <a
+                href="https://www.pinterest.com/thepustika"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-brand-purple"
+              >
+                Pinterest
+              </a>
+
+              <a
+                href="mailto:hello@pustikabooks.in"
+                className="block hover:text-brand-purple"
+              >
+                hello@pustikabooks.in
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-muted-foreground">
-          <Link to="/blog" className="hover:text-foreground">Blog</Link>
-          <Link to="/products" className="hover:text-foreground">Products</Link>
-          <Link to="/about" className="hover:text-foreground">About</Link>
-          <Link to="/privacy" className="hover:text-foreground">Privacy</Link>
-          <Link to="/refund" className="hover:text-foreground">Refund</Link>
-        </nav>
+
+        <div className="mt-12 border-t border-slate-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+
+          <p className="text-sm text-slate-400">
+            © 2026 Pustika Books. All rights reserved.
+          </p>
+
+          <p className="text-sm text-slate-400">
+            Made with ❤️ for creators worldwide.
+          </p>
+
+        </div>
+
       </div>
     </footer>
   );
@@ -313,8 +697,12 @@ export default function Index() {
       <main>
         <Hero />
         <Topics />
+        <FeaturedArticles />
+        <WhyPustika />
+        <StartJourney />
         <LatestArticles />
         <FreeGuide />
+        <FAQ />
       </main>
       <SiteFooter />
     </div>
