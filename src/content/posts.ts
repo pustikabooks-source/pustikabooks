@@ -1,6 +1,6 @@
 export interface BlogPost {
   slug: string;
-  category?: "ebook" | "digital-products" | "ai-for-creators";
+  category?: "ebook" | "digital-products" | "ai-for-creators" | "marketing" ;
   title: string;
   description: string;
   date: string;
@@ -20,6 +20,454 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  {
+  slug: "lead-magnets-for-digital-products",
+  category: "marketing",
+  title: "Lead Magnets for Digital Product Creators: 15 Ideas That Actually Convert in 2026",
+  description: "The complete guide to creating lead magnets that grow your email list fast — 15 proven ideas, what makes them convert, and how to deliver them automatically.",
+  date: "2026-06-27",
+  readingMinutes: 11,
+  tags: ["lead magnets", "email marketing", "digital products", "marketing"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
+      alt: "Lead magnets for digital product creators 2026",
+      caption: "A great lead magnet is your single most powerful list-building tool"
+    },
+    {
+      type: "p",
+      text: "A lead magnet is the free resource you offer in exchange for someone's email address. It is the foundation of every email list and the starting point of every digital product sale. Most creators create lead magnets that are too broad, too long, or too obvious — and then wonder why their opt-in rate is under 2%. This guide shows you exactly what makes a lead magnet convert, gives you 15 proven ideas specific to digital product creators, and shows you how to deliver them automatically without any manual work."
+    },
+    {
+      type: "stat",
+      value: "35%",
+      label: "average opt-in rate for a well-targeted lead magnet — vs under 2% for a generic newsletter sign-up"
+    },
+    {
+      type: "h2",
+      text: "What makes a lead magnet actually convert"
+    },
+    {
+      type: "p",
+      text: "Most lead magnets fail for one of three reasons. They are too generic — 'subscribe to my newsletter' is not a lead magnet. They are too long — a 50-page eBook is not a lead magnet, it is a product. Or they are not specific enough to the reader's immediate problem. A converting lead magnet has four characteristics without exception: it is specific, it is immediately useful, it is quick to consume, and it promises a clear outcome."
+    },
+    {
+      type: "table",
+      headers: ["Characteristic", "Bad Example", "Good Example"],
+      rows: [
+        ["Specific", "Guide to making money online", "5 ChatGPT prompts to write your first eBook chapter"],
+        ["Immediately useful", "Introduction to digital marketing", "30-day content calendar template — fill in the blanks"],
+        ["Quick to consume", "100-page eBook", "1-page checklist or 5-minute video"],
+        ["Clear outcome", "'Learn about email marketing'", "'Get your first 100 email subscribers in 30 days'"],
+      ]
+    },
+    {
+      type: "quote",
+      text: "Your lead magnet should solve one problem so completely and so quickly that the reader's immediate thought is: 'If the free stuff is this good, what must the paid stuff be like?'"
+    },
+    {
+      type: "h2",
+      text: "The 15 best lead magnet ideas for digital product creators"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&auto=format&fit=crop",
+      alt: "Best lead magnet ideas for creators and digital product sellers",
+      caption: "The best lead magnets are specific, fast to consume, and deliver an immediate win"
+    },
+    {
+      type: "h2",
+      text: "Type 1 — Checklists (highest converting)"
+    },
+    {
+      type: "ul",
+      items: [
+        "1. '30-Day eBook Launch Checklist' — day by day action plan from idea to first sale",
+        "2. 'Pre-Launch Checklist for Digital Products' — everything to set up before going live",
+        "3. 'Daily Content Creation Checklist for Creators' — what to do every day to grow consistently"
+      ]
+    },
+    {
+      type: "p",
+      text: "Checklists convert at 15-35% because they are immediately actionable and take under 5 minutes to consume. They feel like high value because they save significant research time. Build yours in Canva, export as PDF, and deliver via your email platform automatically."
+    },
+    {
+      type: "h2",
+      text: "Type 2 — Templates (second highest converting)"
+    },
+    {
+      type: "ul",
+      items: [
+        "4. 'Content Calendar Template for Creators' — weekly planning spreadsheet or Notion template",
+        "5. '7 Instagram Caption Templates for Digital Product Sellers' — fill in the blank captions",
+        "6. 'eBook Outline Template' — chapter structure for any non-fiction eBook",
+        "7. 'Product Launch Email Template' — the exact email sequence to send when launching"
+      ]
+    },
+    {
+      type: "p",
+      text: "Templates convert at 20-35% because they eliminate the blank page problem. The reader gets immediate value they can use today. Templates also pre-qualify buyers — someone who wants a content calendar template is likely interested in your content creation products."
+    },
+    {
+      type: "h2",
+      text: "Type 3 — Resource lists and swipe files"
+    },
+    {
+      type: "ul",
+      items: [
+        "8. '50 Digital Product Ideas You Can Launch This Weekend' — categorised by niche and effort",
+        "9. '25 ChatGPT Prompts for eBook Writers' — ready to copy and paste",
+        "10. '100 Instagram Caption Hooks for Creators' — swipe file of opening lines that stop the scroll"
+      ]
+    },
+    {
+      type: "h2",
+      text: "Type 4 — Mini guides and PDF reports"
+    },
+    {
+      type: "ul",
+      items: [
+        "11. 'How to Validate Your Digital Product Idea in 60 Minutes' — single framework, single outcome",
+        "12. 'The 5-Step Formula to Price Your eBook for Maximum Sales' — specific and practical",
+        "13. 'How to Get Your First 1,000 Pinterest Followers in 30 Days' — specific platform, specific number, specific timeline"
+      ]
+    },
+    {
+      type: "h2",
+      text: "Type 5 — Email courses and challenges"
+    },
+    {
+      type: "ul",
+      items: [
+        "14. '5-Day eBook Launch Challenge' — one email per day with a specific action",
+        "15. '7-Day Digital Product Starter Course' — delivered via email, one lesson per day"
+      ]
+    },
+    {
+      type: "p",
+      text: "Email courses convert at lower opt-in rates than checklists but build significantly deeper relationships. A subscriber who completes a 5-day email course has spent 5 days engaging with your content — they know, like, and trust you far more than someone who downloaded a checklist. Conversion to paid products from email course subscribers is consistently 3-5x higher than from checklist subscribers."
+    },
+    {
+      type: "youtube",
+      videoId: "uVjdL1E2bKM",
+      title: "How to Create a Lead Magnet That ACTUALLY Converts — Complete Guide"
+    },
+    {
+      type: "h2",
+      text: "How to create your lead magnet in under 2 hours"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&auto=format&fit=crop",
+      alt: "Creating a lead magnet quickly with Canva and AI",
+      caption: "Canva + ChatGPT = professional lead magnet in under 2 hours"
+    },
+    {
+      type: "ul",
+      items: [
+        "Step 1 — Pick your lead magnet type: checklist or template for fastest creation",
+        "Step 2 — Use ChatGPT to generate the content: prompt — 'Create a 30-day checklist for [YOUR TOPIC] with one specific action per day. Make it practical and immediately actionable.'",
+        "Step 3 — Design in Canva: use a free PDF template, paste your content, add your logo and brand colors",
+        "Step 4 — Export as PDF: keep file size under 5MB for fast download",
+        "Step 5 — Upload to your email platform: create an automated delivery email that sends the PDF immediately after sign-up",
+        "Step 6 — Create an opt-in landing page: one headline, one sentence of benefit, one email field, one button"
+      ]
+    },
+    {
+      type: "h2",
+      text: "How to deliver your lead magnet automatically"
+    },
+    {
+      type: "p",
+      text: "Manual delivery kills momentum. Every lead magnet should be delivered automatically within seconds of someone signing up. Here is the exact setup for the most common platforms used by digital product creators."
+    },
+    {
+      type: "table",
+      headers: ["Platform", "How to Deliver Automatically"],
+      rows: [
+        ["Kit (ConvertKit)", "Upload PDF to Kit → create automation → trigger on subscribe → send email with PDF link"],
+        ["Brevo", "Upload PDF to Google Drive → create automation → send email with Drive link on subscribe"],
+        ["Mailchimp", "Create automation → welcome email → attach PDF or link to hosted file"],
+        ["Your own website", "Use Make.com → trigger on form submission → send email with PDF Google Drive link"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Where to promote your lead magnet"
+    },
+    {
+      type: "ul",
+      items: [
+        "Instagram bio link — most important placement. Update your bio link to your opt-in page immediately.",
+        "Every blog post — mention your lead magnet in the introduction and add an opt-in form at the end of each post",
+        "Pinterest — create 3-5 pins linking directly to your opt-in landing page. Pinterest drives email sign-ups extremely well.",
+        "Instagram Stories — show the lead magnet, swipe up or link in bio CTA",
+        "At the end of every YouTube video — 'grab my free [lead magnet] — link in description'",
+        "Twitter/X — pin a tweet about your lead magnet to the top of your profile"
+      ]
+    },
+    {
+      type: "stat",
+      value: "10x",
+      label: "more email subscribers when creators promote their lead magnet consistently vs only having a sign-up form on their website"
+    },
+    {
+      type: "h2",
+      text: "The connection between lead magnets and product sales"
+    },
+    {
+      type: "p",
+      text: "Your lead magnet should be directly connected to your paid product. The free resource solves step one of the problem. Your paid product solves the complete problem. Someone who downloads a '30-Day eBook Launch Checklist' is exactly the person who should buy your eBook creation course or Pro Vault. The lead magnet filters your audience and delivers your most motivated, pre-qualified potential buyers straight to your email list."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Once your lead magnet is live and delivering subscribers, read our complete guide on " },
+        { text: "email marketing for digital product creators", href: "/blog/email-marketing-for-digital-product-creators" },
+        { text: " to learn exactly how to convert those subscribers into paying customers with automated sequences and weekly broadcasts." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And if you are still building your first digital product, our guide on " },
+        { text: "how to create an eBook with ChatGPT in one weekend", href: "/blog/how-to-create-ebook-with-chatgpt" },
+        { text: " shows you how to go from zero to a sellable product using free AI tools — so you have something to sell to your new subscribers." },
+      ],
+    },
+  ],
+},
+  {
+  slug: "email-marketing-for-digital-product-creators",
+  category: "marketing",
+  title: "Email Marketing for Digital Product Creators: The Complete 2026 Guide",
+  description: "How to build, grow, and monetise an email list as a digital product creator — tools, sequences, subject lines, and the exact strategy that turns subscribers into buyers.",
+  date: "2026-06-27",
+  readingMinutes: 13,
+  tags: ["email marketing", "digital products", "marketing", "make money online"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&auto=format&fit=crop",
+      alt: "Email marketing for digital product creators 2026",
+      caption: "Email is the only marketing channel you own completely — no algorithm, no platform risk"
+    },
+    {
+      type: "p",
+      text: "Every social media platform can change its algorithm overnight. Instagram can cut your reach by 80% with a single update. YouTube can demonetise your channel without warning. TikTok can be banned in your country. Pinterest can de-index your pins. But your email list is yours. Nobody can take it away, throttle it, or hide it from your audience. This is why the most successful digital product creators consistently say the same thing: the money is in the list. This guide shows you exactly how to build that list and turn it into a reliable revenue stream."
+    },
+    {
+      type: "stat",
+      value: "$36",
+      label: "average return for every $1 spent on email marketing — the highest ROI of any marketing channel"
+    },
+    {
+      type: "h2",
+      text: "Why email outperforms every other channel for digital product sales"
+    },
+    {
+      type: "p",
+      text: "The average Instagram post reaches 3-8% of your followers. The average email reaches 20-40% of your subscribers. Email subscribers have already opted in to hear from you — they raised their hand and said 'yes, I want what you have.' That level of intent does not exist on any social platform. An email list of 500 engaged subscribers will consistently outperform an Instagram account with 10,000 followers when it comes to digital product sales."
+    },
+    {
+      type: "table",
+      headers: ["Channel", "Average Reach", "Conversion Rate", "You Own It?"],
+      rows: [
+        ["Email", "20-40% of list", "2-5%", "Yes ✅"],
+        ["Instagram", "3-8% of followers", "0.5-1%", "No ❌"],
+        ["YouTube", "10-20% of subscribers", "1-2%", "No ❌"],
+        ["Pinterest", "Algorithm dependent", "0.3-0.8%", "No ❌"],
+        ["Twitter/X", "2-5% of followers", "0.3-0.5%", "No ❌"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Step 1 — Choose your email platform"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop",
+      alt: "Email marketing platform for creators",
+      caption: "The right email platform makes list building and selling significantly easier"
+    },
+    {
+      type: "p",
+      text: "For digital product creators, you need an email platform that handles list building, automated sequences, broadcasts, and ideally integrates with your payment system. Here are the best options in 2026 based on features and price."
+    },
+    {
+      type: "table",
+      headers: ["Platform", "Free Tier", "Best For", "Price to Scale"],
+      rows: [
+        ["Kit (formerly ConvertKit)", "Up to 10,000 subscribers", "Creators, digital products", "$25/month at 1k subs"],
+        ["Brevo", "300 emails/day free", "Indian creators, automation", "Free up to 9k emails/month"],
+        ["Mailchimp", "500 subscribers", "Beginners, simple campaigns", "$13/month at 500 subs"],
+        ["Beehiiv", "Up to 2,500 subscribers", "Newsletter-first creators", "$42/month for growth features"],
+        ["MailerLite", "1,000 subscribers", "Bloggers, affordable", "$10/month at 1k subs"],
+      ]
+    },
+    {
+      type: "p",
+      text: "For Indian creators starting out, Brevo is the best free option — 300 emails per day free forever, with no subscriber limit. For creators focused on building a newsletter-first business, Kit is the industry standard with the best creator-focused features."
+    },
+    {
+      type: "h2",
+      text: "Step 2 — Build your list from zero"
+    },
+    {
+      type: "p",
+      text: "The fastest way to build an email list is with a lead magnet — a free, valuable resource that people exchange their email address to receive. Your lead magnet should solve one specific problem for your exact target audience in under 10 minutes. The more specific and immediately useful it is, the higher your opt-in rate will be."
+    },
+    {
+      type: "ul",
+      items: [
+        "Free PDF checklist — '30-Day eBook Launch Checklist' converts at 15-25% of visitors",
+        "Free mini guide — '5 ChatGPT Prompts to Write Your First eBook Chapter' converts at 10-20%",
+        "Free template — 'Content Calendar Template for Creators' converts at 20-35%",
+        "Free email course — '5-Day Digital Product Launch Challenge' converts at 8-15%",
+        "Free resource list — '50 Digital Product Ideas You Can Launch This Weekend' converts at 12-20%"
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Your lead magnet is the foundation of your entire email strategy. Read our dedicated guide on " },
+        { text: "how to create a lead magnet that actually converts", href: "/blog/lead-magnets-for-digital-products" },
+        { text: " for the complete framework — including the 5 lead magnet types that work best for digital product creators." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Step 3 — Set up your welcome sequence"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop",
+      alt: "Email welcome sequence for digital product creators",
+      caption: "Your welcome sequence is the most important email you will ever send — it sets the entire relationship"
+    },
+    {
+      type: "p",
+      text: "The welcome sequence is the automated series of emails that goes out to every new subscriber. This is your highest-open-rate email series — new subscribers are most engaged in the first 72 hours after signing up. Most creators waste this window by sending one welcome email and then going quiet. A proper welcome sequence warms the relationship, establishes your authority, and leads naturally to a product offer."
+    },
+    {
+      type: "table",
+      headers: ["Email", "When", "Goal", "Content"],
+      rows: [
+        ["Email 1 — Welcome", "Immediately", "Deliver lead magnet + set expectations", "Thank them, deliver the freebie, tell them what to expect"],
+        ["Email 2 — Your story", "Day 2", "Build trust and connection", "Why you started, what you believe, what you have learned"],
+        ["Email 3 — Best content", "Day 3", "Demonstrate expertise", "Your single most valuable tip or insight"],
+        ["Email 4 — Common mistake", "Day 5", "Create urgency and awareness", "The biggest mistake your audience makes and how to avoid it"],
+        ["Email 5 — Soft offer", "Day 7", "Introduce your product naturally", "Case study or result, then mention your paid product as the next step"],
+      ]
+    },
+    {
+      type: "quote",
+      text: "The welcome sequence is not a sales funnel. It is a relationship builder that happens to end with an offer. If the relationship is strong by email 5, the offer feels natural. If it is weak, the offer feels pushy."
+    },
+    {
+      type: "h2",
+      text: "Step 4 — Write subject lines that get opened"
+    },
+    {
+      type: "p",
+      text: "The subject line is the single most important part of any email. A great email with a bad subject line gets ignored. A mediocre email with a great subject line gets opened. The goal of the subject line is one thing only — get the email opened. Everything else happens inside."
+    },
+    {
+      type: "ul",
+      items: [
+        "Curiosity gap: 'The pricing mistake I almost made (and how to avoid it)'",
+        "Specific number: '7 subject line formulas that get 40%+ open rates'",
+        "Personal story: 'I made ₹0 in my first month. Here is what changed.'",
+        "Direct benefit: 'How to write an eBook chapter in 45 minutes using AI'",
+        "Question: 'Are you making this eBook pricing mistake?'",
+        "Urgency: 'Last chance — launch price ends tonight'",
+        "Controversy: 'Why I stopped recommending Amazon KDP to beginners'"
+      ]
+    },
+    {
+      type: "stat",
+      value: "47%",
+      label: "of email recipients open emails based on subject line alone — nothing else matters if they don't open it"
+    },
+    {
+      type: "h2",
+      text: "Step 5 — Send broadcast emails that sell"
+    },
+    {
+      type: "p",
+      text: "Broadcast emails are one-time emails sent to your entire list or a segment of it. These are different from automated sequences — they are timely, relevant, and often promotional. The best digital product creators send 1-2 broadcast emails per week. One value email for every promotional email keeps your list healthy and engaged."
+    },
+    {
+      type: "table",
+      headers: ["Email Type", "Frequency", "Goal", "Example"],
+      rows: [
+        ["Value email", "1x per week", "Build trust, stay top of mind", "Tip, insight, story, case study"],
+        ["Promotional email", "1x per week max", "Drive product sales", "Launch, discount, new product, bundle"],
+        ["Re-engagement", "Every 90 days", "Clean list, win back cold subs", "'Are you still interested in X?'"],
+        ["Story email", "2x per month", "Deepen connection", "Personal win, failure, lesson learned"],
+      ]
+    },
+    {
+      type: "youtube",
+      videoId: "TnlFzjtILcE",
+      title: "Ultimate Guide to Email Marketing for Beginners 2026 — Step by Step"
+    },
+    {
+      type: "h2",
+      text: "Step 6 — Grow your list consistently"
+    },
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&auto=format&fit=crop",
+      alt: "Growing email list for digital product creators",
+      caption: "Consistent list growth compounds — 10 new subscribers per day is 3,650 per year"
+    },
+    {
+      type: "ul",
+      items: [
+        "Add opt-in form to every blog post — mention your lead magnet in the first 300 words",
+        "Pin your lead magnet to the top of your Instagram profile — update the bio link",
+        "Create Pinterest pins linking directly to your opt-in landing page",
+        "Add 'PS: grab my free [lead magnet]' to every social media post",
+        "Mention your freebie at the end of every YouTube video or podcast episode",
+        "Run a 'free for email' promotion — give away your lead magnet for 48 hours with heavy promotion",
+        "Partner with other creators for newsletter swaps — recommend each other's lead magnets to your lists"
+      ]
+    },
+    {
+      type: "h2",
+      text: "Email marketing mistakes to avoid"
+    },
+    {
+      type: "ul",
+      items: [
+        "Emailing too rarely — once a month is not enough. Weekly minimum keeps you top of mind.",
+        "Only emailing when selling — if every email is a sales pitch, subscribers stop opening. Value first, always.",
+        "Ignoring mobile — 70%+ of emails are opened on phones. Keep emails short, single column, large text.",
+        "No clear CTA — every email needs one call to action. One. Not five. One.",
+        "Buying email lists — never. Purchased lists have low engagement, high spam rates, and destroy your sender reputation.",
+        "Not segmenting — buyers and non-buyers should get different emails. Buyers don't need to be sold what they already own."
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Email marketing works best when paired with a strong content strategy. Read our guide on " },
+        { text: "how the creator economy works and which income streams compound best", href: "/blog/creator-economy-explained" },
+        { text: " to understand how email fits into a full digital product business." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And if you haven't created your first digital product yet, start with our guide on " },
+        { text: "how to earn money selling eBooks and digital products", href: "/blog/how-to-earn-money-selling-ebooks-in-india" },
+        { text: " — your email list will be the primary channel you use to sell it." },
+      ],
+    },
+  ],
+},
   {
   slug: "best-platforms-to-sell-ebooks-2026",
   category: "ebook",
