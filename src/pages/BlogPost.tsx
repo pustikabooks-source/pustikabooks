@@ -12,6 +12,9 @@ export default function BlogPost() {
   const [progress, setProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headings = post?.body.filter(
+  (block: any) => block.type === "h2"
+) || [];
 
   useEffect(() => {
     if (!slug) return;
@@ -177,6 +180,29 @@ export default function BlogPost() {
       </header>
 
       <article className="mx-auto max-w-3xl px-6 py-12 md:py-16">
+        {/* Table of Contents */}
+{headings.length > 0 && (
+  <aside
+    className="mb-10 rounded-3xl border border-border bg-[#FAFAF8] p-6"
+  >
+    <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+      Contents
+    </p>
+
+    <ul className="mt-5 space-y-3">
+      {headings.map((heading: any, index: number) => (
+        <li key={index}>
+          <a
+            href={`#section-${index}`}
+            className="text-sm font-medium text-foreground hover:text-brand-purple"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}
 
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground mb-6">
@@ -250,12 +276,31 @@ export default function BlogPost() {
             </button>
           </div>
         </div>
+        {/* Key Takeaways */}
+<div className="mb-10 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-brand-purple/5 to-white p-7">
+  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+    Key Takeaways
+  </p>
+
+  <ul className="mt-5 space-y-3">
+    <li>✅ Learn the main idea in under 2 minutes.</li>
+    <li>✅ Follow practical, step-by-step advice.</li>
+    <li>✅ Avoid common beginner mistakes.</li>
+    <li>✅ Apply the strategies immediately.</li>
+  </ul>
+</div>
         {/* Body */}
         <div className="mt-10 space-y-6 text-[17px] leading-[1.75] text-foreground/90">
           {post.body.map((block, i) => {
             if (block.type === "h2") {
               return (
-                <h2 key={i} className="mt-12 text-2xl md:text-3xl font-bold tracking-tight">
+                <h2
+  id={`section-${headings.findIndex(
+    (h: any) => h.text === block.text
+  )}`}
+  key={i}
+  className="mt-12 text-2xl md:text-3xl font-bold tracking-tight scroll-mt-24"
+>
                   {block.text}
                 </h2>
               );
@@ -299,11 +344,11 @@ if (block.type === "p-link") {
             if (block.type === "quote") {
               return (
                 <blockquote
-                  key={i}
-                  className="border-l-4 border-brand-purple bg-secondary/60 rounded-r-2xl px-6 py-5 italic text-foreground"
-                >
-                  {block.text}
-                </blockquote>
+  key={i}
+  className="my-10 rounded-3xl border-l-4 border-brand-purple bg-gradient-to-r from-brand-purple/5 to-white px-8 py-7 italic text-lg leading-relaxed shadow-sm"
+>
+  “{block.text}”
+</blockquote>
               );
             }
             if (block.type === "stat") {
@@ -375,6 +420,51 @@ if (block.type === "p-link") {
                 </div>
               );
             }
+  if (block.type === "tip") {
+  return (
+    <div
+      key={i}
+      className="my-8 rounded-3xl border border-green-200 bg-green-50 p-6"
+    >
+      <div className="flex items-start gap-4">
+        <span className="text-3xl">💡</span>
+
+        <div>
+          <p className="font-bold text-green-800">
+            Pro Tip
+          </p>
+
+          <p className="mt-2 text-green-700 leading-relaxed">
+            {block.text}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+if (block.type === "warning") {
+  return (
+    <div
+      key={i}
+      className="my-8 rounded-3xl border border-red-200 bg-red-50 p-6"
+    >
+      <div className="flex items-start gap-4">
+        <span className="text-3xl">⚠️</span>
+
+        <div>
+          <p className="font-bold text-red-800">
+            Common Mistake
+          </p>
+
+          <p className="mt-2 text-red-700 leading-relaxed">
+            {block.text}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
             return null;
           })}
         </div>
@@ -397,6 +487,23 @@ if (block.type === "p-link") {
     Browse our products →
   </Link>
 </aside>
+        {/* Share CTA */}
+<div className="mt-14 rounded-3xl border border-border bg-[#FAFAF8] p-8 text-center">
+
+  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+    Enjoyed this article?
+  </p>
+
+  <h3 className="mt-3 text-3xl font-black">
+    Share it with another creator 🚀
+  </h3>
+
+  <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+    Every share helps more creators learn how to build digital income through
+    ebooks, AI and digital products.
+  </p>
+
+</div>
 
         {/* Bottom share row */}
         <div className="mt-12 pt-8 border-t border-border flex items-center justify-between flex-wrap gap-4">
@@ -435,19 +542,66 @@ if (block.type === "p-link") {
         {related.length > 0 && (
           <section className="mt-16">
             <h2 className="text-xl font-bold tracking-tight">Keep reading</h2>
-            <ul className="mt-5 space-y-4">
-              {related.map((r) => (
-                <li key={r.slug}>
-                  <Link
-                    to={`/blog/${r.slug}`}
-                    className="block rounded-2xl border border-border bg-card p-5 hover:border-brand-purple transition-colors"
-                  >
-                    <p className="font-bold">{r.title}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{r.description}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-8 grid md:grid-cols-3 gap-6">
+
+  {related.map((r) => {
+
+    const cover =
+      r.body.find((b: any) => b.type === "image")?.url || "";
+
+    return (
+
+      <Link
+        key={r.slug}
+        to={`/blog/${r.slug}`}
+        className="group overflow-hidden rounded-3xl border border-border bg-white shadow-card hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+      >
+
+        {cover && (
+          <div className="aspect-[16/10] overflow-hidden bg-secondary">
+            <img
+              src={cover}
+              alt={r.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        )}
+
+        <div className="p-6 flex flex-col flex-1">
+
+          <span className="inline-flex w-fit rounded-full bg-brand-purple/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
+            Related
+          </span>
+
+          <h3 className="mt-4 text-xl font-bold group-hover:text-brand-purple transition-colors">
+            {r.title}
+          </h3>
+
+          <p className="mt-3 text-sm text-muted-foreground line-clamp-3">
+            {r.description}
+          </p>
+
+          <div className="mt-auto pt-6 flex items-center justify-between">
+
+            <span className="text-xs text-muted-foreground">
+              ⏱ {r.readingMinutes} min
+            </span>
+
+            <span className="font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
+              Continue →
+            </span>
+
+          </div>
+
+        </div>
+
+      </Link>
+
+    );
+
+  })}
+
+</div>
           </section>
         )}
 
