@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.( woff|woff2|ttf|otf|webp|avif|png|jpg|jpeg|svg|ico|gif)",
+      "source": "/(.*)\\.(woff|woff2|ttf|otf|webp|avif|png|jpg|jpeg|svg|ico|gif)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
