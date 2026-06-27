@@ -81,7 +81,7 @@ function Hero() {
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-32 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-foreground">
           Turn Your Knowledge Into
-          <span className="text-brand-purple"> Digital Income</span>
+          <span className="text-brand-purple"> Digital Products & Passive Income</span>
         </h1>
         <p className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Learn how to create, publish and sell eBooks, digital products and AI-powered businesses—even if you're starting from zero.
@@ -273,8 +273,46 @@ export default function Index() {
           content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses. Practical guides for creators and entrepreneurs."
         />
         <link rel="canonical" href="https://pustikabooks.in/" />
-        <meta property="og:title" content="Pustika Books — Practical guides for Indian creators" />
-        <meta property="og:url" content="https://pustikabooks.in/" />
+        <meta property="og:type" content="website" />
+
+<meta property="og:title"
+content="Sell eBooks & Digital Products | Pustika Books" />
+
+<meta
+property="og:description"
+content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses."
+/>
+
+<meta
+property="og:image"
+content="https://pustikabooks.in/og-home.jpg"
+/>
+
+<meta property="og:url"
+content="https://pustikabooks.in/" />
+
+<meta property="og:site_name"
+content="Pustika Books" />
+
+<meta
+name="twitter:card"
+content="summary_large_image"
+/>
+
+<meta
+name="twitter:title"
+content="Sell eBooks & Digital Products | Pustika Books"
+/>
+
+<meta
+name="twitter:description"
+content="Learn how to create and sell digital products worldwide."
+/>
+
+<meta
+name="twitter:image"
+content="https://pustikabooks.in/og-home.jpg"
+/>
       </Helmet>
       <SiteHeader />
       <main>
