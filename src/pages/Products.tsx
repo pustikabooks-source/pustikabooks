@@ -613,7 +613,7 @@ function Pricing() {
 
 </div>
 
-</div>
+
 
 {/* WHY BUY FROM US */}
 
@@ -669,10 +669,8 @@ function Pricing() {
         No technical skills or previous experience required.
       </p>
     </div>
-
-  </div>
-
-</section>
+    </div>
+    </section>
   );
 }
         
