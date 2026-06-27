@@ -257,6 +257,88 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
+      <section
+  style={{
+    padding: "90px 24px",
+    background: "#FAFAFC",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "900px",
+      margin: "0 auto",
+      textAlign: "center",
+    }}
+  >
+    <p
+      style={{
+        color: "#7C3AED",
+        fontWeight: 700,
+        letterSpacing: "3px",
+        textTransform: "uppercase",
+        fontSize: "12px",
+      }}
+    >
+      WHY CHOOSE US
+    </p>
+
+    <h2
+      style={{
+        fontSize: "40px",
+        fontWeight: 900,
+        marginTop: "14px",
+        marginBottom: "20px",
+      }}
+    >
+      Everything we create is built for results.
+    </h2>
+
+    <p
+      style={{
+        color: "#666",
+        fontSize: "18px",
+        lineHeight: 1.8,
+        maxWidth: "700px",
+        margin: "0 auto 60px",
+      }}
+    >
+      We don't create content just to fill pages. Every guide,
+      ebook and resource is designed to help creators learn
+      faster, build valuable digital products, and generate
+      sustainable online income.
+    </p>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+        gap: "24px",
+      }}
+    >
+      {[
+        "✅ Practical step-by-step guides",
+        "🌍 Made for creators worldwide",
+        "💜 Affordable premium resources",
+        "🚀 Constantly updated content",
+      ].map((item) => (
+        <div
+          key={item}
+          style={{
+            background: "white",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #ececec",
+            fontWeight: 600,
+            fontSize: "17px",
+            boxShadow: "0 8px 20px rgba(0,0,0,.04)",
+          }}
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Contact */}
       <section style={{
@@ -285,14 +367,74 @@ export default function AboutUs() {
       </section>
 
       {/* Footer */}
-      <footer style={{ padding: "24px", textAlign: "center", borderTop: "1px solid #f0f0f0" }}>
-        <p style={{ fontSize: "13px", color: "#999" }}>
-          © 2026 Pustika Books ·{" "}
-          <Link to="/blog" style={{ color: "#7C3AED", textDecoration: "none" }}>Blog</Link>
-          {" · "}
-          <Link to="/privacy" style={{ color: "#7C3AED", textDecoration: "none" }}>Privacy</Link>
-        </p>
-      </footer>
+      <footer
+  style={{
+    background: "#0B0717",
+    color: "#fff",
+    padding: "60px 24px 30px",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+      gap: "40px",
+    }}
+  >
+    <div>
+      <h3 style={{ fontSize: "24px", fontWeight: 800 }}>
+        Pustika <span style={{ color: "#8B5CF6" }}>Books</span>
+      </h3>
+
+      <p style={{ color: "#bbb", lineHeight: 1.8, marginTop: 15 }}>
+        Practical ebooks, digital products and creator education for people
+        building online income.
+      </p>
+    </div>
+
+    <div>
+      <h4 style={{ marginBottom: 18 }}>Quick Links</h4>
+
+      <p><Link to="/">Home</Link></p>
+      <p><Link to="/blog">Blog</Link></p>
+      <p><Link to="/products">Products</Link></p>
+      <p><Link to="/about">About</Link></p>
+    </div>
+
+    <div>
+      <h4 style={{ marginBottom: 18 }}>Resources</h4>
+
+      <p><Link to="/privacy">Privacy Policy</Link></p>
+      <p><Link to="/refund">Refund Policy</Link></p>
+    </div>
+
+    <div>
+      <h4 style={{ marginBottom: 18 }}>Contact</h4>
+
+      <p>hello@pustikabooks.in</p>
+      <p>Worldwide 🌍</p>
+    </div>
+  </div>
+
+  <hr
+    style={{
+      borderColor: "#222",
+      margin: "40px 0 20px",
+    }}
+  />
+
+  <p
+    style={{
+      textAlign: "center",
+      color: "#999",
+      fontSize: "14px",
+    }}
+  >
+    © 2026 Pustika Books. All Rights Reserved.
+  </p>
+</footer>
     </main>
   );
 }
