@@ -112,29 +112,69 @@ function Pricing() {
 
         <div className="text-center max-w-3xl mx-auto">
 
-          <span className="inline-flex items-center rounded-full border border-brand-purple/20 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.25em] text-brand-purple shadow-sm">
-            Pricing
-          </span>
+  <span className="inline-flex items-center rounded-full border border-brand-purple/20 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-brand-purple shadow-sm">
+    PRODUCTS
+  </span>
 
-          <h2 className="mt-7 text-5xl md:text-7xl font-black tracking-tight leading-[1.05]">
-            Everything You Need
-            <br />
-            <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
-              To Build & Sell
-            </span>
-          </h2>
+  <h1 className="mt-8 text-5xl md:text-7xl font-black leading-tight tracking-tight">
+    Build & Sell Digital
+    <br />
+    <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">
+      Products With Confidence
+    </span>
+  </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-8">
-            No subscriptions.
-            <br />
-            Pay once. Own forever.
-          </p>
+  <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-8 max-w-2xl mx-auto">
+    Everything you need to create, launch and sell ebooks,
+    AI-powered resources and digital products without
+    guesswork or expensive courses.
+  </p>
 
-        </div>
+  <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
+    <a
+      href="#products"
+      className="rounded-full bg-gradient-cta px-8 py-4 text-white font-bold shadow-lg"
+    >
+      Explore Products →
+    </a>
+
+    <a
+      href="/blog"
+      className="rounded-full border-2 border-brand-purple px-8 py-4 font-bold text-brand-purple"
+    >
+      Read Free Guides →
+    </a>
+
+  </div>
+
+  <div className="mt-10 flex flex-wrap justify-center gap-3 text-sm font-medium">
+
+    <span className="rounded-full bg-white px-4 py-2 shadow">
+      ✅ Beginner Friendly
+    </span>
+
+    <span className="rounded-full bg-white px-4 py-2 shadow">
+      ⚡ Instant Delivery
+    </span>
+
+    <span className="rounded-full bg-white px-4 py-2 shadow">
+      ♾ Lifetime Access
+    </span>
+
+    <span className="rounded-full bg-white px-4 py-2 shadow">
+      🌍 Global Strategies
+    </span>
+
+  </div>
+
+</div>
         {/* Cards */}
 
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div
+  id="products"
+  className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch"
+>
 
           {/* ===================================================== */}
           {/* CARD 1 */}
