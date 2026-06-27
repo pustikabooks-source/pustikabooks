@@ -268,50 +268,45 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Sell eBooks & Digital Products | Pustika Books</title>
-        <meta
-          name="description"
-          content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses. Practical guides for creators and entrepreneurs."
-        />
-        <link rel="canonical" href="https://pustikabooks.in/" />
-        <meta property="og:type" content="website" />
-
-<meta property="og:title"
-content="Sell eBooks & Digital Products | Pustika Books" />
 
 <meta
-property="og:description"
-content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses."
+  name="description"
+  content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses."
 />
 
+<link rel="canonical" href="https://pustikabooks.in/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Pustika Books" />
 <meta
-property="og:image"
-content="https://pustikabooks.in/og-home.jpg"
+  property="og:title"
+  content="Sell eBooks & Digital Products | Pustika Books"
 />
-
-<meta property="og:url"
-content="https://pustikabooks.in/" />
-
-<meta property="og:site_name"
-content="Pustika Books" />
-
 <meta
-name="twitter:card"
-content="summary_large_image"
+  property="og:description"
+  content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses."
 />
-
+<meta property="og:url" content="https://pustikabooks.in/" />
 <meta
-name="twitter:title"
-content="Sell eBooks & Digital Products | Pustika Books"
+  property="og:image"
+  content="https://pustikabooks.in/og-home.jpg"
 />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Pustika Books - Sell eBooks & Digital Products" />
 
+<meta name="twitter:card" content="summary_large_image" />
 <meta
-name="twitter:description"
-content="Learn how to create and sell digital products worldwide."
+  name="twitter:title"
+  content="Sell eBooks & Digital Products | Pustika Books"
 />
-
 <meta
-name="twitter:image"
-content="https://pustikabooks.in/og-home.jpg"
+  name="twitter:description"
+  content="Learn how to create, publish and sell eBooks, digital products and AI-powered businesses."
+/>
+<meta
+  name="twitter:image"
+  content="https://pustikabooks.in/og-home.jpg"
 />
       </Helmet>
       <SiteHeader />
