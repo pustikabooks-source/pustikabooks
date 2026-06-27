@@ -594,7 +594,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to learn how SEO fits into building a profitable blogging business."
-        ]
+        },
       ]
     },
 
@@ -610,7 +610,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " for turning your knowledge into income."
-        ]
+        },
       ]
     },
 
@@ -626,7 +626,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " and build an email list that supports your business."
-        ]
+        },
       ]
     }
   ],
