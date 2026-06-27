@@ -607,11 +607,17 @@ function Pricing() {
         🔒 One-time payment • No subscription
       </p>
 
-    </div>
+        </div> {/* End Why Buy Grid */}
 
-  </div>
+  </div> {/* End Why Buy Section */}
 
-</div>
+</div> {/* End Products Grid */}
+
+</div> {/* End max-w-7xl */}
+
+</section>
+);
+}
 
 
 
