@@ -317,11 +317,11 @@ export const posts: BlogPost[] = [
       ]
     },
 
-    {
-      type: "youtube",
-      videoId: "MSLkYa6J2LQ",
-      title: "How to Write Your First eBook (Complete Beginner Guide)"
-    },
+  {
+  type: "youtube",
+  videoId: "ZSdcSV3tpgU",
+  title: "How to Create an Ebook for Free (Step by Step!)"
+  },
         {
       type: "h2",
       text: "Ideal eBook Length by Niche"
@@ -745,11 +745,11 @@ export const posts: BlogPost[] = [
       ]
     },
 
-    {
-      type: "youtube",
-      videoId: "MSLkYa6J2LQ",
-      title: "How to Write Your First eBook (Beginner Guide)"
-    },
+{
+  type: "youtube",
+  videoId: "ZSdcSV3tpgU",
+  title: "How to Create an Ebook for Free (Step by Step!)"
+},
         {
       type: "h2",
       text: "Step 8 — Edit Like a Professional"
@@ -1670,9 +1670,9 @@ export const posts: BlogPost[] = [
       text: "Publishing one great article every week is better than publishing ten low-quality articles. Focus on answering specific questions that people search for. Use headings, images, tables, statistics, and internal links to create helpful content."
     },
     {
-      type: "youtube",
-      videoId: "R5qR8SUqjM4",
-      title: "How to Start a Blog in 2026 (Complete Beginner Guide)"
+  type: "youtube",
+  videoId: "EP41DYCSd-c",
+  title: "How to Start a Blog & Make Money in 2026 (Step by Step)"
     },
         {
       type: "h2",
@@ -2720,9 +2720,9 @@ export const posts: BlogPost[] = [
     },
 
     {
-      type: "youtube",
-      videoId: "7a8jleKQ6M0",
-      title: "How to Build a Personal Brand in 2026"
+  type: "youtube",
+  videoId: "uJ8Pg6t_iho",
+  title: "How to START a Personal Brand (Full Course)"
     },
 
     {
