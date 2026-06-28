@@ -315,7 +315,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " and build an email list that supports your blogging business."
-        ]
+        },
       ]
     }
   ],
