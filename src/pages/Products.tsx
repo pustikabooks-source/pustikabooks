@@ -415,6 +415,113 @@ function Pricing() {
     </>
   );
 }
+function FreeResource() {
+  return (
+    <section className="py-24 px-6 bg-[#F7F3EC]">
+
+      <div className="max-w-6xl mx-auto">
+
+        <div className="rounded-[36px] bg-white border border-brand-purple/15 shadow-xl p-10 md:p-14">
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left */}
+
+            <div>
+
+              <span className="inline-flex rounded-full bg-green-100 text-green-700 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em]">
+
+                FREE DOWNLOAD
+
+              </span>
+
+              <h2 className="mt-6 text-4xl md:text-5xl font-black">
+
+                Creator Starter Kit
+
+              </h2>
+
+              <p className="mt-6 text-lg text-muted-foreground leading-8">
+
+                A free toolkit to help you plan, create and launch your first
+                digital product with confidence.
+
+              </p>
+
+              <div className="mt-8 space-y-4">
+
+                <p>✅ eBook Planning Worksheet</p>
+
+                <p>✅ Chapter Outline Template</p>
+
+                <p>✅ Product Validation Worksheet</p>
+
+                <p>✅ Weekly Creator Planner</p>
+
+                <p>✅ Website Launch Checklist</p>
+
+                <p>✅ Goal Tracker</p>
+
+              </div>
+
+              <div className="mt-10 flex gap-4">
+
+                <a
+                  href="/newsletter"
+                  className="rounded-full bg-gradient-cta px-8 py-4 text-white font-bold shadow-lg"
+                >
+                  Download Free →
+                </a>
+
+                <a
+                  href="/blog"
+                  className="rounded-full border-2 border-brand-purple px-8 py-4 font-bold text-brand-purple"
+                >
+                  Read Blog
+                </a>
+
+              </div>
+
+            </div>
+
+            {/* Right */}
+
+            <div className="rounded-3xl border border-dashed border-brand-purple/20 bg-[#FAF7F2] p-10 text-center">
+
+              <div className="text-7xl">
+                📘
+              </div>
+
+              <h3 className="mt-5 text-2xl font-black">
+
+                40+ Pages
+
+              </h3>
+
+              <p className="mt-4 text-muted-foreground">
+
+                Beautiful worksheets, planners and templates
+                for creators.
+
+              </p>
+
+              <div className="mt-8 inline-flex rounded-full bg-brand-purple text-white px-6 py-3 font-bold">
+
+                FREE
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
 function FAQ() {
   return (
     <section className="py-24 px-6 bg-white">
