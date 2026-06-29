@@ -413,7 +413,7 @@ export default function AboutUs() {
     <div>
       <h4 style={{ marginBottom: 18 }}>Contact</h4>
 
-      <p>hello@pustikabooks.in</p>
+      <p>pustikabooks@gmail.com</p>
       <p>Worldwide 🌍</p>
     </div>
   </div>
