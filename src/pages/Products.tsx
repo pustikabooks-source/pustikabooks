@@ -713,7 +713,7 @@ function Products() {
       <main>
 
         <Pricing />
-
+        <FreeResource />
         <FAQ />
 
       </main>
