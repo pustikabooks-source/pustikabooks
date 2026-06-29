@@ -590,6 +590,11 @@ function FreeResource() {
   </div>
 
 </div>
+  </div>
+
+    </section>
+  );
+}
               
 
                 
