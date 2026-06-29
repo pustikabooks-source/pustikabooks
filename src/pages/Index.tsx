@@ -600,7 +600,7 @@ function SiteFooter() {
               </a>
 
               <a
-                href="https://x.com/thepustika"
+                href="https://x.com/PustikaBooks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-brand-purple"
@@ -618,10 +618,10 @@ function SiteFooter() {
               </a>
 
               <a
-                href="mailto:hello@pustikabooks.in"
+                href="mailto: pustikabooks@gmail.com"
                 className="block hover:text-brand-purple"
               >
-                hello@pustikabooks.in
+                pustikabooks@gmail.com
               </a>
 
             </div>
