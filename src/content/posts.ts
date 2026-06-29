@@ -23,6 +23,637 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+  slug: "how-to-self-publish-an-ebook-without-amazon",
+  category: "ebook",
+  title: "How to Self-Publish an eBook Without Amazon (Complete Guide 2026)",
+  description: "Learn how to self-publish an eBook without Amazon in 2026. Discover the best platforms, payment methods, pricing strategies, marketing tips, and how to build a profitable digital publishing business you fully own.",
+  date: "2026-06-29",
+  readingMinutes: 18,
+  tags: [
+    "self publishing",
+    "ebook",
+    "digital products",
+    "gumroad",
+    "payhip",
+    "creator business"
+  ],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop",
+      alt: "Creator publishing an ebook from a laptop",
+      caption: "Publishing independently gives creators complete control over their audience, pricing and profits."
+    },
+
+    {
+      type: "p",
+      text: "When most people think about self-publishing an eBook, Amazon Kindle Direct Publishing (KDP) is usually the first platform that comes to mind. Amazon has helped millions of authors publish books and reach readers around the world. However, in 2026, Amazon is no longer the only option—and for many creators, it isn't even the best one."
+    },
+
+    {
+      type: "p",
+      text: "Today's creator economy has changed how digital products are sold. Instead of relying entirely on online marketplaces, creators are building their own audiences, growing email lists, and selling directly through personal websites and digital product platforms. This approach gives them greater control over pricing, branding, customer relationships, and long-term business growth."
+    },
+
+    {
+      type: "stat",
+      value: "100%",
+      label: "You own your audience when customers buy directly from your website instead of a marketplace."
+    },
+
+    {
+      type: "h2",
+      text: "Can You Really Publish an eBook Without Amazon?"
+    },
+
+    {
+      type: "p",
+      text: "Absolutely. Thousands of independent creators successfully sell eBooks every day without ever listing them on Amazon. Instead of competing against millions of books in one marketplace, they attract readers through search engines, blogs, YouTube, Pinterest, LinkedIn, email newsletters, and social media. Every sale strengthens their own brand rather than someone else's platform."
+    },
+
+    {
+      type: "quote",
+      text: "Don't build your business on rented land. Build an audience you own."
+    },
+
+    {
+      type: "h2",
+      text: "Why More Creators Are Choosing Independent Publishing"
+    },
+
+    {
+      type: "p",
+      text: "Selling directly offers several advantages that traditional marketplaces simply cannot provide. When customers purchase from your own website, you know who they are, you can communicate with them by email, recommend additional products, and create long-term relationships. This turns a one-time buyer into a loyal customer who may purchase multiple products over time."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Amazon KDP",
+        "Independent Publishing"
+      ],
+      rows: [
+        [
+          "Marketplace controls customer relationship",
+          "You own the customer relationship"
+        ],
+        [
+          "Limited branding",
+          "Complete brand control"
+        ],
+        [
+          "Platform decides many policies",
+          "You control pricing and offers"
+        ],
+        [
+          "No direct email list",
+          "Build your own email list"
+        ],
+        [
+          "Compete with millions of books",
+          "Build your own audience"
+        ]
+      ]
+    },
+
+    {
+      type: "p",
+      text: "This doesn't mean Amazon is a bad platform. In fact, many successful creators use Amazon as one of several distribution channels. The difference is that they don't depend on Amazon alone. Their website becomes the center of their business, while marketplaces simply provide additional visibility."
+    },
+
+    {
+      type: "h2",
+      text: "Who Should Publish Without Amazon?"
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Creators selling educational guides or tutorials.",
+        "Coaches and consultants building a personal brand.",
+        "Bloggers looking to monetize their audience.",
+        "Content creators selling digital products.",
+        "Freelancers creating downloadable resources.",
+        "Entrepreneurs building a long-term online business."
+      ]
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&auto=format&fit=crop",
+      alt: "Planning an ebook business",
+      caption: "Your website can become the foundation of a sustainable digital publishing business."
+    },
+
+    {
+      type: "p",
+      text: "Throughout this guide, you'll learn exactly how to publish your eBook without Amazon, choose the right selling platform, collect payments, grow an email list, market your book, and build a business that you fully control."
+    },
+        {
+      type: "h2",
+      text: "Step 1: Choose the Right Platform to Sell Your eBook"
+    },
+
+    {
+      type: "p",
+      text: "The platform you choose will determine how customers buy your eBook, how you receive payments, and how much control you have over your business. Fortunately, today's creators have several excellent alternatives to Amazon, each with its own strengths. Your decision should depend on your audience, technical skills, pricing strategy, and long-term goals."
+    },
+
+    {
+      type: "p",
+      text: "If you're just starting out, focus on simplicity. You don't need an expensive website or complicated software to begin selling. As your audience grows, you can gradually move toward a fully branded website where you own the entire customer experience."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&auto=format&fit=crop",
+      alt: "Choosing an ebook selling platform",
+      caption: "The right platform depends on your goals, audience and business strategy."
+    },
+
+    {
+      type: "h2",
+      text: "Best Platforms to Self-Publish Without Amazon"
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Platform",
+        "Best For",
+        "Website Required",
+        "Beginner Friendly"
+      ],
+      rows: [
+        [
+          "Gumroad",
+          "Digital creators",
+          "No",
+          "★★★★★"
+        ],
+        [
+          "Payhip",
+          "Selling downloads",
+          "No",
+          "★★★★★"
+        ],
+        [
+          "Lemon Squeezy",
+          "Global businesses",
+          "No",
+          "★★★★☆"
+        ],
+        [
+          "Shopify",
+          "Large digital stores",
+          "Yes",
+          "★★★☆☆"
+        ],
+        [
+          "Your Own Website",
+          "Building a brand",
+          "Yes",
+          "★★★★☆"
+        ]
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Gumroad"
+    },
+
+    {
+      type: "p",
+      text: "Gumroad is one of the most popular platforms for independent creators. It allows you to upload your eBook, set your own price, accept payments from customers worldwide, and automatically deliver the download after purchase. It also supports discount codes, memberships, bundles, and email updates."
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Very easy to set up.",
+        "Automatic digital delivery.",
+        "Supports multiple currencies.",
+        "Built-in checkout page.",
+        "Perfect for first-time creators."
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Payhip"
+    },
+
+    {
+      type: "p",
+      text: "Payhip is another excellent option for creators selling digital downloads. It offers a clean storefront, VAT handling, affiliate marketing tools, coupon codes, and secure file delivery. Many authors prefer Payhip because of its simplicity and professional checkout experience."
+    },
+
+    {
+      type: "quote",
+      text: "The best platform is the one that helps you start selling today—not the one with the most features."
+    },
+
+    {
+      type: "h2",
+      text: "Lemon Squeezy"
+    },
+
+    {
+      type: "p",
+      text: "Lemon Squeezy is becoming increasingly popular among digital creators because it handles global taxes, payment processing, subscriptions, and digital product delivery. If you plan to build a larger online business with software, templates, courses, and eBooks, it's worth considering."
+    },
+
+    {
+      type: "stat",
+      value: "3",
+      label: "The three easiest platforms for beginners are Gumroad, Payhip and Lemon Squeezy."
+    },
+
+    {
+      type: "h2",
+      text: "Should You Sell From Your Own Website?"
+    },
+
+    {
+      type: "p",
+      text: "If your goal is to build a long-term brand, the answer is yes. A personal website gives you complete control over your content, pricing, customer relationships, SEO, and email marketing. Unlike marketplaces, every visitor becomes an opportunity to grow your audience instead of someone else's platform."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Marketplace",
+        "Your Website"
+      ],
+      rows: [
+        [
+          "Platform owns the audience",
+          "You own the audience"
+        ],
+        [
+          "Limited branding",
+          "Unlimited branding"
+        ],
+        [
+          "Restricted marketing",
+          "Complete marketing freedom"
+        ],
+        [
+          "Marketplace competition",
+          "Build authority through SEO"
+        ]
+      ]
+    },
+
+    {
+      type: "p",
+      text: "Many successful creators use a hybrid strategy. They maintain their own website for branding and SEO while also using platforms like Gumroad or Payhip to handle secure payments and digital delivery. This approach combines the simplicity of digital product platforms with the long-term benefits of owning your audience."
+    },
+        {
+      type: "h2",
+      text: "Step 2: Price Your eBook Strategically"
+    },
+
+    {
+      type: "p",
+      text: "Pricing is one of the biggest decisions you'll make as an independent publisher. Many first-time creators either underprice their work because they lack confidence or overprice it without understanding their audience. The right price depends on the value your eBook provides, the problem it solves, your niche, and your long-term business goals."
+    },
+
+    {
+      type: "p",
+      text: "Remember that readers aren't paying for the number of pages—they're paying for the outcome your eBook helps them achieve. A concise 40-page guide that saves someone weeks of work can be far more valuable than a 300-page book filled with unnecessary information."
+    },
+
+    {
+      type: "quote",
+      text: "People don't buy information—they buy transformation."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "eBook Type",
+        "Recommended Price"
+      ],
+      rows: [
+        [
+          "Short Guide (20–40 pages)",
+          "$5–15"
+        ],
+        [
+          "Complete Guide (50–100 pages)",
+          "$15–35"
+        ],
+        [
+          "Professional Handbook",
+          "$35–75"
+        ],
+        [
+          "Premium Bundle",
+          "$75+"
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "Value > Pages",
+      label: "Readers care more about solving a problem than the length of your eBook."
+    },
+
+    {
+      type: "h2",
+      text: "Step 3: Set Up Secure Payment Processing"
+    },
+
+    {
+      type: "p",
+      text: "Once your pricing is ready, you'll need a reliable way to accept payments. Most digital product platforms handle payment processing automatically, making it easy for customers to purchase from anywhere in the world. If you're selling directly from your own website, you'll also need a trusted payment gateway."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Payment Method",
+        "Best For"
+      ],
+      rows: [
+        [
+          "Stripe",
+          "Global card payments"
+        ],
+        [
+          "PayPal",
+          "International customers"
+        ],
+        [
+          "Razorpay",
+          "Indian businesses"
+        ],
+        [
+          "Gumroad Payments",
+          "Automatic checkout"
+        ]
+      ]
+    },
+
+    {
+      type: "p",
+      text: "A smooth checkout experience increases conversions. Avoid asking customers to complete unnecessary steps before receiving their purchase. The fewer clicks between 'Buy Now' and download, the better your conversion rate will usually be."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop",
+      alt: "Customer purchasing a digital product online",
+      caption: "A simple checkout process helps increase ebook sales."
+    },
+
+    {
+      type: "h2",
+      text: "Step 4: Deliver Your eBook Automatically"
+    },
+
+    {
+      type: "p",
+      text: "Customers expect instant delivery after completing their purchase. Whether you're using Gumroad, Payhip, Lemon Squeezy, or your own website, your system should automatically send the download link immediately after payment. Instant delivery creates a professional customer experience and reduces support requests."
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Deliver files immediately after payment.",
+        "Send a confirmation email with the download link.",
+        "Allow customers to download the file more than once.",
+        "Use secure download links when possible.",
+        "Include a thank-you message with your branding."
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Step 5: Build Your Email List From Every Sale"
+    },
+
+    {
+      type: "p",
+      text: "One of the biggest advantages of independent publishing is that every customer can become a long-term subscriber. Instead of simply completing a sale, invite buyers to join your newsletter where you can share updates, exclusive content, and future product launches."
+    },
+
+    {
+      type: "quote",
+      text: "An email list is an asset you own. Marketplaces are platforms you borrow."
+    },
+
+    {
+      type: "p",
+      text: "Even if someone buys only one eBook today, they may become a repeat customer in the future. By consistently delivering valuable content through email, you build trust that leads to additional sales without spending more money on advertising."
+    },
+    {
+      type: "h2",
+      text: "Step 6: Market Your eBook Without Amazon"
+    },
+
+    {
+      type: "p",
+      text: "Publishing your eBook is only the beginning. The most successful independent creators spend just as much time marketing their products as they do creating them. Unlike Amazon, where customers discover your book through marketplace search, independent publishing requires you to bring readers to your own website or sales page."
+    },
+
+    {
+      type: "p",
+      text: "The good news is that you don't need a huge audience to start making sales. A consistent content strategy can attract readers from search engines, social media, YouTube, and email for years after your eBook is published."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop",
+      alt: "Marketing an ebook online",
+      caption: "Content marketing helps you sell eBooks consistently without depending on marketplace algorithms."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Marketing Channel",
+        "Long-Term Value"
+      ],
+      rows: [
+        [
+          "SEO Blog",
+          "★★★★★"
+        ],
+        [
+          "Email Newsletter",
+          "★★★★★"
+        ],
+        [
+          "YouTube",
+          "★★★★☆"
+        ],
+        [
+          "Pinterest",
+          "★★★★☆"
+        ],
+        [
+          "LinkedIn",
+          "★★★★☆"
+        ],
+        [
+          "Instagram",
+          "★★★☆☆"
+        ]
+      ]
+    },
+
+    {
+      type: "quote",
+      text: "Create content once. Let it sell your eBook for years."
+    },
+
+    {
+      type: "h2",
+      text: "Common Mistakes Independent Authors Make"
+    },
+
+    {
+      type: "p",
+      text: "Many creators assume that publishing alone will generate sales. In reality, most successful eBook businesses are built through consistent marketing and audience building. Avoiding a few common mistakes can save months of frustration."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Mistake",
+        "Better Approach"
+      ],
+      rows: [
+        [
+          "Publishing without an audience",
+          "Build an email list while creating your eBook."
+        ],
+        [
+          "Only relying on social media",
+          "Use SEO, email and YouTube together."
+        ],
+        [
+          "Ignoring your website",
+          "Make your website the center of your business."
+        ],
+        [
+          "Pricing too low",
+          "Price based on value, not page count."
+        ],
+        [
+          "No lead magnet",
+          "Offer a free resource to grow your audience."
+        ],
+        [
+          "Publishing once and disappearing",
+          "Promote your eBook consistently."
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "80%",
+      label: "Many ebook sales come weeks or months after publishing through evergreen content and email marketing."
+    },
+
+    {
+      type: "h2",
+      text: "Self-Publishing Checklist"
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Finish writing and editing your eBook.",
+        "Design a professional cover.",
+        "Format the PDF or EPUB correctly.",
+        "Choose a selling platform.",
+        "Set up secure payment processing.",
+        "Create a compelling sales page.",
+        "Prepare automatic file delivery.",
+        "Build an email list with a free lead magnet.",
+        "Publish supporting blog articles.",
+        "Promote consistently through multiple channels."
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Final Thoughts"
+    },
+
+    {
+      type: "p",
+      text: "Self-publishing without Amazon gives you something far more valuable than a place to sell your eBook—it gives you ownership. You own your audience, your brand, your pricing, and your future. While marketplaces can be useful, your own website and email list are the foundation of a sustainable digital publishing business."
+    },
+
+    {
+      type: "p",
+      text: "Start simple. Publish your first eBook, learn from real customers, improve your process, and continue building your content library. Every blog post, newsletter, and digital product strengthens your business and creates new opportunities for long-term growth."
+    },
+
+    {
+  type: "youtube",
+  videoId: "qkfUHC0fp-M",
+  title: "How To Sell Digital Products (Best Platform To Sell Digital Products)"
+},
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Before publishing, make sure you've formatted your book correctly by reading "
+        },
+        {
+          text: "How to Format an eBook for PDF, EPUB and Kindle",
+          href: "/blog/how-to-format-an-ebook"
+        },
+        {
+          text: "."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Need a professional-looking cover? Read "
+        },
+        {
+          text: "How to Design a Professional eBook Cover",
+          href: "/blog/how-to-design-an-ebook-cover"
+        },
+        {
+          text: " for practical design tips."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "After publishing, learn "
+        },
+        {
+          text: "How to Promote Your eBook Without an Audience",
+          href: "/blog/how-to-promote-your-ebook-without-an-audience"
+        },
+        {
+          text: " to start getting your first readers and customers."
+        },
+      ]
+    }
+  ],
+},
+    
+  {
   slug: "how-to-format-an-ebook",
   category: "ebook",
   title: "How to Format an eBook for PDF, EPUB and Kindle (Complete Guide 2026)",
