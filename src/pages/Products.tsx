@@ -497,7 +497,7 @@ function FreeResource() {
     ✓ Unsubscribe anytime
   </p>
 
-</div>
+
 
                 <a
                   href="/blog"
