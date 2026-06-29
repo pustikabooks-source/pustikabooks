@@ -23,6 +23,936 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+  slug: "how-to-format-an-ebook",
+  category: "ebook",
+  title: "How to Format an eBook for PDF, EPUB and Kindle (Complete Guide 2026)",
+  description: "Learn how to format an eBook professionally for PDF, EPUB and Kindle. Discover the best fonts, layouts, spacing, images, file formats, and tools to publish your eBook with confidence.",
+  date: "2026-06-29",
+  readingMinutes: 17,
+  tags: [
+    "ebook formatting",
+    "pdf",
+    "epub",
+    "kindle",
+    "ebook publishing"
+  ],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop",
+      alt: "Formatting an ebook for publishing",
+      caption: "Professional formatting makes your eBook easier to read and more enjoyable for your audience."
+    },
+
+    {
+      type: "p",
+      text: "You've finished writing your eBook—now it's time to format it properly. Formatting is much more than making your book look attractive. A well-formatted eBook improves readability, works correctly on different devices, and creates a professional impression. Whether you plan to sell your eBook as a PDF on your website or publish it as an EPUB for e-readers, understanding the differences between formats is essential."
+    },
+
+    {
+      type: "stat",
+      value: "90%",
+      label: "of formatting problems can be avoided by using consistent styles and headings from the beginning."
+    },
+
+    {
+      type: "h2",
+      text: "Why eBook Formatting Matters"
+    },
+
+    {
+      type: "p",
+      text: "Readers expect a smooth reading experience. Poor spacing, inconsistent fonts, broken images, and missing chapter links can make even excellent content feel unprofessional. Good formatting helps readers stay focused on your ideas instead of struggling with the layout."
+    },
+
+    {
+      type: "quote",
+      text: "Professional formatting makes your content invisible—so readers notice your ideas instead of your layout."
+    },
+
+    {
+      type: "h2",
+      text: "Understanding PDF, EPUB and Kindle Formats"
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Format",
+        "Best For"
+      ],
+      rows: [
+        [
+          "PDF",
+          "Selling from your own website, Gumroad or email delivery."
+        ],
+        [
+          "EPUB",
+          "Apple Books, Kobo and most eReaders."
+        ],
+        [
+          "Kindle",
+          "Publishing through Amazon KDP."
+        ]
+      ]
+    },
+
+    {
+      type: "p",
+      text: "PDF files keep every page exactly as you designed it, making them ideal for workbooks, guides, and visually rich eBooks. EPUB is a reflowable format, meaning the text automatically adjusts to different screen sizes and reader preferences. Kindle accepts EPUB uploads and converts them for Kindle devices during publishing, so you generally don't need to create a separate MOBI file anymore.1"
+    },
+
+    {
+      type: "h2",
+      text: "Choose the Right Page Size"
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&auto=format&fit=crop",
+      alt: "Planning ebook page layout",
+      caption: "Choose a page size that matches how readers will consume your eBook."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Use Case",
+        "Recommended Size"
+      ],
+      rows: [
+        [
+          "Standard PDF eBook",
+          "A4 or US Letter"
+        ],
+        [
+          "Workbook",
+          "A4 Portrait"
+        ],
+        [
+          "Mobile-Friendly Guide",
+          "6 × 9 inches"
+        ],
+        [
+          "EPUB",
+          "Uses reflowable text (no fixed page size)"
+        ]
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Choose Readable Fonts"
+    },
+
+    {
+      type: "p",
+      text: "Stick to simple, professional fonts that are easy to read on both desktop and mobile devices. Avoid decorative fonts for body text. Keep headings consistent and use the same font family throughout your eBook to create a polished appearance."
+    },
+        {
+      type: "h2",
+      text: "Create a Consistent Layout"
+    },
+
+    {
+      type: "p",
+      text: "Consistency is the foundation of professional formatting. Every chapter should use the same heading styles, spacing, margins, font sizes, and paragraph alignment. Readers shouldn't notice formatting changes as they move through your eBook."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&auto=format&fit=crop",
+      alt: "Consistent ebook formatting",
+      caption: "Consistent formatting improves readability and creates a professional reading experience."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Element",
+        "Recommendation"
+      ],
+      rows: [
+        [
+          "Heading 1",
+          "26–32 pt Bold"
+        ],
+        [
+          "Heading 2",
+          "18–22 pt Bold"
+        ],
+        [
+          "Body Text",
+          "11–12 pt"
+        ],
+        [
+          "Line Spacing",
+          "1.4–1.6"
+        ],
+        [
+          "Paragraph Spacing",
+          "8–12 pt"
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "1.5",
+      label: "line spacing provides a comfortable reading experience for most digital books."
+    },
+
+    {
+      type: "h2",
+      text: "Use Images Correctly"
+    },
+
+    {
+      type: "p",
+      text: "Images should support your content—not distract from it. Use high-resolution visuals, compress them to keep file sizes manageable, and include descriptive captions where appropriate. Avoid stretching or distorting images."
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Use high-quality images (at least 1200 px wide).",
+        "Compress images before exporting your eBook.",
+        "Keep image styles consistent.",
+        "Center-align images for a clean layout.",
+        "Always include meaningful alt text if publishing online."
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Add a Clickable Table of Contents"
+    },
+
+    {
+      type: "p",
+      text: "A clickable table of contents makes navigation much easier, especially in longer eBooks. Most word processors and design tools can generate one automatically when you use proper heading styles."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Format",
+        "Supports Clickable TOC"
+      ],
+      rows: [
+        [
+          "PDF",
+          "Yes"
+        ],
+        [
+          "EPUB",
+          "Yes"
+        ],
+        [
+          "Kindle",
+          "Yes"
+        ]
+      ]
+    },
+
+    {
+      type: "quote",
+      text: "A good table of contents helps readers find what they need in seconds."
+    },
+
+    {
+      type: "h2",
+      text: "Best Tools for Formatting an eBook"
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Tool",
+        "Best For"
+      ],
+      rows: [
+        [
+          "Canva",
+          "Beautiful PDF eBooks"
+        ],
+        [
+          "Google Docs",
+          "Writing and exporting PDFs"
+        ],
+        [
+          "Microsoft Word",
+          "Professional manuscripts"
+        ],
+        [
+          "LibreOffice",
+          "Free document formatting"
+        ],
+        [
+          "Atticus",
+          "Professional book formatting"
+        ]
+      ]
+    },
+
+    {
+      type: "p",
+      text: "Choose the tool that matches your workflow. For most beginners, Google Docs or Microsoft Word combined with Canva for the cover is more than enough to create a polished eBook."
+    },
+
+    {
+      type: "youtube",
+      videoId: "xh1tiAwba5E",
+      title: "Create an Ebook in 30 Minutes with Canva (Step-by-Step Tutorial)"
+    },
+        {
+      type: "h2",
+      text: "Common eBook Formatting Mistakes"
+    },
+
+    {
+      type: "p",
+      text: "Even great content can feel unprofessional if it's poorly formatted. Before publishing, review your eBook carefully and remove anything that interrupts the reading experience."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Mistake",
+        "Better Approach"
+      ],
+      rows: [
+        [
+          "Using too many fonts",
+          "Stick to one font family with different weights."
+        ],
+        [
+          "Tiny text",
+          "Use 11–12 pt body text for comfortable reading."
+        ],
+        [
+          "No chapter spacing",
+          "Start each chapter on a new page."
+        ],
+        [
+          "Low-quality images",
+          "Use clear, high-resolution images."
+        ],
+        [
+          "No table of contents",
+          "Include a clickable TOC for easier navigation."
+        ],
+        [
+          "Inconsistent headings",
+          "Use the same heading styles throughout."
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "60%",
+      label: "of first-time formatting issues are caused by inconsistent fonts, spacing, and heading styles."
+    },
+
+    {
+      type: "h2",
+      text: "PDF vs EPUB vs Kindle: Which Should You Choose?"
+    },
+
+    {
+      type: "p",
+      text: "The best format depends on where and how you plan to distribute your eBook. Many creators publish in more than one format to reach different audiences."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Feature",
+        "PDF",
+        "EPUB",
+        "Kindle"
+      ],
+      rows: [
+        [
+          "Best for",
+          "Website & Gumroad",
+          "Apple Books & Kobo",
+          "Amazon KDP"
+        ],
+        [
+          "Fixed Layout",
+          "Yes",
+          "No",
+          "No"
+        ],
+        [
+          "Responsive Text",
+          "No",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Easy to Print",
+          "Yes",
+          "No",
+          "No"
+        ],
+        [
+          "Ideal for Workbooks",
+          "Excellent",
+          "Limited",
+          "Limited"
+        ]
+      ]
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&auto=format&fit=crop",
+      alt: "Publishing an ebook",
+      caption: "Export your eBook in the formats your audience is most likely to use."
+    },
+
+    {
+      type: "h2",
+      text: "Before You Export Your eBook"
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Check every page for formatting consistency.",
+        "Verify that all images are clear and properly aligned.",
+        "Test every hyperlink.",
+        "Review your table of contents.",
+        "Proofread one final time.",
+        "Export in high quality.",
+        "Open the exported file on both desktop and mobile devices."
+      ]
+    },
+
+    {
+      type: "quote",
+      text: "Professional formatting builds trust before readers even begin Chapter One."
+    },
+
+    {
+      type: "h2",
+      text: "Final Thoughts"
+    },
+
+    {
+      type: "p",
+      text: "Formatting is the final step that transforms your manuscript into a polished digital product. Whether you choose PDF, EPUB, or Kindle, focus on readability, consistency, and simplicity. A well-formatted eBook creates a better experience for readers and reflects the quality of the knowledge inside."
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "If you're still writing your manuscript, read "
+        },
+        {
+          text: "How to Write an eBook That People Actually Finish Reading",
+          href: "/blog/how-to-write-an-ebook"
+        },
+        {
+          text: " for a complete step-by-step writing guide."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Need a professional cover? Learn "
+        },
+        {
+          text: "How to Design a Professional eBook Cover",
+          href: "/blog/how-to-design-an-ebook-cover"
+        },
+        {
+          text: " to create a cover that attracts more readers."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Once your eBook is ready, discover "
+        },
+        {
+          text: "How to Promote Your eBook Without an Audience",
+          href: "/blog/how-to-promote-your-ebook-without-an-audience"
+        },
+        {
+          text: " and start getting your first readers."
+        },
+      ]
+    }
+  ],
+},
+  {
+  slug: "how-to-design-an-ebook-cover",
+  category: "ebook",
+  title: "How to Design a Professional eBook Cover That Increases Sales (Complete Guide 2026)",
+  description: "Learn how to design an eBook cover that grabs attention and increases sales. Discover typography, color psychology, layouts, Canva tips, AI tools, and common mistakes to avoid.",
+  date: "2026-06-29",
+  readingMinutes: 16,
+  tags: [
+    "ebook cover",
+    "ebook design",
+    "canva",
+    "ebook marketing",
+    "self publishing"
+  ],
+  body: [
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&auto=format&fit=crop",
+      alt: "Professional ebook cover design",
+      caption: "A great eBook cover creates a powerful first impression before readers see a single page."
+    },
+
+    {
+      type: "p",
+      text: "People often say 'don't judge a book by its cover,' but readers do exactly that. Whether you're selling your eBook on your own website, Gumroad, Etsy, or another marketplace, your cover is usually the first thing potential buyers notice. A professional cover builds trust, communicates quality, and encourages people to learn more. In this guide, you'll learn how to design an eBook cover that attracts attention and increases conversions—even if you have no design experience."
+    },
+
+    {
+      type: "stat",
+      value: "7",
+      label: "seconds or less is often enough for a visitor to decide whether your eBook looks worth exploring."
+    },
+
+    {
+      type: "h2",
+      text: "Why Your eBook Cover Matters"
+    },
+
+    {
+      type: "p",
+      text: "Your cover acts as the visual advertisement for your eBook. It should immediately communicate the topic, target audience, and overall quality of your content. A poorly designed cover can reduce sales, while a clean and professional design increases credibility and encourages more clicks."
+    },
+
+    {
+      type: "quote",
+      text: "Your cover doesn't just sell your eBook—it earns the reader's first click."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&auto=format&fit=crop",
+      alt: "Planning an ebook cover",
+      caption: "Great covers combine clarity, simplicity, and a strong visual hierarchy."
+    },
+
+    {
+      type: "h2",
+      text: "The Five Elements of a Great eBook Cover"
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Element",
+        "Purpose"
+      ],
+      rows: [
+        [
+          "Title",
+          "Clearly communicates the promise."
+        ],
+        [
+          "Subtitle",
+          "Explains who the book is for."
+        ],
+        [
+          "Visual",
+          "Creates instant attention."
+        ],
+        [
+          "Typography",
+          "Makes the cover readable."
+        ],
+        [
+          "Color Palette",
+          "Creates emotion and brand consistency."
+        ]
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Start With a Strong Title"
+    },
+
+    {
+      type: "p",
+      text: "Your title should be easy to read even as a small thumbnail. Use simple language, avoid unnecessary words, and make the benefit obvious. Remember that many people will first see your cover on a mobile phone."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Weak Title",
+        "Stronger Title"
+      ],
+      rows: [
+        [
+          "My Marketing Notes",
+          "Digital Marketing Blueprint"
+        ],
+        [
+          "Money Tips",
+          "Build Wealth From Scratch"
+        ],
+        [
+          "AI Guide",
+          "AI Tools Every Creator Should Use"
+        ],
+        [
+          "Writing Book",
+          "Write Your First eBook in 7 Days"
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "3–7",
+      label: "words is often the ideal length for an eBook title."
+    },
+
+    {
+      type: "h2",
+      text: "Choose Colors That Match Your Topic"
+    },
+
+    {
+      type: "p",
+      text: "Colors influence how readers perceive your eBook. Finance books often use green or blue to communicate trust and growth. Technology books frequently use darker tones with bright accent colors, while self-help books often use warm and optimistic palettes. Choose two or three primary colors and keep your design consistent."
+    },
+        {
+      type: "h2",
+      text: "Choose Fonts That Are Easy to Read"
+    },
+
+    {
+      type: "p",
+      text: "Typography can make or break your eBook cover. Readers should be able to read your title instantly, even when the cover appears as a small thumbnail on mobile devices or online marketplaces. Limit yourself to two fonts—one for the title and one for supporting text—to keep the design clean and professional."
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop",
+      alt: "Typography for ebook covers",
+      caption: "Simple, bold typography makes your cover readable at every size."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Best Font Style",
+        "Works Well For"
+      ],
+      rows: [
+        [
+          "Bold Sans Serif",
+          "Business, Marketing, Technology"
+        ],
+        [
+          "Modern Serif",
+          "Personal Development, Finance"
+        ],
+        [
+          "Minimal Sans",
+          "AI, Digital Products, Productivity"
+        ],
+        [
+          "Elegant Serif",
+          "Lifestyle and Creativity"
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "2",
+      label: "fonts are usually enough for a clean and professional eBook cover."
+    },
+
+    {
+      type: "h2",
+      text: "Use One Strong Visual Instead of Many"
+    },
+
+    {
+      type: "p",
+      text: "Many beginners try to include multiple icons, illustrations, and graphics on one cover. This often makes the design look cluttered. Choose one strong visual that reinforces your topic and let it become the focal point of the design."
+    },
+
+    {
+      type: "quote",
+      text: "A clean cover with one memorable visual is far more effective than a crowded design."
+    },
+
+    {
+      type: "h2",
+      text: "Canva vs AI Design Tools"
+    },
+
+    {
+      type: "p",
+      text: "You don't need expensive software to create a professional eBook cover. Canva provides easy-to-edit templates, while AI image generators can help create unique illustrations and backgrounds. Combining both often produces the best results."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Tool",
+        "Best For"
+      ],
+      rows: [
+        [
+          "Canva",
+          "Templates, typography and layouts"
+        ],
+        [
+          "ChatGPT",
+          "Brainstorming titles and subtitles"
+        ],
+        [
+          "DALL·E",
+          "Custom illustrations and cover concepts"
+        ],
+        [
+          "Adobe Express",
+          "Quick editing and branding"
+        ]
+      ]
+    },
+
+    {
+      type: "h2",
+      text: "Recommended Cover Dimensions"
+    },
+
+    {
+      type: "p",
+      text: "Using the correct dimensions ensures your cover looks sharp across websites, marketplaces and mobile devices."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Platform",
+        "Recommended Size"
+      ],
+      rows: [
+        [
+          "PDF eBook",
+          "1600 × 2560 px"
+        ],
+        [
+          "EPUB",
+          "1600 × 2560 px"
+        ],
+        [
+          "Kindle",
+          "1600 × 2560 px or larger"
+        ],
+        [
+          "Gumroad Product Image",
+          "1600 × 900 px (recommended preview image)"
+        ]
+      ]
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop",
+      alt: "Designing an ebook cover in Canva",
+      caption: "Design your cover at a high resolution so it stays sharp on every platform."
+    },
+
+    {
+      type: "h2",
+      text: "Five Common eBook Cover Mistakes"
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Using more than three fonts.",
+        "Choosing low-resolution images.",
+        "Making the title too small.",
+        "Using too many colors.",
+        "Copying another author's cover instead of creating your own style."
+      ]
+    },
+
+    {
+  type: "youtube",
+  videoId: "5x8BfF6q7Jw",
+  title: "How to CREATE an eBook COVER in Canva | 2025 Tutorial"
+    },
+        {
+      type: "h2",
+      text: "Color Psychology for eBook Covers"
+    },
+
+    {
+      type: "p",
+      text: "Colors influence how readers feel before they even read your title. Choosing the right palette helps communicate your topic and makes your cover instantly recognizable. While there are no strict rules, certain colors are commonly associated with specific emotions and industries."
+    },
+
+    {
+      type: "table",
+      headers: [
+        "Color",
+        "Common Association"
+      ],
+      rows: [
+        [
+          "Blue",
+          "Trust, knowledge, professionalism"
+        ],
+        [
+          "Green",
+          "Growth, finance, success"
+        ],
+        [
+          "Purple",
+          "Creativity, innovation, premium products"
+        ],
+        [
+          "Orange",
+          "Energy, motivation, action"
+        ],
+        [
+          "Black",
+          "Luxury, authority, sophistication"
+        ]
+      ]
+    },
+
+    {
+      type: "stat",
+      value: "3",
+      label: "primary colors are usually enough to create a clean and memorable cover."
+    },
+
+    {
+      type: "h2",
+      text: "Professional eBook Cover Checklist"
+    },
+
+    {
+      type: "p",
+      text: "Before publishing your eBook, review your cover carefully. A simple checklist helps you avoid common mistakes and ensures your design looks professional across all platforms."
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Is the title readable as a small thumbnail?",
+        "Does the cover clearly communicate the topic?",
+        "Have you used no more than two fonts?",
+        "Are the colors consistent with your brand?",
+        "Is the image high resolution?",
+        "Does the subtitle explain the benefit?",
+        "Have you included your author or brand name?",
+        "Have you exported the cover in high quality?"
+      ]
+    },
+
+    {
+      type: "image",
+      url: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&auto=format&fit=crop",
+      alt: "Reviewing an ebook cover before publishing",
+      caption: "Always review your cover at full size and thumbnail size before publishing."
+    },
+
+    {
+      type: "h2",
+      text: "Should You Hire a Designer?"
+    },
+
+    {
+      type: "p",
+      text: "If you're launching your first eBook on a budget, Canva and AI tools are more than enough to create a professional-looking cover. As your business grows and you begin publishing multiple books, investing in a professional designer can help strengthen your brand and improve consistency across your product catalog."
+    },
+
+    {
+      type: "quote",
+      text: "A simple, well-designed cover will almost always outperform a complicated one."
+    },
+
+    {
+      type: "h2",
+      text: "Final Thoughts"
+    },
+
+    {
+      type: "p",
+      text: "Your eBook cover is your first opportunity to make a strong impression. Keep it simple, readable, and focused on your audience. A clear title, professional typography, consistent colors, and one compelling visual are often all you need to create a cover that attracts clicks and builds trust."
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Now that your cover is ready, learn "
+        },
+        {
+          text: "How to Write an eBook That People Actually Finish Reading",
+          href: "/blog/how-to-write-an-ebook"
+        },
+        {
+          text: " to create content that delivers real value."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Next, read "
+        },
+        {
+          text: "How Long Should an eBook Be?",
+          href: "/blog/how-long-should-an-ebook-be"
+        },
+        {
+          text: " to choose the ideal length for your readers and topic."
+        },
+      ]
+    },
+
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "Finally, discover "
+        },
+        {
+          text: "How to Price Your eBook",
+          href: "/blog/how-to-price-your-ebook"
+        },
+        {
+          text: " so you can maximize both sales and profitability."
+        },
+      ]
+    }
+  ],
+},
+  {
   slug: "how-long-should-an-ebook-be",
   category: "ebook",
   title: "How Long Should an eBook Be? The Complete Guide for Every Type of eBook (2026)",
