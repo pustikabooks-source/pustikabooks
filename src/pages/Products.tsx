@@ -419,177 +419,114 @@ function Pricing() {
     function FreeResource() {
   return (
     <section className="py-24 px-6 bg-[#F7F3EC]">
-      <div className="mx-auto max-w-7xl">
 
-        <div className="overflow-hidden rounded-[36px] border border-brand-purple/10 bg-white shadow-2xl">
+      <div className="mx-auto max-w-4xl">
 
-          <div className="grid lg:grid-cols-2">
+        <div className="rounded-[36px] border border-brand-purple/10 bg-white shadow-2xl p-8 md:p-14">
 
-            {/* LEFT SIDE */}
+          <span className="inline-flex rounded-full bg-green-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-green-700">
+            FREE DOWNLOAD
+          </span>
 
-            <div className="p-8 md:p-14">
+          <h2 className="mt-6 text-4xl md:text-5xl font-black leading-tight">
+            Download the FREE Creator Starter Kit
+          </h2>
 
-              <span className="inline-flex rounded-full bg-green-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-green-700">
-                FREE DOWNLOAD
-              </span>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            Get practical templates, worksheets and planning tools to help you
+            create, launch and sell your first digital product with confidence.
+          </p>
 
-              <h2 className="mt-6 text-4xl font-black leading-tight md:text-5xl">
-                Creator Starter Kit
-              </h2>
+          <div className="mt-10 rounded-3xl border border-brand-purple/10 bg-[#FAF7F2] p-8">
 
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Everything you need to plan, create and launch your first digital
-                product with confidence.
-              </p>
+            <h3 className="text-2xl font-bold">
+              What You'll Get
+            </h3>
 
-              <div className="mt-8 rounded-2xl border border-brand-purple/10 bg-[#FAF7F2] p-6">
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
 
-                <h3 className="mb-5 text-xl font-bold">
-                  Inside the Kit
-                </h3>
-
-                <div className="space-y-3">
-
-                  <p>✅ eBook Planning Worksheet</p>
-                  <p>✅ Chapter Outline Template</p>
-                  <p>✅ Product Validation Worksheet</p>
-                  <p>✅ Weekly Creator Planner</p>
-                  <p>✅ Website Launch Checklist</p>
-                  <p>✅ Goal Tracker</p>
-
-                </div>
-
+              <div className="rounded-xl bg-white p-4">
+                ✅ eBook Planning Worksheet
               </div>
 
-              <div className="mt-10">
-
-                <h3 className="mb-4 text-xl font-bold">
-                  Get Instant Access
-                </h3>
-
-                <form
-                  action="https://app.kit.com/forms/9623388/subscriptions"
-                  method="post"
-                  target="_blank"
-                  className="space-y-4"
-                >
-
-                  <input
-                    type="email"
-                    name="email_address"
-                    placeholder="Enter your email address"
-                    required
-                    className="w-full rounded-2xl border border-gray-300 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-brand-purple"
-                  />
-
-                  <button
-                    type="submit"
-                    className="w-full rounded-2xl bg-gradient-cta px-6 py-4 text-lg font-bold text-white shadow-xl transition hover:scale-[1.02]"
-                  >
-                    🚀 Get FREE Creator Starter Kit
-                  </button>
-
-                </form>
-
-                <div className="mt-5 flex flex-wrap gap-3">
-
-                  <span className="rounded-full bg-green-100 px-4 py-2 text-sm">
-                    ⚡ Instant Download
-                  </span>
-
-                  <span className="rounded-full bg-blue-100 px-4 py-2 text-sm">
-                    🔒 No Spam
-                  </span>
-
-                  <span className="rounded-full bg-purple-100 px-4 py-2 text-sm">
-                    💌 Creator Tips
-                  </span>
-
-                </div>
-
+              <div className="rounded-xl bg-white p-4">
+                ✅ Chapter Outline Template
               </div>
 
-            </div>
-                        {/* RIGHT SIDE */}
+              <div className="rounded-xl bg-white p-4">
+                ✅ Product Validation Worksheet
+              </div>
 
-            <div className="bg-gradient-to-br from-[#F8F5FF] via-white to-[#F7F3EC] p-8 md:p-14 flex items-center">
+              <div className="rounded-xl bg-white p-4">
+                ✅ Weekly Creator Planner
+              </div>
 
-              <div className="w-full rounded-3xl border border-brand-purple/10 bg-white p-10 shadow-xl">
+              <div className="rounded-xl bg-white p-4">
+                ✅ Website Launch Checklist
+              </div>
 
-                <span className="inline-flex rounded-full bg-green-100 px-4 py-2 text-xs font-bold uppercase text-green-700">
-                  FREE CREATOR RESOURCE
-                </span>
-
-                <h3 className="mt-6 text-4xl font-black">
-                  What's Included?
-                </h3>
-
-                <p className="mt-4 leading-7 text-muted-foreground">
-                  A practical toolkit designed for creators who want to build
-                  and sell digital products without feeling overwhelmed.
-                </p>
-
-                <div className="mt-8 space-y-5">
-
-                  <div className="flex items-start gap-4">
-                    <div className="text-2xl">📘</div>
-                    <div>
-                      <p className="font-bold">30+ Page PDF Guide</p>
-                      <p className="text-sm text-muted-foreground">
-                        Actionable lessons you can implement immediately.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="text-2xl">📝</div>
-                    <div>
-                      <p className="font-bold">Worksheets & Templates</p>
-                      <p className="text-sm text-muted-foreground">
-                        Fill-in-the-blank resources that save hours of work.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="text-2xl">🚀</div>
-                    <div>
-                      <p className="font-bold">Launch Checklists</p>
-                      <p className="text-sm text-muted-foreground">
-                        Publish your first digital product with confidence.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="text-2xl">♾️</div>
-                    <div>
-                      <p className="font-bold">Lifetime Access</p>
-                      <p className="text-sm text-muted-foreground">
-                        Download once and keep it forever.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="mt-10 rounded-2xl bg-brand-purple p-6 text-center text-white">
-
-                  <div className="text-5xl font-black">
-                    FREE
-                  </div>
-
-                  <p className="mt-2">
-                    No credit card required.
-                  </p>
-
-                </div>
-
+              <div className="rounded-xl bg-white p-4">
+                ✅ Goal Tracker
               </div>
 
             </div>
 
           </div>
+
+          <div className="mt-12">
+
+            <h3 className="text-2xl font-bold">
+              Get Instant Access
+            </h3>
+
+            <p className="mt-2 text-muted-foreground">
+              Enter your email below and we'll send the Creator Starter Kit to
+              your inbox.
+            </p>
+
+            <form
+              action="https://app.kit.com/forms/9623388/subscriptions"
+              method="post"
+              className="mt-6 space-y-4"
+            >
+
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Enter your email address"
+                required
+                className="w-full rounded-2xl border border-gray-300 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-brand-purple"
+              />
+
+              <button
+                type="submit"
+                className="w-full rounded-2xl bg-gradient-cta px-6 py-4 text-lg font-bold text-white shadow-lg transition hover:scale-[1.02]"
+              >
+                🚀 Get My FREE Creator Starter Kit
+              </button>
+
+            </form>
+
+            <p className="mt-5 text-center text-sm text-muted-foreground">
+              Join creators learning how to build profitable digital products.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+
+              <span className="rounded-full bg-green-100 px-4 py-2 text-sm">
+                ⚡ Instant Download
+              </span>
+
+              <span className="rounded-full bg-blue-100 px-4 py-2 text-sm">
+                🔒 No Spam Ever
+              </span>
+
+              <span className="rounded-full bg-purple-100 px-4 py-2 text-sm">
+                💌 Weekly Creator Tips
+              </span>
+
+            </div>
+                      </div>
 
         </div>
 
@@ -599,7 +536,7 @@ function Pricing() {
   );
     }
 
-                
+                  
 
 function FAQ() {
   return (
