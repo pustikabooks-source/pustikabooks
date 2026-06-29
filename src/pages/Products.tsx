@@ -467,12 +467,13 @@ function FreeResource() {
 
               <div className="mt-10 flex gap-4">
 
-                <a
-                  href="/newsletter"
-                  className="rounded-full bg-gradient-cta px-8 py-4 text-white font-bold shadow-lg"
-                >
-                  Download Free →
-                </a>
+                <div className="mt-10">
+  <script
+    async
+    data-uid="2d2c4e54ac"
+    src="https://pustika-books.kit.com/2d2c4e54ac/index.js"
+  />
+</div>
 
                 <a
                   href="/blog"
