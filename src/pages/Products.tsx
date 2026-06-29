@@ -415,6 +415,7 @@ function Pricing() {
     </>
   );
 }
+
 function FreeResource() {
   return (
     <section className="py-24 px-6 bg-[#F7F3EC]">
@@ -494,7 +495,7 @@ function FreeResource() {
 
               <h3 className="mt-5 text-2xl font-black">
 
-                40+ Pages
+                30+ Pages
 
               </h3>
 
@@ -522,6 +523,7 @@ function FreeResource() {
     </section>
   );
 }
+
 function FAQ() {
   return (
     <section className="py-24 px-6 bg-white">
