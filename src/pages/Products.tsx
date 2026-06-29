@@ -465,14 +465,38 @@ function FreeResource() {
 
               </div>
 
-              <div className="mt-10 flex gap-4">
+              <div className="mt-10 max-w-md">
 
-                <div className="mt-10">
-  <script
-    async
-    data-uid="2d2c4e54ac"
-    src="https://pustika-books.kit.com/2d2c4e54ac/index.js"
-  />
+  <form
+    id="creator-kit-form"
+    className="space-y-4"
+  >
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email address"
+      required
+      className="w-full rounded-xl border border-gray-300 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-brand-purple"
+    />
+
+    <button
+      type="submit"
+      className="w-full rounded-xl bg-gradient-cta px-6 py-4 text-white font-bold text-lg shadow-lg"
+    >
+      🎁 Get FREE Creator Starter Kit
+    </button>
+
+  </form>
+
+  <p className="mt-4 text-sm text-muted-foreground">
+    ✓ Instant download
+    <br />
+    ✓ No spam
+    <br />
+    ✓ Unsubscribe anytime
+  </p>
+
 </div>
 
                 <a
