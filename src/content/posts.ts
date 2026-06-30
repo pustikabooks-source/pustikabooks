@@ -397,6 +397,452 @@ export const posts: BlogPost[] =[
   ],
 },
   {
+  slug: "how-to-sell-ebooks-from-your-own-website",
+  category: "ebook",
+  title: "How to Sell eBooks From Your Own Website (Complete Guide 2026)",
+  description: "The complete guide to selling eBooks directly from your own website — why it beats marketplaces, the exact tech stack, payment setup, automated delivery, traffic generation, SEO, and scaling to your first 100 sales.",
+  date: "2026-06-30",
+  readingMinutes: 22,
+  tags: ["ebook business", "sell ebooks online", "digital products", "website"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?w=800&auto=compress",
+      alt: "Selling eBooks from your own website in 2026",
+      caption: "Owning your sales channel is the single biggest unlock for long-term eBook revenue"
+    },
+    {
+      type: "p",
+      text: "Every eBook creator eventually asks the same question: should I sell on Amazon, on Gumroad, or build my own website? The honest answer is that your own website is the only option where you keep nearly everything you earn, own every customer relationship, and control every part of the buying experience. This complete guide walks through the entire process — from understanding why this model wins, to setting up the exact technical foundation, to driving traffic, optimising conversion, and scaling beyond your first 100 sales."
+    },
+    {
+      type: "stat",
+      value: "97%",
+      label: "of revenue you keep when selling directly from your website with Razorpay — versus 30-70% on marketplace platforms"
+    },
+    {
+      type: "h2",
+      text: "Why your own website beats every marketplace"
+    },
+    {
+      type: "p",
+      text: "Marketplaces like Amazon KDP and Gumroad offer something genuinely valuable — built-in discovery. Someone searching for a topic on Amazon might stumble onto your book without you doing any marketing. But this convenience comes at a steep, often invisible cost. You never see your buyer's email address. You cannot follow up, sell them a second product, or build a relationship. You are renting access to someone else's customers, and the rent is your margin."
+    },
+    {
+      type: "table",
+      headers: ["Factor", "Amazon KDP", "Gumroad", "Your Own Website"],
+      rows: [
+        ["Revenue kept per sale", "35-70%", "90%", "97-98%"],
+        ["Buyer email access", "Never", "Sometimes", "Always"],
+        ["Pricing control", "Limited tiers", "Full control", "Full control"],
+        ["Upsell ability", "None", "Limited", "Unlimited"],
+        ["Brand control", "Amazon's design", "Gumroad's design", "100% yours"],
+        ["UPI support for India", "No", "Limited", "Yes, via Razorpay"],
+      ]
+    },
+    {
+      type: "quote",
+      text: "A marketplace sale ends the relationship the moment payment clears. A website sale begins one — because you now have the single most valuable asset in digital business: a direct line to someone who already paid you once."
+    },
+    {
+      type: "p",
+      text: "The buyer's email address is worth more than the first sale itself. It is the foundation for every future product launch, every re-engagement campaign, and every testimonial request. Marketplaces strip this away by design — they want you dependent on their platform indefinitely, not building an independent business."
+    },
+    {
+      type: "tip",
+      text: "You don't need to choose exclusively. Many successful creators use their own website as the primary sales channel while also listing on Gumroad or Amazon for additional discovery — just never as your only channel."
+    },
+    {
+      type: "h2",
+      text: "The complete tech stack — what you actually need"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?w=800&auto=compress",
+      alt: "The technology stack needed to sell ebooks from a website",
+      caption: "Four simple tools, none requiring coding knowledge, power a complete eBook sales website"
+    },
+    {
+      type: "p",
+      text: "Building a website to sell eBooks sounds technically intimidating, but the modern stack requires zero coding knowledge. You need exactly four components working together: a website to present and describe your product, a payment processor to collect money, an automation tool to deliver the product, and an email platform to nurture buyers afterward."
+    },
+    {
+      type: "table",
+      headers: ["Component", "Recommended Tool", "Monthly Cost", "Why This One"],
+      rows: [
+        ["Website builder", "Lovable, Framer, or WordPress", "Free–$15", "No-code, fast to launch, professional design"],
+        ["Payment processor (India)", "Razorpay", "2% per transaction", "UPI, cards, net banking, no monthly fee"],
+        ["Payment processor (global)", "PayPal", "3-4% per transaction", "Trusted worldwide, easy checkout"],
+        ["Automated delivery", "Make.com", "Free tier available", "Connects payment to email delivery instantly"],
+        ["Email platform", "Brevo or Kit", "Free tier available", "Handles delivery emails and ongoing nurture"],
+      ]
+    },
+    {
+      type: "p",
+      text: "Notice that the total monthly cost to run this entire system can be effectively zero until you start generating meaningful revenue. Razorpay and PayPal only charge when you make a sale. Make.com and Brevo both offer generous free tiers that comfortably support hundreds of monthly transactions before any upgrade becomes necessary."
+    },
+    {
+      type: "h2",
+      text: "Step 1 — Build your product page the right way"
+    },
+    {
+      type: "p",
+      text: "Your product page is the single highest-leverage page on your entire website. It does not need to be long, but every element on it needs to earn its place. The goal is moving a visitor from curiosity to purchase in under 90 seconds, without confusion or unnecessary friction."
+    },
+    {
+      type: "ul",
+      items: [
+        "Headline — state the specific outcome, not the eBook title. 'Get your first 100 email subscribers in 30 days' beats 'Email Marketing Mastery'",
+        "Cover image — professional design matters here. A poorly designed cover signals a poorly written product, fairly or not.",
+        "Price display — show original value crossed out alongside your actual price. This anchor pricing technique consistently improves conversion.",
+        "What's included — bullet point list of exact contents: page count, bonus materials, format, delivery method.",
+        "Social proof — even 3 early testimonials dramatically increase trust. Ask your first buyers directly for a sentence of feedback.",
+        "FAQ section — address the 3-5 most common objections before they become reasons not to buy.",
+        "Single, clear CTA button — repeated at the top and bottom of the page, never competing with multiple calls to action.",
+      ]
+    },
+    {
+      type: "warning",
+      text: "Don't add multiple competing offers on a single product page. A page selling one eBook with three upsell links scattered throughout confuses visitors and reduces conversion across every offer, not just the additional ones."
+    },
+    {
+      type: "h2",
+      text: "Step 2 — Set up Razorpay for Indian buyers"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?w=800&auto=compress",
+      alt: "Setting up Razorpay payment gateway for selling ebooks in India",
+      caption: "Razorpay's payment links require no website integration knowledge — set up takes under 15 minutes"
+    },
+    {
+      type: "p",
+      text: "For Indian creators, Razorpay is the single most important piece of infrastructure in this entire stack. It supports UPI, credit and debit cards, net banking, and wallet payments — covering nearly every payment method an Indian buyer might prefer. Setting it up does not require any developer involvement when you use Razorpay's Payment Links feature."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create a free Razorpay account and complete KYC verification with your PAN and bank details.",
+        "Navigate to Payment Links and create a new link for your specific eBook, setting the exact price.",
+        "Customise the payment page with your business name and a brief product description.",
+        "Test the link yourself with a small ₹1 transaction before sharing it publicly.",
+        "Copy the generated link and embed it as your 'Buy Now' button on your product page.",
+      ]
+    },
+    {
+      type: "p",
+      text: "Razorpay charges approximately 2% per successful transaction with no setup fee and no monthly subscription. This means a ₹299 eBook sale costs you roughly ₹6 in payment processing fees — leaving you with 98% of every sale, a margin no marketplace platform can match."
+    },
+    {
+      type: "h2",
+      text: "Step 3 — Set up PayPal for international buyers"
+    },
+    {
+      type: "p",
+      text: "If your eBook has any appeal beyond the Indian market, PayPal remains the most universally trusted payment method for international buyers. Many global customers will not complete a purchase if PayPal is not offered as an option, even if a card payment alternative exists. Setting up a PayPal payment link follows a similarly simple process to Razorpay."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create a PayPal Business account, which is free and takes about 10 minutes to verify.",
+        "Use PayPal's 'Create a Payment Link' feature found in the PayPal.me or Checkout section.",
+        "Set your price in USD, accounting for the typical 15-20% price difference creators use between INR and USD pricing.",
+        "Test the link with a small transaction to confirm the checkout flow works correctly on both desktop and mobile.",
+        "Place both Razorpay and PayPal buttons side by side on your product page, clearly labelled by currency.",
+      ]
+    },
+    {
+      type: "tip",
+      text: "Label your payment buttons clearly: '🇮🇳 Pay in ₹ via Razorpay' and '🌍 Pay in $ via PayPal'. This small clarity reduces hesitation and checkout abandonment for both audiences."
+    },
+    {
+      type: "h2",
+      text: "Step 4 — Automate delivery so you never manually send a single file"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?w=800&auto=compress",
+      alt: "Automating ebook delivery with Make.com after payment",
+      caption: "Automated delivery means your eBook business runs while you sleep, travel, or focus on creating the next product"
+    },
+    {
+      type: "p",
+      text: "Manual delivery does not scale and creates a poor buyer experience — nobody wants to wait hours for an email after paying. Make.com solves this completely, connecting your payment processor's webhook directly to an automated email that delivers your eBook within seconds of a successful transaction."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create a free Make.com account and start a new scenario.",
+        "Add a Webhook trigger and connect it to your Razorpay account's webhook settings under payment.captured events.",
+        "Add a Router if you sell multiple products, splitting based on the payment amount for each specific eBook.",
+        "Add an email module (Brevo or your chosen platform) that sends the buyer's email, name, and a download link to your eBook.",
+        "Host your actual PDF file on Google Drive with link sharing enabled, and insert that link into your automated email template.",
+        "Test the entire flow with a real ₹1 payment before considering the system live.",
+      ]
+    },
+    {
+      type: "quote",
+      text: "The moment your delivery is automated, you have built a system that works whether you are awake, asleep, or on vacation. This single piece of infrastructure is what separates a hobby from a business."
+    },
+    {
+      type: "h2",
+      text: "Step 5 — Connect everything to your email platform"
+    },
+    {
+      type: "p",
+      text: "Every buyer should automatically enter your email list after purchase, tagged specifically as a 'customer' rather than just a general subscriber. This distinction matters enormously for your future marketing — buyers respond to different messaging than someone who has only downloaded a free resource."
+    },
+    {
+      type: "ul",
+      items: [
+        "Configure your Make.com automation to add the buyer's email directly to your Brevo or Kit list upon purchase.",
+        "Apply a 'customer' or 'buyer' tag immediately, separate from any pre-launch or lead magnet tags.",
+        "Set up a short post-purchase email sequence — typically 2-3 emails over the following week, asking for feedback and offering related resources.",
+        "Use buyer tags to exclude this group from generic promotional emails about the same product they already own.",
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "If you have not yet built your list-nurturing system, our complete guide on " },
+        { text: "email marketing for digital product creators", href: "/blog/email-marketing-for-digital-product-creators" },
+        { text: " covers exactly how to structure welcome sequences, subject lines, and weekly broadcasts that keep both buyers and prospects engaged long-term." },
+      ],
+    },
+    {
+      type: "youtube",
+      videoId: "tuZV6Zn2bM4",
+      title: "How To Sell eBooks On Your Own Website — Complete Walkthrough"
+    },
+    {
+      type: "h2",
+      text: "Pricing your eBook for a website-first sales model"
+    },
+    {
+      type: "p",
+      text: "Selling from your own website changes your pricing calculus compared to marketplace platforms. Because you keep 97-98% of each sale instead of 30-70%, you have significantly more flexibility to price competitively while still earning more per sale than you would through Amazon or similar platforms — even at a lower sticker price."
+    },
+    {
+      type: "table",
+      headers: ["Price Point", "Platform", "Fee", "You Keep"],
+      rows: [
+        ["₹299", "Amazon KDP (35% royalty tier)", "65%", "₹104.65"],
+        ["₹299", "Gumroad", "10%", "₹269.10"],
+        ["₹299", "Your website (Razorpay)", "2%", "₹293.02"],
+        ["₹199", "Your website (Razorpay)", "2%", "₹195.02"],
+      ]
+    },
+    {
+      type: "p",
+      text: "This table reveals something important — you could price your eBook lower on your own website than on Amazon and still take home significantly more money per sale. This pricing flexibility becomes a genuine competitive advantage, particularly when you are trying to build initial momentum and testimonials."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "For a deeper breakdown of pricing psychology and exactly which price points convert best, read our complete guide on " },
+        { text: "how to price your eBook for maximum profit", href: "/blog/how-to-price-ebook-maximum-profit" },
+        { text: " — including the anchor pricing technique and bundle strategies that significantly increase average order value." },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Testing your complete system before going live"
+    },
+    {
+      type: "p",
+      text: "Before announcing your eBook publicly, run through the entire buyer journey yourself at least twice. This single quality control step prevents the embarrassing and costly experience of a broken payment link or missing delivery email on launch day, when you have the least margin for error and the highest stakes."
+    },
+    {
+      type: "ul",
+      items: [
+        "Visit your product page on both desktop and mobile, checking that every image loads and every button works.",
+        "Complete a real ₹1 test transaction through both Razorpay and PayPal if you offer both.",
+        "Confirm the automated delivery email arrives within 60 seconds, with a working download link.",
+        "Open the delivered PDF file itself to confirm it opens correctly and matches what you intended to send.",
+        "Check that your email automatically tags the test purchase correctly in your email platform.",
+        "Have one trusted friend complete the entire purchase flow independently, without your guidance, to catch anything you missed.",
+      ]
+    },
+    {
+      type: "warning",
+      text: "Don't skip the friend test. Creators are often too familiar with their own website to notice confusing navigation or unclear instructions that a first-time visitor would immediately struggle with."
+    },
+    {
+      type: "h2",
+      text: "The traffic problem nobody warns you about"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?w=800&auto=compress",
+      alt: "Driving traffic and scaling an ebook sales website",
+      caption: "A perfectly built website with zero traffic generates zero sales — this is where the real work begins"
+    },
+    {
+      type: "p",
+      text: "Building a beautiful, fully functional eBook website is genuinely the easier half of this entire process. The harder, more sustained challenge is consistently getting strangers to discover that website exists at all. A website with zero visitors converts at exactly the same rate as no website — zero sales. This section addresses the three channels that consistently work for eBook creators without requiring a paid advertising budget."
+    },
+    {
+      type: "stat",
+      value: "82%",
+      label: "of website-based eBook creators say traffic generation was harder than building the website itself"
+    },
+    {
+      type: "quote",
+      text: "Your website is not a marketing strategy. It is the destination your marketing strategy points toward. Confusing the two is the most common reason talented creators with great products see disappointing sales."
+    },
+    {
+      type: "h2",
+      text: "Channel 1 — Search engine optimisation through blogging"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?w=800&auto=compress",
+      alt: "SEO blogging strategy to drive organic traffic to ebook website",
+      caption: "Blog posts compound over months and years, unlike social media posts that disappear within hours"
+    },
+    {
+      type: "p",
+      text: "A blog attached to your eBook sales website serves two simultaneous purposes — it gives Google content to index and rank, and it builds genuine trust with potential buyers before they ever see your product page. Unlike social media posts that have a lifespan of hours, a well-optimised blog post can drive consistent traffic for years after publication."
+    },
+    {
+      type: "table",
+      headers: ["SEO Element", "What To Do", "Why It Matters"],
+      rows: [
+        ["Keyword research", "Target specific phrases your buyer searches, like 'how to price an ebook in India'", "Matches actual search intent rather than guessing"],
+        ["Post length", "Aim for 1,500-2,500+ words covering the topic thoroughly", "Google favours comprehensive content for competitive keywords"],
+        ["Internal linking", "Link related blog posts to each other and to your product page", "Keeps visitors on your site longer, signals topic authority"],
+        ["Meta description", "Write a compelling 150-character summary for each post", "Improves click-through rate from search results"],
+        ["Publishing frequency", "Minimum 2-3 posts per week for the first 3 months", "Consistency signals an active site to search engines"],
+      ]
+    },
+    {
+      type: "p",
+      text: "The compounding nature of SEO is what makes it worth the patience it requires. A blog post published today might generate only a handful of visits in its first month, but by month six or twelve, the same post — assuming it ranks well — can be driving dozens or hundreds of visitors monthly, completely passively, without any additional work from you."
+    },
+    {
+      type: "tip",
+      text: "Write your first 10 blog posts around the exact questions your target reader is already typing into Google. Use free tools like Google's 'People Also Ask' section and AnswerThePublic to find these questions before writing anything."
+    },
+    {
+      type: "h2",
+      text: "Channel 2 — Pinterest as a long-term traffic engine"
+    },
+    {
+      type: "p",
+      text: "Pinterest functions less like a social media platform and more like a visual search engine, which makes it uniquely effective for eBook creators. A single well-designed pin linking to your product page or blog post can continue generating clicks for months or even years after it was created, with none of the rapid decay typical of Instagram or Twitter posts."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create 5-10 new pins per week, each linking to either your product page or a relevant blog post.",
+        "Design pins with bold, readable text overlays — Pinterest users scroll quickly and decide in under 2 seconds whether to click.",
+        "Use vertical image formats (1000x1500px) which Pinterest's algorithm favours and displays more prominently.",
+        "Write keyword-rich pin descriptions, treating them similarly to a mini SEO exercise for Pinterest's internal search.",
+        "Organise pins into specific, clearly labelled boards rather than one generic catch-all board.",
+      ]
+    },
+    {
+      type: "table",
+      headers: ["Pin Type", "Best Use Case", "Typical Click Rate"],
+      rows: [
+        ["Direct product pin", "Promoting your eBook with price and clear benefit", "Lower volume, higher purchase intent"],
+        ["Blog post pin", "Driving traffic to a related blog post first", "Higher volume, builds trust before selling"],
+        ["List/checklist pin", "Summarising key points from a blog post visually", "Strong save rate, drives repeat visibility"],
+        ["Quote/stat pin", "Sharing a compelling statistic from your content", "High shareability, moderate direct clicks"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Channel 3 — Answer platforms (Quora and Reddit)"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?w=800&auto=compress",
+      alt: "Using Quora and Reddit to drive traffic to an ebook sales website",
+      caption: "One detailed answer on a high-traffic question can quietly send buyers your way for years"
+    },
+    {
+      type: "p",
+      text: "Answer platforms like Quora and relevant Reddit communities offer something rare in digital marketing — direct access to people actively searching for a solution to the exact problem your eBook solves, at the precise moment they are looking. Unlike posting on your own social channels where you interrupt someone's feed, answering questions meets people inside their own search intent."
+    },
+    {
+      type: "ul",
+      items: [
+        "Search for questions with at least 5,000 views in your specific niche before investing time in a detailed answer.",
+        "Write genuinely helpful, complete answers first — mentioning your eBook as one additional resource, not the entire point of the answer.",
+        "Avoid answers that feel like thinly veiled advertisements, which both platforms' communities quickly recognise and penalise.",
+        "Link directly to a relevant blog post on your website rather than your product page when possible, building trust before the sales pitch.",
+        "Revisit and update your best-performing answers periodically as your eBook content or pricing evolves.",
+      ]
+    },
+    {
+      type: "warning",
+      text: "Don't post the exact same promotional answer across dozens of questions. Both Quora and Reddit's moderation systems detect this pattern quickly, and accounts that do this consistently get shadow-banned or removed entirely."
+    },
+    {
+      type: "h2",
+      text: "Optimising your product page for higher conversion over time"
+    },
+    {
+      type: "p",
+      text: "Once traffic starts arriving, your focus should shift toward converting more of those visitors into buyers without needing more traffic at all. Small, data-informed changes to your product page often produce larger revenue increases than doubling your traffic volume, because they compound across every future visitor rather than requiring continuous new effort."
+    },
+    {
+      type: "table",
+      headers: ["Conversion Element", "What To Test", "Typical Impact"],
+      rows: [
+        ["Headline", "Outcome-focused vs feature-focused phrasing", "10-30% conversion difference"],
+        ["Price display", "With vs without anchor pricing shown", "15-25% conversion increase"],
+        ["Social proof placement", "Above the fold vs below the fold", "5-15% conversion increase"],
+        ["CTA button colour and text", "Generic 'Buy Now' vs specific 'Get Instant Access'", "5-10% conversion difference"],
+        ["Page load speed", "Under 3 seconds vs over 5 seconds", "Up to 20% drop-off on slow pages"],
+      ]
+    },
+    {
+      type: "p",
+      text: "The discipline of testing one element at a time, rather than redesigning your entire page on instinct, is what separates creators who steadily improve their conversion rate from those who guess randomly and never know what actually worked. Even without sophisticated A/B testing tools, simply changing one element every two weeks and tracking your conversion rate manually provides enough signal to make informed decisions."
+    },
+    {
+      type: "h2",
+      text: "Scaling beyond your first 100 sales"
+    },
+    {
+      type: "p",
+      text: "Reaching 100 sales is a meaningful milestone, but it is also the point where many creators plateau without a clear next step. Scaling from here requires shifting focus from proving the model works to systematically expanding what already works — through bundling, repeat customer strategies, and expanding your product line."
+    },
+    {
+      type: "ul",
+      items: [
+        "Bundle your eBook with a related template or checklist, increasing average order value by 40-80% with minimal additional creation effort.",
+        "Reach out to your existing buyers with a second, related product — buyers who trust you once convert at dramatically higher rates than new visitors.",
+        "Introduce a slight price increase once you have accumulated 10+ genuine testimonials, which justify and support a higher perceived value.",
+        "Expand your content marketing efforts methodically, adding one new traffic channel only after your current channels are running consistently.",
+        "Track your cost and time per channel monthly, doubling down on whichever channel produces the best return relative to effort invested.",
+      ]
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "If you are ready to expand beyond a single eBook, our guide on " },
+        { text: "the creator economy and which income streams compound best", href: "/blog/creator-economy-explained" },
+        { text: " explains how to layer additional revenue streams onto the foundation you have already built." },
+      ],
+    },
+    {
+      type: "quote",
+      text: "The first 10 sales prove your product works. The first 100 sales prove your system works. Everything after that is simply repeating and refining a system you have already validated."
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Before you launch, make sure you have validated genuine demand and built an audience ready to buy. Our guide on " },
+        { text: "how to build an email list before launching your eBook", href: "/blog/how-to-build-email-list-before-launching-ebook" },
+        { text: " walks through exactly how to create anticipation before your website even goes live — dramatically improving your launch week results." },
+      ],
+    },
+  ],
+},
+  {
   slug: "how-to-promote-your-ebook-without-an-audience",
   category: "ebook",
   title: "How to Promote Your eBook Without an Audience (Complete Guide 2026)",
