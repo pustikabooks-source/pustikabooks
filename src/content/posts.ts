@@ -865,7 +865,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to understand the complete independent publishing process."
-        ]
+        },
     },
 
     {
