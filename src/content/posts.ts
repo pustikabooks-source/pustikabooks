@@ -749,8 +749,7 @@ export const posts: BlogPost[] = [
       text: "The best launches begin months before launch day."
     },
   ]
-},
-  
+
   {
   slug: "how-to-promote-your-ebook-without-an-audience",
   category: "ebook",
