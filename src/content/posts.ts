@@ -113,7 +113,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " will help you create content that readers genuinely enjoy."
-        }
+        },
       ]
     },
 
@@ -275,7 +275,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to attract visitors before optimizing conversions."
-        }
+        },
       ]
     },
 
@@ -461,7 +461,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to learn how SEO can bring readers to your website every day."
-        }
+        },
       ]
     },
 
@@ -686,7 +686,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to build a professional sales system that you fully control."
-        }
+        },
       ]
     },
 
@@ -1013,7 +1013,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to compare the best publishing options."
-        }
+        },
       ]
     },
 
@@ -1143,7 +1143,7 @@ export const posts: BlogPost[] = [
         },
         {
           text: " to learn sustainable marketing strategies."
-        }
+        },
       ]
     },
 
