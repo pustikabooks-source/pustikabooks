@@ -866,9 +866,8 @@ export const posts: BlogPost[] = [
         {
           text: " to understand the complete independent publishing process."
         },
-    },
-
-    {
+    
+  {
       type: "h2",
       text: "What You Need Before You Start Selling"
     },
