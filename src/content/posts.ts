@@ -748,7 +748,7 @@ export const posts: BlogPost[] = [
       type: "quote",
       text: "The best launches begin months before launch day."
     },
-  ],
+  ]
 },
   
   {
