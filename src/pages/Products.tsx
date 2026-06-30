@@ -573,10 +573,10 @@ function FAQ() {
           Need help choosing the right product?
           <br />
           <a
-            href="mailto:support@pustikabooks.in"
+            href="mailto: pustikabooks@gmail.com"
             className="font-bold text-brand-purple"
           >
-            support@pustikabooks.in
+            pustikabooks@gmail.com
           </a>
         </p>
 
@@ -639,10 +639,10 @@ function Footer() {
           <div className="space-y-2 text-white/70">
 
             <a
-              href="mailto:support@pustikabooks.in"
+              href="mailto: pustikabooks@gmail.com"
               className="block hover:text-white"
             >
-              support@pustikabooks.in
+              pustikabooks@gmail.com
             </a>
 
             <a
