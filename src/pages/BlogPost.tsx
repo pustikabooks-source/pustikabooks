@@ -63,7 +63,7 @@ export default function BlogPost() {
 
   const url = `https://pustikabooks.in/blog/${post.slug}`;
   const coverImage =
-  post.body.find((b: any) => b.type === "image")?.url ||
+  (post.body.find((b: any) => b.type === "image") as any)?.url ||
   "https://pustikabooks.in/images/blog-default.jpg";
 
   const articleJsonLd = {
@@ -547,7 +547,7 @@ if (block.type === "warning") {
   {related.map((r) => {
 
     const cover =
-      r.body.find((b: any) => b.type === "image")?.url || "";
+      (r.body.find((b: any) => b.type === "image") as any)?.url || "";
 
     return (
 
