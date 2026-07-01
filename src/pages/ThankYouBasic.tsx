@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 declare global {
   interface Window {
@@ -17,6 +18,11 @@ export default function ThankYouBasic() {
 
   return (
     <main className="min-h-screen bg-[#05060A] text-white flex items-center justify-center px-6 py-16 font-sans relative overflow-hidden">
+      <Helmet>
+        <title>Payment Successful — Pustika Books</title>
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://pustikabooks.in/thank-you-basic" />
+      </Helmet>
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
