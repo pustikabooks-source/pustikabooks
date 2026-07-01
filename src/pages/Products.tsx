@@ -705,18 +705,18 @@ function Products() {
     <div className="min-h-screen bg-background text-foreground">
 
       <Helmet>
-        <title>Products | Pustika Books</title>
-
-        <meta
-          name="description"
-          content="Discover ebooks, creator tools and digital products from Pustika Books."
-        />
-
-        <link
-          rel="canonical"
-          href="https://pustikabooks.in/products"
-        />
-
+        <title>Products — eBooks & Digital Toolkits | Pustika Books</title>
+        <meta name="description" content="Discover ebooks, creator tools and digital products from Pustika Books. Instant access, lifetime updates and beginner-friendly guides." />
+        <link rel="canonical" href="https://pustikabooks.in/products" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Products — eBooks & Digital Toolkits | Pustika Books" />
+        <meta property="og:description" content="Discover ebooks, creator tools and digital products from Pustika Books." />
+        <meta property="og:url" content="https://pustikabooks.in/products" />
+        <meta property="og:image" content="https://pustikabooks.in/og-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Products — eBooks & Digital Toolkits | Pustika Books" />
+        <meta name="twitter:description" content="Discover ebooks, creator tools and digital products from Pustika Books." />
+        <meta name="twitter:image" content="https://pustikabooks.in/og-home.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(productLd)}
         </script>

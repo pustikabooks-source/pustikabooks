@@ -8,9 +8,18 @@ export default function AboutUs() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>About Us | Pustika Books</title>
-        <meta name="description" content="Learn about Pustika Books — helping everyday creators to turn their knowledge into income, one eBook at a time." />
+        <title>About Us — Pustika Books</title>
+        <meta name="description" content="Learn about Pustika Books — helping everyday creators turn knowledge into income through practical ebooks, digital products and AI-powered guides." />
         <link rel="canonical" href="https://pustikabooks.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Us — Pustika Books" />
+        <meta property="og:description" content="Learn about Pustika Books — helping everyday creators turn knowledge into income." />
+        <meta property="og:url" content="https://pustikabooks.in/about" />
+        <meta property="og:image" content="https://pustikabooks.in/og-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us — Pustika Books" />
+        <meta name="twitter:description" content="Learn about Pustika Books — helping everyday creators turn knowledge into income." />
+        <meta name="twitter:image" content="https://pustikabooks.in/og-home.jpg" />
       </Helmet>
 
       {/* Header */}

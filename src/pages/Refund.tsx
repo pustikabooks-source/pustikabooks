@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function Refund() {
   return (
@@ -23,6 +24,28 @@ export default function Refund() {
           If you experience a technical issue or did not receive your product, please contact us
           within 7 days and we will personally make it right.
         </p>
+        <h2 className="mt-8 text-2xl font-bold">When we do issue refunds</h2>
+        <p className="mt-3 leading-relaxed">
+          We issue a full refund if a duplicate payment was charged for the same order, or if the
+          download link never reached you after multiple delivery attempts. In these cases we
+          typically process the refund back to the original payment method within 5–7 business days
+          through Razorpay.
+        </p>
+        <h2 className="mt-8 text-2xl font-bold">Before you buy</h2>
+        <p className="mt-3 leading-relaxed">
+          We want every customer to feel confident before checkout. Please browse our{" "}
+          <Link className="text-brand-purple font-semibold" to="/products">products page</Link> for
+          full details, sample chapters and pricing. Reading a few of our{" "}
+          <Link className="text-brand-purple font-semibold" to="/blog">blog articles</Link> will
+          also give you a strong sense of what our guides cover.
+        </p>
+        <h2 className="mt-8 text-2xl font-bold">Chargebacks</h2>
+        <p className="mt-3 leading-relaxed">
+          Please reach out to us first before filing a chargeback with your bank. In almost every
+          case we can resolve the issue faster over email. Your{" "}
+          <Link className="text-brand-purple font-semibold" to="/privacy">privacy is protected</Link>{" "}
+          throughout the entire support process.
+        </p>
         <h2 className="mt-8 text-2xl font-bold">Contact</h2>
         <p className="mt-3 leading-relaxed">
           Email{" "}
@@ -32,7 +55,7 @@ export default function Refund() {
           and we'll respond within 24 hours.
         </p>
         <p className="mt-10">
-          <a href="/" className="text-brand-purple font-semibold">← Back to home</a>
+          <Link to="/" className="text-brand-purple font-semibold">← Back to home</Link>
         </p>
       </article>
     </main>
