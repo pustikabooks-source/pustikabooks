@@ -211,8 +211,6 @@ export const posts: BlogPost[] =[
         ["Quote or statistic pin", "Viral potential, brand awareness building", "High shareability, lower direct purchase intent", "Variable"],
       ]
     },
-  ],
-},
   {
       type: "h2",
       text: "Channel 5 — Facebook Groups (warm community buyers)"
