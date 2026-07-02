@@ -47,10 +47,10 @@ function SiteHeader() {
               <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: 24, cursor: "pointer" }}>×</button>
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-              <a href="/" style={navLinkStyle}>🏠 Home</a>
-              <a href="/blog" style={navLinkStyle}>📖 Blog</a>
-              <a href="/products" style={navLinkStyle}>🛒 Products</a>
-              <a href="/about" style={navLinkStyle}>👋 About Us</a>
+              <Link to="/" onClick={() => setMenuOpen(false)} style={navLinkStyle}>🏠 Home</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)} style={navLinkStyle}>📖 Blog</Link>
+              <Link to="/products" onClick={() => setMenuOpen(false)} style={navLinkStyle}>🛒 Products</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)} style={navLinkStyle}>👋 About Us</Link>
             </nav>
             <div style={{ marginTop: "auto" }}>
               <p style={{ fontSize: 12, color: "#999", marginBottom: 12 }}>Follow us</p>

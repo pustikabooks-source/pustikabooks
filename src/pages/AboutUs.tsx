@@ -67,7 +67,7 @@ export default function AboutUs() {
                 textDecoration: "none", fontSize: "20px", fontWeight: 600,
                 color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0"
               }}>👋 About Us</Link>
-              <Link to="/#pricing" onClick={() => setMenuOpen(false)} style={{
+              <Link to="/products" onClick={() => setMenuOpen(false)} style={{
                 textDecoration: "none", fontSize: "20px", fontWeight: 600,
                 color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0"
               }}>🛒 Products</Link>

@@ -11,6 +11,13 @@ export default function Privacy() {
         <meta property="og:title" content="Privacy Policy — Pustika Books" />
         <meta property="og:description" content="How Pustika Books collects, uses, and protects your information when you purchase The Pro Vault." />
         <meta property="og:url" content="https://pustikabooks.in/privacy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Pustika Books" />
+        <meta property="og:image" content="https://pustikabooks.in/og-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy — Pustika Books" />
+        <meta name="twitter:description" content="How Pustika Books collects, uses, and protects your information." />
+        <meta name="twitter:image" content="https://pustikabooks.in/og-home.jpg" />
       </Helmet>
       <article className="mx-auto max-w-3xl prose prose-neutral">
         <h1 className="text-4xl font-black tracking-tight">Privacy Policy</h1>

@@ -11,6 +11,13 @@ export default function Refund() {
         <meta property="og:title" content="Refund Policy — Pustika Books" />
         <meta property="og:description" content="Refund terms for The Pro Vault digital download from Pustika Books, plus how to contact support if something goes wrong." />
         <meta property="og:url" content="https://pustikabooks.in/refund" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Pustika Books" />
+        <meta property="og:image" content="https://pustikabooks.in/og-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Refund Policy — Pustika Books" />
+        <meta name="twitter:description" content="Refund terms for digital downloads from Pustika Books." />
+        <meta name="twitter:image" content="https://pustikabooks.in/og-home.jpg" />
       </Helmet>
       <article className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-black tracking-tight">Refund Policy</h1>
