@@ -51,4 +51,15 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+  <url>
+  <loc>https://pustikabooks.in/blog/how-to-build-digital-product-business-from-scratch</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://pustikabooks.in/blog/biggest-digital-product-mistakes-beginners-make</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
