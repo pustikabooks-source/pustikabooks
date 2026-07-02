@@ -137,7 +137,7 @@ export default function BlogPost() {
             <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
               <Link to="/blog" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</Link>
               <Link to="/about" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</Link>
-              <Link to="/#pricing" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</Link>
+              <Link to="/products" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</Link>
             </nav>
             <div style={{ marginTop: "auto" }}>
               <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>

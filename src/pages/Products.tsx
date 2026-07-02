@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const WHATSAPP = "https://wa.me/919662436387";
 
@@ -37,7 +38,7 @@ function Header() {
     <>
       <header className="site-header">
         <div className="site-header__inner">
-          <a href="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <span
               style={{
                 fontSize: 20,
@@ -49,7 +50,7 @@ function Header() {
               Pustika
               <span style={{ color: "#7C3AED" }}> Books</span>
             </span>
-          </a>
+          </Link>
 
           <button
             onClick={() => setMenuOpen(true)}
@@ -119,10 +120,10 @@ function Header() {
               </button>
             </div>
 
-            <a className="py-3" href="/">🏠 Home</a>
-            <a className="py-3" href="/blog">📖 Blog</a>
-            <a className="py-3" href="/products">🛒 Products</a>
-            <a className="py-3" href="/about">👋 About Us</a>
+            <Link className="py-3" to="/" onClick={() => setMenuOpen(false)}>🏠 Home</Link>
+            <Link className="py-3" to="/blog" onClick={() => setMenuOpen(false)}>📖 Blog</Link>
+            <Link className="py-3" to="/products" onClick={() => setMenuOpen(false)}>🛒 Products</Link>
+            <Link className="py-3" to="/about" onClick={() => setMenuOpen(false)}>👋 About Us</Link>
 
             <div style={{ marginTop: "auto" }}>
               <a href="https://instagram.com/pustikabooks">
