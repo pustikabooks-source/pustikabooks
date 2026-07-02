@@ -63,8 +63,8 @@ export default function BlogPost() {
 
   const url = `https://pustikabooks.in/blog/${post.slug}`;
   const coverImage =
-  (post.body.find((b: any) => b.type === "image") as any)?.url ||
-  "https://pustikabooks.in/images/blog-default.jpg";
+    (post.body.find((b: any) => b.type === "image") as any)?.url ||
+    "https://pustikabooks.in/og-home.jpg";
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -103,6 +103,9 @@ export default function BlogPost() {
 <meta property="og:url" content={url} />
 <meta property="og:type" content="article" />
 <meta property="og:image" content={coverImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Pustika Books" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={post.title} />

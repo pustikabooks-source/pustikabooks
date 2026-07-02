@@ -7,6 +7,7 @@ export default function NotFound() {
       <Helmet>
         <title>Page not found — Pustika Books</title>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://pustikabooks.in/404" />
       </Helmet>
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>

@@ -75,6 +75,14 @@ export default function Blog() {
         <meta property="og:description" content="Practical guides on creating, marketing, and selling eBooks and digital products worldwide." />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Pustika Books" />
+        <meta property="og:image" content="https://pustikabooks.in/og-home.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pustika Books Blog — How to Earn With eBooks and Digital Products" />
+        <meta name="twitter:description" content="Practical guides on creating, marketing, and selling eBooks and digital products worldwide." />
+        <meta name="twitter:image" content="https://pustikabooks.in/og-home.jpg" />
         <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
       </Helmet>
 
