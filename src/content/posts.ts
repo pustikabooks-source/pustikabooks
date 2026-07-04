@@ -542,6 +542,8 @@ export const posts: BlogPost[] =[
   buttonText: "Explore More Guides",
   buttonHref: "/blog"
 },
+],
+},
   {
   slug: "how-to-price-digital-products-maximum-profit",
   category: "digital-products",
