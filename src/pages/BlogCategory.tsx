@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useLocation, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { BlogPost } from "@/content/posts";
 import { fetchPublishedPosts } from "@/lib/blog";
@@ -49,7 +49,8 @@ function getCategory(post: any): CategoryId {
 }
 
 export default function BlogCategory() {
-  const { category } = useParams<{ category: string }>();
+  const location = useLocation();
+  const category = location.pathname.replace(/^\/blog\//, "").replace(/\/$/, "");
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
