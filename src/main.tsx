@@ -15,6 +15,7 @@ import AboutUs from "./pages/AboutUs";
 import Login from "./pages/Login";
 import BlogEditor from "./pages/BlogEditor";
 import Products from "./pages/Products";
+import BlogCategory from "./pages/BlogCategory";
 function Analytics() {
   const location = useLocation();
   useEffect(() => {
@@ -38,6 +39,10 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/refund" element={<Refund />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/ebooks" element={<BlogCategory />} />
+        <Route path="/blog/digital-products" element={<BlogCategory />} />
+        <Route path="/blog/ai-for-creators" element={<BlogCategory />} />
+        <Route path="/blog/marketing" element={<BlogCategory />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
