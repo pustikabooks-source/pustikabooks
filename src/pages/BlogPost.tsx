@@ -468,6 +468,49 @@ if (block.type === "warning") {
     </div>
   );
 }
+            if (block.type === "faq") {
+              return (
+                <div key={i} className="my-8 space-y-4">
+                  {block.items.map((item, j) => (
+                    <details
+                      key={j}
+                      className="group rounded-2xl border border-border bg-card p-5"
+                    >
+                      <summary className="cursor-pointer font-bold text-lg text-foreground list-none flex justify-between items-center">
+                        <span>{item.question}</span>
+                        <span className="ml-4 text-brand-purple transition-transform group-open:rotate-45">
+                          +
+                        </span>
+                      </summary>
+                      <p className="mt-3 text-foreground/80 leading-relaxed">
+                        {item.answer}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              );
+            }
+            if (block.type === "cta") {
+              return (
+                <aside
+                  key={i}
+                  className="my-10 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-brand-purple/10 to-secondary p-8 text-center"
+                >
+                  <h3 className="text-2xl md:text-3xl font-black tracking-tight">
+                    {block.title}
+                  </h3>
+                  <p className="mt-3 text-muted-foreground text-[15px]">
+                    {block.description}
+                  </p>
+                  <Link
+                    to={block.buttonHref}
+                    className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-purple px-7 py-3.5 text-base font-bold text-white hover:opacity-90 transition"
+                  >
+                    {block.buttonText} →
+                  </Link>
+                </aside>
+              );
+            }
             return null;
           })}
         </div>
