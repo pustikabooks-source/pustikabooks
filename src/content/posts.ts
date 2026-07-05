@@ -18,6 +18,14 @@ export interface BlogPost {
     | { type: "youtube"; videoId: string; title: string }
     | { type: "tip"; text: string }
     | { type: "warning"; text: string }
+    | { type: "faq"; items: Array<{ question: string; answer: string }> }
+    | {
+        type: "cta";
+        title: string;
+        description: string;
+        buttonText: string;
+        buttonHref: string;
+      }
   >;
 }
 

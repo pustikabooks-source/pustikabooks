@@ -9,10 +9,10 @@ type Category = "all" | "ebook" | "digital-products" | "ai-for-creators" | "mark
 
 const CATEGORIES = [
   { id: "all" as Category, label: "All Posts", emoji: "📚", description: "" },
-  { id: "ebook" as Category, label: "eBook Business", emoji: "📖", description: "Write, price, and sell eBooks" },
-  { id: "digital-products" as Category, label: "Digital Products", emoji: "💡", description: "Templates, Notion, Canva & more" },
-  { id: "ai-for-creators" as Category, label: "AI for Creators", emoji: "🤖", description: "Use AI to build & sell faster" },
-  { id: "marketing" as Category, label: "Marketing", emoji: "📣", description: "Pinterest, SEO, email, Instagram and more" },
+  { id: "ebook" as Category, label: "eBook Business", emoji: "📖", description: "Write, price, and sell eBooks", href: "/blog/ebooks" },
+  { id: "digital-products" as Category, label: "Digital Products", emoji: "💡", description: "Templates, Notion, Canva & more", href: "/blog/digital-products" },
+  { id: "ai-for-creators" as Category, label: "AI for Creators", emoji: "🤖", description: "Use AI to build & sell faster", href: "/blog/ai-for-creators" },
+  { id: "marketing" as Category, label: "Marketing", emoji: "📣", description: "Pinterest, SEO, email, Instagram and more", href: "/blog/marketing" },
 ];
 
 function getCategory(post: any): Category {
@@ -107,6 +107,36 @@ export default function Blog() {
           <p className="mt-5 text-lg text-muted-foreground">
             Honest, step-by-step guides on writing, pricing, marketing, and selling digital products worldwide. No fluff — just what's working in 2026.
           </p>
+        </div>
+      </section>
+
+      {/* Category Cards */}
+      <section className="px-6 pb-4">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+            Browse by category
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {CATEGORIES.filter((c) => c.id !== "all").map((cat) => (
+              <Link
+                key={cat.id}
+                to={(cat as any).href}
+                className="group rounded-2xl border border-border bg-card p-5 hover:border-brand-purple hover:-translate-y-1 transition-all"
+              >
+                <div className="text-3xl mb-2">{cat.emoji}</div>
+                <p className="font-bold text-sm group-hover:text-brand-purple transition-colors">
+                  {cat.label}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
+                  {cat.description}
+                </p>
+                <p className="mt-3 text-[11px] font-bold uppercase tracking-wider text-brand-purple">
+                  {countFor(cat.id)}{" "}
+                  {countFor(cat.id) === 1 ? "article" : "articles"} →
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
