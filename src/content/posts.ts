@@ -111,7 +111,7 @@ export const posts: BlogPost[] =[
         },
         {
           text: ", which explains how AI fits into a complete creator business."
-        }
+        },
       ]
     },
     {
@@ -240,7 +240,7 @@ export const posts: BlogPost[] =[
         },
         {
           text: ", where we explain complete AI workflows from content creation to marketing."
-        }
+        },
       ]
     },
     {
