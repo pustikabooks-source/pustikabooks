@@ -402,8 +402,11 @@ export const posts: BlogPost[] =[
         {
           text: " to discover the complete AI workflow used by successful creators."
         },
-      ],
+      ]
     },
+        },
+  ],
+},
     
   {
   slug: "how-to-use-chatgpt-to-build-and-sell-digital-products",
