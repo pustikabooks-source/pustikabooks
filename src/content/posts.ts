@@ -1741,7 +1741,7 @@ export const posts: BlogPost[] =[
         },
         {
           text: " to learn SEO, content marketing, and audience growth strategies."
-        }
+        },
       ]
     },
     {
