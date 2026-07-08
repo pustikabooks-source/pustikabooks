@@ -448,6 +448,10 @@ export const posts: BlogPost[] =[
         },
       ]
     },
+        },
+  ],
+},
+    
       
   {
   slug: "claude-vs-chatgpt-for-creators-2026",
