@@ -31,6 +31,338 @@ export interface BlogPost {
 
 export const posts: BlogPost[] =[
   {
+  slug: "101-ai-prompts-every-creator-should-save",
+  category: "ai-for-creators",
+  title: "101 AI Prompts Every Creator Should Save (Free Prompt Library for 2026)",
+  description: "Discover 101 powerful AI prompts for creators. Copy-and-paste prompts for blogging, YouTube, digital products, marketing, SEO, email, social media, business, productivity, and more.",
+  date: "2026-07-07",
+  readingMinutes: 26,
+  tags: [
+    "AI prompts",
+    "ChatGPT prompts",
+    "creator prompts",
+    "AI for creators",
+    "content creation",
+    "marketing prompts",
+    "SEO prompts",
+    "business prompts",
+    "ChatGPT",
+    "AI tools"
+  ],
+  body: [
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?w=1200&auto=compress",
+      alt: "AI prompts for creators",
+      caption: "The right prompt can save hours of work and dramatically improve AI-generated results."
+    },
+    {
+      type: "p",
+      text: "Artificial Intelligence is only as useful as the instructions you give it. Two people can use the same AI model and receive completely different results simply because one writes better prompts. Learning prompt engineering doesn't require technical expertise—it requires clarity. The more context, direction, and detail you provide, the more valuable the response becomes."
+    },
+    {
+      type: "p",
+      text: "Instead of spending time inventing prompts from scratch every day, successful creators build prompt libraries they can reuse repeatedly. This guide contains 101 practical prompts covering blogging, YouTube, digital products, SEO, marketing, email, productivity, and business growth. Copy them, customize them, and adapt them to your workflow."
+    },
+    {
+      type: "stat",
+      value: "101",
+      label: "Ready-to-use AI prompts organized by category for creators and entrepreneurs."
+    },
+    {
+      type: "quote",
+      text: "The quality of AI output rarely exceeds the quality of the prompt that created it."
+    },
+    {
+      type: "h2",
+      text: "How to Use These Prompts"
+    },
+    {
+      type: "p",
+      text: "Every prompt in this guide is designed to be customized. Replace the words inside brackets with your own topic, audience, business, or product. The more specific your instructions, the better the results. Don't hesitate to ask AI to rewrite, expand, simplify, or improve its responses until they match your expectations."
+    },
+    {
+      type: "table",
+      headers: [
+        "Prompt Element",
+        "Example"
+      ],
+      rows: [
+        ["Topic", "[Digital Products]"],
+        ["Audience", "[Beginner Bloggers]"],
+        ["Goal", "[Increase Sales]"],
+        ["Tone", "[Professional and Friendly]"],
+        ["Length", "[1500 Words]"]
+      ]
+    },
+    {
+      type: "tip",
+      text: "Treat prompts as starting points rather than fixed instructions. Small improvements often produce dramatically better results."
+    },
+    {
+      type: "h2",
+      text: "Blogging Prompts (1–20)"
+    },
+    {
+      type: "p",
+      text: "These prompts help creators research, write, optimize, and improve blog content while maintaining originality and value."
+    },
+    {
+      type: "ul",
+      items: [
+        "Generate 20 blog ideas about [TOPIC] targeting beginners.",
+        "Create an SEO-optimized outline for a 3,000-word article about [TOPIC].",
+        "Suggest 10 compelling blog titles for [TOPIC].",
+        "Write an engaging introduction that immediately captures reader attention.",
+        "Identify the biggest mistakes beginners make in [TOPIC].",
+        "Suggest internal linking opportunities for this article.",
+        "Rewrite this paragraph to improve readability.",
+        "Generate five examples supporting this argument.",
+        "Create a comparison table for [TOPIC].",
+        "Suggest image ideas for every major heading.",
+        "Generate a conclusion that summarizes key takeaways.",
+        "Write a meta description under 160 characters.",
+        "Suggest SEO keywords naturally related to [TOPIC].",
+        "Generate FAQ ideas for research purposes.",
+        "Rewrite this article in a more conversational tone.",
+        "Explain this topic as if teaching a beginner.",
+        "Identify weak sections in this article.",
+        "Create an article structure based on search intent.",
+        "Suggest authority-building statistics to research.",
+        "Repurpose this blog into a LinkedIn article."
+      ]
+    },
+        {
+      type: "h2",
+      text: "Social Media Prompts (21–40)"
+    },
+    {
+      type: "p",
+      text: "Social media rewards consistency, creativity, and understanding your audience. These prompts help you generate engaging content faster while adapting it to different platforms and content formats."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create 30 Instagram post ideas for [NICHE].",
+        "Write an engaging Instagram caption for [TOPIC].",
+        "Generate a 10-slide Instagram carousel about [TOPIC].",
+        "Write five viral hooks for an Instagram Reel.",
+        "Suggest trending hashtags for [NICHE].",
+        "Create a one-month social media content calendar.",
+        "Turn this blog post into an X (Twitter) thread.",
+        "Rewrite this content for LinkedIn professionals.",
+        "Generate five Facebook post ideas promoting [PRODUCT].",
+        "Write a YouTube Community post encouraging discussion.",
+        "Generate ten YouTube Shorts ideas related to [TOPIC].",
+        "Write a compelling YouTube video description with keywords.",
+        "Suggest ten YouTube video titles with high click potential.",
+        "Create five thumbnail text ideas for this video.",
+        "Turn this article into a 60-second Reel script.",
+        "Generate a storytelling post about overcoming [PROBLEM].",
+        "Write an announcement post for launching [PRODUCT].",
+        "Suggest five audience engagement questions.",
+        "Repurpose this newsletter into social media posts.",
+        "Create a week's worth of posts promoting one blog article."
+      ]
+    },
+    {
+      type: "quote",
+      text: "One well-researched piece of content can become dozens of posts across multiple platforms with the right prompts."
+    },
+    {
+      type: "h2",
+      text: "Digital Product & eBook Prompts (41–60)"
+    },
+    {
+      type: "p",
+      text: "These prompts are designed for creators building eBooks, templates, workbooks, prompt libraries, planners, online courses, and other digital products."
+    },
+    {
+      type: "ul",
+      items: [
+        "Generate 50 profitable digital product ideas for [NICHE].",
+        "Suggest ten eBook topics with strong market demand.",
+        "Create a complete outline for an eBook about [TOPIC].",
+        "Generate chapter titles for a beginner's guide to [TOPIC].",
+        "Suggest worksheets that increase the value of this eBook.",
+        "Create a workbook outline with practical exercises.",
+        "Generate checklist ideas related to [TOPIC].",
+        "Suggest bonus resources for a premium product.",
+        "Create a Notion template structure for [TOPIC].",
+        "Generate planner pages for [GOAL].",
+        "Suggest printable product ideas for Etsy.",
+        "Write a compelling product description.",
+        "Create a sales page outline for this product.",
+        "Generate ten product name ideas.",
+        "Suggest pricing strategies for this product.",
+        "Identify customer objections before purchase.",
+        "Generate five bonus ideas that increase perceived value.",
+        "Create a product launch checklist.",
+        "Write a welcome email for new customers.",
+        "Suggest ways to improve customer satisfaction after purchase."
+      ]
+    },
+    {
+      type: "tip",
+      text: "Save prompts that consistently produce excellent results. Over time, you'll build a personal prompt library tailored to your workflow."
+    },
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "If your goal is building profitable digital products, continue with our guide on "
+        },
+        {
+          text: "How to Use ChatGPT to Build and Sell Digital Products",
+          href: "/blog/how-to-use-chatgpt-to-build-and-sell-digital-products"
+        },
+        {
+          text: ", where we explain how to turn AI-generated ideas into products customers actually buy."
+        },
+      ]
+    },
+        {
+      type: "h2",
+      text: "Marketing & SEO Prompts (61–80)"
+    },
+    {
+      type: "p",
+      text: "Creating a great product is only the beginning. Marketing is what helps people discover it. These prompts are designed to improve SEO, attract organic traffic, write persuasive copy, and build long-term audience trust."
+    },
+    {
+      type: "ul",
+      items: [
+        "Generate 50 SEO keyword ideas for [TOPIC].",
+        "Create a topical cluster around [KEYWORD].",
+        "Suggest 20 long-tail keywords with buying intent.",
+        "Write a compelling meta title under 60 characters.",
+        "Generate a meta description under 160 characters.",
+        "Create an SEO-friendly URL slug.",
+        "Write a homepage headline that improves conversions.",
+        "Generate a high-converting landing page outline.",
+        "Write persuasive product copy using benefit-focused language.",
+        "Create five email subject lines with high open-rate potential.",
+        "Generate a welcome email sequence for new subscribers.",
+        "Write a promotional email announcing a product launch.",
+        "Suggest lead magnet ideas for [NICHE].",
+        "Generate five calls-to-action for a sales page.",
+        "Create a content marketing strategy for the next 90 days.",
+        "Suggest backlink opportunities for a website in [NICHE].",
+        "Generate outreach email templates for guest blogging.",
+        "Write a case study outline for a successful customer.",
+        "Create an editorial calendar for the next three months.",
+        "Suggest ten evergreen blog topics that can generate traffic for years."
+      ]
+    },
+    {
+      type: "quote",
+      text: "The best marketing doesn't interrupt people—it helps them solve problems they were already trying to solve."
+    },
+    {
+      type: "h2",
+      text: "Business & Productivity Prompts (81–101)"
+    },
+    {
+      type: "p",
+      text: "Creators are also entrepreneurs. These prompts help improve planning, productivity, decision-making, and business growth while reducing repetitive work."
+    },
+    {
+      type: "ul",
+      items: [
+        "Create a one-year business growth roadmap for [BUSINESS].",
+        "Generate SMART goals for the next quarter.",
+        "Identify the biggest risks facing my business.",
+        "Create a SWOT analysis for [BUSINESS].",
+        "Suggest new income streams related to [NICHE].",
+        "Generate partnership ideas with complementary businesses.",
+        "Write a standard operating procedure for [TASK].",
+        "Create a weekly productivity system for creators.",
+        "Generate a daily work schedule that minimizes distractions.",
+        "Suggest automation opportunities using AI.",
+        "Create a checklist for launching a new product.",
+        "Write a customer onboarding process.",
+        "Generate ideas for improving customer retention.",
+        "Suggest ways to increase average order value.",
+        "Create a pricing comparison table for my products.",
+        "Generate ten business book recommendations based on my goals.",
+        "Review this business plan and identify weaknesses.",
+        "Create a decision-making framework for evaluating new opportunities.",
+        "Summarize this meeting into actionable tasks.",
+        "Generate five creative business ideas based on my existing audience.",
+        "Review my workflow and suggest ways to save at least five hours every week."
+      ]
+    },
+    {
+      type: "tip",
+      text: "Don't just save prompts—improve them. Every time you refine a prompt after seeing the output, you're creating a more valuable version that will save even more time in the future."
+    },
+    {
+      type: "h2",
+      text: "What Makes an AI Prompt Effective?"
+    },
+    {
+      type: "p",
+      text: "The difference between an average response and an exceptional one usually comes down to context. Effective prompts clearly explain the role AI should play, describe the audience, define the objective, specify the desired format, and provide enough detail to remove ambiguity. Asking follow-up questions and refining the response is often more effective than expecting perfection from the first prompt."
+    },
+    {
+      type: "table",
+      headers: [
+        "Prompt Component",
+        "Example"
+      ],
+      rows: [
+        ["Role", "Act as an SEO strategist"],
+        ["Audience", "Write for beginner entrepreneurs"],
+        ["Goal", "Teach without overwhelming readers"],
+        ["Format", "Use headings, tables and examples"],
+        ["Tone", "Professional, practical and encouraging"]
+      ]
+    },
+    {
+      type: "warning",
+      text: "Never copy AI responses without reviewing them carefully. Always verify important facts, add your own expertise, and ensure the final content reflects your unique perspective."
+    },
+    {
+      type: "h2",
+      text: "Final Thoughts"
+    },
+    {
+      type: "p",
+      text: "Artificial Intelligence becomes dramatically more valuable when paired with clear instructions. A well-organized prompt library allows creators to work faster, maintain consistency, and focus more on creativity than repetitive tasks. Use these prompts as starting points, adapt them to your workflow, and continue refining them over time. The creators who succeed with AI are rarely those with the most tools—they are the ones who know how to ask better questions."
+    },
+    {
+      type: "p-link",
+      parts: [
+        {
+          text: "To build a complete AI-powered creator business, continue reading our "
+        },
+        {
+          text: "Ultimate Guide to AI for Creators",
+          href: "/blog/ultimate-guide-ai-for-creators-2026"
+        },
+        {
+          text: ", "
+        },
+        {
+          text: "Best AI Tools for Creators",
+          href: "/blog/best-ai-tools-for-creators-2026"
+        },
+        {
+          text: ", and "
+        },
+        {
+          text: "How to Use ChatGPT to Build and Sell Digital Products",
+          href: "/blog/how-to-use-chatgpt-to-build-and-sell-digital-products"
+        },
+        {
+          text: " for practical workflows and detailed tutorials."
+        },
+      ]
+    },
+        
+  ],
+},
+  {
   slug: "best-ai-video-generators-2026",
   category: "ai-for-creators",
   title: "Best AI Video Generators in 2026 (Compared for YouTube, Marketing & Content Creators)",
