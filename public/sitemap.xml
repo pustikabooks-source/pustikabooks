@@ -144,4 +144,15 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+  <url>
+  <loc>https://pustikabooks.in/blog/ultimate-guide-digital-marketing-for-creators-2026</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://pustikabooks.in/blog/seo-for-beginners-2026</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
