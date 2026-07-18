@@ -155,4 +155,15 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+  <url>
+  <loc>https://pustikabooks.in/blog/content-marketing-strategy-2026</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://pustikabooks.in/blog/email-marketing-for-beginners-2026</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
