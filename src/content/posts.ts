@@ -31,6 +31,363 @@ export interface BlogPost {
 
 export const posts: BlogPost[] =[
   {
+  slug: "on-page-seo-guide-for-creators",
+  category: "marketing",
+  title: "On-Page SEO Guide for Digital Product Creators and Bloggers (Complete 2026)",
+  description: "The complete on-page SEO guide for digital product creators and bloggers in 2026 — every element you need to optimise on every page to rank higher on Google and drive consistent organic traffic.",
+  date: "2026-07-05",
+  readingMinutes: 10,
+  tags: ["on-page seo", "seo", "marketing", "blog seo"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?w=800&auto=compress",
+      alt: "On-page SEO guide for digital product creators and bloggers 2026",
+      caption: "On-page SEO is the foundation that determines whether Google ranks your content or ignores it entirely"
+    },
+    {
+      type: "p",
+      text: "On-page SEO is the practice of optimising individual pages on your website to rank higher in search engine results. Unlike off-page SEO — which involves building external links and domain authority over months and years — on-page SEO is entirely within your control and can be implemented immediately on every piece of content you publish. For digital product creators who blog to drive organic traffic to their products, correct on-page SEO is the difference between content that compounds in value month over month and content that disappears into the internet without a trace."
+    },
+    {
+      type: "stat",
+      value: "200+",
+      label: "factors Google's algorithm evaluates when ranking a page — on-page SEO addresses the most impactful ones directly within your control"
+    },
+    {
+      type: "h2",
+      text: "Element 1 — Title tag (the single most important on-page factor)"
+    },
+    {
+      type: "p",
+      text: "The title tag is the headline that appears in Google's search results as the clickable link to your page. It is the single highest-impact on-page SEO element — it tells Google what your page is about and tells searchers why they should click your result over every other result on the page. Getting the title tag right dramatically impacts both ranking and click-through rate simultaneously."
+    },
+    {
+      type: "table",
+      headers: ["Title Tag Best Practice", "Example"],
+      rows: [
+        ["Include primary keyword near the start", "'Keyword Research Guide for Beginners (2026)'"],
+        ["Keep under 60 characters to avoid truncation", "Most titles display 50-60 characters in search results"],
+        ["Make it compelling, not just descriptive", "Add a benefit, number, or year to improve click-through"],
+        ["Match the searcher's intent exactly", "If keyword is 'how to', title should start with 'How to'"],
+        ["Include brand name at the end if space allows", "'Keyword Research Guide — Pustika Books'"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Element 2 — Meta description"
+    },
+    {
+      type: "p",
+      text: "The meta description is the short paragraph that appears below your title in search results. It does not directly influence ranking but significantly impacts click-through rate — and click-through rate does influence ranking over time. A compelling meta description that accurately previews the value of your content and includes your primary keyword consistently outperforms a vague or auto-generated description."
+    },
+    {
+      type: "ul",
+      items: [
+        "Keep meta descriptions between 120-158 characters — longer descriptions get truncated in most search result displays.",
+        "Include your primary keyword naturally — Google often bolds it when it matches the searcher's query, increasing visual prominence.",
+        "Write it as a direct value proposition — 'Learn exactly how to do X in Y steps' outperforms 'This guide covers X topic'.",
+        "Include a subtle call to action — 'Read the complete guide' or 'See the full breakdown' invites the click.",
+      ]
+    },
+    {
+      type: "tip",
+      text: "Treat your meta description like ad copy for your content. Its only job is to make the searcher choose your result over the other nine results on the page — write it accordingly."
+    },
+    {
+      type: "h2",
+      text: "Element 3 — Heading structure (H1, H2, H3)"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?w=800&auto=compress",
+      alt: "Proper heading structure for on-page SEO optimisation",
+      caption: "A clear heading hierarchy tells Google exactly how your content is structured and what each section covers"
+    },
+    {
+      type: "p",
+      text: "Heading tags create the structural hierarchy of your content, helping both Google and readers navigate your page. Every page should have exactly one H1 tag — your main title — and multiple H2 tags for major sections, with H3 tags for subsections within those major sections. Google uses this structure to understand the topical coverage of your page and surface the most relevant sections for specific search queries."
+    },
+    {
+      type: "ul",
+      items: [
+        "H1 — appears once, matches or closely mirrors your title tag, contains your primary keyword.",
+        "H2 — used for all major section headings throughout the post, should include secondary keywords and related terms naturally.",
+        "H3 — used for subsections within H2 sections, helpful for very long posts with complex internal structure.",
+        "Never use headings purely for visual styling — only use them when they genuinely represent a new section of content.",
+      ]
+    },
+    {
+      type: "h2",
+      text: "Element 4 — Keyword placement throughout the content"
+    },
+    {
+      type: "p",
+      text: "Keyword placement is about ensuring your primary keyword and related terms appear naturally throughout your content in the locations Google weights most heavily. The goal is natural integration that serves the reader, not mechanical repetition that makes content feel forced or robotic."
+    },
+    {
+      type: "table",
+      headers: ["Location", "Importance", "How to Include"],
+      rows: [
+        ["First 100 words", "Very high", "Include primary keyword naturally in your opening paragraph"],
+        ["H1 and H2 headings", "Very high", "Primary keyword in H1, related terms in H2s"],
+        ["URL slug", "High", "Short, keyword-rich URL with hyphens between words"],
+        ["Image alt text", "Medium", "Describe images accurately, include keyword where genuinely relevant"],
+        ["Final paragraph", "Medium", "Reinforce the topic with a natural keyword mention in your conclusion"],
+        ["Throughout body", "High", "Aim for keyword density of 1-2% — natural, never forced"],
+      ]
+    },
+    {
+      type: "warning",
+      text: "Don't keyword-stuff your content. Repeating your keyword unnaturally every few sentences reduces readability for human readers and triggers Google's quality filters. Write for humans first — Google's understanding of natural language is sophisticated enough to identify your topic without mechanical repetition."
+    },
+    {
+      type: "h2",
+      text: "Element 5 — Internal linking"
+    },
+    {
+      type: "p",
+      text: "Internal linking — connecting your blog posts to each other and to your product pages with descriptive anchor text — serves three simultaneous purposes. It helps Google discover and crawl all your pages efficiently. It distributes ranking authority across your website rather than concentrating it in one or two pages. And it keeps readers on your website longer by surfacing relevant content they have not yet read."
+    },
+    {
+      type: "ul",
+      items: [
+        "Link to 3-5 relevant internal pages from every blog post you publish — more for longer, pillar-style posts.",
+        "Use descriptive anchor text that tells Google and the reader what the linked page is about — never use generic 'click here' or 'read more' as anchor text.",
+        "Link from new posts to older, established posts and vice versa — this creates a web of connected content that Google crawls and evaluates holistically.",
+        "Always include at least one internal link to your product page or products section from relevant blog posts.",
+      ]
+    },
+    {
+      type: "h2",
+      text: "Element 6 — Image optimisation"
+    },
+    {
+      type: "p",
+      text: "Images contribute to on-page SEO through three factors — their alt text attribute, their file size impact on page load speed, and their relevance to the surrounding content. Each factor is independently optimisable and collectively contributes to both ranking and user experience."
+    },
+    {
+      type: "ul",
+      items: [
+        "Write accurate, descriptive alt text for every image — this tells Google what the image contains and provides accessibility for visually impaired readers.",
+        "Compress images before uploading — uncompressed images significantly slow page load speed, which is a direct Google ranking factor.",
+        "Use descriptive, keyword-relevant file names before uploading — 'keyword-research-guide-2026.jpg' is better than 'IMG_20260701.jpg'.",
+        "Use WebP format where supported — WebP files are typically 25-35% smaller than equivalent JPEG files at the same visual quality.",
+      ]
+    },
+    {
+      type: "h2",
+      text: "Element 7 — Page speed and Core Web Vitals"
+    },
+    {
+      type: "p",
+      text: "Google's Core Web Vitals — a set of user experience metrics measuring loading speed, interactivity, and visual stability — are confirmed ranking factors as of 2021 and have become increasingly influential through 2025 and 2026. A page that fails Core Web Vitals thresholds can rank significantly lower than its content quality alone would justify."
+    },
+    {
+      type: "table",
+      headers: ["Core Web Vital", "What It Measures", "Target Score"],
+      rows: [
+        ["LCP (Largest Contentful Paint)", "How long the main content takes to load", "Under 2.5 seconds"],
+        ["FID / INP (Interaction to Next Paint)", "How quickly the page responds to user input", "Under 200 milliseconds"],
+        ["CLS (Cumulative Layout Shift)", "How much the page layout shifts while loading", "Under 0.1"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Your on-page SEO checklist"
+    },
+    {
+      type: "ul",
+      items: [
+        "☐ Primary keyword included in title tag, H1, first 100 words, and URL slug",
+        "☐ Meta description written with keyword and compelling value proposition (120-158 characters)",
+        "☐ Heading structure uses one H1 and multiple descriptive H2/H3 tags",
+        "☐ Primary keyword and related terms appear naturally throughout at 1-2% density",
+        "☐ 3-5 internal links to relevant posts and at least one to a product page",
+        "☐ All images have descriptive alt text and compressed file sizes",
+        "☐ URL slug is short, descriptive, and keyword-rich",
+        "☐ Page load speed tested and images compressed to minimise LCP",
+        "☐ Content fully addresses the searcher's intent for the target keyword",
+        "☐ Post length is appropriate for the topic — comprehensive without padding",
+      ]
+    },
+    {
+      type: "youtube",
+      videoId: "7DRO4rEIHDk",
+      title: "The Complete SEO and AI SEO Course for 2026 — Full Beginner's Guide"
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "On-page SEO works best when you target the right keywords to begin with. If you have not yet completed keyword research for your blog, our complete " },
+        { text: "keyword research guide for digital product creators", href: "/blog/keyword-research-guide-for-digital-product-creators" },
+        { text: " covers every step from seed keywords through content planning using entirely free tools." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And to drive traffic beyond organic search, our guide on " },
+        { text: "social media marketing strategy for creators", href: "/blog/social-media-marketing-strategy-for-creators" },
+        { text: " covers the exact platform, content, and posting strategy that turns social presence into product sales." },
+      ],
+    },
+  ],
+},
+  {
+  slug: "keyword-research-guide-for-digital-product-creators",
+  category: "marketing",
+  title: "Keyword Research Guide for Digital Product Creators (Complete 2026 Tutorial)",
+  description: "A complete keyword research guide for digital product creators and bloggers in 2026 — how to find keywords your buyers actually search, free tools to use, and how to turn research into content that ranks.",
+  date: "2026-07-05",
+  readingMinutes: 10,
+  tags: ["keyword research", "seo", "marketing", "blog seo"],
+  body: [
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/6476808/pexels-photo-6476808.jpeg?w=800&auto=compress",
+      alt: "Keyword research guide for digital product creators and bloggers 2026",
+      caption: "Keyword research is the foundation of every blog post that drives consistent organic traffic"
+    },
+    {
+      type: "p",
+      text: "Every blog post that drives consistent organic traffic to your digital product website has one thing in common — it was written around a keyword that real buyers are actively typing into Google. Keyword research is not a technical SEO activity reserved for specialists. It is the process of discovering exactly what language your buyers use to search for the solutions you provide, and then creating content that speaks directly to those searches. This guide walks through the complete keyword research process using free tools, applicable to any creator or blogger targeting a niche audience."
+    },
+    {
+      type: "stat",
+      value: "68%",
+      label: "of all website traffic begins with a search engine query — organic search remains the highest-volume traffic channel available to content creators"
+    },
+    {
+      type: "h2",
+      text: "Why keyword research matters for digital product creators specifically"
+    },
+    {
+      type: "p",
+      text: "For digital product creators, keyword research serves a dual purpose — it identifies topics for blog content that drives traffic to your website, and it reveals the exact language your buyers use to describe their problems. Both are commercially valuable. A blog post ranking on page one of Google for 'how to price an eBook in India' drives targeted visitors who are exactly one decision away from needing your digital product. Understanding the exact phrase they used to search tells you how to frame your product's value proposition on the product page itself."
+    },
+    {
+      type: "h2",
+      text: "Step 1 — Understand keyword types"
+    },
+    {
+      type: "table",
+      headers: ["Keyword Type", "Example", "Search Volume", "Competition", "Best For"],
+      rows: [
+        ["Short-tail", "'digital products'", "Very high", "Very high", "Brand awareness only"],
+        ["Long-tail", "'how to create digital products with no audience'", "Low-medium", "Low-medium", "Targeted blog content"],
+        ["Question keywords", "'how do I price my eBook in India'", "Low", "Low", "Beginner-friendly ranking"],
+        ["Buyer-intent keywords", "'best platform to sell digital products'", "Medium", "Medium", "High purchase intent"],
+        ["Local/market keywords", "'sell eBooks in India 2026'", "Low", "Very low", "Niche market domination"],
+      ]
+    },
+    {
+      type: "p",
+      text: "Long-tail keywords are the most valuable starting point for new websites and blogs. A long-tail keyword like 'how to sell Notion templates in India' has lower monthly search volume than 'sell templates online' but is significantly easier to rank for, more specific to a buyer's intent, and more likely to drive a visitor who converts into a subscriber or customer rather than simply bouncing after reading."
+    },
+    {
+      type: "tip",
+      text: "Target keywords with monthly search volumes between 100 and 2,000 when starting a new blog. These volumes are achievable to rank for without domain authority, while still generating meaningful traffic at scale across many posts."
+    },
+    {
+      type: "h2",
+      text: "Step 2 — Use free keyword research tools"
+    },
+    {
+      type: "image",
+      url: "https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg?w=800&auto=compress",
+      alt: "Free keyword research tools for bloggers and content creators",
+      caption: "Free tools provide everything a new creator needs to build a complete keyword strategy"
+    },
+    {
+      type: "ul",
+      items: [
+        "Google Search itself — type your topic into Google and note the autocomplete suggestions. Each suggestion is a real search query being made by real people. The 'People Also Ask' section and 'Related Searches' at the bottom of results pages are keyword goldmines.",
+        "Google Keyword Planner (free with Google account) — provides monthly search volume estimates and competition levels for any keyword you enter.",
+        "Ubersuggest (free tier) — gives keyword ideas, search volume, SEO difficulty scores, and content ideas based on any seed keyword.",
+        "AnswerThePublic (limited free searches) — visualises every question, comparison, and preposition people use around your topic.",
+        "Ahrefs Free Keyword Generator — enter any keyword and receive 100+ related keyword ideas with difficulty scores, completely free.",
+      ]
+    },
+    {
+      type: "h2",
+      text: "Step 3 — Find your seed keywords"
+    },
+    {
+      type: "p",
+      text: "Seed keywords are the broad, central terms that define your niche. They are not what you write blog posts about directly — they are the starting point from which you discover the long-tail keywords you actually target. For a digital product creator, seed keywords might include 'sell digital products', 'eBook business', 'Notion templates', or 'passive income online'."
+    },
+    {
+      type: "ul",
+      items: [
+        "List 5-10 seed keywords that describe your niche, your products, and the problems your buyers face.",
+        "Enter each seed keyword into Google Keyword Planner or Ubersuggest and export the suggested keyword list.",
+        "Filter the results for keywords with 100-2,000 monthly searches and low-to-medium competition scores.",
+        "Group the filtered keywords by topic or intent — all keywords about pricing in one group, all about platforms in another.",
+        "Each group represents a potential blog post topic, with the most specific keyword in that group becoming the primary target for that post.",
+      ]
+    },
+    {
+      type: "h2",
+      text: "Step 4 — Evaluate keyword difficulty honestly"
+    },
+    {
+      type: "p",
+      text: "Keyword difficulty measures how hard it is to rank on page one of Google for a given keyword, typically scored on a scale of 0-100. A new website with no established domain authority should target keywords with difficulty scores under 30 initially, building topical authority over 6-12 months before competing for higher-difficulty terms."
+    },
+    {
+      type: "table",
+      headers: ["Difficulty Score", "Interpretation", "Suitable For"],
+      rows: [
+        ["0-15", "Very easy — minimal competition", "New blogs, niche topics"],
+        ["16-30", "Easy — achievable with good content", "Blogs under 6 months old"],
+        ["31-50", "Medium — requires quality and some authority", "Blogs 6-18 months old"],
+        ["51-70", "Hard — needs significant domain authority", "Established blogs 18+ months"],
+        ["71-100", "Very hard — competes with major domains", "Only pursue with strong existing authority"],
+      ]
+    },
+    {
+      type: "h2",
+      text: "Step 5 — Map keywords to content types"
+    },
+    {
+      type: "p",
+      text: "Not every keyword requires the same type of content. Matching your content format to the searcher's intent — what they are actually trying to accomplish with that search — is one of the most important factors in ranking and converting organic traffic."
+    },
+    {
+      type: "ul",
+      items: [
+        "'How to' keywords — require step-by-step guide content. The searcher wants actionable instructions, not a theoretical overview.",
+        "'Best' and 'top' keywords — require comparison or listicle content. The searcher is evaluating options and wants a clear recommendation.",
+        "'What is' keywords — require definitional, explanatory content. The searcher is in the awareness phase and needs foundational education.",
+        "'vs' keywords — require comparison content with a clear conclusion. The searcher is close to a decision and needs help choosing.",
+        "'Review' keywords — require detailed evaluation content. The searcher wants to know if a specific product or tool is worth their money.",
+      ]
+    },
+    {
+      type: "youtube",
+      videoId: "3qFvEJqXvrA",
+      title: "Ultimate SEO Keyword Research Tutorial 2026"
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "Once you have your keywords identified and your content planned, the next step is making sure each post is optimised correctly for search engines. Our guide on " },
+        { text: "on-page SEO for digital product creators", href: "/blog/on-page-seo-guide-for-creators" },
+        { text: " covers every element of on-page optimisation from title tags through internal linking." },
+      ],
+    },
+    {
+      type: "p-link",
+      parts: [
+        { text: "And for a complete picture of how SEO, social media, and email marketing work together to build a sustainable traffic system, read our guide on " },
+        { text: "how to build a digital product business from scratch", href: "/blog/how-to-build-digital-product-business-from-scratch" },
+        { text: " which maps every marketing channel to the right stage of business growth." },
+      ],
+    },
+  ],
+},
+  {
   slug: "social-media-marketing-strategy-for-creators",
   category: "marketing",
   title: "Social Media Marketing Strategy for Digital Product Creators (Complete 2026 Guide)",
