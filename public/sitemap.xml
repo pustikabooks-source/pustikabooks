@@ -166,4 +166,19 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+  <url>
+  <loc>https://pustikabooks.in/blog/social-media-marketing-strategy-for-creators</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+  <url>
+  <loc>https://pustikabooks.in/blog/keyword-research-guide-for-digital-product-creators</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+ <url>
+  <loc>https://pustikabooks.in/blog/on-page-seo-guide-for-creators</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url> 
 </urlset>
