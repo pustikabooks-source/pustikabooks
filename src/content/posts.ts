@@ -35,7 +35,7 @@ export const posts: BlogPost[] =[
   category: "marketing",
   title: "On-Page SEO Guide for Digital Product Creators and Bloggers (Complete 2026)",
   description: "The complete on-page SEO guide for digital product creators and bloggers in 2026 — every element you need to optimise on every page to rank higher on Google and drive consistent organic traffic.",
-  date: "2026-07-05",
+  date: "2026-07-22",
   readingMinutes: 10,
   tags: ["on-page seo", "seo", "marketing", "blog seo"],
   body: [
@@ -239,7 +239,7 @@ export const posts: BlogPost[] =[
   category: "marketing",
   title: "Keyword Research Guide for Digital Product Creators (Complete 2026 Tutorial)",
   description: "A complete keyword research guide for digital product creators and bloggers in 2026 — how to find keywords your buyers actually search, free tools to use, and how to turn research into content that ranks.",
-  date: "2026-07-05",
+  date: "2026-07-22",
   readingMinutes: 10,
   tags: ["keyword research", "seo", "marketing", "blog seo"],
   body: [
@@ -392,7 +392,7 @@ export const posts: BlogPost[] =[
   category: "marketing",
   title: "Social Media Marketing Strategy for Digital Product Creators (Complete 2026 Guide)",
   description: "A complete social media marketing strategy for digital product creators in 2026 — which platforms to focus on, what to post, how often, and how to turn followers into buyers.",
-  date: "2026-07-05",
+  date: "2026-07-22",
   readingMinutes: 10,
   tags: ["social media marketing", "marketing", "digital products", "make money online"],
   body: [
