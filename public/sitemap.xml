@@ -181,4 +181,15 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url> 
+  <url>
+  <loc>https://pustikabooks.in/blog/link-building-guide-for-creators</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://pustikabooks.in/blog/how-to-increase-website-traffic-organically</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
