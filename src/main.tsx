@@ -22,6 +22,9 @@ type Gtag = (...args: unknown[]) => void;
 declare global {
   interface Window {
     gtag?: Gtag;
+    // Set by BlogPost when the article is fully resolved and the final title/URL are available.
+    __pustika_article_ready_signature?: string;
+    dataLayer?: unknown[];
   }
 }
 
@@ -88,6 +91,48 @@ function Analytics() {
         sendPageView(gtag);
       };
 
+      // Special handling for blog article routes: wait for the article to be
+      // fully resolved (post loaded and Helmet title committed). BlogPost will
+      // set window.__pustika_article_ready_signature and dispatch a
+      // 'pustika:article-ready' event when it's ready. Prefer that signal so
+      // GA receives the correct title and URL.
+      const isLikelyArticle = (() => {
+        const parts = location.pathname.split("/").filter(Boolean);
+        if (parts[0] !== "blog") return false;
+        // Only treat two-segment paths like /blog/:slug as article pages. Exclude known category or editor routes.
+        if (parts.length !== 2) return false;
+        const second = parts[1];
+        const excluded = ["ebooks", "digital-products", "ai-for-creators", "marketing", "new", "edit"];
+        if (excluded.includes(second)) return false;
+        return true;
+      })();
+
+      const onArticleReady = () => {
+        // The BlogPost indicates it has finished rendering/setting Helmet.
+        sendOnce();
+      };
+
+      if (isLikelyArticle) {
+        // If the BlogPost already set the ready signature, send immediately.
+        if (window.__pustika_article_ready_signature === routeSignature) {
+          sendOnce();
+          return;
+        }
+
+        // Otherwise listen for the ready event, but still fall back to the
+        // title MutationObserver/safety timer below so we don't hang forever.
+        window.addEventListener("pustika:article-ready", onArticleReady);
+
+        // Ensure we clean up the listener if we bail out.
+        const removeArticleListener = () => window.removeEventListener("pustika:article-ready", onArticleReady);
+
+        // If pathname changes before article-ready arrives, stop listening.
+        if (cancelled) removeArticleListener();
+
+        // Proceed to set up the observer as a fallback (below). We'll return
+        // only once sendOnce has executed via one of the paths.
+      }
+
       if (!titleNode) {
         sendOnce();
         return;
@@ -126,6 +171,8 @@ function Analytics() {
       observer?.disconnect();
       if (settleTimer !== undefined) window.clearTimeout(settleTimer);
       if (safetyTimer !== undefined) window.clearTimeout(safetyTimer);
+      // Clean up article-ready listener if present.
+      window.removeEventListener("pustika:article-ready", () => {});
     };
   }, [location.pathname, location.search, location.hash]);
 
