@@ -17,57 +17,117 @@ import BlogEditor from "./pages/BlogEditor";
 import Products from "./pages/Products";
 import BlogCategory from "./pages/BlogCategory";
 
-function sendPageView() {
-  if (typeof (window as any).gtag !== "function") return;
+type Gtag = (...args: unknown[]) => void;
 
-  const pageLocation = window.location.href;
-  const pagePath = window.location.pathname + window.location.search;
-  const pageTitle = document.title || "Pustika Books";
+declare global {
+  interface Window {
+    gtag?: Gtag;
+  }
+}
 
-  (window as any).gtag("event", "page_view", {
-    page_location: pageLocation,
-    page_path: pagePath,
-    page_title: pageTitle,
+function waitForGtag(maxWaitMs = 5000): Promise<Gtag> {
+  return new Promise((resolve) => {
+    const startedAt = Date.now();
+    const check = () => {
+      if (typeof window.gtag === "function") {
+        resolve(window.gtag);
+        return;
+      }
+
+      if (Date.now() - startedAt >= maxWaitMs) {
+        // The inline GA bootstrap normally defines gtag immediately. If it does
+        // not, keep the event queued through dataLayer rather than dropping it.
+        const queuedGtag = ((...args: unknown[]) => {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(args);
+        }) as Gtag;
+        resolve(queuedGtag);
+        return;
+      }
+
+      window.setTimeout(check, 50);
+    };
+
+    check();
   });
+}
+
+function sendPageView(gtag: Gtag) {
+  gtag("event", "page_view", {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname + window.location.search,
+  });
+}
+
+function getRouteSignature() {
+  return `${window.location.pathname}${window.location.search}${window.location.hash}`;
 }
 
 function Analytics() {
   const location = useLocation();
-  const lastTrackedRef = useRef("");
+  const lastSentSignatureRef = useRef("");
 
   useEffect(() => {
-    if (typeof (window as any).gtag !== "function") return;
+    const routeSignature = `${location.pathname}${location.search}${location.hash}`;
+    let cancelled = false;
+    let settleTimer: number | undefined;
+    let safetyTimer: number | undefined;
+    let observer: MutationObserver | undefined;
 
-    const routeKey = `${location.pathname}${location.search}`;
+    const trackAfterSettlement = async () => {
+      const gtag = await waitForGtag();
+      if (cancelled) return;
 
-    const trackIfNeeded = () => {
-      const pageTitle = document.title || "Pustika Books";
-      const signature = `${routeKey}|${pageTitle}`;
+      const titleNode = document.querySelector("title");
+      const sendOnce = () => {
+        if (cancelled || getRouteSignature() !== routeSignature) return;
+        if (lastSentSignatureRef.current === routeSignature) return;
 
-      if (lastTrackedRef.current === signature) return;
-      lastTrackedRef.current = signature;
-      sendPageView();
+        lastSentSignatureRef.current = routeSignature;
+        sendPageView(gtag);
+      };
+
+      if (!titleNode) {
+        sendOnce();
+        return;
+      }
+
+      const settle = () => {
+        if (settleTimer !== undefined) window.clearTimeout(settleTimer);
+        settleTimer = window.setTimeout(() => {
+          observer?.disconnect();
+          sendOnce();
+        }, 100);
+      };
+
+      observer = new MutationObserver(settle);
+      observer.observe(titleNode, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
+
+      // Allow Helmet's committed title to settle without using a long delay.
+      settle();
+      safetyTimer = window.setTimeout(() => {
+        observer?.disconnect();
+        sendOnce();
+      }, 500);
     };
 
-    let timer = window.setTimeout(trackIfNeeded, 150);
-    const titleNode = document.querySelector("title");
-
-    if (!titleNode) {
-      return () => window.clearTimeout(timer);
-    }
-
-    const observer = new MutationObserver(() => {
-      window.clearTimeout(timer);
-      timer = window.setTimeout(trackIfNeeded, 150);
+    // Let the destination route render before observing Helmet's title.
+    window.requestAnimationFrame(() => {
+      void trackAfterSettlement();
     });
 
-    observer.observe(titleNode, { childList: true, subtree: true, characterData: true });
-
     return () => {
-      observer.disconnect();
-      window.clearTimeout(timer);
+      cancelled = true;
+      observer?.disconnect();
+      if (settleTimer !== undefined) window.clearTimeout(settleTimer);
+      if (safetyTimer !== undefined) window.clearTimeout(safetyTimer);
     };
-  }, [location.pathname, location.search]);
+  }, [location.pathname, location.search, location.hash]);
 
   return null;
 }
