@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useParams, Navigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { BlogPost as BlogPostType } from "@/content/posts";
 import { fetchPostBySlug, fetchPublishedPosts } from "@/lib/blog";
@@ -7,14 +7,15 @@ import founderImg from "@/assets/founder.jpg";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
   const [post, setPost] = useState<BlogPostType | null | undefined>(undefined);
   const [related, setRelated] = useState<BlogPostType[]>([]);
   const [progress, setProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const headings = post?.body.filter(
-  (block: any) => block.type === "h2"
-) || [];
+    (block: any) => block.type === "h2"
+  ) || [];
 
   useEffect(() => {
     if (!slug) return;
@@ -34,6 +35,66 @@ export default function BlogPost() {
     })();
     return () => { cancelled = true; };
   }, [slug]);
+
+  // When the post is resolved and Helmet commits the title, notify Analytics
+  // that the article is ready so we can send an accurate page_view with the
+  // final title and URL. We do this by observing the <title> node and
+  // dispatching a 'pustika:article-ready' event when the title contains the
+  // article title. This avoids sending GA events too early and prevents
+  // attributing article views to /blog.
+  useEffect(() => {
+    if (!post) return;
+    const routeSignature = `${location.pathname}${location.search}${location.hash}`;
+    const expected = post.title; // match against presence of the article title
+    let disconnected = false;
+    const titleNode = document.querySelector('title');
+
+    const markReady = () => {
+      try {
+        window.__pustika_article_ready_signature = routeSignature;
+        window.dispatchEvent(new Event('pustika:article-ready'));
+      } catch (e) {
+        // ignore
+      }
+    };
+
+    if (!titleNode) {
+      // If no title element, still set ready immediately after render.
+      markReady();
+      return;
+    }
+
+    // If the title already contains the post title, we are ready.
+    if (titleNode.textContent && titleNode.textContent.indexOf(expected) !== -1) {
+      markReady();
+      return;
+    }
+
+    const observer = new MutationObserver(() => {
+      if (disconnected) return;
+      if (titleNode.textContent && titleNode.textContent.indexOf(expected) !== -1) {
+        observer.disconnect();
+        disconnected = true;
+        markReady();
+      }
+    });
+
+    observer.observe(titleNode, { childList: true, characterData: true, subtree: true });
+
+    const safety = window.setTimeout(() => {
+      if (!disconnected) {
+        observer.disconnect();
+        disconnected = true;
+        markReady();
+      }
+    }, 1000);
+
+    return () => {
+      disconnected = true;
+      observer.disconnect();
+      window.clearTimeout(safety);
+    };
+  }, [post, location.pathname, location.search, location.hash]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,27 +160,27 @@ export default function BlogPost() {
         <meta name="description" content={post.description} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={post.title} />
-<meta property="og:description" content={post.description} />
-<meta property="og:url" content={url} />
-<meta property="og:type" content="article" />
-<meta property="og:image" content={coverImage} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Pustika Books" />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={coverImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Pustika Books" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={post.title} />
-<meta name="twitter:description" content={post.description} />
-<meta name="twitter:image" content={coverImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.description} />
+        <meta name="twitter:image" content={coverImage} />
 
-<meta property="article:published_time" content={post.date} />
+        <meta property="article:published_time" content={post.date} />
         {post.tags.map((t) => (
           <meta key={t} property="article:tag" content={t} />
         ))}
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
-{menuOpen && (
+      {menuOpen && (
         <div style={{ position: "fixed", inset: 0, zIndex: 9999, display: "flex" }}>
           <div
             style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.4)" }}
@@ -135,9 +196,9 @@ export default function BlogPost() {
               <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>×</button>
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-              <Link to="/blog" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>📖 Blog</Link>
-              <Link to="/about" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>👋 About Us</Link>
-              <Link to="/products" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid #f0f0f0" }}>🛒 Products</Link>
+              <Link to="/blog" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>Blog</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>About</Link>
+              <Link to="/products" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", fontSize: "20px", fontWeight: 600, color: "#191919", padding: "12px 0", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>Products</Link>
             </nav>
             <div style={{ marginTop: "auto" }}>
               <p style={{ fontSize: "12px", color: "#999", marginBottom: "12px" }}>Follow us</p>
@@ -184,28 +245,28 @@ export default function BlogPost() {
 
       <article className="mx-auto max-w-3xl px-6 py-12 md:py-16">
         {/* Table of Contents */}
-{headings.length > 0 && (
-  <aside
-    className="mb-10 rounded-3xl border border-border bg-[#FAFAF8] p-6"
-  >
-    <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
-      Contents
-    </p>
-
-    <ul className="mt-5 space-y-3">
-      {headings.map((heading: any, index: number) => (
-        <li key={index}>
-          <a
-            href={`#section-${index}`}
-            className="text-sm font-medium text-foreground hover:text-brand-purple"
+        {headings.length > 0 && (
+          <aside
+            className="mb-10 rounded-3xl border border-border bg-[#FAFAF8] p-6"
           >
-            {heading.text}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </aside>
-)}
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+              Contents
+            </p>
+
+            <ul className="mt-5 space-y-3">
+              {headings.map((heading: any, index: number) => (
+                <li key={index}>
+                  <a
+                    href={`#section-${index}`}
+                    className="text-sm font-medium text-foreground hover:text-brand-purple"
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
 
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground mb-6">
@@ -280,61 +341,61 @@ export default function BlogPost() {
           </div>
         </div>
         {/* Key Takeaways */}
-<div className="mb-10 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-brand-purple/5 to-white p-7">
-  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
-    Key Takeaways
-  </p>
+        <div className="mb-10 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-brand-purple/5 to-white p-7">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+            Key Takeaways
+          </p>
 
-  <ul className="mt-5 space-y-3">
-    <li>✅ Learn the main idea in under 2 minutes.</li>
-    <li>✅ Follow practical, step-by-step advice.</li>
-    <li>✅ Avoid common beginner mistakes.</li>
-    <li>✅ Apply the strategies immediately.</li>
-  </ul>
-</div>
+          <ul className="mt-5 space-y-3">
+            <li>✅ Learn the main idea in under 2 minutes.</li>
+            <li>✅ Follow practical, step-by-step advice.</li>
+            <li>✅ Avoid common beginner mistakes.</li>
+            <li>✅ Apply the strategies immediately.</li>
+          </ul>
+        </div>
         {/* Body */}
         <div className="mt-10 space-y-6 text-[17px] leading-[1.75] text-foreground/90">
           {post.body.map((block, i) => {
             if (block.type === "h2") {
               return (
                 <h2
-  id={`section-${headings.findIndex(
-    (h: any) => h.text === block.text
-  )}`}
-  key={i}
-  className="mt-12 text-2xl md:text-3xl font-bold tracking-tight scroll-mt-24"
->
+                  id={`section-${headings.findIndex(
+                    (h: any) => h.text === block.text
+                  )}`}
+                  key={i}
+                  className="mt-12 text-2xl md:text-3xl font-bold tracking-tight scroll-mt-24"
+                >
                   {block.text}
                 </h2>
               );
             }
             if (block.type === "p") {
-  return <p key={i}>{block.text}</p>;
-}
-if (block.type === "p-link") {
-  return (
-    <p key={i}>
-      {block.parts.map((part, j) =>
-        part.href ? (
-          <Link
-            key={j}
-            to={part.href}
-            style={{
-              color: "#7C3AED",
-              fontWeight: 700,
-              textDecoration: "underline",
-              textDecorationColor: "rgba(124,58,237,0.3)",
-            }}
-          >
-            {part.text}
-          </Link>
-        ) : (
-          <span key={j}>{part.text}</span>
-        )
-      )}
-    </p>
-  );
-}
+              return <p key={i}>{block.text}</p>;
+            }
+            if (block.type === "p-link") {
+              return (
+                <p key={i}>
+                  {block.parts.map((part, j) =>
+                    part.href ? (
+                      <Link
+                        key={j}
+                        to={part.href}
+                        style={{
+                          color: "#7C3AED",
+                          fontWeight: 700,
+                          textDecoration: "underline",
+                          textDecorationColor: "rgba(124,58,237,0.3)",
+                        }}
+                      >
+                        {part.text}
+                      </Link>
+                    ) : (
+                      <span key={j}>{part.text}</span>
+                    )
+                  )}
+                </p>
+              );
+            }
             if (block.type === "ul") {
               return (
                 <ul key={i} className="list-disc pl-6 space-y-2 marker:text-brand-purple">
@@ -347,11 +408,11 @@ if (block.type === "p-link") {
             if (block.type === "quote") {
               return (
                 <blockquote
-  key={i}
-  className="my-10 rounded-3xl border-l-4 border-brand-purple bg-gradient-to-r from-brand-purple/5 to-white px-8 py-7 italic text-lg leading-relaxed shadow-sm"
->
-  “{block.text}”
-</blockquote>
+                  key={i}
+                  className="my-10 rounded-3xl border-l-4 border-brand-purple bg-gradient-to-r from-brand-purple/5 to-white px-8 py-7 italic text-lg leading-relaxed shadow-sm"
+                >
+                  “{block.text}”
+                </blockquote>
               );
             }
             if (block.type === "stat") {
@@ -386,7 +447,7 @@ if (block.type === "p-link") {
                 </div>
               );
             }
-      if (block.type === "image") {
+            if (block.type === "image") {
               return (
                 <figure key={i} className="my-8">
                   <img
@@ -423,51 +484,51 @@ if (block.type === "p-link") {
                 </div>
               );
             }
-  if (block.type === "tip") {
-  return (
-    <div
-      key={i}
-      className="my-8 rounded-3xl border border-green-200 bg-green-50 p-6"
-    >
-      <div className="flex items-start gap-4">
-        <span className="text-3xl">💡</span>
+            if (block.type === "tip") {
+              return (
+                <div
+                  key={i}
+                  className="my-8 rounded-3xl border border-green-200 bg-green-50 p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">💡</span>
 
-        <div>
-          <p className="font-bold text-green-800">
-            Pro Tip
-          </p>
+                    <div>
+                      <p className="font-bold text-green-800">
+                        Pro Tip
+                      </p>
 
-          <p className="mt-2 text-green-700 leading-relaxed">
-            {block.text}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+                      <p className="mt-2 text-green-700 leading-relaxed">
+                        {block.text}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
 
-if (block.type === "warning") {
-  return (
-    <div
-      key={i}
-      className="my-8 rounded-3xl border border-red-200 bg-red-50 p-6"
-    >
-      <div className="flex items-start gap-4">
-        <span className="text-3xl">⚠️</span>
+            if (block.type === "warning") {
+              return (
+                <div
+                  key={i}
+                  className="my-8 rounded-3xl border border-red-200 bg-red-50 p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">⚠️</span>
 
-        <div>
-          <p className="font-bold text-red-800">
-            Common Mistake
-          </p>
+                    <div>
+                      <p className="font-bold text-red-800">
+                        Common Mistake
+                      </p>
 
-          <p className="mt-2 text-red-700 leading-relaxed">
-            {block.text}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+                      <p className="mt-2 text-red-700 leading-relaxed">
+                        {block.text}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             if (block.type === "faq") {
               return (
                 <div key={i} className="my-8 space-y-4">
@@ -517,39 +578,39 @@ if (block.type === "warning") {
 
         {/* CTA Box */}
         <aside className="mt-16 rounded-3xl border border-brand-purple/20 bg-gradient-to-br from-card to-secondary p-7 md:p-9 shadow-card text-center">
-  <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">
-    Ready to start?
-  </p>
-  <h3 className="mt-2 text-2xl md:text-3xl font-black tracking-tight">
-    Turn your knowledge into income — explore our resources.
-  </h3>
-  <p className="mt-3 text-muted-foreground text-[15px]">
-    eBooks, templates, and guides to help you launch your first digital product.
-  </p>
-  <Link
-    to="/products"
-    className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-purple px-7 py-3.5 text-base font-bold text-white hover:opacity-90 transition"
-  >
-    Browse our products →
-  </Link>
-</aside>
+          <p className="text-xs font-semibold tracking-[0.2em] text-brand-purple uppercase">
+            Ready to start?
+          </p>
+          <h3 className="mt-2 text-2xl md:text-3xl font-black tracking-tight">
+            Turn your knowledge into income — explore our resources.
+          </h3>
+          <p className="mt-3 text-muted-foreground text-[15px]">
+            eBooks, templates, and guides to help you launch your first digital product.
+          </p>
+          <Link
+            to="/products"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-purple px-7 py-3.5 text-base font-bold text-white hover:opacity-90 transition"
+          >
+            Browse our products →
+          </Link>
+        </aside>
         {/* Share CTA */}
-<div className="mt-14 rounded-3xl border border-border bg-[#FAFAF8] p-8 text-center">
+        <div className="mt-14 rounded-3xl border border-border bg-[#FAFAF8] p-8 text-center">
 
-  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
-    Enjoyed this article?
-  </p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
+            Enjoyed this article?
+          </p>
 
-  <h3 className="mt-3 text-3xl font-black">
-    Share it with another creator 🚀
-  </h3>
+          <h3 className="mt-3 text-3xl font-black">
+            Share it with another creator 🚀
+          </h3>
 
-  <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-    Every share helps more creators learn how to build digital income through
-    ebooks, AI and digital products.
-  </p>
+          <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+            Every share helps more creators learn how to build digital income through
+            ebooks, AI and digital products.
+          </p>
 
-</div>
+        </div>
 
         {/* Bottom share row */}
         <div className="mt-12 pt-8 border-t border-border flex items-center justify-between flex-wrap gap-4">
@@ -590,64 +651,64 @@ if (block.type === "warning") {
             <h2 className="text-xl font-bold tracking-tight">Keep reading</h2>
             <div className="mt-8 grid md:grid-cols-3 gap-6">
 
-  {related.map((r) => {
+              {related.map((r) => {
 
-    const cover =
-      (r.body.find((b: any) => b.type === "image") as any)?.url || "";
+                const cover =
+                  (r.body.find((b: any) => b.type === "image") as any)?.url || "";
 
-    return (
+                return (
 
-      <Link
-        key={r.slug}
-        to={`/blog/${r.slug}`}
-        className="group overflow-hidden rounded-3xl border border-border bg-white shadow-card hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
-      >
+                  <Link
+                    key={r.slug}
+                    to={`/blog/${r.slug}`}
+                    className="group overflow-hidden rounded-3xl border border-border bg-white shadow-card hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+                  >
 
-        {cover && (
-          <div className="aspect-[16/10] overflow-hidden bg-secondary">
-            <img
-              src={cover}
-              alt={r.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        )}
+                    {cover && (
+                      <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                        <img
+                          src={cover}
+                          alt={r.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    )}
 
-        <div className="p-6 flex flex-col flex-1">
+                    <div className="p-6 flex flex-col flex-1">
 
-          <span className="inline-flex w-fit rounded-full bg-brand-purple/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
-            Related
-          </span>
+                      <span className="inline-flex w-fit rounded-full bg-brand-purple/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
+                        Related
+                      </span>
 
-          <h3 className="mt-4 text-xl font-bold group-hover:text-brand-purple transition-colors">
-            {r.title}
-          </h3>
+                      <h3 className="mt-4 text-xl font-bold group-hover:text-brand-purple transition-colors">
+                        {r.title}
+                      </h3>
 
-          <p className="mt-3 text-sm text-muted-foreground line-clamp-3">
-            {r.description}
-          </p>
+                      <p className="mt-3 text-sm text-muted-foreground line-clamp-3">
+                        {r.description}
+                      </p>
 
-          <div className="mt-auto pt-6 flex items-center justify-between">
+                      <div className="mt-auto pt-6 flex items-center justify-between">
 
-            <span className="text-xs text-muted-foreground">
-              ⏱ {r.readingMinutes} min
-            </span>
+                        <span className="text-xs text-muted-foreground">
+                          ⏱ {r.readingMinutes} min
+                        </span>
 
-            <span className="font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
-              Continue →
-            </span>
+                        <span className="font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
+                          Continue →
+                        </span>
 
-          </div>
+                      </div>
 
-        </div>
+                    </div>
 
-      </Link>
+                  </Link>
 
-    );
+                );
 
-  })}
+              })}
 
-</div>
+            </div>
           </section>
         )}
 
