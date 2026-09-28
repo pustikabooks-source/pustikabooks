@@ -687,6 +687,7 @@ export const posts: BlogPost[] =[
   ],
 },
   {
+    slug: "biggest-digital-marketing-mistakes-beginners-make",
   category: "marketing",
   title: "15 Biggest Digital Marketing Mistakes Beginners Make (And How to Avoid Them in 2026)",
   description: "Discover the most common digital marketing mistakes beginners make and learn practical strategies to avoid them. Improve your SEO, content marketing, email marketing, social media, and long-term business growth.",
