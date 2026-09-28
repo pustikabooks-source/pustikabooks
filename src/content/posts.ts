@@ -686,8 +686,7 @@ export const posts: BlogPost[] =[
     },
   ]
 },
-],
-},
+
   {
   s[\"Random publishing\", \"Unfocused website\"],lug: "biggest-digital-marketing-mistakes-beginners-make",
   category: "marketing",
