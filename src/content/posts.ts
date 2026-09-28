@@ -684,10 +684,8 @@ export const posts: BlogPost[] =[
       content:
         "Your first eBook does not have to become a bestseller. It needs to become useful. That is where a sustainable digital product business begins."
     },
-  ]
+  ],
 },
-],
-  },
   {
   s[\"Random publishing\", \"Unfocused website\"],lug: "biggest-digital-marketing-mistakes-beginners-make",
   category: "marketing",
